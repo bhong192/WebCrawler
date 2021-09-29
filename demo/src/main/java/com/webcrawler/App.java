@@ -8,6 +8,7 @@ import org.jsoup.select.Elements;
 import java.io.IOException;
 import java.util.HashSet;
 import java.io.FileWriter;
+import java.net.URLEncoder;
 
 
 
@@ -43,6 +44,26 @@ public class App
             }
 
         }
+    }
+
+    public String getLang(String sampleText){
+        String language= ""; 
+
+        String languageLayerEndPoint = "http://api.languagelayer.com/detect?access_key=%s&query=%s";
+        String APIKey= "1ca250f0a2bbcb6ed2da2a9e17e0b720";
+
+        String newSampleText = "";
+
+        try{
+            newSampleText = URLEncoder.encode(sampleText, "UTF-8");
+        } catch(Exception e) {
+            e.getMessage();
+        }
+
+        
+        
+
+        return language; 
     }
 
     /*public void writeToFile(String filename){
