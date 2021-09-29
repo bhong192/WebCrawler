@@ -10,11 +10,8 @@ import java.io.IOException;
 import java.util.HashSet;
 import java.util.HashMap;
 import java.io.FileWriter;
-<<<<<<< HEAD
 import java.io.File;
-=======
 import java.net.URLEncoder;
->>>>>>> 41a57278e3bf99361a49902b0afaf10ce4a241f8
 
 
 
@@ -69,9 +66,7 @@ public class App
 
         }
 
-<<<<<<< HEAD
     }
-=======
     public String getLang(String sampleText){
         String language= ""; 
 
@@ -91,16 +86,6 @@ public class App
 
         return language; 
     }
-
-    /*public void writeToFile(String filename){
-        Filewriter writer;
-        try {
-            writer = new FileWriter(filename); 
-            //articles.forEach\
-            String temp = " - Title: " + a.get(0) + " (link: " + a.get(1) + ")\n"; 
-        }
-        catch 
->>>>>>> 41a57278e3bf99361a49902b0afaf10ce4a241f8
 
     public static void main( String[] args )
     {
