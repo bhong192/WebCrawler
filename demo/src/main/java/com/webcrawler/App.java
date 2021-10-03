@@ -20,6 +20,9 @@ import java.io.File;
 import java.net.URLEncoder;
 import java.util.Scanner;
 import java.util.regex.Pattern;
+
+import javax.lang.model.util.ElementScanner6;
+
 import java.util.regex.Matcher; 
 
 
@@ -30,10 +33,12 @@ public class App
     private static final int MAX_DEPTH = 2;
     //private HashSet<String> links; 
     private HashMap<String, Integer> links; 
+    private String[] removedTags = {"audio", "button", "img", "input", "nav", "video", "script", "style", "a", "link", "footer", "object", "figure", "track", "noscript", "form" };
 
     public App()
     {
         links = new HashMap<String, Integer>();
+    
     }
 
     public void getPageLinks(String URL, int depth){
@@ -51,9 +56,18 @@ public class App
                 Connection.Response response = Jsoup.connect(URL).execute();
                 Document doc = response.parse();
 
+                for(int i = 0; i < removedTags.length; i++){
+                    doc.select(removedTags[i]).remove();
+                }
+
                 for(Element page: linksOnPage){
                     getPageLinks(page.attr("abs:href"), depth);
                 }
+
+
+                //Element link = doc.select("p").first();
+                //System.out.println("Text:" + link.text());
+
 
                 String path = "./repository/";
                 FileWriter writer; 
