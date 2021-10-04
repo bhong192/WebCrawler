@@ -1,0 +1,723 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="google-site-verification" content="VsVvSTVAouAluNodWeR30BeIWTr4c84HvN4Fn9WBsak"> <!-- wp_head --> <!-- This site is optimized with the Yoast SEO plugin v15.5 - https://yoast.com/wordpress/plugins/seo/ -->
+  <title>Jersey and HK2 dependency injection (auto scanning) - Mkyong.com</title>
+  <meta name="description" content="Jersey and HK2 dependency injection example, with auto-scanning, auto-discovery for @Contract, @Service, @Named, etc.">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Jersey and HK2 dependency injection (auto scanning) - Mkyong.com">
+  <meta property="og:description" content="Jersey and HK2 dependency injection example, with auto-scanning, auto-discovery for @Contract, @Service, @Named, etc.">
+  <meta property="og:url" content="https://mkyong.com/webservices/jax-rs/jersey-and-hk2-dependency-injection-auto-scanning/">
+  <meta property="og:site_name" content="Mkyong.com">
+  <meta property="article:published_time" content="2021-05-28T15:26:57+00:00">
+  <meta property="article:modified_time" content="2021-06-26T07:28:40+00:00">
+  <meta property="og:image" content="https://mkyong.com/wp-content/uploads/2021/05/jersey-hk2-example-1.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:label1" content="Written by">
+  <meta name="twitter:data1" content="mkyong">
+  <meta name="twitter:label2" content="Est. reading time">
+  <meta name="twitter:data2" content="6 minutes">  <!-- / Yoast SEO plugin. -->  
+ </head>
+ <body>
+  <div class="container-fluid">
+   <div class="row"> <!-- left -->
+    <div id="sidebar-left" class="col-12 col-lg-3 col-xl-2"> <!-- sidebar-left-menu, see functions.php-->
+     <div class="offcanvas offcanvas-start" tabindex="-1" id="left-nav" aria-labelledby="left-nav">
+      <div class="offcanvas-header">
+       <h5 class="offcanvas-title">Main Tutorials</h5>
+      </div>
+      <div class="offcanvas-body sidebar-left-no-highlight">
+       <div>
+        <ul>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+        </ul>
+       </div>
+      </div>
+     </div> <!-- ads -->
+     <div class="ads-container-sticky d-none d-lg-block">
+      <div class="ads-container">
+       <div align="center" data-freestar-ad="__160x600" id="mkyong_rail_left">  
+       </div>
+      </div>
+     </div>
+    </div> <!-- middle -->
+    <main id="main-middle" role="main" class="col-12 col-lg-9 col-xl-7">
+     <article id="main-content" class="dont-break-out">
+      <div id="title-container">
+       <h1>Jersey and HK2 dependency injection (auto scanning)</h1>
+       <div class="post-meta d-flex align-items-center position-relative">
+        <div></div>
+        <div>
+         <p><small class="extra-info">By  | <time datetime="2021-06-26T15:28:40+08:00"> Last updated: June 26, 2021</time></small></p>
+         <p><small class="extra-info">Viewed: 2,607 (+122 pv/w)</small></p>
+         <p><small class="extra-info"></small></p>
+         <div class="post-tag">
+          <small class="extra-info">Tags: |  |  |  | </small>
+         </div>
+         <p></p>
+        </div>
+       </div>
+      </div>
+      <p>This article shows how to use  dependency injection framework in  and enable auto-scanning auto-discovery of the declared <code>@Contract</code> and <code>@Service</code> components.</p>
+      <p>Table of contents</p>
+      <ul class="list-toc">
+       <li></li>
+       <li></li>
+       <li></li>
+       <li>
+        <ul>
+         <li></li>
+         <li></li>
+        </ul></li>
+       <li>
+        <ul>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+        </ul></li>
+       <li></li>
+       <li></li>
+      </ul>
+      <p><em>P.S. Tested with Jersey 3.0.2 and Java 1.8</em></p>
+      <h2 id="jersey-and-hk2-dependency-injection"> 1. Jersey and HK2 dependency injection<br></h2>
+      <p>Jersey, by default, uses HK2 (Hundred-Kilobyte Kernel) for dependency injection. And the HK2 is an implementation of (Dependency Injection for Java).</p>
+      <p>For Jersey and HK2 development, we only need to declare <code>jersey-hk2</code>.</p>
+      <div class="filename">
+       pom.xml
+      </div>
+      <pre><code class="language-xml">
+  &lt;dependency&gt;
+      &lt;groupId&gt;org.glassfish.jersey.inject&lt;/groupId&gt;
+      &lt;artifactId&gt;jersey-hk2&lt;/artifactId&gt;
+  &lt;/dependency&gt;
+</code></pre>
+      <div class="ads-container ads-container-video">
+       <div id="mkyongFreeStarVideoAdContainer">
+        <div id="freestar-video-parent">
+         <div id="freestar-video-child"></div>
+        </div>
+       </div>
+      </div>
+      <h2 id="contract-service-and-inject"> 2. @Contract, @Service, and @Inject<br></h2>
+      <p>2.1 Review a simple dependency injection in Jersey.</p>
+      <pre><code class="language-java">
+@Contract
+public interface MessageService {
+  String getHello(String name);
+}
+
+@Service
+public class MessageServiceImpl implements MessageService {
+
+    @Override
+    public String getHello() {
+        return "Hello World Jersey and HK2"
+    }
+
+}
+
+@Path("/hello")
+public class MyResource {
+
+    @Inject
+    private MessageService msgService;
+
+}
+</code></pre>
+      <p>2.2 If we call the <code>/hello</code> endpoint, Jersey will throw the exception "no object available"?</p>
+      <div class="filename">
+       Terminal
+      </div>
+      <pre><code class="language-bash">
+org.glassfish.hk2.api.UnsatisfiedDependencyException:
+    There was no object available in __HK2_Generated_0 for injection at...
+</code></pre>
+      <div class="note">
+       <p><strong>Note</strong><br> For the Jersey and HK2 injection to work correctly, we must register the <code>@Contract</code> and <code>@Service</code> manually or enable the auto-scanning or auto-discovery feature. At this moment, I started to miss the Spring framework auto-scanning feature 🙂</p>
+      </div>
+      <h2 id="hk2-manual-register-contract-and-service"> 3. HK2 manual register @Contract and @Service<br></h2>
+      <p>In Jersey and HK2, we can use <code>AbstractBinder</code> to register the <code>@Contract</code> and <code>@Service</code> manually. This <code>AbstractBinder</code> manual registration is suitable for simple injection, and we, developers, control what to declare and inject.</p>
+      <pre><code class="language-java">
+import org.glassfish.hk2.utilities.binding.AbstractBinder;
+import org.glassfish.jersey.grizzly2.httpserver.GrizzlyHttpServerFactory;
+import org.glassfish.jersey.server.ResourceConfig;
+
+  // Starts Grizzly HTTP server
+  public static HttpServer startServer() {
+
+        final ResourceConfig config = new ResourceConfig();
+        config.register(MyResource.class);
+
+        config.register(new AbstractBinder(){
+            @Override
+            protected void configure() {
+                // map this service to this contract
+                bind(MessageServiceImpl.class).to(MessageService.class);
+            }
+        });
+
+        return GrizzlyHttpServerFactory
+                  .createHttpServer(URI.create(BASE_URI), config);
+
+    }
+</code></pre>
+      <h2 id="hk2-auto-scanning-contract-and-service"> 4. HK2 auto scanning @Contract and @Service<br></h2>
+      <p>To enable Jersey and HK2 auto scanning, we need two things:</p>
+      <ol>
+       <li>HK2 metadata called <code>inhabitant files</code>.</li>
+       <li><code>ServiceLocator</code> to find the generated inhabitant files and loads the declared @Contract and @Service.</li>
+      </ol>
+      <h3 id="hk2-inhabitant-files"> 4.1 HK2 inhabitant files<br></h3>
+      <p>Declares the <code>hk2-metadata-generator</code> dependency on the project classpath, and it will generate the inhabitant files during the compile process and place the output file in <code>META-INF/hk2-locator/default</code>.</p>
+      <div class="filename">
+       pom.xml
+      </div>
+      <pre><code class="language-xml">
+  &lt;dependency&gt;
+      &lt;groupId&gt;org.glassfish.hk2&lt;/groupId&gt;
+      &lt;artifactId&gt;hk2-metadata-generator&lt;/artifactId&gt;
+      &lt;version&gt;3.0.2&lt;/version&gt;
+  &lt;/dependency&gt;
+</code></pre>
+      <p>The below is the auto-generated inhabitant file.</p>
+      <div class="filename">
+       META-INF/hk2-locator/default
+      </div>
+      <pre><code class="language-bash">
+#
+# Generated by hk2-metadata-generator
+#
+
+[com.mkyong.service.MessageServiceImpl]S
+contract={com.mkyong.service.MessageService}
+</code></pre>
+      <div class="note">
+       <p><strong>Note</strong><br> Read this </p>
+      </div>
+      <h3 id="servicelocator-to-read-the-inhabitant-files"> 4.2 ServiceLocator to read the inhabitant files<br></h3>
+      <p>4.2.1 We can use <code>ServiceLocatorUtilities</code> to get the <code>ServiceLocator</code> and pass it to the Grizzly HTTP Server.</p>
+      <pre><code class="language-java">
+  public static HttpServer startServer() {
+
+      // scan packages
+      final ResourceConfig config = new ResourceConfig();
+      config.register(MyResource.class);
+
+      // Get a ServiceLocator
+      ServiceLocator locator =
+            ServiceLocatorUtilities.createAndPopulateServiceLocator();
+
+      // pass the ServiceLocator to Grizzly Http Server
+      final HttpServer httpServer =
+              GrizzlyHttpServerFactory
+                  .createHttpServer(URI.create(BASE_URI), config, locator);
+
+      return httpServer;
+
+  }
+</code></pre>
+      <p>4.2.2 Alternatively, we can create a <code>Feature</code> to enable auto-scanning.</p>
+      <div class="filename">
+       AutoScanFeature.java
+      </div>
+      <pre><code class="language-java">
+package com.mkyong.config;
+
+import jakarta.inject.Inject;
+import jakarta.ws.rs.core.Feature;
+import jakarta.ws.rs.core.FeatureContext;
+import org.glassfish.hk2.api.DynamicConfigurationService;
+import org.glassfish.hk2.api.MultiException;
+import org.glassfish.hk2.api.Populator;
+import org.glassfish.hk2.api.ServiceLocator;
+import org.glassfish.hk2.utilities.ClasspathDescriptorFileFinder;
+import org.glassfish.hk2.utilities.DuplicatePostProcessor;
+
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+public class AutoScanFeature implements Feature {
+
+    @Inject
+    ServiceLocator serviceLocator;
+
+    @Override
+    public boolean configure(FeatureContext context) {
+
+        DynamicConfigurationService dcs =
+                serviceLocator.getService(DynamicConfigurationService.class);
+        Populator populator = dcs.getPopulator();
+        try {
+            // Populator - populate HK2 service locators from inhabitants files
+            // ClasspathDescriptorFileFinder - find files from META-INF/hk2-locator/default
+            populator.populate(
+                    new ClasspathDescriptorFileFinder(this.getClass().getClassLoader()),
+                    new DuplicatePostProcessor());
+
+        } catch (IOException | MultiException ex) {
+            Logger.getLogger(AutoScanFeature.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return true;
+    }
+
+}
+</code></pre>
+      <p>Register the above feature.</p>
+      <pre><code class="language-java">
+  public static HttpServer startServer() {
+
+      final ResourceConfig config = new ResourceConfig();
+      config.register(MyResource.class);
+      // enable auto scan
+      config.register(AutoScanFeature.class);
+
+      return GrizzlyHttpServerFactory
+          .createHttpServer(URI.create(BASE_URI), config);
+
+  }
+</code></pre>
+      <h2 id="jersey-and-hk2-service-named-complete-example"> 5. Jersey and HK2, @Service @Named complete example<br></h2>
+      <p>The below is a complete Jersey and HK2 example to auto scan the <code>@Service</code> and <code>@Contract</code> and <code>@Named</code> (qualifier, multiple implementations for the same interface).</p>
+      <h3 id="project-directory-structure"> 5.1 Project Directory Structure<br></h3>
+      <p></p>
+      <div class="pic"> 
+      </div>
+      <p></p>
+      <h3 id="project-dependencies"> 5.2 Project Dependencies<br></h3>
+      <div class="filename">
+       pom.xml
+      </div>
+      <pre><code class="language-xml">
+  &lt;dependency&gt;
+      &lt;groupId&gt;org.glassfish.jersey.containers&lt;/groupId&gt;
+      &lt;artifactId&gt;jersey-container-grizzly2-http&lt;/artifactId&gt;
+  &lt;/dependency&gt;
+
+  &lt;dependency&gt;
+      &lt;groupId&gt;org.glassfish.jersey.inject&lt;/groupId&gt;
+      &lt;artifactId&gt;jersey-hk2&lt;/artifactId&gt;
+  &lt;/dependency&gt;
+
+  &lt;dependency&gt;
+      &lt;groupId&gt;org.glassfish.hk2&lt;/groupId&gt;
+      &lt;artifactId&gt;hk2-metadata-generator&lt;/artifactId&gt;
+      &lt;version&gt;3.0.2&lt;/version&gt;
+  &lt;/dependency&gt;
+</code></pre>
+      <h3 id="contract-service-and-named"> 5.3 @Contract @Service and @Named<br></h3>
+      <p>We use the <code>@Contract</code> interface and two <code>@Service</code> implementations, and we use <code>@Named</code> to give each implementation a unique name.</p>
+      <div class="filename">
+       MessageService.java
+      </div>
+      <pre><code class="language-java">
+package com.mkyong.service;
+
+import org.jvnet.hk2.annotations.Contract;
+
+@Contract
+public interface MessageService {
+  String getHello();
+}
+</code></pre>
+      <div class="filename">
+       MessageServiceAwsImpl.java
+      </div>
+      <pre><code class="language-java">
+package com.mkyong.service;
+
+import jakarta.inject.Named;
+import org.jvnet.hk2.annotations.Service;
+
+@Service @Named("aws")
+public class MessageServiceAwsImpl implements MessageService {
+
+  @Override
+  public String getHello() {
+      return "Hello from AWS";
+  }
+
+}
+</code></pre>
+      <div class="filename">
+       MessageServiceAzureImpl.java
+      </div>
+      <pre><code class="language-java">
+package com.mkyong.service;
+
+import jakarta.inject.Named;
+import org.jvnet.hk2.annotations.Service;
+
+@Service @Named("azure")
+public class MessageServiceAzureImpl implements MessageService {
+
+  @Override
+  public String getHello() {
+      return "Hello from Azure";
+  }
+
+}
+</code></pre>
+      <h3 id="jersey-resources-path-and-inject"> 5.4 Jersey Resources @Path and @Inject<br></h3>
+      <div class="filename">
+       MyResource.java
+      </div>
+      <pre><code class="language-java">
+package com.mkyong;
+
+import com.mkyong.service.MessageService;
+import jakarta.inject.Inject;
+import jakarta.inject.Named;
+import jakarta.ws.rs.GET;
+import jakarta.ws.rs.Path;
+import jakarta.ws.rs.Produces;
+import jakarta.ws.rs.core.MediaType;
+
+@Path("/hello")
+public class MyResource {
+
+  @Inject
+  @Named("aws")
+  private MessageService awsService;
+
+  @Inject
+  @Named("azure")
+  private MessageService azureService;
+
+  @Path("/hk2/aws")
+  @GET
+  @Produces(MediaType.TEXT_PLAIN)
+  public String helloAws() {
+      return awsService.getHello();
+  }
+
+  @Path("/hk2/azure")
+  @GET
+  @Produces(MediaType.TEXT_PLAIN)
+  public String helloAzure() {
+      return azureService.getHello();
+  }
+
+}
+</code></pre>
+      <h3 id="jersey-application-starter"> 5.5 Jersey application starter<br></h3>
+      <p>Run the below <code>MainApp.java</code>, and it will start Grizzly HTTP server, auto scan the <code>@Service</code>, and publish the endpoints.</p>
+      <div class="filename">
+       MainApp.java
+      </div>
+      <pre><code class="language-java">
+package com.mkyong;
+
+import com.mkyong.config.AutoScanFeature;
+import org.glassfish.grizzly.http.server.HttpServer;
+import org.glassfish.jersey.grizzly2.httpserver.GrizzlyHttpServerFactory;
+import org.glassfish.jersey.server.ResourceConfig;
+
+import java.net.URI;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+public class MainApp {
+
+  public static final String BASE_URI = "http://localhost:8080/";
+
+  // Starts Grizzly HTTP server
+  public static HttpServer startServer() {
+
+      final ResourceConfig config = new ResourceConfig();
+      config.register(MyResource.class);
+
+      // enable the auto scanning, see above 4.2.2
+      config.register(AutoScanFeature.class);
+
+      final HttpServer httpServer =
+              GrizzlyHttpServerFactory
+                  .createHttpServer(URI.create(BASE_URI), config);
+
+      return httpServer;
+
+  }
+
+  public static void main(String[] args) {
+
+      try {
+
+          final HttpServer httpServer = startServer();
+
+          // add jvm shutdown hook
+          Runtime.getRuntime().addShutdownHook(new Thread(() -&gt; {
+              try {
+                  System.out.println("Shutting down the application...");
+
+                  httpServer.shutdownNow();
+
+                  System.out.println("Done, exit.");
+              } catch (Exception e) {
+                  Logger.getLogger(MainApp.class.getName()).log(Level.SEVERE, null, e);
+              }
+          }));
+
+          System.out.println(String.format("Application started.%nStop the application using CTRL+C"));
+
+          // block and wait shut down signal, like CTRL+C
+          Thread.currentThread().join();
+
+      } catch (InterruptedException ex) {
+          Logger.getLogger(MainApp.class.getName()).log(Level.SEVERE, null, ex);
+      }
+
+  }
+}
+</code></pre>
+      <h3 id="test-it-with-curl"> 5.6 Test it with cURL<br></h3>
+      <p>We can use the <code>cURL</code> command to test the <code>/hello</code> endpoints.</p>
+      <div class="filename">
+       Terminal
+      </div>
+      <pre><code class="language-bash">
+&gt; curl http://localhost:8080/hello/hk2/azure
+Hello from Azure
+
+&gt; curl http://localhost:8080/hello/hk2/aws
+Hello from AWS
+
+&gt; curl -i http://localhost:8080/hello/hk2/aws
+HTTP/1.1 200 OK
+Content-Type: text/plain
+Content-Length: 14
+
+Hello from AWS
+</code></pre>
+      <h2 id="download-source-code"> 6. Download Source Code<br></h2>
+      <div class="github">
+       <p>$ git clone </p>
+       <p>$ cd jax-rs/jersey/jersey-hk2/</p>
+       <p>$ mvn clean package</p>
+       <p>$ java -jar target/jersey-hk2.jar</p>
+      </div>
+      <h2 id="references"> 7. References<br></h2>
+      <ul>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+      </ul> <!-- current post ID --> 
+      <div class="d-flex justify-content-center ads-container-after-post ads-container"> <!-- Tag ID: mkyong_leaderboard_btf -->
+       <div align="center" data-freestar-ad="__320x100 __336x280" id="mkyong_leaderboard_btf">  
+       </div>
+      </div> <!-- loaded via JS -->
+      <div id="mk-afterpost-related"></div> <!-- author -->
+      <div id="author-container" class="d-flex align-items-center position-relative">
+       <div></div>
+       <div>
+        <h5></h5>
+        <p>Founder of , love Java and open source stuff. Follow him on . If you like my tutorials, consider make a donation to .</p>
+        <p></p>
+       </div>
+      </div> <!-- comments -->
+      <h4>Comments</h4>
+      <div class="wpdiscuz_top_clearing"></div>
+      <div id="comments" class="comments-area">
+       <div id="respond" style="width: 0;height: 0;clear: both;margin: 0;padding: 0;"></div>
+       <div id="wpdcom" class="wpdiscuz_unauth wpd-default wpd-layout-1 wpd-comments-open">
+        <div class="wc_social_plugin_wrapper"></div>
+        <div class="wpd-form-wrap">
+         <div class="wpd-form-head">
+          <div class="wpd-auth">
+           <div class="wpd-login"></div>
+          </div>
+         </div>
+         <div class="wpd-form wpd-form-wrapper wpd-main-form-wrapper" id="wpd-main-form-wrapper-0_0"></div>
+         <div id="wpdiscuz_hidden_secondary_form" style="display: none;">
+          <div class="wpd-form wpd-form-wrapper wpd-secondary-form-wrapper" id="wpd-secondary-form-wrapper-wpdiscuzuniqueid" style="display: none;">
+           <div class="wpd-secondary-forms-social-content"></div>
+           <div class="clearfix"></div>
+          </div>
+         </div>
+        </div>
+        <div id="wpd-threads" class="wpd-thread-wrapper">
+         <div class="wpd-thread-head">
+          <div class="wpd-thread-info " data-comments-count="2"> <span class="wpdtc" title="2">2</span> Comments
+          </div>
+          <div class="wpd-space"></div>
+          <div class="wpd-thread-filter">
+           <div class="wpd-filter wpdf-sorting"> <span class="wpdiscuz-sort-button wpdiscuz-vote-sort-up wpdiscuz-sort-button-active" data-sorting="by_vote">Most Voted</span> <i class="fas fa-sort-down"></i>
+            <div class="wpdiscuz-sort-buttons"> <span class="wpdiscuz-sort-button wpdiscuz-date-sort-desc" data-sorting="newest">Newest</span> <span class="wpdiscuz-sort-button wpdiscuz-date-sort-asc" data-sorting="oldest">Oldest</span>
+            </div>
+           </div>
+          </div>
+         </div>
+         <div class="wpd-comment-info-bar">
+          <div class="wpd-current-view">
+           <i class="fas fa-quote-left"></i> Inline Feedbacks
+          </div>
+          <div class="wpd-filter-view-all">
+           View all comments
+          </div>
+         </div>
+         <div class="wpd-thread-list">
+          <div id="wpd-comm-1061684_0" class="wpd-comment wpd_comment_level-1">
+           <div class="wpd-comment-wrap wpd-blog-guest">
+            <div class="wpd-comment-left ">
+             <div class="wpd-avatar "> 
+             </div>
+            </div>
+            <div id="comment-1061684" class="wpd-comment-right">
+             <div class="wpd-comment-header">
+              <div class="wpd-comment-author ">
+                Rahul
+              </div>
+              <div class="wpd-comment-date" title="July 18, 2021 10:48 pm"> <i class="far fa-clock" aria-hidden="true"></i> 2 months ago
+              </div>
+              <div class="wpd-space"></div>
+              <div class="wpd-comment-link wpd-hidden">
+               <div style="" class="comment_flag comment_flag_modal wc_flag_tooltipster wpf-cta wpd-field-desc" wpd-tooltip-position="left" id="fc_1061684" wpd-tooltip="Click to flag and open «Comment Reporting» form. You can choose reporting category and send message to website administrator. Admins may or may not choose to remove the comment or block the author. And please don" t worry, your report will be anonymous.'>
+                <i class="fas fa-flag"></i>
+               </div>
+              </div>
+             </div>
+             <div class="wpd-comment-text">
+              <p>hi, Its very well explained and helpful. In my project, hk2-inhabitant-generator is used instead of hk2-metadata-generator and hk2-locator with default entries is generated successfully. However with a difference all services and so this <span>inhabitant</span> file are part of a different application that is bundled and used as a library of another application. Server starts well but as soon as I hit any service I get below error. Could you please guess what I am missing? Thanks in advance!</p>
+              <p><em>org.glassfish.hk2.api.UnsatisfiedDependencyException: There was no object available for injection at SystemInjecteeImpl(requiredType=ReportRunner,parent=ReportResource,qualifiers={},position=1,optional=false,self=false,unqualified=null,897617687)</em></p>
+              <p>Please let me know if you need more details!</p>
+             </div>
+             <div class="wpd-comment-footer">
+              <div class="wpd-vote">
+               <div class="wpd-vote-up wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0V0z" /><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z" />
+                </svg>
+               </div>
+               <div class="wpd-vote-result" title="0">
+                0
+               </div>
+               <div class="wpd-vote-down wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0z" /><path d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z" />
+                </svg>
+               </div>
+              </div>
+              <div class="wpd-reply-button"> 
+               <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                <path d="M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z" /><path d="M0 0h24v24H0z" fill="none" />
+               </svg> <span>Reply</span>
+              </div>
+              <div class="wpd-space"></div>
+              <div class="wpd-toggle wpd-hidden wpd_not_clicked" wpd-tooltip="Hide Replies"> <i class="fas fa-chevron-up"></i>
+              </div>
+             </div>
+            </div>
+           </div>
+           <div id="wpdiscuz_form_anchor-1061684_0"></div>
+           <div id="wpd-comm-1061692_1061684" class="wpd-comment wpd-reply wpd_comment_level-2">
+            <div class="wpd-comment-wrap wpd-blog-user wpd-blog-post_author">
+             <div class="wpd-comment-left ">
+              <div class="wpd-avatar "> 
+              </div>
+              <div class="wpd-comment-label" wpd-tooltip="Author" wpd-tooltip-position="right"> <span>Author</span>
+              </div>
+             </div>
+             <div id="comment-1061692" class="wpd-comment-right">
+              <div class="wpd-comment-header">
+               <div class="wpd-comment-author ">
+                 mkyong
+               </div>
+               <div class="wpd-comment-date" title="July 21, 2021 8:25 am"> <i class="far fa-clock" aria-hidden="true"></i> 2 months ago
+               </div>
+               <div class="wpd-space"></div>
+               <div class="wpd-comment-link wpd-hidden">
+                <div style="" class="comment_flag comment_flag_modal wc_flag_tooltipster wpf-cta wpd-field-desc" wpd-tooltip-position="left" id="fc_1061692" wpd-tooltip="Click to flag and open «Comment Reporting» form. You can choose reporting category and send message to website administrator. Admins may or may not choose to remove the comment or block the author. And please don" t worry, your report will be anonymous.'>
+                 <i class="fas fa-flag"></i>
+                </div>
+               </div>
+              </div>
+              <div class="wpd-reply-to"> <i class="far fa-comments"></i> Reply to&nbsp; 
+              </div>
+              <div class="wpd-comment-text">
+               <p>I don’t have a ready example to test your case.</p>
+               <p>My best guess is to try <code>ServiceLocator</code> to loads those third-party Services.</p>
+              </div>
+              <div class="wpd-comment-footer">
+               <div class="wpd-vote">
+                <div class="wpd-vote-up wpd_not_clicked"> 
+                 <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                  <path fill="none" d="M0 0h24v24H0V0z" /><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z" />
+                 </svg>
+                </div>
+                <div class="wpd-vote-result" title="0">
+                 0
+                </div>
+                <div class="wpd-vote-down wpd_not_clicked"> 
+                 <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                  <path fill="none" d="M0 0h24v24H0z" /><path d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z" />
+                 </svg>
+                </div>
+               </div>
+               <div class="wpd-reply-button"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path d="M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z" /><path d="M0 0h24v24H0z" fill="none" />
+                </svg> <span>Reply</span>
+               </div>
+               <div class="wpd-space"></div>
+              </div>
+             </div>
+            </div>
+            <div id="wpdiscuz_form_anchor-1061692_1061684"></div>
+           </div>
+          </div>
+          <div class="wpdiscuz-comment-pagination"></div>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div id="wpdiscuz-loading-bar" class="wpdiscuz-loading-bar-unauth"></div>
+      <div id="wpdiscuz-comment-message" class="wpdiscuz-comment-message-unauth"></div>
+     </article>
+    </main> <!-- right -->
+    <div id="sidebar-right" class="d-none d-xl-block col-xl-3">
+     <div class="ads-container-height1080">
+      <div class="ads-container-sticky">
+       <div class="ads-container">
+        <div align="center" data-freestar-ad="__300x600" id="mkyong_rail_right_1">  
+        </div>
+       </div>
+      </div>
+     </div>
+     <div class="ads-container-sticky">
+      <div class="ads-container">
+       <div align="center" data-freestar-ad="__300x600" id="mkyong_rail_right_2">  
+       </div>
+      </div>
+     </div>
+    </div>
+   </div> <!--/.row -->
+  </div> <!--/.container-fluid -->  <!-- Dynamic page generated in 0.082 seconds. --><!-- Cached page generated by WP-Super-Cache on 2021-09-29 17:33:52 --><!-- super cache -->
+ </body>
+</html>

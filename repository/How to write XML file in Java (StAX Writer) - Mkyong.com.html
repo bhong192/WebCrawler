@@ -1,0 +1,668 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="google-site-verification" content="VsVvSTVAouAluNodWeR30BeIWTr4c84HvN4Fn9WBsak"> <!-- wp_head --> <!-- This site is optimized with the Yoast SEO plugin v15.5 - https://yoast.com/wordpress/plugins/seo/ -->
+  <title>How to write XML file in Java (StAX Writer) - Mkyong.com</title>
+  <meta name="description" content="java - How to write XML file in Java (StAX Writer)">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="How to write XML file in Java (StAX Writer) - Mkyong.com">
+  <meta property="og:description" content="java - How to write XML file in Java (StAX Writer)">
+  <meta property="og:url" content="https://mkyong.com/java/how-to-write-xml-file-in-java-stax-writer/">
+  <meta property="og:site_name" content="Mkyong.com">
+  <meta property="article:published_time" content="2021-05-05T10:16:28+00:00">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:label1" content="Written by">
+  <meta name="twitter:data1" content="mkyong">
+  <meta name="twitter:label2" content="Est. reading time">
+  <meta name="twitter:data2" content="8 minutes">  <!-- / Yoast SEO plugin. -->  
+ </head>
+ <body>
+  <div class="container-fluid">
+   <div class="row"> <!-- left -->
+    <div id="sidebar-left" class="col-12 col-lg-3 col-xl-2"> <!-- sidebar-left-menu, see functions.php-->
+     <div class="offcanvas offcanvas-start" tabindex="-1" id="left-nav" aria-labelledby="left-nav">
+      <div class="offcanvas-header">
+       <h5 class="offcanvas-title">Java XML Tutorial</h5>
+      </div>
+      <div class="offcanvas-body sidebar-left-no-highlight">
+       <div>
+        <ul>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li class="active"></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+        </ul>
+       </div>
+      </div>
+     </div> <!-- ads -->
+     <div class="ads-container-sticky d-none d-lg-block">
+      <div class="ads-container">
+       <div align="center" data-freestar-ad="__160x600" id="mkyong_rail_left">  
+       </div>
+      </div>
+     </div>
+    </div> <!-- middle -->
+    <main id="main-middle" role="main" class="col-12 col-lg-9 col-xl-7">
+     <article id="main-content" class="dont-break-out">
+      <div id="title-container">
+       <h1>How to write XML file in Java (StAX Writer)</h1>
+       <div class="post-meta d-flex align-items-center position-relative">
+        <div></div>
+        <div>
+         <p><small class="extra-info">By  | <time datetime="2021-05-05T18:16:28+08:00"> Last updated: May 5, 2021</time></small></p>
+         <p><small class="extra-info">Viewed: 3,568 (+171 pv/w)</small></p>
+         <p><small class="extra-info"></small></p>
+         <div class="post-tag">
+          <small class="extra-info">Tags: |  |  |  | </small>
+         </div>
+         <p></p>
+        </div>
+       </div>
+      </div>
+      <div class="pre-next-container d-flex justify-content-between"></div>
+      <p>This tutorial shows how to use the  writer to write data to an XML file.</p>
+      <p>Table of contents</p>
+      <ul class="list-toc">
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+      </ul>
+      <div class="note">
+       <p><strong>Note</strong><br> </p>
+      </div>
+      <p><em>P.S All below examples are tested with Java 11.</em></p>
+      <h2 id="write-to-xml-stax-writer-apis"> 1. Write to XML (StAX Writer APIs)<br></h2>
+      <p>In Streaming API for XML (StAX), we can use <code>StAX Cursor API</code> or <code>StAX Iterator API</code> to write data to an XML file.</p>
+      <p>1.1 Below is the <code>StAX Cursor API</code> of writing data to XML.</p>
+      <pre><code class="language-java">
+  XMLOutputFactory output = XMLOutputFactory.newInstance();
+
+  XMLStreamWriter writer = output.createXMLStreamWriter(
+                              new FileOutputStream("/path/test.xml"));
+
+  writer.writeStartDocument();
+
+  writer.writeStartElement("test");
+
+  // write other XML elements
+
+  writer.writeEndDocument();
+
+  writer.flush();
+
+  writer.close();
+</code></pre>
+      <p>1.2 Below is the <code>StAX Iterator API</code> of writing data to XML.</p>
+      <pre><code class="language-java">
+  XMLOutputFactory output = XMLOutputFactory.newInstance();
+
+  XMLEventFactory eventFactory = XMLEventFactory.newInstance();
+
+  XMLEventWriter writer = output.createXMLEventWriter(
+                            new FileOutputStream("/path/test.xml"));
+
+  XMLEvent event = eventFactory.createStartDocument();
+  writer.add(event);
+
+  // add other xml events
+
+  writer.add(eventFactory.createEndDocument());
+
+  writer.flush();
+
+  writer.close();        
+</code></pre>
+      <div class="ads-container ads-container-video">
+       <div id="mkyongFreeStarVideoAdContainer">
+        <div id="freestar-video-parent">
+         <div id="freestar-video-child"></div>
+        </div>
+       </div>
+      </div>
+      <h2 id="write-to-xml-stax-cursor-api-xmlstreamwriter"> 2. Write to XML (StAX Cursor API – XMLStreamWriter)<br></h2>
+      <p>The below example uses StAX Cursor API <code>XMLStreamWriter</code> to write data to an XML file.</p>
+      <div class="filename">
+       WriteXmlStAXCursor.java
+      </div>
+      <pre><code class="language-java">
+package com.mkyong.xml.stax;
+
+import javax.xml.stream.XMLOutputFactory;
+import javax.xml.stream.XMLStreamException;
+import javax.xml.stream.XMLStreamWriter;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStream;
+
+public class WriteXmlStAXCursor {
+
+    public static void main(String[] args) throws XMLStreamException {
+
+        // send the output to a xml file
+        try(FileOutputStream out = new FileOutputStream("/home/mkyong/test.xml")){
+            writeXml(out);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        // send the output to System.out
+        // writeXml(System.out);
+
+    }
+
+    // StAX Cursor API
+    private static void writeXml(OutputStream out) throws XMLStreamException {
+
+        XMLOutputFactory output = XMLOutputFactory.newInstance();
+
+        XMLStreamWriter writer = output.createXMLStreamWriter(out);
+
+        writer.writeStartDocument("utf-8", "1.0");
+
+        // &lt;company&gt;
+        writer.writeStartElement("company");
+
+        // &lt;staff&gt;
+
+        // add XML comment
+        writer.writeComment("This is Staff 1001");
+
+        writer.writeStartElement("staff");
+        writer.writeAttribute("id", "1001");
+
+        writer.writeStartElement("name");
+        writer.writeCharacters("mkyong");
+        writer.writeEndElement();
+
+        writer.writeStartElement("salary");
+        writer.writeAttribute("currency", "USD");
+        writer.writeCharacters("5000");
+        writer.writeEndElement();
+
+        writer.writeStartElement("bio");
+        writer.writeCData("HTML tag &lt;code&gt;testing&lt;/code&gt;");
+        writer.writeEndElement();
+
+        writer.writeEndElement();
+        // &lt;/staff&gt;
+
+        // &lt;staff&gt;
+        writer.writeStartElement("staff");
+        writer.writeAttribute("id", "1002");
+
+        writer.writeStartElement("name");
+        writer.writeCharacters("yflow");
+        writer.writeEndElement();
+
+        writer.writeStartElement("salary");
+        writer.writeAttribute("currency", "EUR");
+        writer.writeCharacters("8000");
+        writer.writeEndElement();
+
+        writer.writeStartElement("bio");
+        writer.writeCData("a &amp; b");
+        writer.writeEndElement();
+
+        writer.writeEndElement();
+        // &lt;/staff&gt;
+
+        writer.writeEndDocument();
+        // &lt;/company&gt;
+
+        writer.flush();
+
+        writer.close();
+
+    }
+
+}
+</code></pre>
+      <p>The <code>XMLStreamWriter</code> writes data to an XML file in compact mode, and later we will use <code>Transformer</code> to  content.</p>
+      <div class="filename">
+       /home/mkyong/test.xml
+      </div>
+      <pre><code class="language-bash">
+&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;company&gt;
+&lt;!--This is Staff 1001--&gt;&lt;staff id="1001"&gt;&lt;name&gt;mkyong&lt;/name&gt;&lt;salary currency="USD"&gt;5000&lt;/salary&gt;
+&lt;bio&gt;&lt;![CDATA[HTML tag &lt;code&gt;testing&lt;/code&gt;]]&gt;&lt;/bio&gt;&lt;/staff&gt;
+&lt;staff id="1002"&gt;&lt;name&gt;yflow&lt;/name&gt;&lt;salary currency="EUR"&gt;8000&lt;/salary&gt;
+&lt;bio&gt;&lt;![CDATA[a &amp; b]]&gt;&lt;/bio&gt;&lt;/staff&gt;&lt;/company&gt;
+</code></pre>
+      <h2 id="write-to-xml-stax-iterator-api-xmleventwriter"> 3. Write to XML (StAX Iterator API – XMLEventWriter)<br></h2>
+      <p>The below example uses StAX Iterator API <code>XMLEventWriter</code> to write data to an XML file.</p>
+      <div class="filename">
+       WriteXmlStAXIterator.java
+      </div>
+      <pre><code class="language-java">
+package com.mkyong.xml.stax;
+
+import javax.xml.stream.*;
+import javax.xml.stream.events.XMLEvent;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStream;
+
+public class WriteXmlStAXIterator {
+
+    public static void main(String[] args) throws XMLStreamException {
+
+        // send the output to a xml file
+        try(FileOutputStream out = new FileOutputStream("/home/mkyong/test.xml")){
+            writeXml2(out);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        // send the output to System.out
+        // writeXml2(System.out);
+
+    }
+
+    // StAX Iterator API
+    private static void writeXml2(OutputStream out) throws XMLStreamException {
+
+        XMLOutputFactory output = XMLOutputFactory.newInstance();
+        XMLEventFactory eventFactory = XMLEventFactory.newInstance();
+
+        // StAX Iterator API
+        XMLEventWriter writer = output.createXMLEventWriter(out);
+
+        XMLEvent event = eventFactory.createStartDocument();
+        // default
+        //event = eventFactory.createStartDocument("utf-8", "1.0");
+        writer.add(event);
+
+        writer.add(eventFactory.createStartElement("", "", "company"));
+
+        // write XML comment
+        writer.add(eventFactory.createComment("This is staff 1001"));
+
+        writer.add(eventFactory.createStartElement("", "", "staff"));
+        // write XML attribute
+        writer.add(eventFactory.createAttribute("id", "1001"));
+
+        writer.add(eventFactory.createStartElement("", "", "name"));
+        writer.add(eventFactory.createCharacters("mkyong"));
+        writer.add(eventFactory.createEndElement("", "", "name"));
+
+        writer.add(eventFactory.createStartElement("", "", "salary"));
+        writer.add(eventFactory.createAttribute("currency", "USD"));
+        writer.add(eventFactory.createCharacters("5000"));
+        writer.add(eventFactory.createEndElement("", "", "salary"));
+
+        writer.add(eventFactory.createStartElement("", "", "bio"));
+        // write XML CData
+        writer.add(eventFactory.createCData("HTML tag &lt;code&gt;testing&lt;/code&gt;"));
+        writer.add(eventFactory.createEndElement("", "", "bio"));
+
+        // &lt;/staff&gt;
+        writer.add(eventFactory.createEndElement("", "", "staff"));
+
+        // next staff, tired to write more
+        // writer.add(eventFactory.createStartElement("", "", "staff"));
+        // writer.add(eventFactory.createAttribute("id", "1002"));
+        // writer.add(eventFactory.createEndElement("", "", "staff"));
+
+        // end here.
+        writer.add(eventFactory.createEndDocument());
+
+        writer.flush();
+
+        writer.close();
+
+    }
+
+}
+</code></pre>
+      <p>Output</p>
+      <div class="filename">
+       /home/mkyong/test.xml
+      </div>
+      <pre><code class="language-xml">
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;company&gt;
+&lt;!--This is staff 1001--&gt;&lt;staff id="1001"&gt;&lt;name&gt;mkyong&lt;/name&gt;
+&lt;salary currency="USD"&gt;5000&lt;/salary&gt;
+&lt;bio&gt;&lt;![CDATA[HTML tag &lt;code&gt;testing&lt;/code&gt;]]&gt;&lt;/bio&gt;
+&lt;/staff&gt;&lt;/company&gt;
+</code></pre>
+      <h2 id="write-and-pretty-print-xml-content-transformer"> 4. Write and pretty print XML content (Transformer)<br></h2>
+      <p>4.1 The below code snippets uses <code>javax.xml.transform.Transformer</code> to pretty print an XML content.</p>
+      <pre><code class="language-java">
+  private static String formatXML(String xml) throws TransformerException {
+
+      // write data to xml file
+      TransformerFactory transformerFactory = TransformerFactory.newInstance();
+
+      Transformer transformer = transformerFactory.newTransformer();
+
+      // alternative
+      //Transformer transformer = SAXTransformerFactory.newInstance().newTransformer();
+
+      // pretty print by indention
+      transformer.setOutputProperty(OutputKeys.INDENT, "yes");
+
+      // add standalone="yes", add line break before the root element
+      transformer.setOutputProperty(OutputKeys.STANDALONE, "yes");
+
+      /*transformer.setOutputProperty(OutputKeys.DOCTYPE_PUBLIC,
+              "-//W3C//DTD XHTML 1.0 Transitional//EN");
+
+      transformer.setOutputProperty(OutputKeys.DOCTYPE_SYSTEM,
+              "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd");*/
+
+      // ignore &lt;?xml version="1.0" encoding="UTF-8"?&gt;
+      //transformer.setOutputProperty(OutputKeys.OMIT_XML_DECLARATION, "yes");
+
+      StreamSource source = new StreamSource(new StringReader(xml));
+      StringWriter output = new StringWriter();
+      transformer.transform(source, new StreamResult(output));
+
+      return output.toString();
+
+  }
+</code></pre>
+      <p>4.2 Steps to pretty-print the XML content.</p>
+      <ol>
+       <li>Write data to a <code>ByteArrayOutputStream</code> variable.</li>
+       <li>Convert the <code>ByteArrayOutputStream</code> variable to a String.</li>
+       <li><code>Transformer</code> to pretty-print the String and return a formatted XML String.</li>
+       <li>Save the formatted XML String to a file.</li>
+      </ol>
+      <p>The below example pretty print XML content and write to an XML file.</p>
+      <div class="filename">
+       WriteXmlStAXPrettyPrint.java
+      </div>
+      <pre><code class="language-java">
+package com.mkyong.xml.stax;
+
+import javax.xml.stream.XMLOutputFactory;
+import javax.xml.stream.XMLStreamException;
+import javax.xml.stream.XMLStreamWriter;
+import javax.xml.transform.OutputKeys;
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerException;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.stream.StreamResult;
+import javax.xml.transform.stream.StreamSource;
+import java.io.*;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+
+public class WriteXmlStAXPrettyPrint {
+
+    public static void main(String[] args) {
+
+        try {
+
+            ByteArrayOutputStream out = new ByteArrayOutputStream();
+            // write XML to ByteArrayOutputStream
+            writeXml(out);
+
+            // Java 10
+            //String xml = out.toString(StandardCharsets.UTF_8);
+
+            // standard way to convert byte array to String
+            String xml = new String(out.toByteArray(), StandardCharsets.UTF_8);
+
+            // System.out.println(formatXML(xml));
+
+            String prettyPrintXML = formatXML(xml);
+
+            // print to console
+            // System.out.println(prettyPrintXML);
+
+            // Java 11 - write to file
+            Files.writeString(Paths.get("/home/mkyong/test.xml"),
+                    prettyPrintXML, StandardCharsets.UTF_8);
+
+            // Java 7 - write to file
+            //Files.write(Paths.get("/home/mkyong/test.xml"),
+            //    prettyPrintXML.getBytes(StandardCharsets.UTF_8));
+
+            // BufferedWriter - write to file
+            /*try (FileWriter writer = new FileWriter("/home/mkyong/test.xml");
+                 BufferedWriter bw = new BufferedWriter(writer)) {
+                bw.write(xml);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }*/
+
+        } catch (TransformerException | XMLStreamException | IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    // StAX Cursor API
+    private static void writeXml(OutputStream out) throws XMLStreamException {
+
+        XMLOutputFactory output = XMLOutputFactory.newInstance();
+
+        XMLStreamWriter writer = output.createXMLStreamWriter(out);
+
+        writer.writeStartDocument("utf-8", "1.0");
+
+        // &lt;company&gt;
+        writer.writeStartElement("company");
+
+        // &lt;staff&gt;
+        // add XML comment
+        writer.writeComment("This is Staff 1001");
+
+        writer.writeStartElement("staff");
+        writer.writeAttribute("id", "1001");
+
+        writer.writeStartElement("name");
+        writer.writeCharacters("mkyong");
+        writer.writeEndElement();
+
+        writer.writeStartElement("salary");
+        writer.writeAttribute("currency", "USD");
+        writer.writeCharacters("5000");
+        writer.writeEndElement();
+
+        writer.writeStartElement("bio");
+        writer.writeCData("HTML tag &lt;code&gt;testing&lt;/code&gt;");
+        writer.writeEndElement();
+
+        writer.writeEndElement();
+        // &lt;/staff&gt;
+
+        // &lt;staff&gt;
+        writer.writeStartElement("staff");
+        writer.writeAttribute("id", "1002");
+
+        writer.writeStartElement("name");
+        writer.writeCharacters("yflow");
+        writer.writeEndElement();
+
+        writer.writeStartElement("salary");
+        writer.writeAttribute("currency", "EUR");
+        writer.writeCharacters("8000");
+        writer.writeEndElement();
+
+        writer.writeStartElement("bio");
+        writer.writeCData("a &amp; b");
+        writer.writeEndElement();
+
+        writer.writeEndElement();
+        // &lt;/staff&gt;
+
+        writer.writeEndDocument();
+        // &lt;/company&gt;
+
+        writer.flush();
+
+        writer.close();
+
+    }
+
+    private static String formatXML(String xml) throws TransformerException {
+
+        // write data to xml file
+        TransformerFactory transformerFactory = TransformerFactory.newInstance();
+        Transformer transformer = transformerFactory.newTransformer();
+
+        // pretty print by indention
+        transformer.setOutputProperty(OutputKeys.INDENT, "yes");
+
+        // add standalone="yes", add line break before the root element
+        transformer.setOutputProperty(OutputKeys.STANDALONE, "yes");
+
+        StreamSource source = new StreamSource(new StringReader(xml));
+        StringWriter output = new StringWriter();
+        transformer.transform(source, new StreamResult(output));
+
+        return output.toString();
+
+    }
+
+}
+</code></pre>
+      <p>Output</p>
+      <div class="filename">
+       /home/mkyong/test.xml
+      </div>
+      <pre><code class="language-xml">
+&lt;?xml version="1.0" encoding="UTF-8" standalone="yes"?&gt;
+&lt;company&gt;
+    &lt;!--This is Staff 1001--&gt;
+    &lt;staff id="1001"&gt;
+        &lt;name&gt;mkyong&lt;/name&gt;
+        &lt;salary currency="USD"&gt;5000&lt;/salary&gt;
+        &lt;bio&gt;
+            &lt;![CDATA[HTML tag &lt;code&gt;testing&lt;/code&gt;]]&gt;
+        &lt;/bio&gt;
+    &lt;/staff&gt;
+    &lt;staff id="1002"&gt;
+        &lt;name&gt;yflow&lt;/name&gt;
+        &lt;salary currency="EUR"&gt;8000&lt;/salary&gt;
+        &lt;bio&gt;
+            &lt;![CDATA[a &amp; b]]&gt;
+        &lt;/bio&gt;
+    &lt;/staff&gt;
+&lt;/company&gt;
+</code></pre>
+      <div class="note">
+       <p><strong>Convert XML to Java objects</strong><br> Try  to convert XML to/from Java objects.</p>
+      </div>
+      <h2 id="download-source-code"> 5. Download Source Code<br></h2>
+      <div class="github">
+       <p>$ git clone </p>
+       <p>$ cd java-xml</p>
+       <p>$ cd src/main/java/com/mkyong/xml/stax/</p>
+      </div>
+      <h2 id="references"> 6. References<br></h2>
+      <ul>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+      </ul>
+      <div class="pre-next-container d-flex justify-content-between"></div> <!-- current post ID --> 
+      <div class="d-flex justify-content-center ads-container-after-post ads-container"> <!-- Tag ID: mkyong_leaderboard_btf -->
+       <div align="center" data-freestar-ad="__320x100 __336x280" id="mkyong_leaderboard_btf">  
+       </div>
+      </div> <!-- loaded via JS -->
+      <div id="mk-afterpost-related"></div> <!-- author -->
+      <div id="author-container" class="d-flex align-items-center position-relative">
+       <div></div>
+       <div>
+        <h5></h5>
+        <p>Founder of , love Java and open source stuff. Follow him on . If you like my tutorials, consider make a donation to .</p>
+        <p></p>
+       </div>
+      </div> <!-- comments -->
+      <h4>Comments</h4>
+      <div class="wpdiscuz_top_clearing"></div>
+      <div id="comments" class="comments-area">
+       <div id="respond" style="width: 0;height: 0;clear: both;margin: 0;padding: 0;"></div>
+       <div id="wpdcom" class="wpdiscuz_unauth wpd-default wpd-layout-1 wpd-comments-open">
+        <div class="wc_social_plugin_wrapper"></div>
+        <div class="wpd-form-wrap">
+         <div class="wpd-form-head">
+          <div class="wpd-auth">
+           <div class="wpd-login"></div>
+          </div>
+         </div>
+         <div class="wpd-form wpd-form-wrapper wpd-main-form-wrapper" id="wpd-main-form-wrapper-0_0"></div>
+         <div id="wpdiscuz_hidden_secondary_form" style="display: none;">
+          <div class="wpd-form wpd-form-wrapper wpd-secondary-form-wrapper" id="wpd-secondary-form-wrapper-wpdiscuzuniqueid" style="display: none;">
+           <div class="wpd-secondary-forms-social-content"></div>
+           <div class="clearfix"></div>
+          </div>
+         </div>
+        </div>
+        <div id="wpd-threads" class="wpd-thread-wrapper">
+         <div class="wpd-thread-head">
+          <div class="wpd-thread-info " data-comments-count="0"> <span class="wpdtc" title="0">0</span> Comments
+          </div>
+          <div class="wpd-space"></div>
+          <div class="wpd-thread-filter"></div>
+         </div>
+         <div class="wpd-comment-info-bar">
+          <div class="wpd-current-view">
+           <i class="fas fa-quote-left"></i> Inline Feedbacks
+          </div>
+          <div class="wpd-filter-view-all">
+           View all comments
+          </div>
+         </div>
+         <div class="wpd-thread-list">
+          <div class="wpdiscuz-comment-pagination"></div>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div id="wpdiscuz-loading-bar" class="wpdiscuz-loading-bar-unauth"></div>
+      <div id="wpdiscuz-comment-message" class="wpdiscuz-comment-message-unauth"></div>
+     </article>
+    </main> <!-- right -->
+    <div id="sidebar-right" class="d-none d-xl-block col-xl-3">
+     <div class="ads-container-height1080">
+      <div class="ads-container-sticky">
+       <div class="ads-container">
+        <div align="center" data-freestar-ad="__300x600" id="mkyong_rail_right_1">  
+        </div>
+       </div>
+      </div>
+     </div>
+     <div class="ads-container-sticky">
+      <div class="ads-container">
+       <div align="center" data-freestar-ad="__300x600" id="mkyong_rail_right_2">  
+       </div>
+      </div>
+     </div>
+    </div>
+   </div> <!--/.row -->
+  </div> <!--/.container-fluid -->  <!-- Dynamic page generated in 0.092 seconds. --><!-- Cached page generated by WP-Super-Cache on 2021-09-29 17:25:03 -->
+ </body>
+</html>

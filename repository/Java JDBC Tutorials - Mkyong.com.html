@@ -1,0 +1,1653 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="google-site-verification" content="VsVvSTVAouAluNodWeR30BeIWTr4c84HvN4Fn9WBsak"> <!-- wp_head --> <!-- This site is optimized with the Yoast SEO plugin v15.5 - https://yoast.com/wordpress/plugins/seo/ -->
+  <title>Java JDBC Tutorials - Mkyong.com</title>
+  <meta name="description" content="- Java JDBC Tutorials">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Java JDBC Tutorials - Mkyong.com">
+  <meta property="og:description" content="- Java JDBC Tutorials">
+  <meta property="og:url" content="https://mkyong.com/tutorials/jdbc-tutorials/">
+  <meta property="og:site_name" content="Mkyong.com">
+  <meta property="article:published_time" content="2011-04-12T16:12:22+00:00">
+  <meta property="article:modified_time" content="2019-08-09T10:22:49+00:00">
+  <meta property="og:image" content="https://mkyong.com/wp-content/uploads/2012/07/java_logo_100.png">
+  <meta property="og:image:width" content="100">
+  <meta property="og:image:height" content="100">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:label1" content="Written by">
+  <meta name="twitter:data1" content="mkyong">
+  <meta name="twitter:label2" content="Est. reading time">
+  <meta name="twitter:data2" content="2 minutes">  <!-- / Yoast SEO plugin. -->  
+ </head>
+ <body>
+  <div class="container-fluid">
+   <div class="row"> <!-- left -->
+    <div id="sidebar-left" class="col-12 col-lg-3 col-xl-2"> <!-- sidebar-left-menu, see functions.php-->
+     <div class="offcanvas offcanvas-start" tabindex="-1" id="left-nav" aria-labelledby="left-nav">
+      <div class="offcanvas-header">
+       <h5 class="offcanvas-title">Main Tutorials</h5>
+      </div>
+      <div class="offcanvas-body sidebar-left-no-highlight">
+       <div>
+        <ul>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li class="active"></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+        </ul>
+       </div>
+      </div>
+     </div> <!-- ads -->
+     <div class="ads-container-sticky d-none d-lg-block">
+      <div class="ads-container">
+       <div align="center" data-freestar-ad="__160x600" id="mkyong_rail_left">  
+       </div>
+      </div>
+     </div>
+    </div> <!-- middle -->
+    <main id="main-middle" role="main" class="col-12 col-lg-9 col-xl-7">
+     <article id="main-content" class="dont-break-out">
+      <div id="title-container">
+       <h1>Java JDBC Tutorials</h1>
+       <div class="post-meta d-flex align-items-center position-relative">
+        <div></div>
+        <div>
+         <p><small class="extra-info">By  | <time datetime="2019-08-09T18:22:49+08:00"> Last updated: August 9, 2019</time></small></p>
+         <p><small class="extra-info">Viewed: 512,833 (+228 pv/w)</small></p>
+         <p><small class="extra-info"></small></p>
+         <div class="post-tag">
+          <small class="extra-info">Tags: |  | </small>
+         </div>
+         <p></p>
+        </div>
+       </div>
+      </div>
+      <div class="pre-next-container d-flex justify-content-between"></div>
+      <div class="pic"> 
+      </div>
+      <p>The  API enables Java application to interact with database.</p>
+      <h3>1. Getting Started</h3>
+      <ul>
+       <li></li>
+       <li></li>
+       <li></li>
+      </ul>
+      <h3>2. Statement</h3>
+      <p>This <code>Statement</code> has no cache, good for simple and static SQL statements like CREATE or DROP. In <code>Statement</code>, the way we construct the condition or parameters in SQL is prone to SQL injection, remember escape the quotes and special characters.</p>
+      <ul>
+       <li><code>statement.execute(sql)</code> – Normally for DDL like CREATE or DROP</li>
+       <li><code>statement.executeUpdate(sql)</code> – Normally for DML like INSERT, UPDATE, DELETE</li>
+       <li><code>statement.executeQuery(sql)</code> – Run SELECT query and return a <code>ResultSet</code></li>
+       <li><code>statement.executeBatch()</code> – Run SQL commands as a batch</li>
+      </ul>
+      <p>Articles:</p>
+      <ul>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+      </ul>
+      <h3>3. PreparedStatement</h3>
+      <p><code>PreparedStatement</code> extends <code>Statement</code> to provide better performance by precompiled and cached the SQL statement, good for SQL statement that need to execute multiple times. Furthermore, it provides many <code>setXxx()</code> to protect SQL injection by escaping the quotes and special characters.</p>
+      <ul>
+       <li><code>preparedStatement.execute()</code> – Normally for DDL like CREATE or DROP</li>
+       <li><code>preparedStatement.executeUpdate()</code> – Normally for DML like INSERT, UPDATE, DELETE</li>
+       <li><code>preparedStatement.executeQuery()</code> – Run SELECT query and return a <code>ResultSet</code></li>
+       <li><code>preparedStatement.executeBatch()</code> – Run SQL commands as a batch</li>
+      </ul>
+      <p>Articles:</p>
+      <ul>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+      </ul>
+      <h3>4. CallableStatement</h3>
+      <p><code>CallableStatement</code> extends <code>PreparedStatement</code>, for executing stored procedures or functions from the database.</p>
+      <ul>
+       <li><code>conn.prepareCall(sql)</code></li>
+      </ul>
+      <p><strong>Oracle database</strong></p>
+      <ul>
+       <li></li>
+       <li></li>
+       <li></li>
+      </ul>
+      <p><strong>PostgreSQL</strong></p>
+      <ul>
+       <li></li>
+      </ul>
+      <h3>5. Transaction</h3>
+      <ul>
+       <li></li>
+      </ul>
+      <pre><code class="language-java">
+conn.setAutoCommit(false); // default true
+// start transaction block
+
+// SQL statements
+
+// end transaction block
+conn.commit();
+conn.setAutoCommit(true);
+</code></pre>
+      <h3>6. Spring JDBC Database Access</h3>
+      <p><code>JdbcTemplate</code> examples.</p>
+      <ul>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+      </ul>
+      <h3>FAQs</h3>
+      <ul>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+      </ul>
+      <h3>References</h3>
+      <ul>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+      </ul>
+      <p><strong>Oracle</strong></p>
+      <ul>
+       <li></li>
+       <li></li>
+      </ul>
+      <p><strong>MySQL</strong></p>
+      <ul>
+       <li></li>
+       <li></li>
+      </ul>
+      <p><strong>PostgreSQL</strong></p>
+      <ul>
+       <li></li>
+       <li></li>
+      </ul>
+      <div class="pre-next-container d-flex justify-content-between"></div> <!-- current post ID --> 
+      <div class="d-flex justify-content-center ads-container-after-post ads-container"> <!-- Tag ID: mkyong_leaderboard_btf -->
+       <div align="center" data-freestar-ad="__320x100 __336x280" id="mkyong_leaderboard_btf">  
+       </div>
+      </div> <!-- loaded via JS -->
+      <div id="mk-afterpost-related"></div> <!-- author -->
+      <div id="author-container" class="d-flex align-items-center position-relative">
+       <div></div>
+       <div>
+        <h5></h5>
+        <p>Founder of , love Java and open source stuff. Follow him on . If you like my tutorials, consider make a donation to .</p>
+        <p></p>
+       </div>
+      </div> <!-- comments -->
+      <h4>Comments</h4>
+      <div class="wpdiscuz_top_clearing"></div>
+      <div id="comments" class="comments-area">
+       <div id="respond" style="width: 0;height: 0;clear: both;margin: 0;padding: 0;"></div>
+       <div id="wpdcom" class="wpdiscuz_unauth wpd-default wpd-layout-1 wpd-comments-open">
+        <div class="wc_social_plugin_wrapper"></div>
+        <div class="wpd-form-wrap">
+         <div class="wpd-form-head">
+          <div class="wpd-auth">
+           <div class="wpd-login"></div>
+          </div>
+         </div>
+         <div class="wpd-form wpd-form-wrapper wpd-main-form-wrapper" id="wpd-main-form-wrapper-0_0"></div>
+         <div id="wpdiscuz_hidden_secondary_form" style="display: none;">
+          <div class="wpd-form wpd-form-wrapper wpd-secondary-form-wrapper" id="wpd-secondary-form-wrapper-wpdiscuzuniqueid" style="display: none;">
+           <div class="wpd-secondary-forms-social-content"></div>
+           <div class="clearfix"></div>
+          </div>
+         </div>
+        </div>
+        <div id="wpd-threads" class="wpd-thread-wrapper">
+         <div class="wpd-thread-head">
+          <div class="wpd-thread-info " data-comments-count="27"> <span class="wpdtc" title="27">27</span> Comments
+          </div>
+          <div class="wpd-space"></div>
+          <div class="wpd-thread-filter">
+           <div class="wpd-filter wpdf-sorting"> <span class="wpdiscuz-sort-button wpdiscuz-vote-sort-up wpdiscuz-sort-button-active" data-sorting="by_vote">Most Voted</span> <i class="fas fa-sort-down"></i>
+            <div class="wpdiscuz-sort-buttons"> <span class="wpdiscuz-sort-button wpdiscuz-date-sort-desc" data-sorting="newest">Newest</span> <span class="wpdiscuz-sort-button wpdiscuz-date-sort-asc" data-sorting="oldest">Oldest</span>
+            </div>
+           </div>
+          </div>
+         </div>
+         <div class="wpd-comment-info-bar">
+          <div class="wpd-current-view">
+           <i class="fas fa-quote-left"></i> Inline Feedbacks
+          </div>
+          <div class="wpd-filter-view-all">
+           View all comments
+          </div>
+         </div>
+         <div class="wpd-thread-list">
+          <div id="wpd-comm-1053091_0" class="wpd-comment wpd_comment_level-1">
+           <div class="wpd-comment-wrap wpd-blog-guest">
+            <div class="wpd-comment-left ">
+             <div class="wpd-avatar "> 
+             </div>
+            </div>
+            <div id="comment-1053091" class="wpd-comment-right">
+             <div class="wpd-comment-header">
+              <div class="wpd-comment-author ">
+                Ng?c Kh??ng
+              </div>
+              <div class="wpd-comment-date" title="July 5, 2017 2:35 pm"> <i class="far fa-clock" aria-hidden="true"></i> 4 years ago
+              </div>
+              <div class="wpd-space"></div>
+              <div class="wpd-comment-link wpd-hidden">
+               <div style="" class="comment_flag comment_flag_modal wc_flag_tooltipster wpf-cta wpd-field-desc" wpd-tooltip-position="left" id="fc_1053091" wpd-tooltip="Click to flag and open «Comment Reporting» form. You can choose reporting category and send message to website administrator. Admins may or may not choose to remove the comment or block the author. And please don" t worry, your report will be anonymous.'>
+                <i class="fas fa-flag"></i>
+               </div>
+              </div>
+             </div>
+             <div class="wpd-comment-text">
+              <p>Thank you very much :)))</p>
+             </div>
+             <div class="wpd-comment-footer">
+              <div class="wpd-vote">
+               <div class="wpd-vote-up wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0V0z" /><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z" />
+                </svg>
+               </div>
+               <div class="wpd-vote-result wpd-up" title="1">
+                1
+               </div>
+               <div class="wpd-vote-down wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0z" /><path d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z" />
+                </svg>
+               </div>
+              </div>
+              <div class="wpd-reply-button"> 
+               <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                <path d="M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z" /><path d="M0 0h24v24H0z" fill="none" />
+               </svg> <span>Reply</span>
+              </div>
+              <div class="wpd-space"></div>
+             </div>
+            </div>
+           </div>
+           <div id="wpdiscuz_form_anchor-1053091_0"></div>
+          </div>
+          <div id="wpd-comm-48856_0" class="wpd-comment wpd_comment_level-1">
+           <div class="wpd-comment-wrap wpd-blog-guest">
+            <div class="wpd-comment-left ">
+             <div class="wpd-avatar "> 
+             </div>
+            </div>
+            <div id="comment-48856" class="wpd-comment-right">
+             <div class="wpd-comment-header">
+              <div class="wpd-comment-author ">
+                anonim
+              </div>
+              <div class="wpd-comment-date" title="April 14, 2011 2:27 am"> <i class="far fa-clock" aria-hidden="true"></i> 10 years ago
+              </div>
+              <div class="wpd-space"></div>
+              <div class="wpd-comment-link wpd-hidden">
+               <div style="" class="comment_flag comment_flag_modal wc_flag_tooltipster wpf-cta wpd-field-desc" wpd-tooltip-position="left" id="fc_48856" wpd-tooltip="Click to flag and open «Comment Reporting» form. You can choose reporting category and send message to website administrator. Admins may or may not choose to remove the comment or block the author. And please don" t worry, your report will be anonymous.'>
+                <i class="fas fa-flag"></i>
+               </div>
+              </div>
+             </div>
+             <div class="wpd-comment-text">
+              <p>An article about deadlocks would be appreciated.</p>
+             </div>
+             <div class="wpd-comment-footer">
+              <div class="wpd-vote">
+               <div class="wpd-vote-up wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0V0z" /><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z" />
+                </svg>
+               </div>
+               <div class="wpd-vote-result wpd-up" title="1">
+                1
+               </div>
+               <div class="wpd-vote-down wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0z" /><path d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z" />
+                </svg>
+               </div>
+              </div>
+              <div class="wpd-reply-button"> 
+               <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                <path d="M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z" /><path d="M0 0h24v24H0z" fill="none" />
+               </svg> <span>Reply</span>
+              </div>
+              <div class="wpd-space"></div>
+             </div>
+            </div>
+           </div>
+           <div id="wpdiscuz_form_anchor-48856_0"></div>
+          </div>
+          <div id="wpd-comm-1052300_0" class="wpd-comment wpd_comment_level-1">
+           <div class="wpd-comment-wrap wpd-blog-guest">
+            <div class="wpd-comment-left ">
+             <div class="wpd-avatar "> 
+             </div>
+            </div>
+            <div id="comment-1052300" class="wpd-comment-right">
+             <div class="wpd-comment-header">
+              <div class="wpd-comment-author ">
+                Dan de Man
+              </div>
+              <div class="wpd-comment-date" title="March 17, 2017 3:02 am"> <i class="far fa-clock" aria-hidden="true"></i> 4 years ago
+              </div>
+              <div class="wpd-space"></div>
+              <div class="wpd-comment-link wpd-hidden">
+               <div style="" class="comment_flag comment_flag_modal wc_flag_tooltipster wpf-cta wpd-field-desc" wpd-tooltip-position="left" id="fc_1052300" wpd-tooltip="Click to flag and open «Comment Reporting» form. You can choose reporting category and send message to website administrator. Admins may or may not choose to remove the comment or block the author. And please don" t worry, your report will be anonymous.'>
+                <i class="fas fa-flag"></i>
+               </div>
+              </div>
+             </div>
+             <div class="wpd-comment-text">
+              <p>You’re my favorite person in the world!</p>
+             </div>
+             <div class="wpd-comment-footer">
+              <div class="wpd-vote">
+               <div class="wpd-vote-up wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0V0z" /><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z" />
+                </svg>
+               </div>
+               <div class="wpd-vote-result" title="0">
+                0
+               </div>
+               <div class="wpd-vote-down wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0z" /><path d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z" />
+                </svg>
+               </div>
+              </div>
+              <div class="wpd-reply-button"> 
+               <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                <path d="M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z" /><path d="M0 0h24v24H0z" fill="none" />
+               </svg> <span>Reply</span>
+              </div>
+              <div class="wpd-space"></div>
+             </div>
+            </div>
+           </div>
+           <div id="wpdiscuz_form_anchor-1052300_0"></div>
+          </div>
+          <div id="wpd-comm-1050505_0" class="wpd-comment wpd_comment_level-1">
+           <div class="wpd-comment-wrap wpd-blog-guest">
+            <div class="wpd-comment-left ">
+             <div class="wpd-avatar "> 
+             </div>
+            </div>
+            <div id="comment-1050505" class="wpd-comment-right">
+             <div class="wpd-comment-header">
+              <div class="wpd-comment-author ">
+                vinoth
+              </div>
+              <div class="wpd-comment-date" title="December 20, 2015 11:29 am"> <i class="far fa-clock" aria-hidden="true"></i> 5 years ago
+              </div>
+              <div class="wpd-space"></div>
+              <div class="wpd-comment-link wpd-hidden">
+               <div style="" class="comment_flag comment_flag_modal wc_flag_tooltipster wpf-cta wpd-field-desc" wpd-tooltip-position="left" id="fc_1050505" wpd-tooltip="Click to flag and open «Comment Reporting» form. You can choose reporting category and send message to website administrator. Admins may or may not choose to remove the comment or block the author. And please don" t worry, your report will be anonymous.'>
+                <i class="fas fa-flag"></i>
+               </div>
+              </div>
+             </div>
+             <div class="wpd-comment-text">
+              <p>sir how to compare two images in java</p>
+             </div>
+             <div class="wpd-comment-footer">
+              <div class="wpd-vote">
+               <div class="wpd-vote-up wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0V0z" /><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z" />
+                </svg>
+               </div>
+               <div class="wpd-vote-result" title="0">
+                0
+               </div>
+               <div class="wpd-vote-down wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0z" /><path d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z" />
+                </svg>
+               </div>
+              </div>
+              <div class="wpd-reply-button"> 
+               <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                <path d="M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z" /><path d="M0 0h24v24H0z" fill="none" />
+               </svg> <span>Reply</span>
+              </div>
+              <div class="wpd-space"></div>
+             </div>
+            </div>
+           </div>
+           <div id="wpdiscuz_form_anchor-1050505_0"></div>
+          </div>
+          <div id="wpd-comm-1044008_0" class="wpd-comment wpd_comment_level-1">
+           <div class="wpd-comment-wrap wpd-blog-guest">
+            <div class="wpd-comment-left ">
+             <div class="wpd-avatar "> 
+             </div>
+            </div>
+            <div id="comment-1044008" class="wpd-comment-right">
+             <div class="wpd-comment-header">
+              <div class="wpd-comment-author ">
+                AboAbdullah
+              </div>
+              <div class="wpd-comment-date" title="December 9, 2013 6:33 pm"> <i class="far fa-clock" aria-hidden="true"></i> 7 years ago
+              </div>
+              <div class="wpd-space"></div>
+              <div class="wpd-comment-link wpd-hidden">
+               <div style="" class="comment_flag comment_flag_modal wc_flag_tooltipster wpf-cta wpd-field-desc" wpd-tooltip-position="left" id="fc_1044008" wpd-tooltip="Click to flag and open «Comment Reporting» form. You can choose reporting category and send message to website administrator. Admins may or may not choose to remove the comment or block the author. And please don" t worry, your report will be anonymous.'>
+                <i class="fas fa-flag"></i>
+               </div>
+              </div>
+             </div>
+             <div class="wpd-comment-text">
+              <p>Thank You for very useful tutorial<br> I have question related to JDBC can you help me with it ?<br> I want to draw bezier cubic curves by retrieving data from MySQL<br> database and then display the shape on JFrame I have table has 3 columns<br> (ID, ObjectID, Points) Points column is coordinates of cubic curves the statement is</p>
+              <p>SELECT * FROM DB.TABNAME WHERE OBJECTID=1;</p>
+              <p>ObjectID=1 has 11 ID’s, each ID contains a shape if i combine all ID`s together will form composite shape<br> How can i retrieve data from MySQL database, that data are path to draw bezier cubic curves in java GUI?</p>
+             </div>
+             <div class="wpd-comment-footer">
+              <div class="wpd-vote">
+               <div class="wpd-vote-up wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0V0z" /><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z" />
+                </svg>
+               </div>
+               <div class="wpd-vote-result" title="0">
+                0
+               </div>
+               <div class="wpd-vote-down wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0z" /><path d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z" />
+                </svg>
+               </div>
+              </div>
+              <div class="wpd-reply-button"> 
+               <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                <path d="M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z" /><path d="M0 0h24v24H0z" fill="none" />
+               </svg> <span>Reply</span>
+              </div>
+              <div class="wpd-space"></div>
+             </div>
+            </div>
+           </div>
+           <div id="wpdiscuz_form_anchor-1044008_0"></div>
+          </div>
+          <div id="wpd-comm-138104_0" class="wpd-comment wpd_comment_level-1">
+           <div class="wpd-comment-wrap wpd-blog-guest">
+            <div class="wpd-comment-left ">
+             <div class="wpd-avatar "> 
+             </div>
+            </div>
+            <div id="comment-138104" class="wpd-comment-right">
+             <div class="wpd-comment-header">
+              <div class="wpd-comment-author ">
+                vittal
+              </div>
+              <div class="wpd-comment-date" title="September 21, 2013 9:18 pm"> <i class="far fa-clock" aria-hidden="true"></i> 8 years ago
+              </div>
+              <div class="wpd-space"></div>
+              <div class="wpd-comment-link wpd-hidden">
+               <div style="" class="comment_flag comment_flag_modal wc_flag_tooltipster wpf-cta wpd-field-desc" wpd-tooltip-position="left" id="fc_138104" wpd-tooltip="Click to flag and open «Comment Reporting» form. You can choose reporting category and send message to website administrator. Admins may or may not choose to remove the comment or block the author. And please don" t worry, your report will be anonymous.'>
+                <i class="fas fa-flag"></i>
+               </div>
+              </div>
+             </div>
+             <div class="wpd-comment-text">
+              <p>hi mkyong, its really awesome, a very good site to learn……<br> thnq u….</p>
+             </div>
+             <div class="wpd-comment-footer">
+              <div class="wpd-vote">
+               <div class="wpd-vote-up wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0V0z" /><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z" />
+                </svg>
+               </div>
+               <div class="wpd-vote-result" title="0">
+                0
+               </div>
+               <div class="wpd-vote-down wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0z" /><path d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z" />
+                </svg>
+               </div>
+              </div>
+              <div class="wpd-reply-button"> 
+               <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                <path d="M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z" /><path d="M0 0h24v24H0z" fill="none" />
+               </svg> <span>Reply</span>
+              </div>
+              <div class="wpd-space"></div>
+             </div>
+            </div>
+           </div>
+           <div id="wpdiscuz_form_anchor-138104_0"></div>
+          </div>
+          <div id="wpd-comm-136487_0" class="wpd-comment wpd_comment_level-1">
+           <div class="wpd-comment-wrap wpd-blog-guest">
+            <div class="wpd-comment-left ">
+             <div class="wpd-avatar "> 
+             </div>
+            </div>
+            <div id="comment-136487" class="wpd-comment-right">
+             <div class="wpd-comment-header">
+              <div class="wpd-comment-author ">
+                vishwas
+              </div>
+              <div class="wpd-comment-date" title="July 24, 2013 3:20 am"> <i class="far fa-clock" aria-hidden="true"></i> 8 years ago
+              </div>
+              <div class="wpd-space"></div>
+              <div class="wpd-comment-link wpd-hidden">
+               <div style="" class="comment_flag comment_flag_modal wc_flag_tooltipster wpf-cta wpd-field-desc" wpd-tooltip-position="left" id="fc_136487" wpd-tooltip="Click to flag and open «Comment Reporting» form. You can choose reporting category and send message to website administrator. Admins may or may not choose to remove the comment or block the author. And please don" t worry, your report will be anonymous.'>
+                <i class="fas fa-flag"></i>
+               </div>
+              </div>
+             </div>
+             <div class="wpd-comment-text">
+              <p>hi yong</p>
+              <p>Can you tell me how to get list of database in Oracle as well as MySql using java?<br> Like SQLYog IDE which lists all databases in MySql.<br> I want the same thing. I want to connect to any Database server and fetch list of database in it.</p>
+             </div>
+             <div class="wpd-comment-footer">
+              <div class="wpd-vote">
+               <div class="wpd-vote-up wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0V0z" /><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z" />
+                </svg>
+               </div>
+               <div class="wpd-vote-result" title="0">
+                0
+               </div>
+               <div class="wpd-vote-down wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0z" /><path d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z" />
+                </svg>
+               </div>
+              </div>
+              <div class="wpd-reply-button"> 
+               <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                <path d="M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z" /><path d="M0 0h24v24H0z" fill="none" />
+               </svg> <span>Reply</span>
+              </div>
+              <div class="wpd-space"></div>
+             </div>
+            </div>
+           </div>
+           <div id="wpdiscuz_form_anchor-136487_0"></div>
+          </div>
+          <div id="wpd-comm-135742_0" class="wpd-comment wpd_comment_level-1">
+           <div class="wpd-comment-wrap wpd-blog-guest">
+            <div class="wpd-comment-left ">
+             <div class="wpd-avatar "> 
+             </div>
+            </div>
+            <div id="comment-135742" class="wpd-comment-right">
+             <div class="wpd-comment-header">
+              <div class="wpd-comment-author ">
+                panji
+              </div>
+              <div class="wpd-comment-date" title="July 4, 2013 4:26 pm"> <i class="far fa-clock" aria-hidden="true"></i> 8 years ago
+              </div>
+              <div class="wpd-space"></div>
+              <div class="wpd-comment-link wpd-hidden">
+               <div style="" class="comment_flag comment_flag_modal wc_flag_tooltipster wpf-cta wpd-field-desc" wpd-tooltip-position="left" id="fc_135742" wpd-tooltip="Click to flag and open «Comment Reporting» form. You can choose reporting category and send message to website administrator. Admins may or may not choose to remove the comment or block the author. And please don" t worry, your report will be anonymous.'>
+                <i class="fas fa-flag"></i>
+               </div>
+              </div>
+             </div>
+             <div class="wpd-comment-text">
+              <p>thansk for u share sir,</p>
+              <p>nice post</p>
+             </div>
+             <div class="wpd-comment-footer">
+              <div class="wpd-vote">
+               <div class="wpd-vote-up wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0V0z" /><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z" />
+                </svg>
+               </div>
+               <div class="wpd-vote-result" title="0">
+                0
+               </div>
+               <div class="wpd-vote-down wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0z" /><path d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z" />
+                </svg>
+               </div>
+              </div>
+              <div class="wpd-reply-button"> 
+               <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                <path d="M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z" /><path d="M0 0h24v24H0z" fill="none" />
+               </svg> <span>Reply</span>
+              </div>
+              <div class="wpd-space"></div>
+             </div>
+            </div>
+           </div>
+           <div id="wpdiscuz_form_anchor-135742_0"></div>
+          </div>
+          <div id="wpd-comm-132828_0" class="wpd-comment wpd_comment_level-1">
+           <div class="wpd-comment-wrap wpd-blog-guest">
+            <div class="wpd-comment-left ">
+             <div class="wpd-avatar "> 
+             </div>
+            </div>
+            <div id="comment-132828" class="wpd-comment-right">
+             <div class="wpd-comment-header">
+              <div class="wpd-comment-author ">
+                venkat
+              </div>
+              <div class="wpd-comment-date" title="May 10, 2013 2:27 pm"> <i class="far fa-clock" aria-hidden="true"></i> 8 years ago
+              </div>
+              <div class="wpd-space"></div>
+              <div class="wpd-comment-link wpd-hidden">
+               <div style="" class="comment_flag comment_flag_modal wc_flag_tooltipster wpf-cta wpd-field-desc" wpd-tooltip-position="left" id="fc_132828" wpd-tooltip="Click to flag and open «Comment Reporting» form. You can choose reporting category and send message to website administrator. Admins may or may not choose to remove the comment or block the author. And please don" t worry, your report will be anonymous.'>
+                <i class="fas fa-flag"></i>
+               </div>
+              </div>
+             </div>
+             <div class="wpd-comment-text">
+              <p>i want subscription with jdbc code pls help</p>
+             </div>
+             <div class="wpd-comment-footer">
+              <div class="wpd-vote">
+               <div class="wpd-vote-up wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0V0z" /><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z" />
+                </svg>
+               </div>
+               <div class="wpd-vote-result" title="0">
+                0
+               </div>
+               <div class="wpd-vote-down wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0z" /><path d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z" />
+                </svg>
+               </div>
+              </div>
+              <div class="wpd-reply-button"> 
+               <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                <path d="M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z" /><path d="M0 0h24v24H0z" fill="none" />
+               </svg> <span>Reply</span>
+              </div>
+              <div class="wpd-space"></div>
+             </div>
+            </div>
+           </div>
+           <div id="wpdiscuz_form_anchor-132828_0"></div>
+          </div>
+          <div id="wpd-comm-131242_0" class="wpd-comment wpd_comment_level-1">
+           <div class="wpd-comment-wrap wpd-blog-guest">
+            <div class="wpd-comment-left ">
+             <div class="wpd-avatar "> 
+             </div>
+            </div>
+            <div id="comment-131242" class="wpd-comment-right">
+             <div class="wpd-comment-header">
+              <div class="wpd-comment-author ">
+                edo
+              </div>
+              <div class="wpd-comment-date" title="April 5, 2013 5:21 pm"> <i class="far fa-clock" aria-hidden="true"></i> 8 years ago
+              </div>
+              <div class="wpd-space"></div>
+              <div class="wpd-comment-link wpd-hidden">
+               <div style="" class="comment_flag comment_flag_modal wc_flag_tooltipster wpf-cta wpd-field-desc" wpd-tooltip-position="left" id="fc_131242" wpd-tooltip="Click to flag and open «Comment Reporting» form. You can choose reporting category and send message to website administrator. Admins may or may not choose to remove the comment or block the author. And please don" t worry, your report will be anonymous.'>
+                <i class="fas fa-flag"></i>
+               </div>
+              </div>
+             </div>
+             <div class="wpd-comment-text">
+              <p>Hi Mr mkyong, your post’s very awesome and really helpful</p>
+             </div>
+             <div class="wpd-comment-footer">
+              <div class="wpd-vote">
+               <div class="wpd-vote-up wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0V0z" /><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z" />
+                </svg>
+               </div>
+               <div class="wpd-vote-result" title="0">
+                0
+               </div>
+               <div class="wpd-vote-down wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0z" /><path d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z" />
+                </svg>
+               </div>
+              </div>
+              <div class="wpd-reply-button"> 
+               <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                <path d="M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z" /><path d="M0 0h24v24H0z" fill="none" />
+               </svg> <span>Reply</span>
+              </div>
+              <div class="wpd-space"></div>
+             </div>
+            </div>
+           </div>
+           <div id="wpdiscuz_form_anchor-131242_0"></div>
+          </div>
+          <div id="wpd-comm-131084_0" class="wpd-comment wpd_comment_level-1">
+           <div class="wpd-comment-wrap wpd-blog-guest">
+            <div class="wpd-comment-left ">
+             <div class="wpd-avatar "> 
+             </div>
+            </div>
+            <div id="comment-131084" class="wpd-comment-right">
+             <div class="wpd-comment-header">
+              <div class="wpd-comment-author ">
+                Ashabasa
+              </div>
+              <div class="wpd-comment-date" title="April 1, 2013 10:02 pm"> <i class="far fa-clock" aria-hidden="true"></i> 8 years ago
+              </div>
+              <div class="wpd-space"></div>
+              <div class="wpd-comment-link wpd-hidden">
+               <div style="" class="comment_flag comment_flag_modal wc_flag_tooltipster wpf-cta wpd-field-desc" wpd-tooltip-position="left" id="fc_131084" wpd-tooltip="Click to flag and open «Comment Reporting» form. You can choose reporting category and send message to website administrator. Admins may or may not choose to remove the comment or block the author. And please don" t worry, your report will be anonymous.'>
+                <i class="fas fa-flag"></i>
+               </div>
+              </div>
+             </div>
+             <div class="wpd-comment-text">
+              <p>Hello</p>
+              <p>I’m creating a web service on Java. And I need it to connect with many dbms (Oracle, MySql…). Is there a way to do that ?<br> PS :I’m working with hibernate.</p>
+             </div>
+             <div class="wpd-comment-footer">
+              <div class="wpd-vote">
+               <div class="wpd-vote-up wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0V0z" /><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z" />
+                </svg>
+               </div>
+               <div class="wpd-vote-result" title="0">
+                0
+               </div>
+               <div class="wpd-vote-down wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0z" /><path d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z" />
+                </svg>
+               </div>
+              </div>
+              <div class="wpd-reply-button"> 
+               <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                <path d="M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z" /><path d="M0 0h24v24H0z" fill="none" />
+               </svg> <span>Reply</span>
+              </div>
+              <div class="wpd-space"></div>
+             </div>
+            </div>
+           </div>
+           <div id="wpdiscuz_form_anchor-131084_0"></div>
+          </div>
+          <div id="wpd-comm-126727_0" class="wpd-comment wpd_comment_level-1">
+           <div class="wpd-comment-wrap wpd-blog-guest">
+            <div class="wpd-comment-left ">
+             <div class="wpd-avatar "> 
+             </div>
+            </div>
+            <div id="comment-126727" class="wpd-comment-right">
+             <div class="wpd-comment-header">
+              <div class="wpd-comment-author ">
+                venkat
+              </div>
+              <div class="wpd-comment-date" title="January 16, 2013 10:17 pm"> <i class="far fa-clock" aria-hidden="true"></i> 8 years ago
+              </div>
+              <div class="wpd-space"></div>
+              <div class="wpd-comment-link wpd-hidden">
+               <div style="" class="comment_flag comment_flag_modal wc_flag_tooltipster wpf-cta wpd-field-desc" wpd-tooltip-position="left" id="fc_126727" wpd-tooltip="Click to flag and open «Comment Reporting» form. You can choose reporting category and send message to website administrator. Admins may or may not choose to remove the comment or block the author. And please don" t worry, your report will be anonymous.'>
+                <i class="fas fa-flag"></i>
+               </div>
+              </div>
+             </div>
+             <div class="wpd-comment-text">
+              <p>i want all database data retrive in the xml file code</p>
+             </div>
+             <div class="wpd-comment-footer">
+              <div class="wpd-vote">
+               <div class="wpd-vote-up wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0V0z" /><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z" />
+                </svg>
+               </div>
+               <div class="wpd-vote-result" title="0">
+                0
+               </div>
+               <div class="wpd-vote-down wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0z" /><path d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z" />
+                </svg>
+               </div>
+              </div>
+              <div class="wpd-reply-button"> 
+               <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                <path d="M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z" /><path d="M0 0h24v24H0z" fill="none" />
+               </svg> <span>Reply</span>
+              </div>
+              <div class="wpd-space"></div>
+             </div>
+            </div>
+           </div>
+           <div id="wpdiscuz_form_anchor-126727_0"></div>
+          </div>
+          <div id="wpd-comm-126685_0" class="wpd-comment wpd_comment_level-1">
+           <div class="wpd-comment-wrap wpd-blog-guest">
+            <div class="wpd-comment-left ">
+             <div class="wpd-avatar "> 
+             </div>
+            </div>
+            <div id="comment-126685" class="wpd-comment-right">
+             <div class="wpd-comment-header">
+              <div class="wpd-comment-author ">
+                venkat
+              </div>
+              <div class="wpd-comment-date" title="January 16, 2013 1:01 pm"> <i class="far fa-clock" aria-hidden="true"></i> 8 years ago
+              </div>
+              <div class="wpd-space"></div>
+              <div class="wpd-comment-link wpd-hidden">
+               <div style="" class="comment_flag comment_flag_modal wc_flag_tooltipster wpf-cta wpd-field-desc" wpd-tooltip-position="left" id="fc_126685" wpd-tooltip="Click to flag and open «Comment Reporting» form. You can choose reporting category and send message to website administrator. Admins may or may not choose to remove the comment or block the author. And please don" t worry, your report will be anonymous.'>
+                <i class="fas fa-flag"></i>
+               </div>
+              </div>
+             </div>
+             <div class="wpd-comment-text">
+              <p>i want jdbc with xml programs…..</p>
+             </div>
+             <div class="wpd-comment-footer">
+              <div class="wpd-vote">
+               <div class="wpd-vote-up wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0V0z" /><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z" />
+                </svg>
+               </div>
+               <div class="wpd-vote-result" title="0">
+                0
+               </div>
+               <div class="wpd-vote-down wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0z" /><path d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z" />
+                </svg>
+               </div>
+              </div>
+              <div class="wpd-reply-button"> 
+               <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                <path d="M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z" /><path d="M0 0h24v24H0z" fill="none" />
+               </svg> <span>Reply</span>
+              </div>
+              <div class="wpd-space"></div>
+             </div>
+            </div>
+           </div>
+           <div id="wpdiscuz_form_anchor-126685_0"></div>
+          </div>
+          <div id="wpd-comm-126683_0" class="wpd-comment wpd_comment_level-1">
+           <div class="wpd-comment-wrap wpd-blog-guest">
+            <div class="wpd-comment-left ">
+             <div class="wpd-avatar "> 
+             </div>
+            </div>
+            <div id="comment-126683" class="wpd-comment-right">
+             <div class="wpd-comment-header">
+              <div class="wpd-comment-author ">
+                venkat
+              </div>
+              <div class="wpd-comment-date" title="January 16, 2013 12:48 pm"> <i class="far fa-clock" aria-hidden="true"></i> 8 years ago
+              </div>
+              <div class="wpd-space"></div>
+              <div class="wpd-comment-link wpd-hidden">
+               <div style="" class="comment_flag comment_flag_modal wc_flag_tooltipster wpf-cta wpd-field-desc" wpd-tooltip-position="left" id="fc_126683" wpd-tooltip="Click to flag and open «Comment Reporting» form. You can choose reporting category and send message to website administrator. Admins may or may not choose to remove the comment or block the author. And please don" t worry, your report will be anonymous.'>
+                <i class="fas fa-flag"></i>
+               </div>
+              </div>
+             </div>
+             <div class="wpd-comment-text">
+              <p>where is the search box in this website?</p>
+             </div>
+             <div class="wpd-comment-footer">
+              <div class="wpd-vote">
+               <div class="wpd-vote-up wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0V0z" /><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z" />
+                </svg>
+               </div>
+               <div class="wpd-vote-result" title="0">
+                0
+               </div>
+               <div class="wpd-vote-down wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0z" /><path d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z" />
+                </svg>
+               </div>
+              </div>
+              <div class="wpd-reply-button"> 
+               <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                <path d="M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z" /><path d="M0 0h24v24H0z" fill="none" />
+               </svg> <span>Reply</span>
+              </div>
+              <div class="wpd-space"></div>
+             </div>
+            </div>
+           </div>
+           <div id="wpdiscuz_form_anchor-126683_0"></div>
+          </div>
+          <div id="wpd-comm-126682_0" class="wpd-comment wpd_comment_level-1">
+           <div class="wpd-comment-wrap wpd-blog-guest">
+            <div class="wpd-comment-left ">
+             <div class="wpd-avatar "> 
+             </div>
+            </div>
+            <div id="comment-126682" class="wpd-comment-right">
+             <div class="wpd-comment-header">
+              <div class="wpd-comment-author ">
+                venkat
+              </div>
+              <div class="wpd-comment-date" title="January 16, 2013 12:47 pm"> <i class="far fa-clock" aria-hidden="true"></i> 8 years ago
+              </div>
+              <div class="wpd-space"></div>
+              <div class="wpd-comment-link wpd-hidden">
+               <div style="" class="comment_flag comment_flag_modal wc_flag_tooltipster wpf-cta wpd-field-desc" wpd-tooltip-position="left" id="fc_126682" wpd-tooltip="Click to flag and open «Comment Reporting» form. You can choose reporting category and send message to website administrator. Admins may or may not choose to remove the comment or block the author. And please don" t worry, your report will be anonymous.'>
+                <i class="fas fa-flag"></i>
+               </div>
+              </div>
+             </div>
+             <div class="wpd-comment-text">
+              <p>where is the search box inthis site?</p>
+             </div>
+             <div class="wpd-comment-footer">
+              <div class="wpd-vote">
+               <div class="wpd-vote-up wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0V0z" /><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z" />
+                </svg>
+               </div>
+               <div class="wpd-vote-result" title="0">
+                0
+               </div>
+               <div class="wpd-vote-down wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0z" /><path d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z" />
+                </svg>
+               </div>
+              </div>
+              <div class="wpd-reply-button"> 
+               <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                <path d="M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z" /><path d="M0 0h24v24H0z" fill="none" />
+               </svg> <span>Reply</span>
+              </div>
+              <div class="wpd-space"></div>
+             </div>
+            </div>
+           </div>
+           <div id="wpdiscuz_form_anchor-126682_0"></div>
+          </div>
+          <div id="wpd-comm-124422_0" class="wpd-comment wpd_comment_level-1">
+           <div class="wpd-comment-wrap wpd-blog-guest">
+            <div class="wpd-comment-left ">
+             <div class="wpd-avatar "> 
+             </div>
+            </div>
+            <div id="comment-124422" class="wpd-comment-right">
+             <div class="wpd-comment-header">
+              <div class="wpd-comment-author ">
+                srinivasa reddy
+              </div>
+              <div class="wpd-comment-date" title="November 27, 2012 1:17 pm"> <i class="far fa-clock" aria-hidden="true"></i> 8 years ago
+              </div>
+              <div class="wpd-space"></div>
+              <div class="wpd-comment-link wpd-hidden">
+               <div style="" class="comment_flag comment_flag_modal wc_flag_tooltipster wpf-cta wpd-field-desc" wpd-tooltip-position="left" id="fc_124422" wpd-tooltip="Click to flag and open «Comment Reporting» form. You can choose reporting category and send message to website administrator. Admins may or may not choose to remove the comment or block the author. And please don" t worry, your report will be anonymous.'>
+                <i class="fas fa-flag"></i>
+               </div>
+              </div>
+             </div>
+             <div class="wpd-comment-text">
+              <p>all the tutorials are very helpful for me and all others</p>
+              <p>can u upload tutorials for servlets ans jsp</p>
+              <p>thank you mr.yong</p>
+             </div>
+             <div class="wpd-comment-footer">
+              <div class="wpd-vote">
+               <div class="wpd-vote-up wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0V0z" /><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z" />
+                </svg>
+               </div>
+               <div class="wpd-vote-result" title="0">
+                0
+               </div>
+               <div class="wpd-vote-down wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0z" /><path d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z" />
+                </svg>
+               </div>
+              </div>
+              <div class="wpd-reply-button"> 
+               <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                <path d="M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z" /><path d="M0 0h24v24H0z" fill="none" />
+               </svg> <span>Reply</span>
+              </div>
+              <div class="wpd-space"></div>
+             </div>
+            </div>
+           </div>
+           <div id="wpdiscuz_form_anchor-124422_0"></div>
+          </div>
+          <div id="wpd-comm-122236_0" class="wpd-comment wpd_comment_level-1">
+           <div class="wpd-comment-wrap wpd-blog-guest">
+            <div class="wpd-comment-left ">
+             <div class="wpd-avatar "> 
+             </div>
+            </div>
+            <div id="comment-122236" class="wpd-comment-right">
+             <div class="wpd-comment-header">
+              <div class="wpd-comment-author ">
+                sexy back
+              </div>
+              <div class="wpd-comment-date" title="October 9, 2012 6:32 pm"> <i class="far fa-clock" aria-hidden="true"></i> 8 years ago
+              </div>
+              <div class="wpd-space"></div>
+              <div class="wpd-comment-link wpd-hidden">
+               <div style="" class="comment_flag comment_flag_modal wc_flag_tooltipster wpf-cta wpd-field-desc" wpd-tooltip-position="left" id="fc_122236" wpd-tooltip="Click to flag and open «Comment Reporting» form. You can choose reporting category and send message to website administrator. Admins may or may not choose to remove the comment or block the author. And please don" t worry, your report will be anonymous.'>
+                <i class="fas fa-flag"></i>
+               </div>
+              </div>
+             </div>
+             <div class="wpd-comment-text">
+              <p>Good article</p>
+             </div>
+             <div class="wpd-comment-footer">
+              <div class="wpd-vote">
+               <div class="wpd-vote-up wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0V0z" /><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z" />
+                </svg>
+               </div>
+               <div class="wpd-vote-result" title="0">
+                0
+               </div>
+               <div class="wpd-vote-down wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0z" /><path d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z" />
+                </svg>
+               </div>
+              </div>
+              <div class="wpd-reply-button"> 
+               <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                <path d="M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z" /><path d="M0 0h24v24H0z" fill="none" />
+               </svg> <span>Reply</span>
+              </div>
+              <div class="wpd-space"></div>
+             </div>
+            </div>
+           </div>
+           <div id="wpdiscuz_form_anchor-122236_0"></div>
+          </div>
+          <div id="wpd-comm-119034_0" class="wpd-comment wpd_comment_level-1">
+           <div class="wpd-comment-wrap wpd-blog-guest">
+            <div class="wpd-comment-left ">
+             <div class="wpd-avatar "> 
+             </div>
+            </div>
+            <div id="comment-119034" class="wpd-comment-right">
+             <div class="wpd-comment-header">
+              <div class="wpd-comment-author ">
+                Krishna Kumar
+              </div>
+              <div class="wpd-comment-date" title="September 26, 2012 11:40 pm"> <i class="far fa-clock" aria-hidden="true"></i> 9 years ago
+              </div>
+              <div class="wpd-space"></div>
+              <div class="wpd-comment-link wpd-hidden">
+               <div style="" class="comment_flag comment_flag_modal wc_flag_tooltipster wpf-cta wpd-field-desc" wpd-tooltip-position="left" id="fc_119034" wpd-tooltip="Click to flag and open «Comment Reporting» form. You can choose reporting category and send message to website administrator. Admins may or may not choose to remove the comment or block the author. And please don" t worry, your report will be anonymous.'>
+                <i class="fas fa-flag"></i>
+               </div>
+              </div>
+             </div>
+             <div class="wpd-comment-text">
+              <p>hi sir,could help me please,actually we are using prepared statement for speed up and much more,ok but i want to perform single operation not bulk,which one is better and fast general or prepared stament(and also in terms of sql injection).thanx a lot sir.</p>
+             </div>
+             <div class="wpd-comment-footer">
+              <div class="wpd-vote">
+               <div class="wpd-vote-up wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0V0z" /><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z" />
+                </svg>
+               </div>
+               <div class="wpd-vote-result" title="0">
+                0
+               </div>
+               <div class="wpd-vote-down wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0z" /><path d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z" />
+                </svg>
+               </div>
+              </div>
+              <div class="wpd-reply-button"> 
+               <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                <path d="M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z" /><path d="M0 0h24v24H0z" fill="none" />
+               </svg> <span>Reply</span>
+              </div>
+              <div class="wpd-space"></div>
+             </div>
+            </div>
+           </div>
+           <div id="wpdiscuz_form_anchor-119034_0"></div>
+          </div>
+          <div id="wpd-comm-110884_0" class="wpd-comment wpd_comment_level-1">
+           <div class="wpd-comment-wrap wpd-blog-guest">
+            <div class="wpd-comment-left ">
+             <div class="wpd-avatar "> 
+             </div>
+            </div>
+            <div id="comment-110884" class="wpd-comment-right">
+             <div class="wpd-comment-header">
+              <div class="wpd-comment-author ">
+                panji
+              </div>
+              <div class="wpd-comment-date" title="September 19, 2012 11:57 am"> <i class="far fa-clock" aria-hidden="true"></i> 9 years ago
+              </div>
+              <div class="wpd-space"></div>
+              <div class="wpd-comment-link wpd-hidden">
+               <div style="" class="comment_flag comment_flag_modal wc_flag_tooltipster wpf-cta wpd-field-desc" wpd-tooltip-position="left" id="fc_110884" wpd-tooltip="Click to flag and open «Comment Reporting» form. You can choose reporting category and send message to website administrator. Admins may or may not choose to remove the comment or block the author. And please don" t worry, your report will be anonymous.'>
+                <i class="fas fa-flag"></i>
+               </div>
+              </div>
+             </div>
+             <div class="wpd-comment-text">
+              <p>thanks for u tutorial</p>
+              <p>i like this posting</p>
+             </div>
+             <div class="wpd-comment-footer">
+              <div class="wpd-vote">
+               <div class="wpd-vote-up wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0V0z" /><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z" />
+                </svg>
+               </div>
+               <div class="wpd-vote-result" title="0">
+                0
+               </div>
+               <div class="wpd-vote-down wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0z" /><path d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z" />
+                </svg>
+               </div>
+              </div>
+              <div class="wpd-reply-button"> 
+               <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                <path d="M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z" /><path d="M0 0h24v24H0z" fill="none" />
+               </svg> <span>Reply</span>
+              </div>
+              <div class="wpd-space"></div>
+             </div>
+            </div>
+           </div>
+           <div id="wpdiscuz_form_anchor-110884_0"></div>
+          </div>
+          <div id="wpd-comm-85422_0" class="wpd-comment wpd_comment_level-1">
+           <div class="wpd-comment-wrap wpd-blog-guest">
+            <div class="wpd-comment-left ">
+             <div class="wpd-avatar "> 
+             </div>
+            </div>
+            <div id="comment-85422" class="wpd-comment-right">
+             <div class="wpd-comment-header">
+              <div class="wpd-comment-author ">
+                Crossroad
+              </div>
+              <div class="wpd-comment-date" title="August 13, 2012 12:15 am"> <i class="far fa-clock" aria-hidden="true"></i> 9 years ago
+              </div>
+              <div class="wpd-space"></div>
+              <div class="wpd-comment-link wpd-hidden">
+               <div style="" class="comment_flag comment_flag_modal wc_flag_tooltipster wpf-cta wpd-field-desc" wpd-tooltip-position="left" id="fc_85422" wpd-tooltip="Click to flag and open «Comment Reporting» form. You can choose reporting category and send message to website administrator. Admins may or may not choose to remove the comment or block the author. And please don" t worry, your report will be anonymous.'>
+                <i class="fas fa-flag"></i>
+               </div>
+              </div>
+             </div>
+             <div class="wpd-comment-text">
+              <p>Hi mkyong, very good tutorials! Thaks a lot for making java so simple =)</p>
+              <p>Can you make a tutorial about using trigger??</p>
+             </div>
+             <div class="wpd-comment-footer">
+              <div class="wpd-vote">
+               <div class="wpd-vote-up wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0V0z" /><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z" />
+                </svg>
+               </div>
+               <div class="wpd-vote-result" title="0">
+                0
+               </div>
+               <div class="wpd-vote-down wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0z" /><path d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z" />
+                </svg>
+               </div>
+              </div>
+              <div class="wpd-reply-button"> 
+               <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                <path d="M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z" /><path d="M0 0h24v24H0z" fill="none" />
+               </svg> <span>Reply</span>
+              </div>
+              <div class="wpd-space"></div>
+             </div>
+            </div>
+           </div>
+           <div id="wpdiscuz_form_anchor-85422_0"></div>
+          </div>
+          <div id="wpd-comm-84434_0" class="wpd-comment wpd_comment_level-1">
+           <div class="wpd-comment-wrap wpd-blog-guest">
+            <div class="wpd-comment-left ">
+             <div class="wpd-avatar "> 
+             </div>
+            </div>
+            <div id="comment-84434" class="wpd-comment-right">
+             <div class="wpd-comment-header">
+              <div class="wpd-comment-author ">
+                masood
+              </div>
+              <div class="wpd-comment-date" title="July 24, 2012 10:17 am"> <i class="far fa-clock" aria-hidden="true"></i> 9 years ago
+              </div>
+              <div class="wpd-space"></div>
+              <div class="wpd-comment-link wpd-hidden">
+               <div style="" class="comment_flag comment_flag_modal wc_flag_tooltipster wpf-cta wpd-field-desc" wpd-tooltip-position="left" id="fc_84434" wpd-tooltip="Click to flag and open «Comment Reporting» form. You can choose reporting category and send message to website administrator. Admins may or may not choose to remove the comment or block the author. And please don" t worry, your report will be anonymous.'>
+                <i class="fas fa-flag"></i>
+               </div>
+              </div>
+             </div>
+             <div class="wpd-comment-text">
+              <p>hi sir,</p>
+              <p>can u explain me, how can we get database table address in java program., pls help me out sir, this question asked in interview for my friend.</p>
+             </div>
+             <div class="wpd-comment-footer">
+              <div class="wpd-vote">
+               <div class="wpd-vote-up wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0V0z" /><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z" />
+                </svg>
+               </div>
+               <div class="wpd-vote-result" title="0">
+                0
+               </div>
+               <div class="wpd-vote-down wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0z" /><path d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z" />
+                </svg>
+               </div>
+              </div>
+              <div class="wpd-reply-button"> 
+               <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                <path d="M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z" /><path d="M0 0h24v24H0z" fill="none" />
+               </svg> <span>Reply</span>
+              </div>
+              <div class="wpd-space"></div>
+             </div>
+            </div>
+           </div>
+           <div id="wpdiscuz_form_anchor-84434_0"></div>
+          </div>
+          <div id="wpd-comm-84427_0" class="wpd-comment wpd_comment_level-1">
+           <div class="wpd-comment-wrap wpd-blog-guest">
+            <div class="wpd-comment-left ">
+             <div class="wpd-avatar "> 
+             </div>
+            </div>
+            <div id="comment-84427" class="wpd-comment-right">
+             <div class="wpd-comment-header">
+              <div class="wpd-comment-author ">
+                saroj
+              </div>
+              <div class="wpd-comment-date" title="July 24, 2012 4:31 am"> <i class="far fa-clock" aria-hidden="true"></i> 9 years ago
+              </div>
+              <div class="wpd-space"></div>
+              <div class="wpd-comment-link wpd-hidden">
+               <div style="" class="comment_flag comment_flag_modal wc_flag_tooltipster wpf-cta wpd-field-desc" wpd-tooltip-position="left" id="fc_84427" wpd-tooltip="Click to flag and open «Comment Reporting» form. You can choose reporting category and send message to website administrator. Admins may or may not choose to remove the comment or block the author. And please don" t worry, your report will be anonymous.'>
+                <i class="fas fa-flag"></i>
+               </div>
+              </div>
+             </div>
+             <div class="wpd-comment-text">
+              <p>thnx mr. yong this article of your’s abt JDBC helped me a lot</p>
+             </div>
+             <div class="wpd-comment-footer">
+              <div class="wpd-vote">
+               <div class="wpd-vote-up wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0V0z" /><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z" />
+                </svg>
+               </div>
+               <div class="wpd-vote-result" title="0">
+                0
+               </div>
+               <div class="wpd-vote-down wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0z" /><path d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z" />
+                </svg>
+               </div>
+              </div>
+              <div class="wpd-reply-button"> 
+               <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                <path d="M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z" /><path d="M0 0h24v24H0z" fill="none" />
+               </svg> <span>Reply</span>
+              </div>
+              <div class="wpd-space"></div>
+              <div class="wpd-toggle wpd-hidden wpd_not_clicked" wpd-tooltip="Hide Replies"> <i class="fas fa-chevron-up"></i>
+              </div>
+             </div>
+            </div>
+           </div>
+           <div id="wpdiscuz_form_anchor-84427_0"></div>
+           <div id="wpd-comm-84790_84427" class="wpd-comment wpd-reply wpd_comment_level-2">
+            <div class="wpd-comment-wrap wpd-blog-guest">
+             <div class="wpd-comment-left ">
+              <div class="wpd-avatar "> 
+              </div>
+             </div>
+             <div id="comment-84790" class="wpd-comment-right">
+              <div class="wpd-comment-header">
+               <div class="wpd-comment-author ">
+                 jainath Jaiswal
+               </div>
+               <div class="wpd-comment-date" title="July 30, 2012 8:46 pm"> <i class="far fa-clock" aria-hidden="true"></i> 9 years ago
+               </div>
+               <div class="wpd-space"></div>
+               <div class="wpd-comment-link wpd-hidden">
+                <div style="" class="comment_flag comment_flag_modal wc_flag_tooltipster wpf-cta wpd-field-desc" wpd-tooltip-position="left" id="fc_84790" wpd-tooltip="Click to flag and open «Comment Reporting» form. You can choose reporting category and send message to website administrator. Admins may or may not choose to remove the comment or block the author. And please don" t worry, your report will be anonymous.'>
+                 <i class="fas fa-flag"></i>
+                </div>
+               </div>
+              </div>
+              <div class="wpd-reply-to"> <i class="far fa-comments"></i> Reply to&nbsp; 
+              </div>
+              <div class="wpd-comment-text">
+               <p>thnx mr. yong this article of your’s abt JDBC helped me a lot</p>
+              </div>
+              <div class="wpd-comment-footer">
+               <div class="wpd-vote">
+                <div class="wpd-vote-up wpd_not_clicked"> 
+                 <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                  <path fill="none" d="M0 0h24v24H0V0z" /><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z" />
+                 </svg>
+                </div>
+                <div class="wpd-vote-result" title="0">
+                 0
+                </div>
+                <div class="wpd-vote-down wpd_not_clicked"> 
+                 <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                  <path fill="none" d="M0 0h24v24H0z" /><path d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z" />
+                 </svg>
+                </div>
+               </div>
+               <div class="wpd-reply-button"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path d="M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z" /><path d="M0 0h24v24H0z" fill="none" />
+                </svg> <span>Reply</span>
+               </div>
+               <div class="wpd-space"></div>
+              </div>
+             </div>
+            </div>
+            <div id="wpdiscuz_form_anchor-84790_84427"></div>
+           </div>
+          </div>
+          <div id="wpd-comm-84006_0" class="wpd-comment wpd_comment_level-1">
+           <div class="wpd-comment-wrap wpd-blog-guest">
+            <div class="wpd-comment-left ">
+             <div class="wpd-avatar "> 
+             </div>
+            </div>
+            <div id="comment-84006" class="wpd-comment-right">
+             <div class="wpd-comment-header">
+              <div class="wpd-comment-author ">
+                Saraswati
+              </div>
+              <div class="wpd-comment-date" title="July 10, 2012 8:32 pm"> <i class="far fa-clock" aria-hidden="true"></i> 9 years ago
+              </div>
+              <div class="wpd-space"></div>
+              <div class="wpd-comment-link wpd-hidden">
+               <div style="" class="comment_flag comment_flag_modal wc_flag_tooltipster wpf-cta wpd-field-desc" wpd-tooltip-position="left" id="fc_84006" wpd-tooltip="Click to flag and open «Comment Reporting» form. You can choose reporting category and send message to website administrator. Admins may or may not choose to remove the comment or block the author. And please don" t worry, your report will be anonymous.'>
+                <i class="fas fa-flag"></i>
+               </div>
+              </div>
+             </div>
+             <div class="wpd-comment-text">
+              <p>Hi Yong,<br> can you please suggest a good JSP tutorial?<br> thanks.</p>
+             </div>
+             <div class="wpd-comment-footer">
+              <div class="wpd-vote">
+               <div class="wpd-vote-up wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0V0z" /><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z" />
+                </svg>
+               </div>
+               <div class="wpd-vote-result" title="0">
+                0
+               </div>
+               <div class="wpd-vote-down wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0z" /><path d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z" />
+                </svg>
+               </div>
+              </div>
+              <div class="wpd-reply-button"> 
+               <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                <path d="M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z" /><path d="M0 0h24v24H0z" fill="none" />
+               </svg> <span>Reply</span>
+              </div>
+              <div class="wpd-space"></div>
+             </div>
+            </div>
+           </div>
+           <div id="wpdiscuz_form_anchor-84006_0"></div>
+          </div>
+          <div id="wpd-comm-75325_0" class="wpd-comment wpd_comment_level-1">
+           <div class="wpd-comment-wrap wpd-blog-guest">
+            <div class="wpd-comment-left ">
+             <div class="wpd-avatar "> 
+             </div>
+            </div>
+            <div id="comment-75325" class="wpd-comment-right">
+             <div class="wpd-comment-header">
+              <div class="wpd-comment-author ">
+                Raj
+              </div>
+              <div class="wpd-comment-date" title="December 27, 2011 11:42 am"> <i class="far fa-clock" aria-hidden="true"></i> 9 years ago
+              </div>
+              <div class="wpd-space"></div>
+              <div class="wpd-comment-link wpd-hidden">
+               <div style="" class="comment_flag comment_flag_modal wc_flag_tooltipster wpf-cta wpd-field-desc" wpd-tooltip-position="left" id="fc_75325" wpd-tooltip="Click to flag and open «Comment Reporting» form. You can choose reporting category and send message to website administrator. Admins may or may not choose to remove the comment or block the author. And please don" t worry, your report will be anonymous.'>
+                <i class="fas fa-flag"></i>
+               </div>
+              </div>
+             </div>
+             <div class="wpd-comment-text">
+              <p>nice article…….. keep it up,very helpful.</p>
+             </div>
+             <div class="wpd-comment-footer">
+              <div class="wpd-vote">
+               <div class="wpd-vote-up wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0V0z" /><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z" />
+                </svg>
+               </div>
+               <div class="wpd-vote-result" title="0">
+                0
+               </div>
+               <div class="wpd-vote-down wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0z" /><path d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z" />
+                </svg>
+               </div>
+              </div>
+              <div class="wpd-reply-button"> 
+               <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                <path d="M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z" /><path d="M0 0h24v24H0z" fill="none" />
+               </svg> <span>Reply</span>
+              </div>
+              <div class="wpd-space"></div>
+             </div>
+            </div>
+           </div>
+           <div id="wpdiscuz_form_anchor-75325_0"></div>
+          </div>
+          <div id="wpd-comm-49473_0" class="wpd-comment wpd_comment_level-1">
+           <div class="wpd-comment-wrap wpd-blog-guest">
+            <div class="wpd-comment-left ">
+             <div class="wpd-avatar "> 
+             </div>
+            </div>
+            <div id="comment-49473" class="wpd-comment-right">
+             <div class="wpd-comment-header">
+              <div class="wpd-comment-author ">
+                spaceinvader
+              </div>
+              <div class="wpd-comment-date" title="April 21, 2011 1:00 am"> <i class="far fa-clock" aria-hidden="true"></i> 10 years ago
+              </div>
+              <div class="wpd-space"></div>
+              <div class="wpd-comment-link wpd-hidden">
+               <div style="" class="comment_flag comment_flag_modal wc_flag_tooltipster wpf-cta wpd-field-desc" wpd-tooltip-position="left" id="fc_49473" wpd-tooltip="Click to flag and open «Comment Reporting» form. You can choose reporting category and send message to website administrator. Admins may or may not choose to remove the comment or block the author. And please don" t worry, your report will be anonymous.'>
+                <i class="fas fa-flag"></i>
+               </div>
+              </div>
+             </div>
+             <div class="wpd-comment-text">
+              <p>an article in JFreeChart and JavaMail 🙂 plz</p>
+             </div>
+             <div class="wpd-comment-footer">
+              <div class="wpd-vote">
+               <div class="wpd-vote-up wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0V0z" /><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z" />
+                </svg>
+               </div>
+               <div class="wpd-vote-result" title="0">
+                0
+               </div>
+               <div class="wpd-vote-down wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0z" /><path d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z" />
+                </svg>
+               </div>
+              </div>
+              <div class="wpd-reply-button"> 
+               <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                <path d="M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z" /><path d="M0 0h24v24H0z" fill="none" />
+               </svg> <span>Reply</span>
+              </div>
+              <div class="wpd-space"></div>
+              <div class="wpd-toggle wpd-hidden wpd_not_clicked" wpd-tooltip="Hide Replies"> <i class="fas fa-chevron-up"></i>
+              </div>
+             </div>
+            </div>
+           </div>
+           <div id="wpdiscuz_form_anchor-49473_0"></div>
+           <div id="wpd-comm-83649_49473" class="wpd-comment wpd-reply wpd_comment_level-2">
+            <div class="wpd-comment-wrap wpd-blog-guest">
+             <div class="wpd-comment-left ">
+              <div class="wpd-avatar "> 
+              </div>
+             </div>
+             <div id="comment-83649" class="wpd-comment-right">
+              <div class="wpd-comment-header">
+               <div class="wpd-comment-author ">
+                 Raj
+               </div>
+               <div class="wpd-comment-date" title="June 26, 2012 6:30 pm"> <i class="far fa-clock" aria-hidden="true"></i> 9 years ago
+               </div>
+               <div class="wpd-space"></div>
+               <div class="wpd-comment-link wpd-hidden">
+                <div style="" class="comment_flag comment_flag_modal wc_flag_tooltipster wpf-cta wpd-field-desc" wpd-tooltip-position="left" id="fc_83649" wpd-tooltip="Click to flag and open «Comment Reporting» form. You can choose reporting category and send message to website administrator. Admins may or may not choose to remove the comment or block the author. And please don" t worry, your report will be anonymous.'>
+                 <i class="fas fa-flag"></i>
+                </div>
+               </div>
+              </div>
+              <div class="wpd-reply-to"> <i class="far fa-comments"></i> Reply to&nbsp; 
+              </div>
+              <div class="wpd-comment-text">
+               <p>Very nice article</p>
+              </div>
+              <div class="wpd-comment-footer">
+               <div class="wpd-vote">
+                <div class="wpd-vote-up wpd_not_clicked"> 
+                 <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                  <path fill="none" d="M0 0h24v24H0V0z" /><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z" />
+                 </svg>
+                </div>
+                <div class="wpd-vote-result" title="0">
+                 0
+                </div>
+                <div class="wpd-vote-down wpd_not_clicked"> 
+                 <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                  <path fill="none" d="M0 0h24v24H0z" /><path d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z" />
+                 </svg>
+                </div>
+               </div>
+               <div class="wpd-reply-button"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path d="M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z" /><path d="M0 0h24v24H0z" fill="none" />
+                </svg> <span>Reply</span>
+               </div>
+               <div class="wpd-space"></div>
+              </div>
+             </div>
+            </div>
+            <div id="wpdiscuz_form_anchor-83649_49473"></div>
+           </div>
+          </div>
+          <div class="wpdiscuz-comment-pagination"></div>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div id="wpdiscuz-loading-bar" class="wpdiscuz-loading-bar-unauth"></div>
+      <div id="wpdiscuz-comment-message" class="wpdiscuz-comment-message-unauth"></div>
+     </article>
+    </main> <!-- right -->
+    <div id="sidebar-right" class="d-none d-xl-block col-xl-3">
+     <div class="ads-container-height1080">
+      <div class="ads-container-sticky">
+       <div class="ads-container">
+        <div align="center" data-freestar-ad="__300x600" id="mkyong_rail_right_1">  
+        </div>
+       </div>
+      </div>
+     </div>
+     <div class="ads-container-sticky">
+      <div class="ads-container">
+       <div align="center" data-freestar-ad="__300x600" id="mkyong_rail_right_2">  
+       </div>
+      </div>
+     </div>
+    </div>
+   </div> <!--/.row -->
+  </div> <!--/.container-fluid -->  <!-- Dynamic page generated in 0.119 seconds. --><!-- Cached page generated by WP-Super-Cache on 2021-09-30 00:34:46 -->
+ </body>
+</html>

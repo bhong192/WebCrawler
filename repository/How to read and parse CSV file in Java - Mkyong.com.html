@@ -1,0 +1,2042 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="google-site-verification" content="VsVvSTVAouAluNodWeR30BeIWTr4c84HvN4Fn9WBsak"> <!-- wp_head --> <!-- This site is optimized with the Yoast SEO plugin v15.5 - https://yoast.com/wordpress/plugins/seo/ -->
+  <title>How to read and parse CSV file in Java - Mkyong.com</title>
+  <meta name="description" content="Talks about CSV file parsing, RFC 4180, OpenCSV and Single class implementation examples to read and parse a CSV file.">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="How to read and parse CSV file in Java - Mkyong.com">
+  <meta property="og:description" content="Talks about CSV file parsing, RFC 4180, OpenCSV and Single class implementation examples to read and parse a CSV file.">
+  <meta property="og:url" content="https://mkyong.com/java/how-to-read-and-parse-csv-file-in-java/">
+  <meta property="og:site_name" content="Mkyong.com">
+  <meta property="article:published_time" content="2013-04-24T16:07:10+00:00">
+  <meta property="article:modified_time" content="2020-12-26T09:17:21+00:00">
+  <meta property="og:image" content="https://mkyong.com/wp-content/uploads/2013/04/country-csv-example.png">
+  <meta property="og:image:width" content="592">
+  <meta property="og:image:height" content="206">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:label1" content="Written by">
+  <meta name="twitter:data1" content="mkyong">
+  <meta name="twitter:label2" content="Est. reading time">
+  <meta name="twitter:data2" content="12 minutes">  <!-- / Yoast SEO plugin. -->  
+ </head>
+ <body>
+  <div class="container-fluid">
+   <div class="row"> <!-- left -->
+    <div id="sidebar-left" class="col-12 col-lg-3 col-xl-2"> <!-- sidebar-left-menu, see functions.php-->
+     <div class="offcanvas offcanvas-start" tabindex="-1" id="left-nav" aria-labelledby="left-nav">
+      <div class="offcanvas-header">
+       <h5 class="offcanvas-title">Java IO Tutorial</h5>
+      </div>
+      <div class="offcanvas-body sidebar-left-no-highlight">
+       <div>
+        <ul>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li class="active"></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+        </ul>
+       </div>
+      </div>
+     </div> <!-- ads -->
+     <div class="ads-container-sticky d-none d-lg-block">
+      <div class="ads-container">
+       <div align="center" data-freestar-ad="__160x600" id="mkyong_rail_left">  
+       </div>
+      </div>
+     </div>
+    </div> <!-- middle -->
+    <main id="main-middle" role="main" class="col-12 col-lg-9 col-xl-7">
+     <article id="main-content" class="dont-break-out">
+      <div id="title-container">
+       <h1>How to read and parse CSV file in Java</h1>
+       <div class="post-meta d-flex align-items-center position-relative">
+        <div></div>
+        <div>
+         <p><small class="extra-info">By  | <time datetime="2020-12-26T17:17:21+08:00"> Last updated: December 26, 2020</time></small></p>
+         <p><small class="extra-info">Viewed: 1,833,788 (+3,054 pv/w)</small></p>
+         <p><small class="extra-info"></small></p>
+         <div class="post-tag">
+          <small class="extra-info">Tags: |  |  |  |  | </small>
+         </div>
+         <p></p>
+        </div>
+       </div>
+      </div>
+      <div class="pre-next-container d-flex justify-content-between"></div>
+      <p></p>
+      <div class="pic"> 
+      </div>
+      <p>This article shows how to read and parse a  file.</p>
+      <p>Topics:</p>
+      <ol>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+      </ol>
+      <h2 id="csv-file-and-rfc-4180"> 1. CSV file and RFC 4180.<br></h2>
+      <p>A comma-separated values (CSV) file is a standard text file which uses a <code>comma</code> to separate value. Each line of the file consists of one or more fields, separated by commas. Each field may or may not be enclosed in double-quotes.</p>
+      <pre><code class="language-csv">
+1995,Java,James Gosling
+"1995","Java","James Gosling"
+</code></pre>
+      <p>The  defines the format or definitions of a CSV file or <code>text/csv</code> file.</p>
+      <div class="ads-container ads-container-video">
+       <div id="mkyongFreeStarVideoAdContainer">
+        <div id="freestar-video-parent">
+         <div id="freestar-video-child"></div>
+        </div>
+       </div>
+      </div>
+      <h2 id="opencsv---read-and-parse-csv-file"> 2. OpenCSV – Read and Parse CSV file.<br></h2>
+      <p>2.1 The  is simple and easy to use CSV parser for Java.</p>
+      <div class="filename">
+       pom.xml
+      </div>
+      <pre><code class="language-xml">
+  &lt;dependency&gt;
+      &lt;groupId&gt;com.opencsv&lt;/groupId&gt;
+      &lt;artifactId&gt;opencsv&lt;/artifactId&gt;
+      &lt;version&gt;5.3&lt;/version&gt;
+  &lt;/dependency&gt;
+</code></pre>
+      <p>2.2 However, the <code>opencsv.jar</code> has the following dependencies like <code>commons-lang3.jar</code>, <code>commons-text.jar</code>, <code>commons-beanutils.jar</code>, <code>commons-logging.jar</code> and <code>commons-collections4:jar</code>.</p>
+      <div class="filename">
+       Terminal
+      </div>
+      <pre><code class="language-bash">
+[INFO] \- com.opencsv:opencsv:jar:5.3:compile
+[INFO]    +- org.apache.commons:commons-lang3:jar:3.11:compile
+[INFO]    +- org.apache.commons:commons-text:jar:1.9:compile
+[INFO]    +- commons-beanutils:commons-beanutils:jar:1.9.4:compile
+[INFO]    |  +- commons-logging:commons-logging:jar:1.2:compile
+[INFO]    |  \- commons-collections:commons-collections:jar:3.2.2:compile
+[INFO]    \- org.apache.commons:commons-collections4:jar:4.4:compile
+</code></pre>
+      <p><em>P.S The total file size of <code>OpenCSV</code> and its’ dependencies is around 2M+.</em></p>
+      <p>2.3 The <code>OpenCSV</code> examples to read or parse a CSV file.</p>
+      <p>Read all and returns a <code>List&lt;String[]&gt;</code>.</p>
+      <pre><code class="language-java">
+  try (CSVReader reader = new CSVReader(new FileReader("file.csv"))) {
+      List&lt;String[]&gt; r = reader.readAll();
+      r.forEach(x -&gt; System.out.println(Arrays.toString(x)));
+  }
+</code></pre>
+      <p>Read line by line and turns line into a <code>String[]</code>.</p>
+      <pre><code class="language-java">
+  try (CSVReader reader = new CSVReader(new FileReader("file.csv"))) {
+      String[] lineInArray;
+      while ((lineInArray = reader.readNext()) != null) {
+          System.out.println(lineInArray[0] + lineInArray[1] + "etc...");
+      }
+  }
+</code></pre>
+      <p>A complete <code>OpenCSV</code> example to parse a CSV file.</p>
+      <div class="filename">
+       c:\\test\\csv\\country.csv
+      </div>
+      <pre><code class="language-bash">
+"1.0.0.0","1.0.0.255","AU","Australia"
+"1.0.1.0","1.0.3.255","CN","China"
+"1.0.4.0","1.0.7.255","AU","Australia"
+"1.0.128.0","1.0.255.255","TH","Thailand"
+</code></pre>
+      <div class="filename">
+       OpenCsvExample.java
+      </div>
+      <pre><code class="language-java">
+package com.mkyong.io.csv.opencsv;
+
+import com.opencsv.CSVReader;
+import com.opencsv.exceptions.CsvException;
+
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.Arrays;
+import java.util.List;
+
+public class OpenCsvExample {
+
+    public static void main(String[] args) throws IOException, CsvException {
+
+        String fileName = "c:\\test\\csv\\country.csv";
+        try (CSVReader reader = new CSVReader(new FileReader(fileName))) {
+            List&lt;String[]&gt; r = reader.readAll();
+            r.forEach(x -&gt; System.out.println(Arrays.toString(x)));
+        }
+
+    }
+
+}
+</code></pre>
+      <p>Output</p>
+      <div class="filename">
+       Terminal
+      </div>
+      <pre><code class="language-bash">
+[1.0.0.0, 1.0.0.255, AU, Australia]
+[1.0.1.0, 1.0.3.255, CN, China]
+[1.0.4.0, 1.0.7.255, AU, Australia]
+[1.0.128.0, 1.0.255.255, TH, Thailand]
+</code></pre>
+      <p>2.4 It is common to use the semicolon <code>;</code> as the separator. This <code>OpenCSV</code> example shows how to parse a CSV file using a custom separator <code>;</code> and skip the first line.</p>
+      <pre><code class="language-java">
+  CSVParser csvParser = new CSVParserBuilder().withSeparator(';').build(); // custom separator
+  try(CSVReader reader = new CSVReaderBuilder(
+          new FileReader(fileName))
+          .withCSVParser(csvParser)   // custom CSV parser
+          .withSkipLines(1)           // skip the first line, header info
+          .build()){
+      List&lt;String[]&gt; r = reader.readAll();
+      r.forEach(x -&gt; System.out.println(Arrays.toString(x)));
+  }
+</code></pre>
+      <div class="note">
+       <p><strong>Note</strong><br> The use of semicolon <code>;</code> as the separator is not  compliant. However, it’s common to see semicolon separators in the CSV files; not everyone follows the RFC.</p>
+      </div>
+      <h2 id="opencsv---convert-csv-file-to-object"> 3. OpenCSV – Convert CSV file to Object.<br></h2>
+      <p>The <code>OpenCSV</code> also support read or parse a CSV file into a Java object directly.</p>
+      <p>3.1 This example read a CSV file and map it to a <code>Country</code> object via the <code>@CsvBindByPosition</code>.</p>
+      <div class="filename">
+       c:\\test\\csv\\country.csv
+      </div>
+      <pre><code class="language-bash">
+"1.0.0.0","1.0.0.255","AU","Australia"
+"1.0.1.0","1.0.3.255","CN","China"
+"1.0.4.0","1.0.7.255","AU","Australia"
+"1.0.128.0","1.0.255.255","TH","Thailand"
+</code></pre>
+      <div class="filename">
+       Country.java
+      </div>
+      <pre><code class="language-java">
+package com.mkyong.io.csv.opencsv;
+
+import com.opencsv.bean.CsvBindByPosition;
+
+public class Country {
+
+    @CsvBindByPosition(position = 0)
+    private String startIp;
+
+    @CsvBindByPosition(position = 1)
+    private String endIp;
+
+    @CsvBindByPosition(position = 2)
+    private String countryCode;
+
+    @CsvBindByPosition(position = 3)
+    private String country;
+
+    //  getters, setters, toString
+}
+</code></pre>
+      <div class="filename">
+       OpenCsvExample.java
+      </div>
+      <pre><code class="language-java">
+package com.mkyong.io.csv.opencsv;
+
+import com.opencsv.bean.CsvToBeanBuilder;
+
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.List;
+
+public class OpenCsvExample {
+
+    public static void main(String[] args) throws IOException {
+
+        String fileName = "c:\\test\\csv\\country.csv";
+
+        List&lt;Country&gt; beans = new CsvToBeanBuilder(new FileReader(fileName))
+                .withType(Country.class)
+                .build()
+                .parse();
+
+        beans.forEach(System.out::println);
+
+    }
+
+}
+</code></pre>
+      <p>Output</p>
+      <div class="filename">
+       Terminal
+      </div>
+      <pre><code class="language-bash">
+Country{startIp='1.0.0.0', endIp='1.0.0.255', countryCode='AU', country='Australia'}
+Country{startIp='1.0.1.0', endIp='1.0.3.255', countryCode='CN', country='China'}
+Country{startIp='1.0.4.0', endIp='1.0.7.255', countryCode='AU', country='Australia'}
+Country{startIp='1.0.128.0', endIp='1.0.255.255', countryCode='TH', country='Thailand'}
+</code></pre>
+      <p>3.2 If the CSV file containing header info, we also can use <code>@CsvBindByName</code> to map the CSV file to a Java object.</p>
+      <div class="filename">
+       c:\\test\\csv\\country.csv
+      </div>
+      <pre><code class="language-csv">
+start ip,end ip,country code, country
+"1.0.0.0","1.0.0.255","AU","Australia"
+"1.0.1.0","1.0.3.255","CN","China"
+"1.0.4.0","1.0.7.255","AU","Australia"
+"1.0.128.0","1.0.255.255","TH","Thailand"
+</code></pre>
+      <div class="filename">
+       Country.java
+      </div>
+      <pre><code class="language-java">
+package com.mkyong.io.csv.opencsv;
+
+import com.opencsv.bean.CsvBindByName;
+
+public class Country {
+
+    @CsvBindByName(column = "start ip")
+    private String startIp;
+
+    @CsvBindByName(column = "end ip")
+    private String endIp;
+
+    @CsvBindByName(column = "country code")
+    private String countryCode;
+
+    @CsvBindByName
+    private String country;
+
+    //  getters, setters, toString
+}
+</code></pre>
+      <p>Output</p>
+      <div class="filename">
+       Terminal
+      </div>
+      <pre><code class="language-bash">
+Country{startIp='1.0.0.0', endIp='1.0.0.255', countryCode='AU', country='Australia'}
+Country{startIp='1.0.1.0', endIp='1.0.3.255', countryCode='CN', country='China'}
+Country{startIp='1.0.4.0', endIp='1.0.7.255', countryCode='AU', country='Australia'}
+Country{startIp='1.0.128.0', endIp='1.0.255.255', countryCode='TH', country='Thailand'}
+</code></pre>
+      <div class="note">
+       <p><strong>Note</strong><br> For more <code>OpenCSV</code> examples, please check the </p>
+      </div>
+      <h2 id="csv-and-embedded-commas-double-quotes-and-line-breaks"> 4. CSV and embedded commas, double quotes, and line breaks<br></h2>
+      <p>4.1 The  describes the definitions of the CSV file formats, the rule 1-5 are some basic and easy to implement, the real challenges are the rule 6 and 7.</p>
+      <pre><code class="language-bash">
+6. Fields containing line breaks (CRLF), double quotes, and commas
+     should be enclosed in double-quotes.  For example:
+
+     "aaa","b CRLF
+     bb","ccc" CRLF
+     zzz,yyy,xxx
+
+7.  If double-quotes are used to enclose fields, then a double-quote
+     appearing inside a field must be escaped by preceding it with
+     another double quote.  For example:
+
+     "aaa","b""bb","ccc"
+</code></pre>
+      <p>4.2 Table to CVS file.</p>
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Make</th>
+         <th>Model</th>
+         <th>Description</th>
+         <th>Price</th>
+        </tr>
+       </thead>
+       <tbody>
+        <tr>
+         <td>Dell</td>
+         <td>P3421W</td>
+         <td>Dell 34, Curved, USB-C Monitor</td>
+         <td>2499.00</td>
+        </tr>
+        <tr>
+         <td>Dell</td>
+         <td></td>
+         <td>Alienware 38 Curved "Gaming Monitor"</td>
+         <td>6699.00</td>
+        </tr>
+        <tr>
+         <td>Samsung</td>
+         <td></td>
+         <td>49" Dual QHD, QLED, HDR1000</td>
+         <td>6199.00</td>
+        </tr>
+        <tr>
+         <td>Samsung</td>
+         <td></td>
+         <td>Promotion! Special Price <br> 49" Dual QHD, QLED, HDR1000</td>
+         <td>4999.00</td>
+        </tr>
+       </tbody>
+      </table>
+      <p>The above table may be represented in CSV format as follows:</p>
+      <div class="filename">
+       monitor.csv
+      </div>
+      <pre><code class="language-csv">
+Make,Model,Description,Price
+Dell,P3421W,"Dell 34, Curved, USB-C Monitor",2499.00
+Dell,"","Alienware 38 Curved ""Gaming Monitor""",6699.00
+Samsung,,"49"" Dual QHD, QLED, HDR1000",6199.00
+Samsung,,"Promotion! Special Price
+49"" Dual QHD, QLED, HDR1000",4999.00
+</code></pre>
+      <p>4.3 Let test the above CSV file with the <code>OpenCSV</code> again, and review the result:</p>
+      <pre><code class="language-java">
+package com.mkyong.io.csv.opencsv;
+
+import com.opencsv.CSVReader;
+import com.opencsv.exceptions.CsvException;
+
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.Arrays;
+import java.util.List;
+
+public class OpenCsvExample {
+
+    public static void main(String[] args) throws IOException, CsvException {
+
+        String fileName = "c:\\test\\csv\\monitor.csv";
+
+        List&lt;String[]&gt; r;
+        try (CSVReader reader = new CSVReader(new FileReader(fileName))) {
+            r = reader.readAll();
+        }
+
+        int listIndex = 0;
+        for (String[] arrays : r) {
+            System.out.println("\nString[" + listIndex++ + "] : " + Arrays.toString(arrays));
+
+            int index = 0;
+            for (String array : arrays) {
+                System.out.println(index++ + " : " + array);
+            }
+
+        }
+    }
+
+}
+</code></pre>
+      <p>Output</p>
+      <div class="filename">
+       Terminal
+      </div>
+      <pre><code class="language-plaintext">
+String[0] : [Make, Model, Description, Price]
+0 : Make
+1 : Model
+2 : Description
+3 : Price
+
+String[1] : [Dell, P3421W, Dell 34, Curved, USB-C Monitor, 2499.00]
+0 : Dell
+1 : P3421W
+2 : Dell 34, Curved, USB-C Monitor
+3 : 2499.00
+
+String[2] : [Dell, , Alienware 38 Curved "Gaming Monitor", 6699.00]
+0 : Dell
+1 :
+2 : Alienware 38 Curved "Gaming Monitor"
+3 : 6699.00
+
+String[3] : [Samsung, , 49" Dual QHD, QLED, HDR1000, 6199.00]
+0 : Samsung
+1 :
+2 : 49" Dual QHD, QLED, HDR1000
+3 : 6199.00
+
+String[4] : [Samsung, , Promotion! Special Price
+49" Dual QHD, QLED, HDR1000, 4999.00]
+0 : Samsung
+1 :
+2 : Promotion! Special Price
+49" Dual QHD, QLED, HDR1000
+3 : 4999.00
+</code></pre>
+      <p>The above output is a perfect, exact match.</p>
+      <h2 id="single-class-to-read-and-parse-a-csv-file"> 5. Single class to read and parse a CSV file.<br></h2>
+      <p>5.1 If you don’t want to download the <code>OpenCSV</code> library due to the file size of too many dependencies, below is my single class implementation to parse a CSV file.</p>
+      <p>The same CSV file containing embedded commas, double quotes, and line breaks.</p>
+      <div class="filename">
+       monitor.csv
+      </div>
+      <pre><code class="language-csv">
+Make,Model,Description,Price
+Dell,P3421W,"Dell 34, Curved, USB-C Monitor",2499.00
+Dell,"","Alienware 38 Curved ""Gaming Monitor""",6699.00
+Samsung,,"49"" Dual QHD, QLED, HDR1000",6199.00
+Samsung,,"Promotion! Special Price
+49"" Dual QHD, QLED, HDR1000",4999.00
+</code></pre>
+      <p>A single class implementation to parse the above CSV file. Read comments for self-explanatory.</p>
+      <div class="filename">
+       CsvParserSimple.java
+      </div>
+      <pre><code class="language-java">
+package com.mkyong.io.csv;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.net.URL;
+import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Stream;
+
+public class CsvParserSimple {
+
+    private static final char DEFAULT_SEPARATOR = ',';
+    private static final char DOUBLE_QUOTES = '"';
+    private static final char DEFAULT_QUOTE_CHAR = DOUBLE_QUOTES;
+    private static final String NEW_LINE = "\n";
+
+    private boolean isMultiLine = false;
+    private String pendingField = "";
+    private String[] pendingFieldLine = new String[]{};
+
+    public static void main(String[] args) throws Exception {
+
+        // loads CSV file from the resource folder.
+        URL resource = CsvParserSimple.class.getClassLoader().getResource("csv/monitor.csv");
+        File file = Paths.get(resource.toURI()).toFile();
+
+        CsvParserSimple obj = new CsvParserSimple();
+        List&lt;String[]&gt; result = obj.readFile(file, 1);
+
+        int listIndex = 0;
+        for (String[] arrays : result) {
+            System.out.println("\nString[" + listIndex++ + "] : " + Arrays.toString(arrays));
+
+            int index = 0;
+            for (String array : arrays) {
+                System.out.println(index++ + " : " + array);
+            }
+
+        }
+
+    }
+
+    public List&lt;String[]&gt; readFile(File csvFile) throws Exception {
+        return readFile(csvFile, 0);
+    }
+
+    public List&lt;String[]&gt; readFile(File csvFile, int skipLine)
+        throws Exception {
+
+        List&lt;String[]&gt; result = new ArrayList&lt;&gt;();
+        int indexLine = 1;
+
+        try (BufferedReader br = new BufferedReader(new FileReader(csvFile))) {
+
+            String line;
+            while ((line = br.readLine()) != null) {
+
+                if (indexLine++ &lt;= skipLine) {
+                    continue;
+                }
+
+                String[] csvLineInArray = parseLine(line);
+
+                if (isMultiLine) {
+                    pendingFieldLine = joinArrays(pendingFieldLine, csvLineInArray);
+                } else {
+
+                    if (pendingFieldLine != null &amp;&amp; pendingFieldLine.length &gt; 0) {
+                        // joins all fields and add to list
+                        result.add(joinArrays(pendingFieldLine, csvLineInArray));
+                        pendingFieldLine = new String[]{};
+                    } else {
+                        // if dun want to support multiline, only this line is required.
+                        result.add(csvLineInArray);
+                    }
+
+                }
+
+
+            }
+        }
+
+        return result;
+    }
+
+    public String[] parseLine(String line) throws Exception {
+        return parseLine(line, DEFAULT_SEPARATOR);
+    }
+
+    public String[] parseLine(String line, char separator) throws Exception {
+        return parse(line, separator, DEFAULT_QUOTE_CHAR).toArray(String[]::new);
+    }
+
+    private List&lt;String&gt; parse(String line, char separator, char quoteChar)
+        throws Exception {
+
+        List&lt;String&gt; result = new ArrayList&lt;&gt;();
+
+        boolean inQuotes = false;
+        boolean isFieldWithEmbeddedDoubleQuotes = false;
+
+        StringBuilder field = new StringBuilder();
+
+        for (char c : line.toCharArray()) {
+
+            if (c == DOUBLE_QUOTES) {               // handle embedded double quotes ""
+                if (isFieldWithEmbeddedDoubleQuotes) {
+
+                    if (field.length() &gt; 0) {       // handle for empty field like "",""
+                        field.append(DOUBLE_QUOTES);
+                        isFieldWithEmbeddedDoubleQuotes = false;
+                    }
+
+                } else {
+                    isFieldWithEmbeddedDoubleQuotes = true;
+                }
+            } else {
+                isFieldWithEmbeddedDoubleQuotes = false;
+            }
+
+            if (isMultiLine) {                      // multiline, add pending from the previous field
+                field.append(pendingField).append(NEW_LINE);
+                pendingField = "";
+                inQuotes = true;
+                isMultiLine = false;
+            }
+
+            if (c == quoteChar) {
+                inQuotes = !inQuotes;
+            } else {
+                if (c == separator &amp;&amp; !inQuotes) {  // if find separator and not in quotes, add field to the list
+                    result.add(field.toString());
+                    field.setLength(0);             // empty the field and ready for the next
+                } else {
+                    field.append(c);                // else append the char into a field
+                }
+            }
+
+        }
+
+        //line done, what to do next?
+        if (inQuotes) {
+            pendingField = field.toString();        // multiline
+            isMultiLine = true;
+        } else {
+            result.add(field.toString());           // this is the last field
+        }
+
+        return result;
+
+    }
+
+    private String[] joinArrays(String[] array1, String[] array2) {
+        return Stream.concat(Arrays.stream(array1), Arrays.stream(array2))
+                .toArray(String[]::new);
+    }
+}
+</code></pre>
+      <p>Output.</p>
+      <div class="filename">
+       Terminal
+      </div>
+      <pre><code class="language-plaintext">
+String[0] : [Dell, P3421W, Dell 34, Curved, USB-C Monitor, 2499.00]
+0 : Dell
+1 : P3421W
+2 : Dell 34, Curved, USB-C Monitor
+3 : 2499.00
+
+String[1] : [Dell, , Alienware 38 Curved "Gaming Monitor", 6699.00]
+0 : Dell
+1 :
+2 : Alienware 38 Curved "Gaming Monitor"
+3 : 6699.00
+
+String[2] : [Samsung, , 49" Dual QHD, QLED, HDR1000, 6199.00]
+0 : Samsung
+1 :
+2 : 49" Dual QHD, QLED, HDR1000
+3 : 6199.00
+
+String[3] : [Samsung, , Promotion! Special Price
+49" Dual QHD, QLED, HDR1000, 4999.00]
+0 : Samsung
+1 :
+2 : Promotion! Special Price
+49" Dual QHD, QLED, HDR1000
+3 : 4999.00
+</code></pre>
+      <p>The output is correct.</p>
+      <p>5.3 Read below unit tests for a different type of CSV file.</p>
+      <div class="filename">
+       CsvParserSimpleTest.java
+      </div>
+      <pre><code class="language-java">
+package com.mkyong.io.csv;
+
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+public class CsvParserSimpleTest {
+
+    private CsvParserSimple parser = new CsvParserSimple();
+    // OpenCSV
+    //private CSVParser parser = new CSVParser();
+
+    @ParameterizedTest(name = "#{index} - Run test with args={0}")
+    @ValueSource(strings = {
+            "\"aa\",\"bb\",\"cc\",\"dd\",\"ee\"",
+            "aa,bb,cc,dd,ee",
+            "aa,bb,\"cc\",dd,ee"
+    }
+    )
+    void test_csv_line_default(String line) throws Exception {
+        String[] result = parser.parseLine(line);
+        assertEquals(5, result.length);
+        assertEquals("aa", result[0]);
+        assertEquals("bb", result[1]);
+        assertEquals("cc", result[2]);
+        assertEquals("dd", result[3]);
+        assertEquals("ee", result[4]);
+    }
+
+    @ParameterizedTest(name = "#{index} - Run test with args={0}")
+    @ValueSource(strings = {
+            "\"aa\",\"\",\"\",\"\",\"\"",
+            "aa,,,,",
+            "aa,,\"\",,"
+    }
+    )
+    void test_csv_line_empty(String line) throws Exception {
+        String[] result = parser.parseLine(line);
+        assertEquals(5, result.length);
+        assertEquals("aa", result[0]);
+        assertEquals("", result[1]);
+        assertEquals("", result[2]);
+        assertEquals("", result[3]);
+        assertEquals("", result[4]);
+    }
+
+    // RFC 4180 require comma as separator, but in real life , it can be a semicolon,
+    // not everyone follows RFC.
+    @ParameterizedTest(name = "#{index} - Run test with args={0}")
+    @ValueSource(strings = {
+            "\"aa\";\"bb\";\"cc\";\"dd\";\"ee\"",
+            "aa;bb;cc;dd;ee",
+            "aa;bb;\"cc\";dd;ee"
+    }
+    )
+    void test_csv_line_custom_separator(String line) throws Exception {
+        String[] result = parser.parseLine(line, ';');
+        assertEquals(5, result.length);
+        assertEquals("aa", result[0]);
+        assertEquals("bb", result[1]);
+        assertEquals("cc", result[2]);
+        assertEquals("dd", result[3]);
+        assertEquals("ee", result[4]);
+    }
+
+    @ParameterizedTest(name = "#{index} - Run test with args={0}")
+    @ValueSource(strings = {
+            "\"Australia\",\"11 Lakkari Cl, Taree, NSW 2430\"",
+            "Australia,\"11 Lakkari Cl, Taree, NSW 2430\""
+    }
+    )
+    void test_csv_line_contain_comma_in_field(String line) throws Exception {
+
+        String[] result = parser.parseLine(line);
+
+        assertEquals(2, result.length);
+        assertEquals("Australia", result[0]);
+        assertEquals("11 Lakkari Cl, Taree, NSW 2430", result[1]);
+
+    }
+
+    @Test
+    void test_csv_line_contain_double_quotes_in_field() throws Exception {
+
+        String line = "\"Australia\",\"51 Maritime Avenue, \"\"Western Australia\"\", 6286\"";
+        String[] result = parser.parseLine(line);
+
+        assertEquals(2, result.length);
+        assertEquals("Australia", result[0]);
+        assertEquals("51 Maritime Avenue, \"Western Australia\", 6286", result[1]);
+
+    }
+
+    @Test
+    void test_csv_line_contain_double_quotes_in_field_2() throws Exception {
+
+        String line = "Australia,Welcome to \"\"Western Australia\"\"";
+        String[] result = parser.parseLine(line);
+
+        assertEquals(2, result.length);
+        assertEquals("Australia", result[0]);
+        assertEquals("Welcome to \"Western Australia\"", result[1]);
+
+    }
+
+    /*
+    private File getFileFromTestResourcesFolder(String fileName) throws URISyntaxException {
+        // get uri from the test resources folder.
+        URL resource = CsvParserMyImplTest.class.getClassLoader().getResource(fileName);
+        File file = Paths.get(resource.toURI()).toFile();
+        return file;
+    }*/
+}
+</code></pre>
+      <p></p>
+      <div class="pic"> 
+      </div>
+      <p></p>
+      <p>Review the result and the unit tests; the <code>CsvParserSimple</code> should read or parse most of the standard CSV files.</p>
+      <h2 id="stringsplit-to-parse-a-csv-file"> 6. String#split to parse a CSV file.<br></h2>
+      <p><em>6.1 Q: Can I use the <code>String#split</code> to parse a simple CSV file?</em><br> Yes, if you are sure, the CSV file format is plain simple and doesn’t contain any embedded commas, double quotes, and line breaks, as described in the above .</p>
+      <div class="filename">
+       country.csv
+      </div>
+      <pre><code class="language-csv">
+"1.0.0.0","1.0.0.255","AU","Australia"
+"1.0.1.0","1.0.3.255","CN","China"
+"1.0.4.0","1.0.7.255","AU","Australia"
+"1.0.128.0","1.0.255.255","TH","Thailand"
+</code></pre>
+      <p>6.2 Java 8 stream and split example to parse the above CSV file.</p>
+      <pre><code class="language-java">
+  List&lt;String[]&gt; collect =
+          Files.lines(Paths.get("c:\\test\\csv\\country.csv"))
+                .map(line -&gt; line.split(","))
+                .collect(Collectors.toList());
+</code></pre>
+      <p>Output</p>
+      <div class="filename">
+       Terminal
+      </div>
+      <pre><code class="language-bash">
+["1.0.0.0", "1.0.0.255", "AU", "Australia"]
+["1.0.1.0", "1.0.3.255", "CN", "China"]
+["1.0.4.0", "1.0.7.255", "AU", "Australia"]
+["1.0.128.0", "1.0.255.255", "TH", "Thailand"]
+</code></pre>
+      <p>6.3 Here is the old school style.</p>
+      <pre><code class="language-java">
+  String line;
+  try (BufferedReader br = new BufferedReader(
+          new FileReader("c:\\test\\csv\\country.csv"))) {
+
+      while ((line = br.readLine()) != null) {
+
+          // split by a comma separator
+          String[] split = line.split(",");
+          System.out.println("\nLength : " + split.length);
+          System.out.println("split[0] : " + split[0]);
+          System.out.println("split[1] : " + split[1]);
+          System.out.println("split[2] : " + split[2]);
+          System.out.println("split[3] : " + split[3]);
+      }
+
+  } catch (IOException e) {
+      e.printStackTrace();
+  }
+</code></pre>
+      <h2 id="download-source-code"> Download Source Code<br></h2>
+      <div class="github">
+       <p>$ git clone </p>
+       <p>$ cd java-io/csv</p>
+      </div>
+      <h2 id="references"> References<br></h2>
+      <ul>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+      </ul>
+      <div class="pre-next-container d-flex justify-content-between"></div> <!-- current post ID --> 
+      <div class="d-flex justify-content-center ads-container-after-post ads-container"> <!-- Tag ID: mkyong_leaderboard_btf -->
+       <div align="center" data-freestar-ad="__320x100 __336x280" id="mkyong_leaderboard_btf">  
+       </div>
+      </div> <!-- loaded via JS -->
+      <div id="mk-afterpost-related"></div> <!-- author -->
+      <div id="author-container" class="d-flex align-items-center position-relative">
+       <div></div>
+       <div>
+        <h5></h5>
+        <p>Founder of , love Java and open source stuff. Follow him on . If you like my tutorials, consider make a donation to .</p>
+        <p></p>
+       </div>
+      </div> <!-- comments -->
+      <h4>Comments</h4>
+      <div class="wpdiscuz_top_clearing"></div>
+      <div id="comments" class="comments-area">
+       <div id="respond" style="width: 0;height: 0;clear: both;margin: 0;padding: 0;"></div>
+       <div id="wpdcom" class="wpdiscuz_unauth wpd-default wpd-layout-1 wpd-comments-open">
+        <div class="wc_social_plugin_wrapper"></div>
+        <div class="wpd-form-wrap">
+         <div class="wpd-form-head">
+          <div class="wpd-auth">
+           <div class="wpd-login"></div>
+          </div>
+         </div>
+         <div class="wpd-form wpd-form-wrapper wpd-main-form-wrapper" id="wpd-main-form-wrapper-0_0"></div>
+         <div id="wpdiscuz_hidden_secondary_form" style="display: none;">
+          <div class="wpd-form wpd-form-wrapper wpd-secondary-form-wrapper" id="wpd-secondary-form-wrapper-wpdiscuzuniqueid" style="display: none;">
+           <div class="wpd-secondary-forms-social-content"></div>
+           <div class="clearfix"></div>
+          </div>
+         </div>
+        </div>
+        <div id="wpd-threads" class="wpd-thread-wrapper">
+         <div class="wpd-thread-head">
+          <div class="wpd-thread-info " data-comments-count="20"> <span class="wpdtc" title="20">20</span> Comments
+          </div>
+          <div class="wpd-space"></div>
+          <div class="wpd-thread-filter">
+           <div class="wpd-filter wpdf-sorting"> <span class="wpdiscuz-sort-button wpdiscuz-vote-sort-up wpdiscuz-sort-button-active" data-sorting="by_vote">Most Voted</span> <i class="fas fa-sort-down"></i>
+            <div class="wpdiscuz-sort-buttons"> <span class="wpdiscuz-sort-button wpdiscuz-date-sort-desc" data-sorting="newest">Newest</span> <span class="wpdiscuz-sort-button wpdiscuz-date-sort-asc" data-sorting="oldest">Oldest</span>
+            </div>
+           </div>
+          </div>
+         </div>
+         <div class="wpd-comment-info-bar">
+          <div class="wpd-current-view">
+           <i class="fas fa-quote-left"></i> Inline Feedbacks
+          </div>
+          <div class="wpd-filter-view-all">
+           View all comments
+          </div>
+         </div>
+         <div class="wpd-thread-list">
+          <div id="wpd-comm-1051910_0" class="wpd-comment wpd_comment_level-1">
+           <div class="wpd-comment-wrap wpd-blog-guest">
+            <div class="wpd-comment-left ">
+             <div class="wpd-avatar "> 
+             </div>
+            </div>
+            <div id="comment-1051910" class="wpd-comment-right">
+             <div class="wpd-comment-header">
+              <div class="wpd-comment-author ">
+                Ömer Hakan Bilici
+              </div>
+              <div class="wpd-comment-date" title="December 4, 2016 10:03 pm"> <i class="far fa-clock" aria-hidden="true"></i> 4 years ago
+              </div>
+              <div class="wpd-space"></div>
+              <div class="wpd-comment-link wpd-hidden">
+               <div style="" class="comment_flag comment_flag_modal wc_flag_tooltipster wpf-cta wpd-field-desc" wpd-tooltip-position="left" id="fc_1051910" wpd-tooltip="Click to flag and open «Comment Reporting» form. You can choose reporting category and send message to website administrator. Admins may or may not choose to remove the comment or block the author. And please don" t worry, your report will be anonymous.'>
+                <i class="fas fa-flag"></i>
+               </div>
+              </div>
+             </div>
+             <div class="wpd-comment-text">
+              <p>Thanks. Note that OpenCSV Example part is enough for most cases. I think you should move this part to start of this post.</p>
+             </div>
+             <div class="wpd-comment-footer">
+              <div class="wpd-vote">
+               <div class="wpd-vote-up wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0V0z" /><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z" />
+                </svg>
+               </div>
+               <div class="wpd-vote-result wpd-up" title="2">
+                2
+               </div>
+               <div class="wpd-vote-down wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0z" /><path d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z" />
+                </svg>
+               </div>
+              </div>
+              <div class="wpd-reply-button"> 
+               <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                <path d="M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z" /><path d="M0 0h24v24H0z" fill="none" />
+               </svg> <span>Reply</span>
+              </div>
+              <div class="wpd-space"></div>
+              <div class="wpd-toggle wpd-hidden wpd_not_clicked" wpd-tooltip="Hide Replies"> <i class="fas fa-chevron-up"></i>
+              </div>
+             </div>
+            </div>
+           </div>
+           <div id="wpdiscuz_form_anchor-1051910_0"></div>
+           <div id="wpd-comm-1061124_1051910" class="wpd-comment wpd-reply wpd_comment_level-2">
+            <div class="wpd-comment-wrap wpd-blog-user wpd-blog-post_author">
+             <div class="wpd-comment-left ">
+              <div class="wpd-avatar "> 
+              </div>
+              <div class="wpd-comment-label" wpd-tooltip="Author" wpd-tooltip-position="right"> <span>Author</span>
+              </div>
+             </div>
+             <div id="comment-1061124" class="wpd-comment-right">
+              <div class="wpd-comment-header">
+               <div class="wpd-comment-author ">
+                 mkyong
+               </div>
+               <div class="wpd-comment-date" title="January 2, 2021 6:13 pm"> <i class="far fa-clock" aria-hidden="true"></i> 9 months ago
+               </div>
+               <div class="wpd-space"></div>
+               <div class="wpd-comment-link wpd-hidden">
+                <div style="" class="comment_flag comment_flag_modal wc_flag_tooltipster wpf-cta wpd-field-desc" wpd-tooltip-position="left" id="fc_1061124" wpd-tooltip="Click to flag and open «Comment Reporting» form. You can choose reporting category and send message to website administrator. Admins may or may not choose to remove the comment or block the author. And please don" t worry, your report will be anonymous.'>
+                 <i class="fas fa-flag"></i>
+                </div>
+               </div>
+              </div>
+              <div class="wpd-reply-to"> <i class="far fa-comments"></i> Reply to&nbsp; 
+              </div>
+              <div class="wpd-comment-text">
+               <p>Since this is the majority vote, I moved the OpenCSV example to the first one.</p>
+              </div>
+              <div class="wpd-comment-footer">
+               <div class="wpd-vote">
+                <div class="wpd-vote-up wpd_not_clicked"> 
+                 <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                  <path fill="none" d="M0 0h24v24H0V0z" /><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z" />
+                 </svg>
+                </div>
+                <div class="wpd-vote-result" title="0">
+                 0
+                </div>
+                <div class="wpd-vote-down wpd_not_clicked"> 
+                 <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                  <path fill="none" d="M0 0h24v24H0z" /><path d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z" />
+                 </svg>
+                </div>
+               </div>
+               <div class="wpd-reply-button"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path d="M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z" /><path d="M0 0h24v24H0z" fill="none" />
+                </svg> <span>Reply</span>
+               </div>
+               <div class="wpd-space"></div>
+              </div>
+             </div>
+            </div>
+            <div id="wpdiscuz_form_anchor-1061124_1051910"></div>
+           </div>
+          </div>
+          <div id="wpd-comm-1053747_0" class="wpd-comment wpd_comment_level-1">
+           <div class="wpd-comment-wrap wpd-blog-guest">
+            <div class="wpd-comment-left ">
+             <div class="wpd-avatar "> 
+             </div>
+            </div>
+            <div id="comment-1053747" class="wpd-comment-right">
+             <div class="wpd-comment-header">
+              <div class="wpd-comment-author ">
+                Areizero Developer
+              </div>
+              <div class="wpd-comment-date" title="September 12, 2017 5:25 am"> <i class="far fa-clock" aria-hidden="true"></i> 4 years ago
+              </div>
+              <div class="wpd-space"></div>
+              <div class="wpd-comment-link wpd-hidden">
+               <div style="" class="comment_flag comment_flag_modal wc_flag_tooltipster wpf-cta wpd-field-desc" wpd-tooltip-position="left" id="fc_1053747" wpd-tooltip="Click to flag and open «Comment Reporting» form. You can choose reporting category and send message to website administrator. Admins may or may not choose to remove the comment or block the author. And please don" t worry, your report will be anonymous.'>
+                <i class="fas fa-flag"></i>
+               </div>
+              </div>
+             </div>
+             <div class="wpd-comment-text">
+              <p>Nice, OpenCSV really work very well</p>
+             </div>
+             <div class="wpd-comment-footer">
+              <div class="wpd-vote">
+               <div class="wpd-vote-up wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0V0z" /><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z" />
+                </svg>
+               </div>
+               <div class="wpd-vote-result wpd-up" title="1">
+                1
+               </div>
+               <div class="wpd-vote-down wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0z" /><path d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z" />
+                </svg>
+               </div>
+              </div>
+              <div class="wpd-reply-button"> 
+               <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                <path d="M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z" /><path d="M0 0h24v24H0z" fill="none" />
+               </svg> <span>Reply</span>
+              </div>
+              <div class="wpd-space"></div>
+             </div>
+            </div>
+           </div>
+           <div id="wpdiscuz_form_anchor-1053747_0"></div>
+          </div>
+          <div id="wpd-comm-132192_0" class="wpd-comment wpd_comment_level-1">
+           <div class="wpd-comment-wrap wpd-blog-guest">
+            <div class="wpd-comment-left ">
+             <div class="wpd-avatar "> 
+             </div>
+            </div>
+            <div id="comment-132192" class="wpd-comment-right">
+             <div class="wpd-comment-header">
+              <div class="wpd-comment-author ">
+                milczarekIT
+              </div>
+              <div class="wpd-comment-date" title="April 26, 2013 12:40 am"> <i class="far fa-clock" aria-hidden="true"></i> 8 years ago
+              </div>
+              <div class="wpd-space"></div>
+              <div class="wpd-comment-link wpd-hidden">
+               <div style="" class="comment_flag comment_flag_modal wc_flag_tooltipster wpf-cta wpd-field-desc" wpd-tooltip-position="left" id="fc_132192" wpd-tooltip="Click to flag and open «Comment Reporting» form. You can choose reporting category and send message to website administrator. Admins may or may not choose to remove the comment or block the author. And please don" t worry, your report will be anonymous.'>
+                <i class="fas fa-flag"></i>
+               </div>
+              </div>
+             </div>
+             <div class="wpd-comment-text">
+              <p>I also recommend opencsv library. It allow for mapping csv columns to class properties, (de)serializaion with this simple lib is pretty easy.</p>
+             </div>
+             <div class="wpd-comment-footer">
+              <div class="wpd-vote">
+               <div class="wpd-vote-up wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0V0z" /><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z" />
+                </svg>
+               </div>
+               <div class="wpd-vote-result wpd-up" title="1">
+                1
+               </div>
+               <div class="wpd-vote-down wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0z" /><path d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z" />
+                </svg>
+               </div>
+              </div>
+              <div class="wpd-reply-button"> 
+               <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                <path d="M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z" /><path d="M0 0h24v24H0z" fill="none" />
+               </svg> <span>Reply</span>
+              </div>
+              <div class="wpd-space"></div>
+             </div>
+            </div>
+           </div>
+           <div id="wpdiscuz_form_anchor-132192_0"></div>
+          </div>
+          <div id="wpd-comm-1061802_0" class="wpd-comment wpd_comment_level-1">
+           <div class="wpd-comment-wrap wpd-blog-guest">
+            <div class="wpd-comment-left ">
+             <div class="wpd-avatar "> 
+             </div>
+            </div>
+            <div id="comment-1061802" class="wpd-comment-right">
+             <div class="wpd-comment-header">
+              <div class="wpd-comment-author ">
+                Mohammad Tarique Khan
+              </div>
+              <div class="wpd-comment-date" title="September 2, 2021 5:47 pm"> <i class="far fa-clock" aria-hidden="true"></i> 1 month ago
+              </div>
+              <div class="wpd-space"></div>
+              <div class="wpd-comment-link wpd-hidden">
+               <div style="" class="comment_flag comment_flag_modal wc_flag_tooltipster wpf-cta wpd-field-desc" wpd-tooltip-position="left" id="fc_1061802" wpd-tooltip="Click to flag and open «Comment Reporting» form. You can choose reporting category and send message to website administrator. Admins may or may not choose to remove the comment or block the author. And please don" t worry, your report will be anonymous.'>
+                <i class="fas fa-flag"></i>
+               </div>
+              </div>
+             </div>
+             <div class="wpd-comment-text">
+              <p>Thanks, really helpful.</p>
+             </div>
+             <div class="wpd-comment-footer">
+              <div class="wpd-vote">
+               <div class="wpd-vote-up wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0V0z" /><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z" />
+                </svg>
+               </div>
+               <div class="wpd-vote-result" title="0">
+                0
+               </div>
+               <div class="wpd-vote-down wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0z" /><path d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z" />
+                </svg>
+               </div>
+              </div>
+              <div class="wpd-reply-button"> 
+               <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                <path d="M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z" /><path d="M0 0h24v24H0z" fill="none" />
+               </svg> <span>Reply</span>
+              </div>
+              <div class="wpd-space"></div>
+             </div>
+            </div>
+           </div>
+           <div id="wpdiscuz_form_anchor-1061802_0"></div>
+          </div>
+          <div id="wpd-comm-1061551_0" class="wpd-comment wpd_comment_level-1">
+           <div class="wpd-comment-wrap wpd-blog-guest">
+            <div class="wpd-comment-left ">
+             <div class="wpd-avatar "> 
+             </div>
+            </div>
+            <div id="comment-1061551" class="wpd-comment-right">
+             <div class="wpd-comment-header">
+              <div class="wpd-comment-author ">
+                Richard Lavallee
+              </div>
+              <div class="wpd-comment-date" title="May 28, 2021 9:50 am"> <i class="far fa-clock" aria-hidden="true"></i> 4 months ago
+              </div>
+              <div class="wpd-space"></div>
+              <div class="wpd-comment-link wpd-hidden">
+               <div style="" class="comment_flag comment_flag_modal wc_flag_tooltipster wpf-cta wpd-field-desc" wpd-tooltip-position="left" id="fc_1061551" wpd-tooltip="Click to flag and open «Comment Reporting» form. You can choose reporting category and send message to website administrator. Admins may or may not choose to remove the comment or block the author. And please don" t worry, your report will be anonymous.'>
+                <i class="fas fa-flag"></i>
+               </div>
+              </div>
+             </div>
+             <div class="wpd-comment-text">
+              <p>Is there a bug in your “Single class to read and parse a CSV file’ ?<br> I input a field of many double quotes, e.g. four in a row, or ten in a row and the output is always an empty field! I would have expected four to yield one. Or ten to yield four.</p>
+              <p>Please advise?</p>
+              <p>I am a great fan of yours in any case!</p>
+             </div>
+             <div class="wpd-comment-footer">
+              <div class="wpd-vote">
+               <div class="wpd-vote-up wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0V0z" /><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z" />
+                </svg>
+               </div>
+               <div class="wpd-vote-result" title="0">
+                0
+               </div>
+               <div class="wpd-vote-down wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0z" /><path d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z" />
+                </svg>
+               </div>
+              </div>
+              <div class="wpd-reply-button"> 
+               <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                <path d="M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z" /><path d="M0 0h24v24H0z" fill="none" />
+               </svg> <span>Reply</span>
+              </div>
+              <div class="wpd-space"></div>
+              <div class="wpd-toggle wpd-hidden wpd_not_clicked" wpd-tooltip="Hide Replies"> <i class="fas fa-chevron-up"></i>
+              </div>
+             </div>
+            </div>
+           </div>
+           <div id="wpdiscuz_form_anchor-1061551_0"></div>
+           <div id="wpd-comm-1061552_1061551" class="wpd-comment wpd-reply wpd_comment_level-2">
+            <div class="wpd-comment-wrap wpd-blog-user wpd-blog-post_author">
+             <div class="wpd-comment-left ">
+              <div class="wpd-avatar "> 
+              </div>
+              <div class="wpd-comment-label" wpd-tooltip="Author" wpd-tooltip-position="right"> <span>Author</span>
+              </div>
+             </div>
+             <div id="comment-1061552" class="wpd-comment-right">
+              <div class="wpd-comment-header">
+               <div class="wpd-comment-author ">
+                 mkyong
+               </div>
+               <div class="wpd-comment-date" title="May 28, 2021 11:15 pm"> <i class="far fa-clock" aria-hidden="true"></i> 4 months ago
+               </div>
+               <div class="wpd-space"></div>
+               <div class="wpd-comment-link wpd-hidden">
+                <div style="" class="comment_flag comment_flag_modal wc_flag_tooltipster wpf-cta wpd-field-desc" wpd-tooltip-position="left" id="fc_1061552" wpd-tooltip="Click to flag and open «Comment Reporting» form. You can choose reporting category and send message to website administrator. Admins may or may not choose to remove the comment or block the author. And please don" t worry, your report will be anonymous.'>
+                 <i class="fas fa-flag"></i>
+                </div>
+               </div>
+              </div>
+              <div class="wpd-reply-to"> <i class="far fa-comments"></i> Reply to&nbsp; 
+              </div>
+              <div class="wpd-comment-text">
+               <p>How about OpenCSV? Able to parse it?</p>
+              </div>
+              <div class="wpd-comment-footer">
+               <div class="wpd-vote">
+                <div class="wpd-vote-up wpd_not_clicked"> 
+                 <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                  <path fill="none" d="M0 0h24v24H0V0z" /><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z" />
+                 </svg>
+                </div>
+                <div class="wpd-vote-result" title="0">
+                 0
+                </div>
+                <div class="wpd-vote-down wpd_not_clicked"> 
+                 <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                  <path fill="none" d="M0 0h24v24H0z" /><path d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z" />
+                 </svg>
+                </div>
+               </div>
+               <div class="wpd-reply-button"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path d="M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z" /><path d="M0 0h24v24H0z" fill="none" />
+                </svg> <span>Reply</span>
+               </div>
+               <div class="wpd-space"></div>
+               <div class="wpd-toggle wpd-hidden wpd_not_clicked" wpd-tooltip="Hide Replies"> <i class="fas fa-chevron-up"></i>
+               </div>
+              </div>
+             </div>
+            </div>
+            <div id="wpdiscuz_form_anchor-1061552_1061551"></div>
+            <div id="wpd-comm-1061553_1061552" class="wpd-comment wpd-reply wpd_comment_level-3">
+             <div class="wpd-comment-wrap wpd-blog-guest">
+              <div class="wpd-comment-left ">
+               <div class="wpd-avatar "> 
+               </div>
+              </div>
+              <div id="comment-1061553" class="wpd-comment-right">
+               <div class="wpd-comment-header">
+                <div class="wpd-comment-author ">
+                  Richard Lavallee
+                </div>
+                <div class="wpd-comment-date" title="May 28, 2021 11:22 pm"> <i class="far fa-clock" aria-hidden="true"></i> 4 months ago
+                </div>
+                <div class="wpd-space"></div>
+                <div class="wpd-comment-link wpd-hidden">
+                 <div style="" class="comment_flag comment_flag_modal wc_flag_tooltipster wpf-cta wpd-field-desc" wpd-tooltip-position="left" id="fc_1061553" wpd-tooltip="Click to flag and open «Comment Reporting» form. You can choose reporting category and send message to website administrator. Admins may or may not choose to remove the comment or block the author. And please don" t worry, your report will be anonymous.'>
+                  <i class="fas fa-flag"></i>
+                 </div>
+                </div>
+               </div>
+               <div class="wpd-reply-to"> <i class="far fa-comments"></i> Reply to&nbsp; 
+               </div>
+               <div class="wpd-comment-text">
+                <p>yes — parses correctly. Can you provide a fix to your implementation which I prefer to use please?</p>
+               </div>
+               <div class="wpd-comment-footer">
+                <div class="wpd-vote">
+                 <div class="wpd-vote-up wpd_not_clicked"> 
+                  <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                   <path fill="none" d="M0 0h24v24H0V0z" /><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z" />
+                  </svg>
+                 </div>
+                 <div class="wpd-vote-result" title="0">
+                  0
+                 </div>
+                 <div class="wpd-vote-down wpd_not_clicked"> 
+                  <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                   <path fill="none" d="M0 0h24v24H0z" /><path d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z" />
+                  </svg>
+                 </div>
+                </div>
+                <div class="wpd-reply-button"> 
+                 <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                  <path d="M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z" /><path d="M0 0h24v24H0z" fill="none" />
+                 </svg> <span>Reply</span>
+                </div>
+                <div class="wpd-space"></div>
+                <div class="wpd-toggle wpd-hidden wpd_not_clicked" wpd-tooltip="Hide Replies"> <i class="fas fa-chevron-up"></i>
+                </div>
+               </div>
+              </div>
+             </div>
+             <div id="wpdiscuz_form_anchor-1061553_1061552"></div>
+             <div id="wpd-comm-1061555_1061553" class="wpd-comment wpd-reply wpd_comment_level-4">
+              <div class="wpd-comment-wrap wpd-blog-user wpd-blog-post_author">
+               <div class="wpd-comment-left ">
+                <div class="wpd-avatar "> 
+                </div>
+                <div class="wpd-comment-label" wpd-tooltip="Author" wpd-tooltip-position="right"> <span>Author</span>
+                </div>
+               </div>
+               <div id="comment-1061555" class="wpd-comment-right">
+                <div class="wpd-comment-header">
+                 <div class="wpd-comment-author ">
+                   mkyong
+                 </div>
+                 <div class="wpd-comment-date" title="May 29, 2021 11:16 am"> <i class="far fa-clock" aria-hidden="true"></i> 4 months ago
+                 </div>
+                 <div class="wpd-space"></div>
+                 <div class="wpd-comment-link wpd-hidden">
+                  <div style="" class="comment_flag comment_flag_modal wc_flag_tooltipster wpf-cta wpd-field-desc" wpd-tooltip-position="left" id="fc_1061555" wpd-tooltip="Click to flag and open «Comment Reporting» form. You can choose reporting category and send message to website administrator. Admins may or may not choose to remove the comment or block the author. And please don" t worry, your report will be anonymous.'>
+                   <i class="fas fa-flag"></i>
+                  </div>
+                 </div>
+                </div>
+                <div class="wpd-reply-to"> <i class="far fa-comments"></i> Reply to&nbsp; 
+                </div>
+                <div class="wpd-comment-text">
+                 <p>Can you provide the input and expected result? Drop me an email, thanks.</p>
+                </div>
+                <div class="wpd-comment-footer">
+                 <div class="wpd-vote">
+                  <div class="wpd-vote-up wpd_not_clicked"> 
+                   <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                    <path fill="none" d="M0 0h24v24H0V0z" /><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z" />
+                   </svg>
+                  </div>
+                  <div class="wpd-vote-result" title="0">
+                   0
+                  </div>
+                  <div class="wpd-vote-down wpd_not_clicked"> 
+                   <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                    <path fill="none" d="M0 0h24v24H0z" /><path d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z" />
+                   </svg>
+                  </div>
+                 </div>
+                 <div class="wpd-reply-button"> 
+                  <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                   <path d="M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z" /><path d="M0 0h24v24H0z" fill="none" />
+                  </svg> <span>Reply</span>
+                 </div>
+                 <div class="wpd-space"></div>
+                </div>
+               </div>
+              </div>
+              <div id="wpdiscuz_form_anchor-1061555_1061553"></div>
+             </div>
+            </div>
+           </div>
+          </div>
+          <div id="wpd-comm-1061296_0" class="wpd-comment wpd_comment_level-1">
+           <div class="wpd-comment-wrap wpd-blog-guest">
+            <div class="wpd-comment-left ">
+             <div class="wpd-avatar "> 
+             </div>
+            </div>
+            <div id="comment-1061296" class="wpd-comment-right">
+             <div class="wpd-comment-header">
+              <div class="wpd-comment-author ">
+                Nico
+              </div>
+              <div class="wpd-comment-date" title="February 27, 2021 6:11 am"> <i class="far fa-clock" aria-hidden="true"></i> 7 months ago
+              </div>
+              <div class="wpd-space"></div>
+              <div class="wpd-comment-link wpd-hidden">
+               <div style="" class="comment_flag comment_flag_modal wc_flag_tooltipster wpf-cta wpd-field-desc" wpd-tooltip-position="left" id="fc_1061296" wpd-tooltip="Click to flag and open «Comment Reporting» form. You can choose reporting category and send message to website administrator. Admins may or may not choose to remove the comment or block the author. And please don" t worry, your report will be anonymous.'>
+                <i class="fas fa-flag"></i>
+               </div>
+              </div>
+             </div>
+             <div class="wpd-comment-text">
+              <p>Thanks MKYong ! Your knowledge is my cure. You are one of my hero’s. Your friend always, Nico. 👑💯</p>
+             </div>
+             <div class="wpd-comment-footer">
+              <div class="wpd-vote">
+               <div class="wpd-vote-up wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0V0z" /><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z" />
+                </svg>
+               </div>
+               <div class="wpd-vote-result" title="0">
+                0
+               </div>
+               <div class="wpd-vote-down wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0z" /><path d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z" />
+                </svg>
+               </div>
+              </div>
+              <div class="wpd-reply-button"> 
+               <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                <path d="M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z" /><path d="M0 0h24v24H0z" fill="none" />
+               </svg> <span>Reply</span>
+              </div>
+              <div class="wpd-space"></div>
+             </div>
+            </div>
+           </div>
+           <div id="wpdiscuz_form_anchor-1061296_0"></div>
+          </div>
+          <div id="wpd-comm-1061194_0" class="wpd-comment wpd_comment_level-1">
+           <div class="wpd-comment-wrap wpd-blog-guest">
+            <div class="wpd-comment-left ">
+             <div class="wpd-avatar "> 
+             </div>
+            </div>
+            <div id="comment-1061194" class="wpd-comment-right">
+             <div class="wpd-comment-header">
+              <div class="wpd-comment-author ">
+                Marian
+              </div>
+              <div class="wpd-comment-date" title="January 23, 2021 6:18 pm"> <i class="far fa-clock" aria-hidden="true"></i> 8 months ago
+              </div>
+              <div class="wpd-space"></div>
+              <div class="wpd-comment-link wpd-hidden">
+               <div style="" class="comment_flag comment_flag_modal wc_flag_tooltipster wpf-cta wpd-field-desc" wpd-tooltip-position="left" id="fc_1061194" wpd-tooltip="Click to flag and open «Comment Reporting» form. You can choose reporting category and send message to website administrator. Admins may or may not choose to remove the comment or block the author. And please don" t worry, your report will be anonymous.'>
+                <i class="fas fa-flag"></i>
+               </div>
+              </div>
+             </div>
+             <div class="wpd-comment-text">
+              <p>Very relevant examples!</p>
+             </div>
+             <div class="wpd-comment-footer">
+              <div class="wpd-vote">
+               <div class="wpd-vote-up wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0V0z" /><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z" />
+                </svg>
+               </div>
+               <div class="wpd-vote-result" title="0">
+                0
+               </div>
+               <div class="wpd-vote-down wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0z" /><path d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z" />
+                </svg>
+               </div>
+              </div>
+              <div class="wpd-reply-button"> 
+               <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                <path d="M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z" /><path d="M0 0h24v24H0z" fill="none" />
+               </svg> <span>Reply</span>
+              </div>
+              <div class="wpd-space"></div>
+             </div>
+            </div>
+           </div>
+           <div id="wpdiscuz_form_anchor-1061194_0"></div>
+          </div>
+          <div id="wpd-comm-1058496_0" class="wpd-comment wpd_comment_level-1">
+           <div class="wpd-comment-wrap wpd-blog-guest">
+            <div class="wpd-comment-left ">
+             <div class="wpd-avatar "> 
+             </div>
+            </div>
+            <div id="comment-1058496" class="wpd-comment-right">
+             <div class="wpd-comment-header">
+              <div class="wpd-comment-author ">
+                Adam Erickson
+              </div>
+              <div class="wpd-comment-date" title="June 25, 2019 9:46 pm"> <i class="far fa-clock" aria-hidden="true"></i> 2 years ago
+              </div>
+              <div class="wpd-space"></div>
+              <div class="wpd-comment-link wpd-hidden">
+               <div style="" class="comment_flag comment_flag_modal wc_flag_tooltipster wpf-cta wpd-field-desc" wpd-tooltip-position="left" id="fc_1058496" wpd-tooltip="Click to flag and open «Comment Reporting» form. You can choose reporting category and send message to website administrator. Admins may or may not choose to remove the comment or block the author. And please don" t worry, your report will be anonymous.'>
+                <i class="fas fa-flag"></i>
+               </div>
+              </div>
+             </div>
+             <div class="wpd-comment-text">
+              <p>I can’t even count the amount of times I have searched for solutions and cam to your page. Great job!<br> I’m looking for the same thing but with Tabs.</p>
+             </div>
+             <div class="wpd-comment-footer">
+              <div class="wpd-vote">
+               <div class="wpd-vote-up wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0V0z" /><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z" />
+                </svg>
+               </div>
+               <div class="wpd-vote-result" title="0">
+                0
+               </div>
+               <div class="wpd-vote-down wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0z" /><path d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z" />
+                </svg>
+               </div>
+              </div>
+              <div class="wpd-reply-button"> 
+               <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                <path d="M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z" /><path d="M0 0h24v24H0z" fill="none" />
+               </svg> <span>Reply</span>
+              </div>
+              <div class="wpd-space"></div>
+             </div>
+            </div>
+           </div>
+           <div id="wpdiscuz_form_anchor-1058496_0"></div>
+          </div>
+          <div id="wpd-comm-1055769_0" class="wpd-comment wpd_comment_level-1">
+           <div class="wpd-comment-wrap wpd-blog-guest">
+            <div class="wpd-comment-left ">
+             <div class="wpd-avatar "> 
+             </div>
+            </div>
+            <div id="comment-1055769" class="wpd-comment-right">
+             <div class="wpd-comment-header">
+              <div class="wpd-comment-author ">
+                Hsiwei
+              </div>
+              <div class="wpd-comment-date" title="March 22, 2018 5:38 pm"> <i class="far fa-clock" aria-hidden="true"></i> 3 years ago
+              </div>
+              <div class="wpd-space"></div>
+              <div class="wpd-comment-link wpd-hidden">
+               <div style="" class="comment_flag comment_flag_modal wc_flag_tooltipster wpf-cta wpd-field-desc" wpd-tooltip-position="left" id="fc_1055769" wpd-tooltip="Click to flag and open «Comment Reporting» form. You can choose reporting category and send message to website administrator. Admins may or may not choose to remove the comment or block the author. And please don" t worry, your report will be anonymous.'>
+                <i class="fas fa-flag"></i>
+               </div>
+              </div>
+             </div>
+             <div class="wpd-comment-text">
+              <p>Thanks.<br> It’s useful.</p>
+             </div>
+             <div class="wpd-comment-footer">
+              <div class="wpd-vote">
+               <div class="wpd-vote-up wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0V0z" /><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z" />
+                </svg>
+               </div>
+               <div class="wpd-vote-result" title="0">
+                0
+               </div>
+               <div class="wpd-vote-down wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0z" /><path d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z" />
+                </svg>
+               </div>
+              </div>
+              <div class="wpd-reply-button"> 
+               <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                <path d="M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z" /><path d="M0 0h24v24H0z" fill="none" />
+               </svg> <span>Reply</span>
+              </div>
+              <div class="wpd-space"></div>
+             </div>
+            </div>
+           </div>
+           <div id="wpdiscuz_form_anchor-1055769_0"></div>
+          </div>
+          <div id="wpd-comm-1051407_0" class="wpd-comment wpd_comment_level-1">
+           <div class="wpd-comment-wrap wpd-blog-guest">
+            <div class="wpd-comment-left ">
+             <div class="wpd-avatar "> 
+             </div>
+            </div>
+            <div id="comment-1051407" class="wpd-comment-right">
+             <div class="wpd-comment-header">
+              <div class="wpd-comment-author ">
+                peter valencic
+              </div>
+              <div class="wpd-comment-date" title="July 14, 2016 5:30 pm"> <i class="far fa-clock" aria-hidden="true"></i> 5 years ago
+              </div>
+              <div class="wpd-space"></div>
+              <div class="wpd-comment-link wpd-hidden">
+               <div style="" class="comment_flag comment_flag_modal wc_flag_tooltipster wpf-cta wpd-field-desc" wpd-tooltip-position="left" id="fc_1051407" wpd-tooltip="Click to flag and open «Comment Reporting» form. You can choose reporting category and send message to website administrator. Admins may or may not choose to remove the comment or block the author. And please don" t worry, your report will be anonymous.'>
+                <i class="fas fa-flag"></i>
+               </div>
+              </div>
+             </div>
+             <div class="wpd-comment-text">
+              <p>Thank you!</p>
+             </div>
+             <div class="wpd-comment-footer">
+              <div class="wpd-vote">
+               <div class="wpd-vote-up wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0V0z" /><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z" />
+                </svg>
+               </div>
+               <div class="wpd-vote-result" title="0">
+                0
+               </div>
+               <div class="wpd-vote-down wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0z" /><path d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z" />
+                </svg>
+               </div>
+              </div>
+              <div class="wpd-reply-button"> 
+               <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                <path d="M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z" /><path d="M0 0h24v24H0z" fill="none" />
+               </svg> <span>Reply</span>
+              </div>
+              <div class="wpd-space"></div>
+             </div>
+            </div>
+           </div>
+           <div id="wpdiscuz_form_anchor-1051407_0"></div>
+          </div>
+          <div id="wpd-comm-1049623_0" class="wpd-comment wpd_comment_level-1">
+           <div class="wpd-comment-wrap wpd-blog-guest">
+            <div class="wpd-comment-left ">
+             <div class="wpd-avatar "> 
+             </div>
+            </div>
+            <div id="comment-1049623" class="wpd-comment-right">
+             <div class="wpd-comment-header">
+              <div class="wpd-comment-author ">
+                Sarah Ahmed
+              </div>
+              <div class="wpd-comment-date" title="July 30, 2015 5:07 pm"> <i class="far fa-clock" aria-hidden="true"></i> 6 years ago
+              </div>
+              <div class="wpd-space"></div>
+              <div class="wpd-comment-link wpd-hidden">
+               <div style="" class="comment_flag comment_flag_modal wc_flag_tooltipster wpf-cta wpd-field-desc" wpd-tooltip-position="left" id="fc_1049623" wpd-tooltip="Click to flag and open «Comment Reporting» form. You can choose reporting category and send message to website administrator. Admins may or may not choose to remove the comment or block the author. And please don" t worry, your report will be anonymous.'>
+                <i class="fas fa-flag"></i>
+               </div>
+              </div>
+             </div>
+             <div class="wpd-comment-text">
+              <p>kindly i need to know how to read csv file from input stream</p>
+             </div>
+             <div class="wpd-comment-footer">
+              <div class="wpd-vote">
+               <div class="wpd-vote-up wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0V0z" /><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z" />
+                </svg>
+               </div>
+               <div class="wpd-vote-result" title="0">
+                0
+               </div>
+               <div class="wpd-vote-down wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0z" /><path d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z" />
+                </svg>
+               </div>
+              </div>
+              <div class="wpd-reply-button"> 
+               <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                <path d="M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z" /><path d="M0 0h24v24H0z" fill="none" />
+               </svg> <span>Reply</span>
+              </div>
+              <div class="wpd-space"></div>
+              <div class="wpd-toggle wpd-hidden wpd_not_clicked" wpd-tooltip="Hide Replies"> <i class="fas fa-chevron-up"></i>
+              </div>
+             </div>
+            </div>
+           </div>
+           <div id="wpdiscuz_form_anchor-1049623_0"></div>
+           <div id="wpd-comm-1061105_1049623" class="wpd-comment wpd-reply wpd_comment_level-2">
+            <div class="wpd-comment-wrap wpd-blog-user wpd-blog-post_author">
+             <div class="wpd-comment-left ">
+              <div class="wpd-avatar "> 
+              </div>
+              <div class="wpd-comment-label" wpd-tooltip="Author" wpd-tooltip-position="right"> <span>Author</span>
+              </div>
+             </div>
+             <div id="comment-1061105" class="wpd-comment-right">
+              <div class="wpd-comment-header">
+               <div class="wpd-comment-author ">
+                 mkyong
+               </div>
+               <div class="wpd-comment-date" title="December 26, 2020 4:58 pm"> <i class="far fa-clock" aria-hidden="true"></i> 9 months ago
+               </div>
+               <div class="wpd-space"></div>
+               <div class="wpd-comment-link wpd-hidden">
+                <div style="" class="comment_flag comment_flag_modal wc_flag_tooltipster wpf-cta wpd-field-desc" wpd-tooltip-position="left" id="fc_1061105" wpd-tooltip="Click to flag and open «Comment Reporting» form. You can choose reporting category and send message to website administrator. Admins may or may not choose to remove the comment or block the author. And please don" t worry, your report will be anonymous.'>
+                 <i class="fas fa-flag"></i>
+                </div>
+               </div>
+              </div>
+              <div class="wpd-reply-to"> <i class="far fa-comments"></i> Reply to&nbsp; 
+              </div>
+              <div class="wpd-comment-text">
+               <p><code></code></p>
+               <p><code>String line;<br> InputStream is = OpenCsvExample.class.getClassLoader().getResourceAsStream("csv/country.csv");<br> try(BufferedReader br = new BufferedReader(new InputStreamReader(is))){<br> &nbsp;&nbsp;while((line=br.readLine())!=null){<br> &nbsp;&nbsp;&nbsp;&nbsp;// process the line<br> &nbsp;&nbsp;}<br> }</code></p>
+               <p></p>
+              </div>
+              <div class="wpd-comment-last-edited">
+               <i class="far fa-edit"></i>Last edited 9 months ago by mkyong
+              </div>
+              <div class="wpd-comment-footer">
+               <div class="wpd-vote">
+                <div class="wpd-vote-up wpd_not_clicked"> 
+                 <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                  <path fill="none" d="M0 0h24v24H0V0z" /><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z" />
+                 </svg>
+                </div>
+                <div class="wpd-vote-result wpd-up" title="1">
+                 1
+                </div>
+                <div class="wpd-vote-down wpd_not_clicked"> 
+                 <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                  <path fill="none" d="M0 0h24v24H0z" /><path d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z" />
+                 </svg>
+                </div>
+               </div>
+               <div class="wpd-reply-button"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path d="M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z" /><path d="M0 0h24v24H0z" fill="none" />
+                </svg> <span>Reply</span>
+               </div>
+               <div class="wpd-space"></div>
+              </div>
+             </div>
+            </div>
+            <div id="wpdiscuz_form_anchor-1061105_1049623"></div>
+           </div>
+          </div>
+          <div id="wpd-comm-1046901_0" class="wpd-comment wpd_comment_level-1">
+           <div class="wpd-comment-wrap wpd-blog-guest">
+            <div class="wpd-comment-left ">
+             <div class="wpd-avatar "> 
+             </div>
+            </div>
+            <div id="comment-1046901" class="wpd-comment-right">
+             <div class="wpd-comment-header">
+              <div class="wpd-comment-author ">
+                MKP
+              </div>
+              <div class="wpd-comment-date" title="October 10, 2014 8:39 pm"> <i class="far fa-clock" aria-hidden="true"></i> 6 years ago
+              </div>
+              <div class="wpd-space"></div>
+              <div class="wpd-comment-link wpd-hidden">
+               <div style="" class="comment_flag comment_flag_modal wc_flag_tooltipster wpf-cta wpd-field-desc" wpd-tooltip-position="left" id="fc_1046901" wpd-tooltip="Click to flag and open «Comment Reporting» form. You can choose reporting category and send message to website administrator. Admins may or may not choose to remove the comment or block the author. And please don" t worry, your report will be anonymous.'>
+                <i class="fas fa-flag"></i>
+               </div>
+              </div>
+             </div>
+             <div class="wpd-comment-text">
+              <p>Thanks Mr.Mkyong, its highly helpful.</p>
+             </div>
+             <div class="wpd-comment-footer">
+              <div class="wpd-vote">
+               <div class="wpd-vote-up wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0V0z" /><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z" />
+                </svg>
+               </div>
+               <div class="wpd-vote-result" title="0">
+                0
+               </div>
+               <div class="wpd-vote-down wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0z" /><path d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z" />
+                </svg>
+               </div>
+              </div>
+              <div class="wpd-reply-button"> 
+               <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                <path d="M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z" /><path d="M0 0h24v24H0z" fill="none" />
+               </svg> <span>Reply</span>
+              </div>
+              <div class="wpd-space"></div>
+             </div>
+            </div>
+           </div>
+           <div id="wpdiscuz_form_anchor-1046901_0"></div>
+          </div>
+          <div id="wpd-comm-1044262_0" class="wpd-comment wpd_comment_level-1">
+           <div class="wpd-comment-wrap wpd-blog-guest">
+            <div class="wpd-comment-left ">
+             <div class="wpd-avatar "> 
+             </div>
+            </div>
+            <div id="comment-1044262" class="wpd-comment-right">
+             <div class="wpd-comment-header">
+              <div class="wpd-comment-author ">
+                Anand Kadekar
+              </div>
+              <div class="wpd-comment-date" title="January 6, 2014 6:44 pm"> <i class="far fa-clock" aria-hidden="true"></i> 7 years ago
+              </div>
+              <div class="wpd-space"></div>
+              <div class="wpd-comment-link wpd-hidden">
+               <div style="" class="comment_flag comment_flag_modal wc_flag_tooltipster wpf-cta wpd-field-desc" wpd-tooltip-position="left" id="fc_1044262" wpd-tooltip="Click to flag and open «Comment Reporting» form. You can choose reporting category and send message to website administrator. Admins may or may not choose to remove the comment or block the author. And please don" t worry, your report will be anonymous.'>
+                <i class="fas fa-flag"></i>
+               </div>
+              </div>
+             </div>
+             <div class="wpd-comment-text">
+              <p>HI mkyong,<br> This works pretty well with small files. But if file size is beyond 100MB this will probably not work.<br> I came across the situation where I need to compare two very large csv files. First I tried with java but then settled with Hadoop.</p>
+             </div>
+             <div class="wpd-comment-footer">
+              <div class="wpd-vote">
+               <div class="wpd-vote-up wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0V0z" /><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z" />
+                </svg>
+               </div>
+               <div class="wpd-vote-result" title="0">
+                0
+               </div>
+               <div class="wpd-vote-down wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0z" /><path d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z" />
+                </svg>
+               </div>
+              </div>
+              <div class="wpd-reply-button"> 
+               <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                <path d="M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z" /><path d="M0 0h24v24H0z" fill="none" />
+               </svg> <span>Reply</span>
+              </div>
+              <div class="wpd-space"></div>
+             </div>
+            </div>
+           </div>
+           <div id="wpdiscuz_form_anchor-1044262_0"></div>
+          </div>
+          <div id="wpd-comm-135108_0" class="wpd-comment wpd_comment_level-1">
+           <div class="wpd-comment-wrap wpd-blog-guest">
+            <div class="wpd-comment-left ">
+             <div class="wpd-avatar "> 
+             </div>
+            </div>
+            <div id="comment-135108" class="wpd-comment-right">
+             <div class="wpd-comment-header">
+              <div class="wpd-comment-author ">
+                Girish Sharma
+              </div>
+              <div class="wpd-comment-date" title="June 20, 2013 6:22 pm"> <i class="far fa-clock" aria-hidden="true"></i> 8 years ago
+              </div>
+              <div class="wpd-space"></div>
+              <div class="wpd-comment-link wpd-hidden">
+               <div style="" class="comment_flag comment_flag_modal wc_flag_tooltipster wpf-cta wpd-field-desc" wpd-tooltip-position="left" id="fc_135108" wpd-tooltip="Click to flag and open «Comment Reporting» form. You can choose reporting category and send message to website administrator. Admins may or may not choose to remove the comment or block the author. And please don" t worry, your report will be anonymous.'>
+                <i class="fas fa-flag"></i>
+               </div>
+              </div>
+             </div>
+             <div class="wpd-comment-text">
+              <p>Good One You really Helps Me alot Keep sharing these kind of sample.</p>
+             </div>
+             <div class="wpd-comment-footer">
+              <div class="wpd-vote">
+               <div class="wpd-vote-up wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0V0z" /><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z" />
+                </svg>
+               </div>
+               <div class="wpd-vote-result" title="0">
+                0
+               </div>
+               <div class="wpd-vote-down wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0z" /><path d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z" />
+                </svg>
+               </div>
+              </div>
+              <div class="wpd-reply-button"> 
+               <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                <path d="M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z" /><path d="M0 0h24v24H0z" fill="none" />
+               </svg> <span>Reply</span>
+              </div>
+              <div class="wpd-space"></div>
+             </div>
+            </div>
+           </div>
+           <div id="wpdiscuz_form_anchor-135108_0"></div>
+          </div>
+          <div id="wpd-comm-132191_0" class="wpd-comment wpd_comment_level-1">
+           <div class="wpd-comment-wrap wpd-blog-guest">
+            <div class="wpd-comment-left ">
+             <div class="wpd-avatar "> 
+             </div>
+            </div>
+            <div id="comment-132191" class="wpd-comment-right">
+             <div class="wpd-comment-header">
+              <div class="wpd-comment-author ">
+                mahfuz
+              </div>
+              <div class="wpd-comment-date" title="April 26, 2013 12:11 am"> <i class="far fa-clock" aria-hidden="true"></i> 8 years ago
+              </div>
+              <div class="wpd-space"></div>
+              <div class="wpd-comment-link wpd-hidden">
+               <div style="" class="comment_flag comment_flag_modal wc_flag_tooltipster wpf-cta wpd-field-desc" wpd-tooltip-position="left" id="fc_132191" wpd-tooltip="Click to flag and open «Comment Reporting» form. You can choose reporting category and send message to website administrator. Admins may or may not choose to remove the comment or block the author. And please don" t worry, your report will be anonymous.'>
+                <i class="fas fa-flag"></i>
+               </div>
+              </div>
+             </div>
+             <div class="wpd-comment-text">
+              <p>i have used opencsv. Opencsv can read the whole cav in memory to do a faster operation. Also writing csv is pretty easy using that, just google opencsv.<br> Happy Coding.</p>
+             </div>
+             <div class="wpd-comment-footer">
+              <div class="wpd-vote">
+               <div class="wpd-vote-up wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0V0z" /><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z" />
+                </svg>
+               </div>
+               <div class="wpd-vote-result" title="0">
+                0
+               </div>
+               <div class="wpd-vote-down wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0z" /><path d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z" />
+                </svg>
+               </div>
+              </div>
+              <div class="wpd-reply-button"> 
+               <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                <path d="M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z" /><path d="M0 0h24v24H0z" fill="none" />
+               </svg> <span>Reply</span>
+              </div>
+              <div class="wpd-space"></div>
+             </div>
+            </div>
+           </div>
+           <div id="wpdiscuz_form_anchor-132191_0"></div>
+          </div>
+          <div class="wpdiscuz-comment-pagination"></div>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div id="wpdiscuz-loading-bar" class="wpdiscuz-loading-bar-unauth"></div>
+      <div id="wpdiscuz-comment-message" class="wpdiscuz-comment-message-unauth"></div>
+     </article>
+    </main> <!-- right -->
+    <div id="sidebar-right" class="d-none d-xl-block col-xl-3">
+     <div class="ads-container-height1080">
+      <div class="ads-container-sticky">
+       <div class="ads-container">
+        <div align="center" data-freestar-ad="__300x600" id="mkyong_rail_right_1">  
+        </div>
+       </div>
+      </div>
+     </div>
+     <div class="ads-container-sticky">
+      <div class="ads-container">
+       <div align="center" data-freestar-ad="__300x600" id="mkyong_rail_right_2">  
+       </div>
+      </div>
+     </div>
+    </div>
+   </div> <!--/.row -->
+  </div> <!--/.container-fluid -->  <!-- Dynamic page generated in 0.187 seconds. --><!-- Cached page generated by WP-Super-Cache on 2021-10-03 03:17:45 -->
+ </body>
+</html>

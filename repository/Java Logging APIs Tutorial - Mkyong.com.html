@@ -1,0 +1,528 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="google-site-verification" content="VsVvSTVAouAluNodWeR30BeIWTr4c84HvN4Fn9WBsak"> <!-- wp_head --> <!-- This site is optimized with the Yoast SEO plugin v15.5 - https://yoast.com/wordpress/plugins/seo/ -->
+  <title>Java Logging APIs Tutorial - Mkyong.com</title>
+  <meta name="description" content="The `java.util.logging` examples, logging levels, logging.properties and java.util.logging.config.file">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Java Logging APIs Tutorial - Mkyong.com">
+  <meta property="og:description" content="The `java.util.logging` examples, logging levels, logging.properties and java.util.logging.config.file">
+  <meta property="og:url" content="https://mkyong.com/logging/java-logging-apis-tutorial/">
+  <meta property="og:site_name" content="Mkyong.com">
+  <meta property="article:published_time" content="2021-06-05T09:21:01+00:00">
+  <meta property="article:modified_time" content="2021-06-10T00:04:09+00:00">
+  <meta property="og:image" content="https://mkyong.com/wp-content/uploads/2021/06/jul-logging-properties.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:label1" content="Written by">
+  <meta name="twitter:data1" content="mkyong">
+  <meta name="twitter:label2" content="Est. reading time">
+  <meta name="twitter:data2" content="4 minutes">  <!-- / Yoast SEO plugin. -->  
+ </head>
+ <body>
+  <div class="container-fluid">
+   <div class="row"> <!-- left -->
+    <div id="sidebar-left" class="col-12 col-lg-3 col-xl-2"> <!-- sidebar-left-menu, see functions.php-->
+     <div class="offcanvas offcanvas-start" tabindex="-1" id="left-nav" aria-labelledby="left-nav">
+      <div class="offcanvas-header">
+       <h5 class="offcanvas-title">Main Tutorials</h5>
+      </div>
+      <div class="offcanvas-body sidebar-left-no-highlight">
+       <div>
+        <ul>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+        </ul>
+       </div>
+      </div>
+     </div> <!-- ads -->
+     <div class="ads-container-sticky d-none d-lg-block">
+      <div class="ads-container">
+       <div align="center" data-freestar-ad="__160x600" id="mkyong_rail_left">  
+       </div>
+      </div>
+     </div>
+    </div> <!-- middle -->
+    <main id="main-middle" role="main" class="col-12 col-lg-9 col-xl-7">
+     <article id="main-content" class="dont-break-out">
+      <div id="title-container">
+       <h1>Java Logging APIs Tutorial</h1>
+       <div class="post-meta d-flex align-items-center position-relative">
+        <div></div>
+        <div>
+         <p><small class="extra-info">By  | <time datetime="2021-06-10T08:04:09+08:00"> Last updated: June 10, 2021</time></small></p>
+         <p><small class="extra-info">Viewed: 3,484 (+144 pv/w)</small></p>
+         <p><small class="extra-info"></small></p>
+         <div class="post-tag">
+          <small class="extra-info">Tags: |  |  | </small>
+         </div>
+         <p></p>
+        </div>
+       </div>
+      </div>
+      <p>This tutorial shows logging using the Java built-in logging APIs in the <code>java.util.logging</code> package.</p>
+      <p>Table of contents</p>
+      <ul class="list-toc">
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+      </ul>
+      <p><em>P.S The <code>java.util.logging</code> is bundled with the Java since JDK 1.4.</em></p>
+      <h2 id="java-logging-apis-hello-world"> 1. Java Logging APIs Hello World<br></h2>
+      <p>1.1 A Java Logging APIs or <code>java.util.logging</code> hello world example, logs some messages and display them in the console.</p>
+      <div class="filename">
+       HelloWorld.java
+      </div>
+      <pre><code class="language-java">
+package com.mkyong;
+
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+public class HelloWorld {
+
+    private static Logger logger = Logger.getLogger(HelloWorld.class.getName());
+
+    public static void main(String[] args) {
+
+        // set log level to SEVERE, default level info
+        //logger.setLevel(Level.SEVERE);
+
+        // Log a info level msg
+        logger.info("This is level info logging");
+
+        logger.log(Level.WARNING, "This is level warning logging");
+
+        logger.log(Level.SEVERE, "This is level severe logging");
+
+        System.out.println("Hello Java Logging APIs.");
+    }
+
+}
+</code></pre>
+      <p>Output</p>
+      <div class="filename">
+       Terminal
+      </div>
+      <pre><code class="language-bash">
+Jun 05, 2021 1:35:08 PM com.mkyong.HelloWorld main
+INFO: This is level info logging
+Jun 05, 2021 1:35:08 PM com.mkyong.HelloWorld main
+WARNING: This is level warning logging
+Jun 05, 2021 1:35:08 PM com.mkyong.HelloWorld main
+SEVERE: This is level severe logging
+Hello Java Logging APIs.
+</code></pre>
+      <div class="ads-container ads-container-video">
+       <div id="mkyongFreeStarVideoAdContainer">
+        <div id="freestar-video-parent">
+         <div id="freestar-video-child"></div>
+        </div>
+       </div>
+      </div>
+      <h2 id="logging-levels"> 2. Logging Levels<br></h2>
+      <p>2.1 There are 7 logging levels in <code>java.util.logging</code> package :</p>
+      <ul>
+       <li>SEVERE (highest value)</li>
+       <li>WARNING</li>
+       <li>INFO (default)</li>
+       <li>CONFIG</li>
+       <li>FINE</li>
+       <li>FINER</li>
+       <li>FINEST (lowest value)</li>
+      </ul>
+      <div class="note">
+       <p><strong>Note</strong><br> Read the .</p>
+      </div>
+      <p>2.2 If we set the logging level to <code>SEVERE</code>, it will log messages equal to or above the <code>SEVERE</code> level. And since the <code>SEVERE</code> is the highest logging level, it logs messages which is <code>SEVERE</code> level only.</p>
+      <div class="filename">
+       HelloWorld2.java
+      </div>
+      <pre><code class="language-java">
+package com.mkyong;
+
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+public class HelloWorld2 {
+
+    private static Logger logger = Logger.getLogger(HelloWorld.class.getName());
+
+    public static void main(String[] args) {
+
+        // set log level to SEVERE, default level info
+        logger.setLevel(Level.SEVERE);
+
+        // Log a info level msg
+        logger.info("This is level info logging");
+
+        logger.log(Level.WARNING, "This is level warning logging");
+
+        logger.log(Level.SEVERE, "This is level severe logging");
+
+        System.out.println("Hello Java Logging APIs.");
+    }
+
+}
+</code></pre>
+      <p>Output</p>
+      <div class="filename">
+       Terminal
+      </div>
+      <pre><code class="language-bash">
+Jun 05, 2021 1:41:07 PM com.mkyong.HelloWorld main
+SEVERE: This is level severe logging
+Hello Java Logging APIs.
+</code></pre>
+      <p>2.3 If we set the logging level to <code>WARNING</code>, it will log messages equal to or above the <code>WARNING</code> level, which are <code>Level.SEVERE</code> and <code>Level.WARNING</code>.</p>
+      <pre><code class="language-java">
+  // set logging level to WARNING
+  logger.setLevel(Level.WARNING);
+</code></pre>
+      <p>Output</p>
+      <div class="filename">
+       Terminal
+      </div>
+      <pre><code class="language-bash">
+Jun 05, 2021 5:08:11 PM com.mkyong.HelloWorld main
+WARNING: This is level warning logging
+Jun 05, 2021 5:08:11 PM com.mkyong.HelloWorld main
+SEVERE: This is level severe logging
+Hello Java Logging APIs.
+</code></pre>
+      <h2 id="loggingproperties"> 3. logging.properties<br></h2>
+      <p>The Java logging APIs (<code>java.util.logging</code>) default loads  in the <code>$JAVA_HOME/jre/lib/</code> (Java 8 and before); for Java 9 and above, the <code>logging.properties</code> file moved to <code>$JAVA_HOME/conf</code>.</p>
+      <p>3.1 Below is a <code>logging.properties</code> sample, which logs messages to both console and a file.</p>
+      <div class="filename">
+       logging.properties
+      </div>
+      <pre><code class="language-bash">
+# Logs to file and console
+handlers= java.util.logging.FileHandler, java.util.logging.ConsoleHandler
+# Global logging levels, 7 levels
+.level= SEVERE
+
+# Log file output in user's home directory, %h
+java.util.logging.FileHandler.pattern = %h/java%u.log
+java.util.logging.FileHandler.limit = 50000
+java.util.logging.FileHandler.count = 1
+java.util.logging.FileHandler.formatter = java.util.logging.XMLFormatter
+# java.util.logging.FileHandler.formatter = java.util.logging.SimpleFormatter
+
+java.util.logging.ConsoleHandler.level = INFO
+java.util.logging.ConsoleHandler.formatter = java.util.logging.SimpleFormatter
+
+java.util.logging.SimpleFormatter.format=[%1$tc] %4$s: %5$s %n
+
+# log level for package
+com.mkyong.level = SEVERE
+</code></pre>
+      <p>3.2 We can put the <code>logging.properties</code> in the <code>resources</code> folder (Maven standard directory), and use the system property <code>java.util.logging.config.file</code> to define the location of <code>logging.properties</code>.</p>
+      <div class="note">
+       <p><strong>Note</strong><br> </p>
+      </div>
+      <p></p>
+      <div class="pic"> 
+      </div>
+      <p></p>
+      <div class="filename">
+       LoadLogPropertiesFile.java
+      </div>
+      <pre><code class="language-java">
+package com.mkyong;
+
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+public class LoadLogPropertiesFile {
+
+  static {
+      // must set before the Logger
+      String path = LoadLogPropertiesFile.class.getClassLoader()
+                        .getResource("logging.properties").getFile();
+      System.setProperty("java.util.logging.config.file", path);
+  }
+
+  private static Logger logger = Logger.getLogger(LoadLogPropertiesFile.class.getName());
+
+  public static void main(String[] args) {
+
+      logger.fine("This is level fine logging");
+
+      // Log a fine level msg
+      logger.info("This is level info logging");
+
+      logger.log(Level.SEVERE, "This is level severe logging");
+
+      logger.log(Level.WARNING, "This is level warning logging");
+
+      System.out.println("Hello Java Logging APIs.");
+  }
+
+}
+</code></pre>
+      <p>Output in console using <code>SimpleFormatter</code>.</p>
+      <div class="filename">
+       Terminal
+      </div>
+      <pre><code class="language-bash">
+[Sat Jun 05 14:04:18 MYT 2021] SEVERE: This is level severe logging
+Hello Java Logging APIs.
+</code></pre>
+      <p>Output in a file using <code>XMLFormatter</code>.</p>
+      <div class="filename">
+       $user_home/java0.log
+      </div>
+      <pre><code class="language-xml">
+&lt;?xml version="1.0" encoding="UTF-8" standalone="no"?&gt;
+&lt;!DOCTYPE log SYSTEM "logger.dtd"&gt;
+&lt;log&gt;
+&lt;record&gt;
+&lt;date&gt;2021-06-05T06:04:18.276214600Z&lt;/date&gt;
+&lt;millis&gt;1622873058276&lt;/millis&gt;
+&lt;nanos&gt;214600&lt;/nanos&gt;
+&lt;sequence&gt;0&lt;/sequence&gt;
+&lt;logger&gt;com.mkyong.LoadLogPropertiesFile&lt;/logger&gt;
+&lt;level&gt;SEVERE&lt;/level&gt;
+&lt;class&gt;com.mkyong.LoadLogPropertiesFile&lt;/class&gt;
+&lt;method&gt;main&lt;/method&gt;
+&lt;thread&gt;1&lt;/thread&gt;
+&lt;message&gt;This is level severe logging&lt;/message&gt;
+&lt;/record&gt;
+&lt;/log&gt;
+</code></pre>
+      <h2 id="javautilloggingconfigfile"> 4. java.util.logging.config.file<br></h2>
+      <p>The system property <code>java.util.logging.config.file</code> defined the location of <code>logging.properties</code>.</p>
+      <p>In command line, we can use system property <code>java.util.logging.config.file</code> to define the location of a <code>logging.properties</code> file at runtime.</p>
+      <div class="filename">
+       Terminal
+      </div>
+      <pre><code class="language-bash">
+$ java -jar -Djava.util.logging.config.file=/path/logging.properties server.jar
+</code></pre>
+      <h2 id="why-choose-javautillogging"> 5. Why choose java.util.logging<br></h2>
+      <p>This Java logging APIs or <code>java.util.logging</code> is part of the Java JDK, suitable for the simple project which required only basic logging features like logs to console or a file.</p>
+      <p>For more advanced logging features like log file rotation, sending email for error logs, send logs to a database, etc. There are many third-party logging frameworks like the logging facade , or logging framework like  and .</p>
+      <h2 id="download-source-code"> 6. Download Source Code<br></h2>
+      <div class="github">
+       <p>$ git clone </p>
+       <p>$ cd jul</p>
+      </div>
+      <h2 id="references"> 7. References<br></h2>
+      <ul>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+      </ul> <!-- current post ID --> 
+      <div class="d-flex justify-content-center ads-container-after-post ads-container"> <!-- Tag ID: mkyong_leaderboard_btf -->
+       <div align="center" data-freestar-ad="__320x100 __336x280" id="mkyong_leaderboard_btf">  
+       </div>
+      </div> <!-- loaded via JS -->
+      <div id="mk-afterpost-related"></div> <!-- author -->
+      <div id="author-container" class="d-flex align-items-center position-relative">
+       <div></div>
+       <div>
+        <h5></h5>
+        <p>Founder of , love Java and open source stuff. Follow him on . If you like my tutorials, consider make a donation to .</p>
+        <p></p>
+       </div>
+      </div> <!-- comments -->
+      <h4>Comments</h4>
+      <div class="wpdiscuz_top_clearing"></div>
+      <div id="comments" class="comments-area">
+       <div id="respond" style="width: 0;height: 0;clear: both;margin: 0;padding: 0;"></div>
+       <div id="wpdcom" class="wpdiscuz_unauth wpd-default wpd-layout-1 wpd-comments-open">
+        <div class="wc_social_plugin_wrapper"></div>
+        <div class="wpd-form-wrap">
+         <div class="wpd-form-head">
+          <div class="wpd-auth">
+           <div class="wpd-login"></div>
+          </div>
+         </div>
+         <div class="wpd-form wpd-form-wrapper wpd-main-form-wrapper" id="wpd-main-form-wrapper-0_0"></div>
+         <div id="wpdiscuz_hidden_secondary_form" style="display: none;">
+          <div class="wpd-form wpd-form-wrapper wpd-secondary-form-wrapper" id="wpd-secondary-form-wrapper-wpdiscuzuniqueid" style="display: none;">
+           <div class="wpd-secondary-forms-social-content"></div>
+           <div class="clearfix"></div>
+          </div>
+         </div>
+        </div>
+        <div id="wpd-threads" class="wpd-thread-wrapper">
+         <div class="wpd-thread-head">
+          <div class="wpd-thread-info " data-comments-count="2"> <span class="wpdtc" title="2">2</span> Comments
+          </div>
+          <div class="wpd-space"></div>
+          <div class="wpd-thread-filter">
+           <div class="wpd-filter wpdf-sorting"> <span class="wpdiscuz-sort-button wpdiscuz-vote-sort-up wpdiscuz-sort-button-active" data-sorting="by_vote">Most Voted</span> <i class="fas fa-sort-down"></i>
+            <div class="wpdiscuz-sort-buttons"> <span class="wpdiscuz-sort-button wpdiscuz-date-sort-desc" data-sorting="newest">Newest</span> <span class="wpdiscuz-sort-button wpdiscuz-date-sort-asc" data-sorting="oldest">Oldest</span>
+            </div>
+           </div>
+          </div>
+         </div>
+         <div class="wpd-comment-info-bar">
+          <div class="wpd-current-view">
+           <i class="fas fa-quote-left"></i> Inline Feedbacks
+          </div>
+          <div class="wpd-filter-view-all">
+           View all comments
+          </div>
+         </div>
+         <div class="wpd-thread-list">
+          <div id="wpd-comm-1061789_0" class="wpd-comment wpd_comment_level-1">
+           <div class="wpd-comment-wrap wpd-blog-guest">
+            <div class="wpd-comment-left ">
+             <div class="wpd-avatar "> 
+             </div>
+            </div>
+            <div id="comment-1061789" class="wpd-comment-right">
+             <div class="wpd-comment-header">
+              <div class="wpd-comment-author ">
+                Daniel Howard
+              </div>
+              <div class="wpd-comment-date" title="August 28, 2021 8:04 pm"> <i class="far fa-clock" aria-hidden="true"></i> 1 month ago
+              </div>
+              <div class="wpd-space"></div>
+              <div class="wpd-comment-link wpd-hidden">
+               <div style="" class="comment_flag comment_flag_modal wc_flag_tooltipster wpf-cta wpd-field-desc" wpd-tooltip-position="left" id="fc_1061789" wpd-tooltip="Click to flag and open «Comment Reporting» form. You can choose reporting category and send message to website administrator. Admins may or may not choose to remove the comment or block the author. And please don" t worry, your report will be anonymous.'>
+                <i class="fas fa-flag"></i>
+               </div>
+              </div>
+             </div>
+             <div class="wpd-comment-text">
+              <p>2021 and you document legacy logging. I’m trying to get System.Logger working for JUNIT. How to do that!?</p>
+             </div>
+             <div class="wpd-comment-footer">
+              <div class="wpd-vote">
+               <div class="wpd-vote-up wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0V0z" /><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z" />
+                </svg>
+               </div>
+               <div class="wpd-vote-result" title="0">
+                0
+               </div>
+               <div class="wpd-vote-down wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0z" /><path d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z" />
+                </svg>
+               </div>
+              </div>
+              <div class="wpd-reply-button"> 
+               <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                <path d="M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z" /><path d="M0 0h24v24H0z" fill="none" />
+               </svg> <span>Reply</span>
+              </div>
+              <div class="wpd-space"></div>
+             </div>
+            </div>
+           </div>
+           <div id="wpdiscuz_form_anchor-1061789_0"></div>
+          </div>
+          <div id="wpd-comm-1061738_0" class="wpd-comment wpd_comment_level-1">
+           <div class="wpd-comment-wrap wpd-blog-guest">
+            <div class="wpd-comment-left ">
+             <div class="wpd-avatar "> 
+             </div>
+            </div>
+            <div id="comment-1061738" class="wpd-comment-right">
+             <div class="wpd-comment-header">
+              <div class="wpd-comment-author ">
+                alex
+              </div>
+              <div class="wpd-comment-date" title="August 6, 2021 5:01 am"> <i class="far fa-clock" aria-hidden="true"></i> 1 month ago
+              </div>
+              <div class="wpd-space"></div>
+              <div class="wpd-comment-link wpd-hidden">
+               <div style="" class="comment_flag comment_flag_modal wc_flag_tooltipster wpf-cta wpd-field-desc" wpd-tooltip-position="left" id="fc_1061738" wpd-tooltip="Click to flag and open «Comment Reporting» form. You can choose reporting category and send message to website administrator. Admins may or may not choose to remove the comment or block the author. And please don" t worry, your report will be anonymous.'>
+                <i class="fas fa-flag"></i>
+               </div>
+              </div>
+             </div>
+             <div class="wpd-comment-text">
+              <p>Great tutorial, thank you.</p>
+              <p>Would you consider expanding the logging examples to include:<br> how to log an exception.<br> how to log variables in a log message.<br> how to format a message in json?</p>
+              <p>Much appreciated</p>
+             </div>
+             <div class="wpd-comment-footer">
+              <div class="wpd-vote">
+               <div class="wpd-vote-up wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0V0z" /><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z" />
+                </svg>
+               </div>
+               <div class="wpd-vote-result" title="0">
+                0
+               </div>
+               <div class="wpd-vote-down wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0z" /><path d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z" />
+                </svg>
+               </div>
+              </div>
+              <div class="wpd-reply-button"> 
+               <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                <path d="M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z" /><path d="M0 0h24v24H0z" fill="none" />
+               </svg> <span>Reply</span>
+              </div>
+              <div class="wpd-space"></div>
+             </div>
+            </div>
+           </div>
+           <div id="wpdiscuz_form_anchor-1061738_0"></div>
+          </div>
+          <div class="wpdiscuz-comment-pagination"></div>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div id="wpdiscuz-loading-bar" class="wpdiscuz-loading-bar-unauth"></div>
+      <div id="wpdiscuz-comment-message" class="wpdiscuz-comment-message-unauth"></div>
+     </article>
+    </main> <!-- right -->
+    <div id="sidebar-right" class="d-none d-xl-block col-xl-3">
+     <div class="ads-container-height1080">
+      <div class="ads-container-sticky">
+       <div class="ads-container">
+        <div align="center" data-freestar-ad="__300x600" id="mkyong_rail_right_1">  
+        </div>
+       </div>
+      </div>
+     </div>
+     <div class="ads-container-sticky">
+      <div class="ads-container">
+       <div align="center" data-freestar-ad="__300x600" id="mkyong_rail_right_2">  
+       </div>
+      </div>
+     </div>
+    </div>
+   </div> <!--/.row -->
+  </div> <!--/.container-fluid -->  <!-- Dynamic page generated in 0.074 seconds. --><!-- Cached page generated by WP-Super-Cache on 2021-09-29 17:17:56 --><!-- super cache -->
+ </body>
+</html>

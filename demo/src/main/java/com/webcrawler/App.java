@@ -9,7 +9,9 @@ import org.jsoup.select.Elements;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.PrintWriter;
 import java.util.HashSet;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.io.FileWriter;
 import java.net.HttpURLConnection;
@@ -41,33 +43,42 @@ public class App
     
     }
 
-    public void getPageLinks(String URL, int depth){
+    public void getLinks(String URL, int depth) throws IOException{
 
         if(!links.containsKey(URL) && (depth < MAX_DEPTH)){
             System.out.println(">> Depth: " + depth + " [" + URL + "]");
-            
-            try{
 
+             
+            try{
                 Document document = Jsoup.connect(URL).get(); 
                 Elements linksOnPage = document.select("a[href]"); 
 
+
+
+                int outlinks = Integer.valueOf(linksOnPage.size());
+                String pathToCsv = "./report.csv";
+                File csvFile = new File(pathToCsv);
+                //FileWriter csvWriter = new FileWriter(csvFile, true);
+
+                links.put(URL, outlinks);
+                //System.out.println(links);
+                /*csvWriter.append(links(i).toString());
+                csvWriter.append("\n");
+                System.out.println("Wrote to file! pog :)");
+                csvWriter.close();*/
+
                 depth++;
 
-                Connection.Response response = Jsoup.connect(URL).execute();
-                Document doc = response.parse();
+                Connection.Response response = Jsoup.connect(URL).execute(); 
+                Document doc = response.parse(); 
 
                 for(int i = 0; i < removedTags.length; i++){
-                    doc.select(removedTags[i]).remove();
+                    doc.select(removedTags[i]).remove(); 
                 }
 
                 for(Element page: linksOnPage){
-                    getPageLinks(page.attr("abs:href"), depth);
+                    getLinks(page.attr("abs:href"), depth);
                 }
-
-
-                //Element link = doc.select("p").first();
-                //System.out.println("Text:" + link.text());
-
 
                 String path = "./repository/";
                 FileWriter writer; 
@@ -81,13 +92,17 @@ public class App
                 writer = new FileWriter(path + document.title() + ".html", true);
                 writer.write(doc.outerHtml());
                 writer.close();
-                System.out.println("Wrote to the file!");
-
+            
             } catch(IOException e){
                 System.err.println("For '" + URL + "':" + e.getMessage());
             }
-
         }
+
+    }
+
+    public HashMap<String, Integer> getPageLinks(){
+
+        return links;
 
     }
     public String getLang(String sampleText){ 
@@ -140,8 +155,29 @@ public class App
         return language; 
     }
 
-    public static void main( String[] args )
+    public static void main( String[] args ) throws IOException
     {
-        new App().getPageLinks("https://mkyong.com/", 0);
+        App webCrawler = new App();
+        
+        webCrawler.getLinks("https://mkyong.com/", 0);
+
+        String pathToCsv = "./report.csv";
+        File csvFile = new File(pathToCsv);
+        FileWriter csvWriter = new FileWriter(csvFile, true);
+       
+        HashMap<String, Integer> finishedlinks;
+        finishedlinks = webCrawler.getPageLinks();
+        
+        for(HashMap.Entry<String, Integer> entry: finishedlinks.entrySet()){
+            
+            csvWriter.append(entry.getKey() + ", " + entry.getValue());
+            csvWriter.append("\n");       
+                 
+        }
+
+        csvWriter.close();
+
+
+
     }
 }

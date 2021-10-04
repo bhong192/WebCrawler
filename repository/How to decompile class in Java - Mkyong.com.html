@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="google-site-verification" content="VsVvSTVAouAluNodWeR30BeIWTr4c84HvN4Fn9WBsak"> <!-- wp_head --> <!-- This site is optimized with the Yoast SEO plugin v15.5 - https://yoast.com/wordpress/plugins/seo/ -->
+  <title>How to decompile class in Java - Mkyong.com</title>
+  <meta name="description" content="List of Java Decompilers and decompile Java class in Eclipse IDE, IntelliJ IDEA, and command line.">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="How to decompile class in Java - Mkyong.com">
+  <meta property="og:description" content="List of Java Decompilers and decompile Java class in Eclipse IDE, IntelliJ IDEA, and command line.">
+  <meta property="og:url" content="https://mkyong.com/java/how-to-decompile-class-in-java/">
+  <meta property="og:site_name" content="Mkyong.com">
+  <meta property="article:published_time" content="2021-07-01T14:04:21+00:00">
+  <meta property="og:image" content="https://mkyong.com/wp-content/uploads/2008/07/eclipse-java-decompiler-4-file-associations.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:label1" content="Written by">
+  <meta name="twitter:data1" content="mkyong">
+  <meta name="twitter:label2" content="Est. reading time">
+  <meta name="twitter:data2" content="2 minutes">  <!-- / Yoast SEO plugin. -->  
+ </head>
+ <body>
+  <div class="container-fluid">
+   <div class="row"> <!-- left -->
+    <div id="sidebar-left" class="col-12 col-lg-3 col-xl-2"> <!-- sidebar-left-menu, see functions.php-->
+     <div class="offcanvas offcanvas-start" tabindex="-1" id="left-nav" aria-labelledby="left-nav">
+      <div class="offcanvas-header">
+       <h5 class="offcanvas-title">Main Tutorials</h5>
+      </div>
+      <div class="offcanvas-body sidebar-left-no-highlight">
+       <div>
+        <ul>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+        </ul>
+       </div>
+      </div>
+     </div> <!-- ads -->
+     <div class="ads-container-sticky d-none d-lg-block">
+      <div class="ads-container">
+       <div align="center" data-freestar-ad="__160x600" id="mkyong_rail_left">  
+       </div>
+      </div>
+     </div>
+    </div> <!-- middle -->
+    <main id="main-middle" role="main" class="col-12 col-lg-9 col-xl-7">
+     <article id="main-content" class="dont-break-out">
+      <div id="title-container">
+       <h1>How to decompile class in Java</h1>
+       <div class="post-meta d-flex align-items-center position-relative">
+        <div></div>
+        <div>
+         <p><small class="extra-info">By  | <time datetime="2021-07-01T22:04:21+08:00"> Last updated: July 1, 2021</time></small></p>
+         <p><small class="extra-info">Viewed: 4,132 (+483 pv/w)</small></p>
+         <p><small class="extra-info"></small></p>
+         <div class="post-tag">
+          <small class="extra-info">Tags: |  |  | </small>
+         </div>
+         <p></p>
+        </div>
+       </div>
+      </div>
+      <p>This article shows how to decompile Java class in Eclipse IDE, IntelliJ IDEA, and command line.</p>
+      <p>Table of contents</p>
+      <ul class="list-toc">
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+      </ul>
+      <h2 id="java-decompilers"> 1. Java Decompilers<br></h2>
+      <p>Java decompiler can convert <code>.class</code> files back to its source code <code>.java</code> files or convert a program’s bytecode into source code. Below are some of the Java decompilers:</p>
+      <ol>
+       <li> – IntelliJ IDEA build-in Java decompiler.</li>
+       <li> – yet another fast Java decompiler, a GUI tool.</li>
+       <li> – inspired by .NET  and Mono.Cecil.</li>
+       <li> – another java decompiler, written entirely in Java 6, decompile modern Java feature up to Java 14.</li>
+       <li> – no longer maintained, closed source.</li>
+      </ol>
+      <div class="ads-container ads-container-video">
+       <div id="mkyongFreeStarVideoAdContainer">
+        <div id="freestar-video-parent">
+         <div id="freestar-video-child"></div>
+        </div>
+       </div>
+      </div>
+      <h2 id="decompile-java-class-in-eclipse-ide"> 2. Decompile Java class in Eclipse IDE<br></h2>
+      <p>In Eclipse IDE, we can use  plugin to decompile Java class files without source code directly.</p>
+      <p>2.1 Select <code>Help -&gt; Eclipse Marketplace...</code> to search and install the <code>Enhanced Class Decompiler</code> plugin.</p>
+      <p>2.2 Select <code>Window -&gt; Preferences -&gt; General -&gt; Editors -&gt; File Associations</code>, configure the <code>*.class without source</code> default to <code>Class Decompiler Viewer</code>.</p>
+      <p></p>
+      <div class="pic"> 
+      </div>
+      <p></p>
+      <p>Now, click on the class or methods, press <code>F3</code>, and the plugin will automatically decompile the Java class.</p>
+      <div class="note">
+       <p><strong>Note</strong><br> For more detailed in install and configure the <code>Enhanced Class Decompiler</code> plugin, visit this .</p>
+      </div>
+      <h2 id="decompile-java-class-in-intellij-idea"> 3. Decompile Java class in IntelliJ IDEA<br></h2>
+      <p>IntelliJ IDEA has a built-in Java decompiler using . We no need to install or configure anything, just clicks on the Java class or method, clicks <kbd>CTRL + B</kbd> (declaration or usages) or <kbd>CTRL + ALT + B</kbd> (implementation), IntelliJ IDEA will automatically decompile the Java class.</p>
+      <p></p>
+      <div class="pic"> 
+      </div>
+      <p></p>
+      <h2 id="decompile-java-class-in-command-line-fernflower"> 4. Decompile Java class in Command Line (FernFlower)<br></h2>
+      <p>This example shows how to use <code>FernFlower (Java Decompiler)</code> to decompile a <code>.jar</code> or <code>.class</code> file in command line.</p>
+      <div class="note">
+       <p><strong>Note</strong><br> The size of the official  is a bit large, difficult to build the source. The workaround is to use the fesh0r’s .</p>
+      </div>
+      <p>4.1 <code>git clone</code> the source code and Gradle build the source code into a <code>fernflower.jar</code></p>
+      <div class="filename">
+       Terminal
+      </div>
+      <pre><code class="language-bash">
+$ git clone https://github.com/fesh0r/fernflower
+
+$ cd fernflower
+
+# build the source code using Gradle build tool
+$ gradle build
+
+# the fernflower.jar at build/lib/
+</code></pre>
+      <p>4.2 The below example uses <code>fernflower.jar</code> to decompile a <code>asm-analysis-3.2.jar</code> JAR file into folder <code>/path/decompile/</code> (must exists).</p>
+      <div class="filename">
+       Terminal
+      </div>
+      <pre><code class="language-bash">
+# decompile JAR or Class files
+# java -jar fernflower.jar /path/asm-analysis-3.2.jar /path/unknown.class /path/decompile/
+
+$ java -jar fernflower.jar /path/asm-analysis-3.2.jar /path/decompile/
+
+INFO:  Decompiling class org/objectweb/asm/tree/analysis/Analyzer
+INFO:  ... done
+INFO:  Decompiling class org/objectweb/asm/tree/analysis/AnalyzerException
+INFO:  ... done
+INFO:  Decompiling class org/objectweb/asm/tree/analysis/BasicInterpreter
+INFO:  ... done
+
+</code></pre>
+      <p>The result is a new <code>/path/decompile/asm-analysis-3.2.jar</code> containing the source code <code>*.java</code>.</p>
+      <div class="pic"> 
+      </div>
+      <p></p>
+      <p>Extract the decompiled JAR file.</p>
+      <div class="filename">
+       Terminal
+      </div>
+      <pre><code class="language-bash">
+$ jar -xf /path/decompile/asm-analysis-3.2.jar
+</code></pre>
+      <h2 id="references"> 5. References<br></h2>
+      <ul>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+      </ul> <!-- current post ID --> 
+      <div class="d-flex justify-content-center ads-container-after-post ads-container"> <!-- Tag ID: mkyong_leaderboard_btf -->
+       <div align="center" data-freestar-ad="__320x100 __336x280" id="mkyong_leaderboard_btf">  
+       </div>
+      </div> <!-- loaded via JS -->
+      <div id="mk-afterpost-related"></div> <!-- author -->
+      <div id="author-container" class="d-flex align-items-center position-relative">
+       <div></div>
+       <div>
+        <h5></h5>
+        <p>Founder of , love Java and open source stuff. Follow him on . If you like my tutorials, consider make a donation to .</p>
+        <p></p>
+       </div>
+      </div> <!-- comments -->
+      <h4>Comments</h4>
+      <div class="wpdiscuz_top_clearing"></div>
+      <div id="comments" class="comments-area">
+       <div id="respond" style="width: 0;height: 0;clear: both;margin: 0;padding: 0;"></div>
+       <div id="wpdcom" class="wpdiscuz_unauth wpd-default wpd-layout-1 wpd-comments-open">
+        <div class="wc_social_plugin_wrapper"></div>
+        <div class="wpd-form-wrap">
+         <div class="wpd-form-head">
+          <div class="wpd-auth">
+           <div class="wpd-login"></div>
+          </div>
+         </div>
+         <div class="wpd-form wpd-form-wrapper wpd-main-form-wrapper" id="wpd-main-form-wrapper-0_0"></div>
+         <div id="wpdiscuz_hidden_secondary_form" style="display: none;">
+          <div class="wpd-form wpd-form-wrapper wpd-secondary-form-wrapper" id="wpd-secondary-form-wrapper-wpdiscuzuniqueid" style="display: none;">
+           <div class="wpd-secondary-forms-social-content"></div>
+           <div class="clearfix"></div>
+          </div>
+         </div>
+        </div>
+        <div id="wpd-threads" class="wpd-thread-wrapper">
+         <div class="wpd-thread-head">
+          <div class="wpd-thread-info " data-comments-count="0"> <span class="wpdtc" title="0">0</span> Comments
+          </div>
+          <div class="wpd-space"></div>
+          <div class="wpd-thread-filter"></div>
+         </div>
+         <div class="wpd-comment-info-bar">
+          <div class="wpd-current-view">
+           <i class="fas fa-quote-left"></i> Inline Feedbacks
+          </div>
+          <div class="wpd-filter-view-all">
+           View all comments
+          </div>
+         </div>
+         <div class="wpd-thread-list">
+          <div class="wpdiscuz-comment-pagination"></div>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div id="wpdiscuz-loading-bar" class="wpdiscuz-loading-bar-unauth"></div>
+      <div id="wpdiscuz-comment-message" class="wpdiscuz-comment-message-unauth"></div>
+     </article>
+    </main> <!-- right -->
+    <div id="sidebar-right" class="d-none d-xl-block col-xl-3">
+     <div class="ads-container-height1080">
+      <div class="ads-container-sticky">
+       <div class="ads-container">
+        <div align="center" data-freestar-ad="__300x600" id="mkyong_rail_right_1">  
+        </div>
+       </div>
+      </div>
+     </div>
+     <div class="ads-container-sticky">
+      <div class="ads-container">
+       <div align="center" data-freestar-ad="__300x600" id="mkyong_rail_right_2">  
+       </div>
+      </div>
+     </div>
+    </div>
+   </div> <!--/.row -->
+  </div> <!--/.container-fluid -->  <!-- Dynamic page generated in 0.076 seconds. --><!-- Cached page generated by WP-Super-Cache on 2021-09-29 17:39:49 --><!-- super cache -->
+ </body>
+</html>

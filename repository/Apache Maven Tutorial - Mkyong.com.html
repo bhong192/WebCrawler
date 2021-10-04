@@ -1,0 +1,1820 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="google-site-verification" content="VsVvSTVAouAluNodWeR30BeIWTr4c84HvN4Fn9WBsak"> <!-- wp_head --> <!-- This site is optimized with the Yoast SEO plugin v15.5 - https://yoast.com/wordpress/plugins/seo/ -->
+  <title>Apache Maven Tutorial - Mkyong.com</title>
+  <meta name="description" content="- Apache Maven Tutorial">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Apache Maven Tutorial - Mkyong.com">
+  <meta property="og:description" content="- Apache Maven Tutorial">
+  <meta property="og:url" content="https://mkyong.com/tutorials/maven-tutorials/">
+  <meta property="og:site_name" content="Mkyong.com">
+  <meta property="article:published_time" content="2010-03-31T00:24:51+00:00">
+  <meta property="article:modified_time" content="2018-11-21T06:46:08+00:00">
+  <meta property="og:image" content="https://mkyong.com/wp-content/uploads/2010/03/maven-tutorials.png">
+  <meta property="og:image:width" content="250">
+  <meta property="og:image:height" content="100">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:label1" content="Written by">
+  <meta name="twitter:data1" content="mkyong">
+  <meta name="twitter:label2" content="Est. reading time">
+  <meta name="twitter:data2" content="1 minute">  <!-- / Yoast SEO plugin. -->  
+ </head>
+ <body>
+  <div class="container-fluid">
+   <div class="row"> <!-- left -->
+    <div id="sidebar-left" class="col-12 col-lg-3 col-xl-2"> <!-- sidebar-left-menu, see functions.php-->
+     <div class="offcanvas offcanvas-start" tabindex="-1" id="left-nav" aria-labelledby="left-nav">
+      <div class="offcanvas-header">
+       <h5 class="offcanvas-title">Main Tutorials</h5>
+      </div>
+      <div class="offcanvas-body sidebar-left-no-highlight">
+       <div>
+        <ul>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li class="active"></li>
+         <li></li>
+        </ul>
+       </div>
+      </div>
+     </div> <!-- ads -->
+     <div class="ads-container-sticky d-none d-lg-block">
+      <div class="ads-container">
+       <div align="center" data-freestar-ad="__160x600" id="mkyong_rail_left">  
+       </div>
+      </div>
+     </div>
+    </div> <!-- middle -->
+    <main id="main-middle" role="main" class="col-12 col-lg-9 col-xl-7">
+     <article id="main-content" class="dont-break-out">
+      <div id="title-container">
+       <h1>Apache Maven Tutorial</h1>
+       <div class="post-meta d-flex align-items-center position-relative">
+        <div></div>
+        <div>
+         <p><small class="extra-info">By  | <time datetime="2018-11-21T14:46:08+08:00"> Last updated: November 21, 2018</time></small></p>
+         <p><small class="extra-info">Viewed: 1,065,315 (+476 pv/w)</small></p>
+         <p><small class="extra-info"></small></p>
+         <div class="post-tag">
+          <small class="extra-info">Tags: |  | </small>
+         </div>
+         <p></p>
+        </div>
+       </div>
+      </div>
+      <div class="pre-next-container d-flex justify-content-between"></div>
+      <div class="pic"> 
+      </div>
+      <p>, is an innovative software project management tool. It uses a project object model (POM) file to manage project’s build, dependencies, reporting and documentation.</p>
+      <p><em>P.S Tested with Apache Maven 3.5.x</em></p>
+      <h3>1. Installation</h3>
+      <p>Install Maven on Windows, Ubuntu and MacOS</p>
+      <ul>
+       <li></li>
+       <li></li>
+       <li></li>
+      </ul>
+      <h3>2. Java Project</h3>
+      <p>Maven examples to manage JAR project, Web project (WAR) and multi module project.</p>
+      <ul>
+       <li></li>
+       <li></li>
+       <li></li>
+      </ul>
+      <h3>3. Unit Test</h3>
+      <p>Maven + JUnit 5 examples.</p>
+      <ul>
+       <li></li>
+       <li></li>
+      </ul>
+      <h3>4. Code Coverage</h3>
+      <p>Maven + Code coverage report integration.</p>
+      <ul>
+       <li></li>
+       <li></li>
+      </ul>
+      <h3>5. Static Code Analysis</h3>
+      <p>Maven + Static code analysis report.</p>
+      <ul>
+       <li></li>
+       <li></li>
+      </ul>
+      <h3>6. Maven FAQs</h3>
+      <ul>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+      </ul>
+      <p>=&gt; </p>
+      <h3>Source Code</h3>
+      <div class="github">
+        $ git clone 
+      </div>
+      <h3>References</h3>
+      <ol>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+      </ol>
+      <div class="pre-next-container d-flex justify-content-between"></div> <!-- current post ID --> 
+      <div class="d-flex justify-content-center ads-container-after-post ads-container"> <!-- Tag ID: mkyong_leaderboard_btf -->
+       <div align="center" data-freestar-ad="__320x100 __336x280" id="mkyong_leaderboard_btf">  
+       </div>
+      </div> <!-- loaded via JS -->
+      <div id="mk-afterpost-related"></div> <!-- author -->
+      <div id="author-container" class="d-flex align-items-center position-relative">
+       <div></div>
+       <div>
+        <h5></h5>
+        <p>Founder of , love Java and open source stuff. Follow him on . If you like my tutorials, consider make a donation to .</p>
+        <p></p>
+       </div>
+      </div> <!-- comments -->
+      <h4>Comments</h4>
+      <div class="wpdiscuz_top_clearing"></div>
+      <div id="comments" class="comments-area">
+       <div id="respond" style="width: 0;height: 0;clear: both;margin: 0;padding: 0;"></div>
+       <div id="wpdcom" class="wpdiscuz_unauth wpd-default wpd-layout-1 wpd-comments-open">
+        <div class="wc_social_plugin_wrapper"></div>
+        <div class="wpd-form-wrap">
+         <div class="wpd-form-head">
+          <div class="wpd-auth">
+           <div class="wpd-login"></div>
+          </div>
+         </div>
+         <div class="wpd-form wpd-form-wrapper wpd-main-form-wrapper" id="wpd-main-form-wrapper-0_0"></div>
+         <div id="wpdiscuz_hidden_secondary_form" style="display: none;">
+          <div class="wpd-form wpd-form-wrapper wpd-secondary-form-wrapper" id="wpd-secondary-form-wrapper-wpdiscuzuniqueid" style="display: none;">
+           <div class="wpd-secondary-forms-social-content"></div>
+           <div class="clearfix"></div>
+          </div>
+         </div>
+        </div>
+        <div id="wpd-threads" class="wpd-thread-wrapper">
+         <div class="wpd-thread-head">
+          <div class="wpd-thread-info " data-comments-count="64"> <span class="wpdtc" title="64">64</span> Comments
+          </div>
+          <div class="wpd-space"></div>
+          <div class="wpd-thread-filter">
+           <div class="wpd-filter wpdf-sorting"> <span class="wpdiscuz-sort-button wpdiscuz-vote-sort-up wpdiscuz-sort-button-active" data-sorting="by_vote">Most Voted</span> <i class="fas fa-sort-down"></i>
+            <div class="wpdiscuz-sort-buttons"> <span class="wpdiscuz-sort-button wpdiscuz-date-sort-desc" data-sorting="newest">Newest</span> <span class="wpdiscuz-sort-button wpdiscuz-date-sort-asc" data-sorting="oldest">Oldest</span>
+            </div>
+           </div>
+          </div>
+         </div>
+         <div class="wpd-comment-info-bar">
+          <div class="wpd-current-view">
+           <i class="fas fa-quote-left"></i> Inline Feedbacks
+          </div>
+          <div class="wpd-filter-view-all">
+           View all comments
+          </div>
+         </div>
+         <div class="wpd-thread-list">
+          <div id="wpd-comm-1045887_0" class="wpd-comment wpd_comment_level-1">
+           <div class="wpd-comment-wrap wpd-blog-guest">
+            <div class="wpd-comment-left ">
+             <div class="wpd-avatar "> 
+             </div>
+            </div>
+            <div id="comment-1045887" class="wpd-comment-right">
+             <div class="wpd-comment-header">
+              <div class="wpd-comment-author ">
+                Daxi Li
+              </div>
+              <div class="wpd-comment-date" title="June 12, 2014 10:46 am"> <i class="far fa-clock" aria-hidden="true"></i> 7 years ago
+              </div>
+              <div class="wpd-space"></div>
+              <div class="wpd-comment-link wpd-hidden">
+               <div style="" class="comment_flag comment_flag_modal wc_flag_tooltipster wpf-cta wpd-field-desc" wpd-tooltip-position="left" id="fc_1045887" wpd-tooltip="Click to flag and open «Comment Reporting» form. You can choose reporting category and send message to website administrator. Admins may or may not choose to remove the comment or block the author. And please don" t worry, your report will be anonymous.'>
+                <i class="fas fa-flag"></i>
+               </div>
+              </div>
+             </div>
+             <div class="wpd-comment-text">
+              <p>You are the best!</p>
+             </div>
+             <div class="wpd-comment-footer">
+              <div class="wpd-vote">
+               <div class="wpd-vote-up wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0V0z" /><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z" />
+                </svg>
+               </div>
+               <div class="wpd-vote-result wpd-up" title="2">
+                2
+               </div>
+               <div class="wpd-vote-down wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0z" /><path d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z" />
+                </svg>
+               </div>
+              </div>
+              <div class="wpd-reply-button"> 
+               <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                <path d="M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z" /><path d="M0 0h24v24H0z" fill="none" />
+               </svg> <span>Reply</span>
+              </div>
+              <div class="wpd-space"></div>
+             </div>
+            </div>
+           </div>
+           <div id="wpdiscuz_form_anchor-1045887_0"></div>
+          </div>
+          <div id="wpd-comm-1045411_0" class="wpd-comment wpd_comment_level-1">
+           <div class="wpd-comment-wrap wpd-blog-guest">
+            <div class="wpd-comment-left ">
+             <div class="wpd-avatar "> 
+             </div>
+            </div>
+            <div id="comment-1045411" class="wpd-comment-right">
+             <div class="wpd-comment-header">
+              <div class="wpd-comment-author ">
+                Sunil HR
+              </div>
+              <div class="wpd-comment-date" title="April 25, 2014 9:00 pm"> <i class="far fa-clock" aria-hidden="true"></i> 7 years ago
+              </div>
+              <div class="wpd-space"></div>
+              <div class="wpd-comment-link wpd-hidden">
+               <div style="" class="comment_flag comment_flag_modal wc_flag_tooltipster wpf-cta wpd-field-desc" wpd-tooltip-position="left" id="fc_1045411" wpd-tooltip="Click to flag and open «Comment Reporting» form. You can choose reporting category and send message to website administrator. Admins may or may not choose to remove the comment or block the author. And please don" t worry, your report will be anonymous.'>
+                <i class="fas fa-flag"></i>
+               </div>
+              </div>
+             </div>
+             <div class="wpd-comment-text">
+              <p>i am newer to maven…i am facing a problem while creating new maven<br> project it throws an below error….</p>
+              <p>CoreException:<br> Could not calculate build plan: Plugin<br> org.apache.maven.plugins:maven-compiler-plugin:2.3.2 or one of its<br> dependencies could not be resolved: Failed to read artifact descriptor<br> for org.apache.maven.plugins:maven-compiler-plugin:jar:2.3.2:<br> ArtifactResolutionException: Failure to transfer<br> org.apache.maven.plugins:maven-compiler-plugin:pom:2.3.2 from …<br> was cached in the local repository, resolution will not be reattempted<br> until the update interval of central has elapsed or updates are forced.<br> Original error: Could not transfer artifact<br> org.apache.maven.plugins:maven-compiler-plugin:pom:2.3.2 from/to central<br> (… null to …</p>
+              <p>kindly reply as soon as possible……</p>
+             </div>
+             <div class="wpd-comment-footer">
+              <div class="wpd-vote">
+               <div class="wpd-vote-up wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0V0z" /><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z" />
+                </svg>
+               </div>
+               <div class="wpd-vote-result wpd-up" title="2">
+                2
+               </div>
+               <div class="wpd-vote-down wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0z" /><path d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z" />
+                </svg>
+               </div>
+              </div>
+              <div class="wpd-reply-button"> 
+               <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                <path d="M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z" /><path d="M0 0h24v24H0z" fill="none" />
+               </svg> <span>Reply</span>
+              </div>
+              <div class="wpd-space"></div>
+             </div>
+            </div>
+           </div>
+           <div id="wpdiscuz_form_anchor-1045411_0"></div>
+          </div>
+          <div id="wpd-comm-1054022_0" class="wpd-comment wpd_comment_level-1">
+           <div class="wpd-comment-wrap wpd-blog-guest">
+            <div class="wpd-comment-left ">
+             <div class="wpd-avatar "> 
+             </div>
+            </div>
+            <div id="comment-1054022" class="wpd-comment-right">
+             <div class="wpd-comment-header">
+              <div class="wpd-comment-author ">
+                zapay
+              </div>
+              <div class="wpd-comment-date" title="October 11, 2017 11:50 pm"> <i class="far fa-clock" aria-hidden="true"></i> 3 years ago
+              </div>
+              <div class="wpd-space"></div>
+              <div class="wpd-comment-link wpd-hidden">
+               <div style="" class="comment_flag comment_flag_modal wc_flag_tooltipster wpf-cta wpd-field-desc" wpd-tooltip-position="left" id="fc_1054022" wpd-tooltip="Click to flag and open «Comment Reporting» form. You can choose reporting category and send message to website administrator. Admins may or may not choose to remove the comment or block the author. And please don" t worry, your report will be anonymous.'>
+                <i class="fas fa-flag"></i>
+               </div>
+              </div>
+             </div>
+             <div class="wpd-comment-text">
+              <p>you are so wonderful</p>
+             </div>
+             <div class="wpd-comment-footer">
+              <div class="wpd-vote">
+               <div class="wpd-vote-up wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0V0z" /><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z" />
+                </svg>
+               </div>
+               <div class="wpd-vote-result wpd-up" title="1">
+                1
+               </div>
+               <div class="wpd-vote-down wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0z" /><path d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z" />
+                </svg>
+               </div>
+              </div>
+              <div class="wpd-reply-button"> 
+               <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                <path d="M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z" /><path d="M0 0h24v24H0z" fill="none" />
+               </svg> <span>Reply</span>
+              </div>
+              <div class="wpd-space"></div>
+             </div>
+            </div>
+           </div>
+           <div id="wpdiscuz_form_anchor-1054022_0"></div>
+          </div>
+          <div id="wpd-comm-1058594_0" class="wpd-comment wpd_comment_level-1">
+           <div class="wpd-comment-wrap wpd-blog-guest">
+            <div class="wpd-comment-left ">
+             <div class="wpd-avatar "> 
+             </div>
+            </div>
+            <div id="comment-1058594" class="wpd-comment-right">
+             <div class="wpd-comment-header">
+              <div class="wpd-comment-author ">
+                sarat
+              </div>
+              <div class="wpd-comment-date" title="July 10, 2019 5:05 pm"> <i class="far fa-clock" aria-hidden="true"></i> 2 years ago
+              </div>
+              <div class="wpd-space"></div>
+              <div class="wpd-comment-link wpd-hidden">
+               <div style="" class="comment_flag comment_flag_modal wc_flag_tooltipster wpf-cta wpd-field-desc" wpd-tooltip-position="left" id="fc_1058594" wpd-tooltip="Click to flag and open «Comment Reporting» form. You can choose reporting category and send message to website administrator. Admins may or may not choose to remove the comment or block the author. And please don" t worry, your report will be anonymous.'>
+                <i class="fas fa-flag"></i>
+               </div>
+              </div>
+             </div>
+             <div class="wpd-comment-text">
+              <p>HI,</p>
+              <p> My Name is Sarat, I am trying to crate a class in maven. I can’t create class. If i click the Finish button.It have’t response.Plz., HELP me</p>
+             </div>
+             <div class="wpd-comment-footer">
+              <div class="wpd-vote">
+               <div class="wpd-vote-up wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0V0z" /><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z" />
+                </svg>
+               </div>
+               <div class="wpd-vote-result" title="0">
+                0
+               </div>
+               <div class="wpd-vote-down wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0z" /><path d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z" />
+                </svg>
+               </div>
+              </div>
+              <div class="wpd-reply-button"> 
+               <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                <path d="M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z" /><path d="M0 0h24v24H0z" fill="none" />
+               </svg> <span>Reply</span>
+              </div>
+              <div class="wpd-space"></div>
+             </div>
+            </div>
+           </div>
+           <div id="wpdiscuz_form_anchor-1058594_0"></div>
+          </div>
+          <div id="wpd-comm-1058390_0" class="wpd-comment wpd_comment_level-1">
+           <div class="wpd-comment-wrap wpd-blog-guest">
+            <div class="wpd-comment-left ">
+             <div class="wpd-avatar "> 
+             </div>
+            </div>
+            <div id="comment-1058390" class="wpd-comment-right">
+             <div class="wpd-comment-header">
+              <div class="wpd-comment-author ">
+                Venkatesan.S
+              </div>
+              <div class="wpd-comment-date" title="June 11, 2019 12:38 pm"> <i class="far fa-clock" aria-hidden="true"></i> 2 years ago
+              </div>
+              <div class="wpd-space"></div>
+              <div class="wpd-comment-link wpd-hidden">
+               <div style="" class="comment_flag comment_flag_modal wc_flag_tooltipster wpf-cta wpd-field-desc" wpd-tooltip-position="left" id="fc_1058390" wpd-tooltip="Click to flag and open «Comment Reporting» form. You can choose reporting category and send message to website administrator. Admins may or may not choose to remove the comment or block the author. And please don" t worry, your report will be anonymous.'>
+                <i class="fas fa-flag"></i>
+               </div>
+              </div>
+             </div>
+             <div class="wpd-comment-text">
+              <p>Hai i am newer to mavan i am facing a problem while set Home and Path in CMD prompt how to set that directly without system environmental section</p>
+             </div>
+             <div class="wpd-comment-footer">
+              <div class="wpd-vote">
+               <div class="wpd-vote-up wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0V0z" /><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z" />
+                </svg>
+               </div>
+               <div class="wpd-vote-result" title="0">
+                0
+               </div>
+               <div class="wpd-vote-down wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0z" /><path d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z" />
+                </svg>
+               </div>
+              </div>
+              <div class="wpd-reply-button"> 
+               <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                <path d="M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z" /><path d="M0 0h24v24H0z" fill="none" />
+               </svg> <span>Reply</span>
+              </div>
+              <div class="wpd-space"></div>
+             </div>
+            </div>
+           </div>
+           <div id="wpdiscuz_form_anchor-1058390_0"></div>
+          </div>
+          <div id="wpd-comm-1053079_0" class="wpd-comment wpd_comment_level-1">
+           <div class="wpd-comment-wrap wpd-blog-guest">
+            <div class="wpd-comment-left ">
+             <div class="wpd-avatar "> 
+             </div>
+            </div>
+            <div id="comment-1053079" class="wpd-comment-right">
+             <div class="wpd-comment-header">
+              <div class="wpd-comment-author ">
+                Garima
+              </div>
+              <div class="wpd-comment-date" title="July 4, 2017 1:10 am"> <i class="far fa-clock" aria-hidden="true"></i> 4 years ago
+              </div>
+              <div class="wpd-space"></div>
+              <div class="wpd-comment-link wpd-hidden">
+               <div style="" class="comment_flag comment_flag_modal wc_flag_tooltipster wpf-cta wpd-field-desc" wpd-tooltip-position="left" id="fc_1053079" wpd-tooltip="Click to flag and open «Comment Reporting» form. You can choose reporting category and send message to website administrator. Admins may or may not choose to remove the comment or block the author. And please don" t worry, your report will be anonymous.'>
+                <i class="fas fa-flag"></i>
+               </div>
+              </div>
+             </div>
+             <div class="wpd-comment-text">
+              <p>Hi,<br> I am trying to integrate maven in eclipse indigo. But, the installation fails and give below issue:</p>
+              <p>Cannot complete the install because one or more required items could not be found.<br> Software being installed: m2e – Maven Integration for Eclipse (includes Incubating components) 1.8.0.20170516-2043 (org.eclipse.m2e.feature.feature.group 1.8.0.20170516-2043)<br> Missing requirement: Maven Integration for Eclipse 1.8.0.20170516-2043 (org.eclipse.m2e.core 1.8.0.20170516-2043) requires ‘bundle org.eclipse.osgi 3.10.0’ but it could not be found<br> Cannot satisfy dependency:<br> From: m2e Marketplace 1.8.0.20170516-2043 (org.eclipse.m2e.discovery 1.8.0.20170516-2043)<br> To: bundle org.eclipse.m2e.core [1.8.0,1.9.0)<br> Cannot satisfy dependency:<br> From: m2e – Maven Integration for Eclipse (includes Incubating components) 1.8.0.20170516-2043 (org.eclipse.m2e.feature.feature.group 1.8.0.20170516-2043)<br> To: org.eclipse.m2e.discovery [1.8.0.20170516-2043]</p>
+              <p>Can anyone help on this?</p>
+             </div>
+             <div class="wpd-comment-footer">
+              <div class="wpd-vote">
+               <div class="wpd-vote-up wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0V0z" /><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z" />
+                </svg>
+               </div>
+               <div class="wpd-vote-result" title="0">
+                0
+               </div>
+               <div class="wpd-vote-down wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0z" /><path d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z" />
+                </svg>
+               </div>
+              </div>
+              <div class="wpd-reply-button"> 
+               <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                <path d="M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z" /><path d="M0 0h24v24H0z" fill="none" />
+               </svg> <span>Reply</span>
+              </div>
+              <div class="wpd-space"></div>
+             </div>
+            </div>
+           </div>
+           <div id="wpdiscuz_form_anchor-1053079_0"></div>
+          </div>
+          <div id="wpd-comm-1049832_0" class="wpd-comment wpd_comment_level-1">
+           <div class="wpd-comment-wrap wpd-blog-guest">
+            <div class="wpd-comment-left ">
+             <div class="wpd-avatar "> 
+             </div>
+            </div>
+            <div id="comment-1049832" class="wpd-comment-right">
+             <div class="wpd-comment-header">
+              <div class="wpd-comment-author ">
+                Tarun Kumar
+              </div>
+              <div class="wpd-comment-date" title="August 23, 2015 8:27 pm"> <i class="far fa-clock" aria-hidden="true"></i> 6 years ago
+              </div>
+              <div class="wpd-space"></div>
+              <div class="wpd-comment-link wpd-hidden">
+               <div style="" class="comment_flag comment_flag_modal wc_flag_tooltipster wpf-cta wpd-field-desc" wpd-tooltip-position="left" id="fc_1049832" wpd-tooltip="Click to flag and open «Comment Reporting» form. You can choose reporting category and send message to website administrator. Admins may or may not choose to remove the comment or block the author. And please don" t worry, your report will be anonymous.'>
+                <i class="fas fa-flag"></i>
+               </div>
+              </div>
+             </div>
+             <div class="wpd-comment-text">
+              <p>Regarding Custom Library.</p>
+              <p>we are using Maven. One of the custom library reside under web-inf/lib dir. while building project i m facing error like</p>
+              <p>Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.0:compile (default-compile) on project : Compilation failure: Compilation failure: saying that cannot find symbol.</p>
+              <p>above mentioned lib are not mentioned under pom.xml.</p>
+              <p>can you please help me.</p>
+             </div>
+             <div class="wpd-comment-footer">
+              <div class="wpd-vote">
+               <div class="wpd-vote-up wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0V0z" /><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z" />
+                </svg>
+               </div>
+               <div class="wpd-vote-result" title="0">
+                0
+               </div>
+               <div class="wpd-vote-down wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0z" /><path d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z" />
+                </svg>
+               </div>
+              </div>
+              <div class="wpd-reply-button"> 
+               <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                <path d="M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z" /><path d="M0 0h24v24H0z" fill="none" />
+               </svg> <span>Reply</span>
+              </div>
+              <div class="wpd-space"></div>
+             </div>
+            </div>
+           </div>
+           <div id="wpdiscuz_form_anchor-1049832_0"></div>
+          </div>
+          <div id="wpd-comm-1048897_0" class="wpd-comment wpd_comment_level-1">
+           <div class="wpd-comment-wrap wpd-blog-guest">
+            <div class="wpd-comment-left ">
+             <div class="wpd-avatar "> 
+             </div>
+            </div>
+            <div id="comment-1048897" class="wpd-comment-right">
+             <div class="wpd-comment-header">
+              <div class="wpd-comment-author ">
+                Juan
+              </div>
+              <div class="wpd-comment-date" title="May 18, 2015 8:45 pm"> <i class="far fa-clock" aria-hidden="true"></i> 6 years ago
+              </div>
+              <div class="wpd-space"></div>
+              <div class="wpd-comment-link wpd-hidden">
+               <div style="" class="comment_flag comment_flag_modal wc_flag_tooltipster wpf-cta wpd-field-desc" wpd-tooltip-position="left" id="fc_1048897" wpd-tooltip="Click to flag and open «Comment Reporting» form. You can choose reporting category and send message to website administrator. Admins may or may not choose to remove the comment or block the author. And please don" t worry, your report will be anonymous.'>
+                <i class="fas fa-flag"></i>
+               </div>
+              </div>
+             </div>
+             <div class="wpd-comment-text">
+              <p>Hello,how to work with webfragments and maven?</p>
+             </div>
+             <div class="wpd-comment-footer">
+              <div class="wpd-vote">
+               <div class="wpd-vote-up wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0V0z" /><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z" />
+                </svg>
+               </div>
+               <div class="wpd-vote-result" title="0">
+                0
+               </div>
+               <div class="wpd-vote-down wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0z" /><path d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z" />
+                </svg>
+               </div>
+              </div>
+              <div class="wpd-reply-button"> 
+               <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                <path d="M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z" /><path d="M0 0h24v24H0z" fill="none" />
+               </svg> <span>Reply</span>
+              </div>
+              <div class="wpd-space"></div>
+             </div>
+            </div>
+           </div>
+           <div id="wpdiscuz_form_anchor-1048897_0"></div>
+          </div>
+          <div id="wpd-comm-1048170_0" class="wpd-comment wpd_comment_level-1">
+           <div class="wpd-comment-wrap wpd-blog-guest">
+            <div class="wpd-comment-left ">
+             <div class="wpd-avatar "> 
+             </div>
+            </div>
+            <div id="comment-1048170" class="wpd-comment-right">
+             <div class="wpd-comment-header">
+              <div class="wpd-comment-author ">
+                Vivek
+              </div>
+              <div class="wpd-comment-date" title="March 1, 2015 1:39 pm"> <i class="far fa-clock" aria-hidden="true"></i> 6 years ago
+              </div>
+              <div class="wpd-space"></div>
+              <div class="wpd-comment-link wpd-hidden">
+               <div style="" class="comment_flag comment_flag_modal wc_flag_tooltipster wpf-cta wpd-field-desc" wpd-tooltip-position="left" id="fc_1048170" wpd-tooltip="Click to flag and open «Comment Reporting» form. You can choose reporting category and send message to website administrator. Admins may or may not choose to remove the comment or block the author. And please don" t worry, your report will be anonymous.'>
+                <i class="fas fa-flag"></i>
+               </div>
+              </div>
+             </div>
+             <div class="wpd-comment-text">
+              <p>I have a use case … I am building a website. Depending on the user login I want to build an other application (which is an second project in Eclipse) (all this in real time) ( this I want to accomplish through Maven Eclipse plugin)? How can I achieve this? So my specific question is —- From one project (website project) in eclipse , how to call (how to build , generate its exe, mvn install ) a second project? ….. Do I have to call Runtime.getRuntime().exec(“… but then how do I give the address of the second project ??? Finally I have to generate a .war . Thanks .</p>
+             </div>
+             <div class="wpd-comment-footer">
+              <div class="wpd-vote">
+               <div class="wpd-vote-up wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0V0z" /><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z" />
+                </svg>
+               </div>
+               <div class="wpd-vote-result" title="0">
+                0
+               </div>
+               <div class="wpd-vote-down wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0z" /><path d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z" />
+                </svg>
+               </div>
+              </div>
+              <div class="wpd-reply-button"> 
+               <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                <path d="M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z" /><path d="M0 0h24v24H0z" fill="none" />
+               </svg> <span>Reply</span>
+              </div>
+              <div class="wpd-space"></div>
+             </div>
+            </div>
+           </div>
+           <div id="wpdiscuz_form_anchor-1048170_0"></div>
+          </div>
+          <div id="wpd-comm-1045746_0" class="wpd-comment wpd_comment_level-1">
+           <div class="wpd-comment-wrap wpd-blog-guest">
+            <div class="wpd-comment-left ">
+             <div class="wpd-avatar "> 
+             </div>
+            </div>
+            <div id="comment-1045746" class="wpd-comment-right">
+             <div class="wpd-comment-header">
+              <div class="wpd-comment-author ">
+                neetu
+              </div>
+              <div class="wpd-comment-date" title="May 29, 2014 7:40 am"> <i class="far fa-clock" aria-hidden="true"></i> 7 years ago
+              </div>
+              <div class="wpd-space"></div>
+              <div class="wpd-comment-link wpd-hidden">
+               <div style="" class="comment_flag comment_flag_modal wc_flag_tooltipster wpf-cta wpd-field-desc" wpd-tooltip-position="left" id="fc_1045746" wpd-tooltip="Click to flag and open «Comment Reporting» form. You can choose reporting category and send message to website administrator. Admins may or may not choose to remove the comment or block the author. And please don" t worry, your report will be anonymous.'>
+                <i class="fas fa-flag"></i>
+               </div>
+              </div>
+             </div>
+             <div class="wpd-comment-text">
+              <p>I am planning to write a custom rule extending maven enforcer<br> plugin. My task is simple here. I need to read the description in the<br> POM file and see if it valid or not and fail the build of the project if<br> it is empty. Can anyone help me how to retrieve the descrioption and<br> check using java code</p>
+             </div>
+             <div class="wpd-comment-footer">
+              <div class="wpd-vote">
+               <div class="wpd-vote-up wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0V0z" /><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z" />
+                </svg>
+               </div>
+               <div class="wpd-vote-result" title="0">
+                0
+               </div>
+               <div class="wpd-vote-down wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0z" /><path d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z" />
+                </svg>
+               </div>
+              </div>
+              <div class="wpd-reply-button"> 
+               <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                <path d="M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z" /><path d="M0 0h24v24H0z" fill="none" />
+               </svg> <span>Reply</span>
+              </div>
+              <div class="wpd-space"></div>
+             </div>
+            </div>
+           </div>
+           <div id="wpdiscuz_form_anchor-1045746_0"></div>
+          </div>
+          <div id="wpd-comm-1045256_0" class="wpd-comment wpd_comment_level-1">
+           <div class="wpd-comment-wrap wpd-blog-guest">
+            <div class="wpd-comment-left ">
+             <div class="wpd-avatar "> 
+             </div>
+            </div>
+            <div id="comment-1045256" class="wpd-comment-right">
+             <div class="wpd-comment-header">
+              <div class="wpd-comment-author ">
+                Srinivas Nudurupati
+              </div>
+              <div class="wpd-comment-date" title="April 11, 2014 2:43 pm"> <i class="far fa-clock" aria-hidden="true"></i> 7 years ago
+              </div>
+              <div class="wpd-space"></div>
+              <div class="wpd-comment-link wpd-hidden">
+               <div style="" class="comment_flag comment_flag_modal wc_flag_tooltipster wpf-cta wpd-field-desc" wpd-tooltip-position="left" id="fc_1045256" wpd-tooltip="Click to flag and open «Comment Reporting» form. You can choose reporting category and send message to website administrator. Admins may or may not choose to remove the comment or block the author. And please don" t worry, your report will be anonymous.'>
+                <i class="fas fa-flag"></i>
+               </div>
+              </div>
+             </div>
+             <div class="wpd-comment-text">
+              <p>I am getting the following error when i try to integarate maven in eclipse.</p>
+              <p>Could not calculate build plan: Plugin org.apache.maven.plugins:maven-resources-plugin:2.5 or one of its dependencies could not be resolved: Failed to read artifact descriptor for org.apache.maven.plugins:maven-resources-plugin:jar:2.5</p>
+              <p>Plugin org.apache.maven.plugins:maven-resources-plugin:2.5 or one of its dependencies could not be resolved: Failed to read artifact descriptor for org.apache.maven.plugins:maven-resources-plugin:jar:2.5</p>
+              <p>Please help me ASAP..</p>
+             </div>
+             <div class="wpd-comment-footer">
+              <div class="wpd-vote">
+               <div class="wpd-vote-up wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0V0z" /><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z" />
+                </svg>
+               </div>
+               <div class="wpd-vote-result" title="0">
+                0
+               </div>
+               <div class="wpd-vote-down wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0z" /><path d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z" />
+                </svg>
+               </div>
+              </div>
+              <div class="wpd-reply-button"> 
+               <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                <path d="M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z" /><path d="M0 0h24v24H0z" fill="none" />
+               </svg> <span>Reply</span>
+              </div>
+              <div class="wpd-space"></div>
+             </div>
+            </div>
+           </div>
+           <div id="wpdiscuz_form_anchor-1045256_0"></div>
+          </div>
+          <div id="wpd-comm-1045212_0" class="wpd-comment wpd_comment_level-1">
+           <div class="wpd-comment-wrap wpd-blog-guest">
+            <div class="wpd-comment-left ">
+             <div class="wpd-avatar "> 
+             </div>
+            </div>
+            <div id="comment-1045212" class="wpd-comment-right">
+             <div class="wpd-comment-header">
+              <div class="wpd-comment-author ">
+                Mahadev Shinde
+              </div>
+              <div class="wpd-comment-date" title="April 8, 2014 1:38 pm"> <i class="far fa-clock" aria-hidden="true"></i> 7 years ago
+              </div>
+              <div class="wpd-space"></div>
+              <div class="wpd-comment-link wpd-hidden">
+               <div style="" class="comment_flag comment_flag_modal wc_flag_tooltipster wpf-cta wpd-field-desc" wpd-tooltip-position="left" id="fc_1045212" wpd-tooltip="Click to flag and open «Comment Reporting» form. You can choose reporting category and send message to website administrator. Admins may or may not choose to remove the comment or block the author. And please don" t worry, your report will be anonymous.'>
+                <i class="fas fa-flag"></i>
+               </div>
+              </div>
+             </div>
+             <div class="wpd-comment-text">
+              <p> got 404, check it out</p>
+             </div>
+             <div class="wpd-comment-footer">
+              <div class="wpd-vote">
+               <div class="wpd-vote-up wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0V0z" /><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z" />
+                </svg>
+               </div>
+               <div class="wpd-vote-result" title="0">
+                0
+               </div>
+               <div class="wpd-vote-down wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0z" /><path d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z" />
+                </svg>
+               </div>
+              </div>
+              <div class="wpd-reply-button"> 
+               <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                <path d="M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z" /><path d="M0 0h24v24H0z" fill="none" />
+               </svg> <span>Reply</span>
+              </div>
+              <div class="wpd-space"></div>
+             </div>
+            </div>
+           </div>
+           <div id="wpdiscuz_form_anchor-1045212_0"></div>
+          </div>
+          <div id="wpd-comm-1044872_0" class="wpd-comment wpd_comment_level-1">
+           <div class="wpd-comment-wrap wpd-blog-guest">
+            <div class="wpd-comment-left ">
+             <div class="wpd-avatar "> 
+             </div>
+            </div>
+            <div id="comment-1044872" class="wpd-comment-right">
+             <div class="wpd-comment-header">
+              <div class="wpd-comment-author ">
+                Radhakrishna
+              </div>
+              <div class="wpd-comment-date" title="March 7, 2014 6:57 pm"> <i class="far fa-clock" aria-hidden="true"></i> 7 years ago
+              </div>
+              <div class="wpd-space"></div>
+              <div class="wpd-comment-link wpd-hidden">
+               <div style="" class="comment_flag comment_flag_modal wc_flag_tooltipster wpf-cta wpd-field-desc" wpd-tooltip-position="left" id="fc_1044872" wpd-tooltip="Click to flag and open «Comment Reporting» form. You can choose reporting category and send message to website administrator. Admins may or may not choose to remove the comment or block the author. And please don" t worry, your report will be anonymous.'>
+                <i class="fas fa-flag"></i>
+               </div>
+              </div>
+             </div>
+             <div class="wpd-comment-text">
+              <p>Even if i downloaded the new eclipse kepler, i am getting the following error-</p>
+              <p>Could not calculate build plan: Plugin org.apache.maven.plugins:maven-war-plugin:2.1.1 or one of its dependencies could not be resolved: Failed to read artifact descriptor for org.apache.maven.plugins:maven-war-plugin:jar:2.1.1</p>
+              <p>Plugin org.apache.maven.plugins:maven-war-plugin:2.1.1 or one of its dependencies could not be resolved: Failed to read artifact descriptor for org.apache.maven.plugins:maven-war-plugin:jar:2.1.1</p>
+             </div>
+             <div class="wpd-comment-footer">
+              <div class="wpd-vote">
+               <div class="wpd-vote-up wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0V0z" /><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z" />
+                </svg>
+               </div>
+               <div class="wpd-vote-result" title="0">
+                0
+               </div>
+               <div class="wpd-vote-down wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0z" /><path d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z" />
+                </svg>
+               </div>
+              </div>
+              <div class="wpd-reply-button"> 
+               <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                <path d="M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z" /><path d="M0 0h24v24H0z" fill="none" />
+               </svg> <span>Reply</span>
+              </div>
+              <div class="wpd-space"></div>
+             </div>
+            </div>
+           </div>
+           <div id="wpdiscuz_form_anchor-1044872_0"></div>
+          </div>
+          <div id="wpd-comm-1044871_0" class="wpd-comment wpd_comment_level-1">
+           <div class="wpd-comment-wrap wpd-blog-guest">
+            <div class="wpd-comment-left ">
+             <div class="wpd-avatar "> 
+             </div>
+            </div>
+            <div id="comment-1044871" class="wpd-comment-right">
+             <div class="wpd-comment-header">
+              <div class="wpd-comment-author ">
+                Radhakrishna
+              </div>
+              <div class="wpd-comment-date" title="March 7, 2014 6:47 pm"> <i class="far fa-clock" aria-hidden="true"></i> 7 years ago
+              </div>
+              <div class="wpd-space"></div>
+              <div class="wpd-comment-link wpd-hidden">
+               <div style="" class="comment_flag comment_flag_modal wc_flag_tooltipster wpf-cta wpd-field-desc" wpd-tooltip-position="left" id="fc_1044871" wpd-tooltip="Click to flag and open «Comment Reporting» form. You can choose reporting category and send message to website administrator. Admins may or may not choose to remove the comment or block the author. And please don" t worry, your report will be anonymous.'>
+                <i class="fas fa-flag"></i>
+               </div>
+              </div>
+             </div>
+             <div class="wpd-comment-text">
+              <p>ECLIPSE KEPLER AND STS 3.4.O are killing me like anything. Could you help me please?</p>
+             </div>
+             <div class="wpd-comment-footer">
+              <div class="wpd-vote">
+               <div class="wpd-vote-up wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0V0z" /><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z" />
+                </svg>
+               </div>
+               <div class="wpd-vote-result" title="0">
+                0
+               </div>
+               <div class="wpd-vote-down wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0z" /><path d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z" />
+                </svg>
+               </div>
+              </div>
+              <div class="wpd-reply-button"> 
+               <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                <path d="M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z" /><path d="M0 0h24v24H0z" fill="none" />
+               </svg> <span>Reply</span>
+              </div>
+              <div class="wpd-space"></div>
+             </div>
+            </div>
+           </div>
+           <div id="wpdiscuz_form_anchor-1044871_0"></div>
+          </div>
+          <div id="wpd-comm-1044870_0" class="wpd-comment wpd_comment_level-1">
+           <div class="wpd-comment-wrap wpd-blog-guest">
+            <div class="wpd-comment-left ">
+             <div class="wpd-avatar "> 
+             </div>
+            </div>
+            <div id="comment-1044870" class="wpd-comment-right">
+             <div class="wpd-comment-header">
+              <div class="wpd-comment-author ">
+                Radhakrishna
+              </div>
+              <div class="wpd-comment-date" title="March 7, 2014 6:46 pm"> <i class="far fa-clock" aria-hidden="true"></i> 7 years ago
+              </div>
+              <div class="wpd-space"></div>
+              <div class="wpd-comment-link wpd-hidden">
+               <div style="" class="comment_flag comment_flag_modal wc_flag_tooltipster wpf-cta wpd-field-desc" wpd-tooltip-position="left" id="fc_1044870" wpd-tooltip="Click to flag and open «Comment Reporting» form. You can choose reporting category and send message to website administrator. Admins may or may not choose to remove the comment or block the author. And please don" t worry, your report will be anonymous.'>
+                <i class="fas fa-flag"></i>
+               </div>
+              </div>
+             </div>
+             <div class="wpd-comment-text">
+              <p>Could not calculate build plan: Plugin org.apache.maven.plugins:maven-resources-plugin:2.5 or one of its dependencies could not be resolved: Failed to read artifact descriptor for org.apache.maven.plugins:maven-resources-plugin:jar:2.5</p>
+              <p>Plugin org.apache.maven.plugins:maven-resources-plugin:2.5 or one of its dependencies could not be resolved: Failed to read artifact descriptor for org.apache.maven.plugins:maven-resources-plugin:jar:2.5</p>
+             </div>
+             <div class="wpd-comment-footer">
+              <div class="wpd-vote">
+               <div class="wpd-vote-up wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0V0z" /><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z" />
+                </svg>
+               </div>
+               <div class="wpd-vote-result" title="0">
+                0
+               </div>
+               <div class="wpd-vote-down wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0z" /><path d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z" />
+                </svg>
+               </div>
+              </div>
+              <div class="wpd-reply-button"> 
+               <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                <path d="M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z" /><path d="M0 0h24v24H0z" fill="none" />
+               </svg> <span>Reply</span>
+              </div>
+              <div class="wpd-space"></div>
+             </div>
+            </div>
+           </div>
+           <div id="wpdiscuz_form_anchor-1044870_0"></div>
+          </div>
+          <div id="wpd-comm-1044254_0" class="wpd-comment wpd_comment_level-1">
+           <div class="wpd-comment-wrap wpd-blog-guest">
+            <div class="wpd-comment-left ">
+             <div class="wpd-avatar "> 
+             </div>
+            </div>
+            <div id="comment-1044254" class="wpd-comment-right">
+             <div class="wpd-comment-header">
+              <div class="wpd-comment-author ">
+                DevRaj
+              </div>
+              <div class="wpd-comment-date" title="January 5, 2014 3:35 pm"> <i class="far fa-clock" aria-hidden="true"></i> 7 years ago
+              </div>
+              <div class="wpd-space"></div>
+              <div class="wpd-comment-link wpd-hidden">
+               <div style="" class="comment_flag comment_flag_modal wc_flag_tooltipster wpf-cta wpd-field-desc" wpd-tooltip-position="left" id="fc_1044254" wpd-tooltip="Click to flag and open «Comment Reporting» form. You can choose reporting category and send message to website administrator. Admins may or may not choose to remove the comment or block the author. And please don" t worry, your report will be anonymous.'>
+                <i class="fas fa-flag"></i>
+               </div>
+              </div>
+             </div>
+             <div class="wpd-comment-text">
+              <p>Great Tutorial….<br> </p>
+             </div>
+             <div class="wpd-comment-footer">
+              <div class="wpd-vote">
+               <div class="wpd-vote-up wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0V0z" /><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z" />
+                </svg>
+               </div>
+               <div class="wpd-vote-result" title="0">
+                0
+               </div>
+               <div class="wpd-vote-down wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0z" /><path d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z" />
+                </svg>
+               </div>
+              </div>
+              <div class="wpd-reply-button"> 
+               <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                <path d="M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z" /><path d="M0 0h24v24H0z" fill="none" />
+               </svg> <span>Reply</span>
+              </div>
+              <div class="wpd-space"></div>
+             </div>
+            </div>
+           </div>
+           <div id="wpdiscuz_form_anchor-1044254_0"></div>
+          </div>
+          <div id="wpd-comm-1043785_0" class="wpd-comment wpd_comment_level-1">
+           <div class="wpd-comment-wrap wpd-blog-guest">
+            <div class="wpd-comment-left ">
+             <div class="wpd-avatar "> 
+             </div>
+            </div>
+            <div id="comment-1043785" class="wpd-comment-right">
+             <div class="wpd-comment-header">
+              <div class="wpd-comment-author ">
+                Prasanth Prabhakaran
+              </div>
+              <div class="wpd-comment-date" title="November 22, 2013 5:44 pm"> <i class="far fa-clock" aria-hidden="true"></i> 7 years ago
+              </div>
+              <div class="wpd-space"></div>
+              <div class="wpd-comment-link wpd-hidden">
+               <div style="" class="comment_flag comment_flag_modal wc_flag_tooltipster wpf-cta wpd-field-desc" wpd-tooltip-position="left" id="fc_1043785" wpd-tooltip="Click to flag and open «Comment Reporting» form. You can choose reporting category and send message to website administrator. Admins may or may not choose to remove the comment or block the author. And please don" t worry, your report will be anonymous.'>
+                <i class="fas fa-flag"></i>
+               </div>
+              </div>
+             </div>
+             <div class="wpd-comment-text">
+              <p>Really awesome… Keep it up…</p>
+             </div>
+             <div class="wpd-comment-footer">
+              <div class="wpd-vote">
+               <div class="wpd-vote-up wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0V0z" /><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z" />
+                </svg>
+               </div>
+               <div class="wpd-vote-result" title="0">
+                0
+               </div>
+               <div class="wpd-vote-down wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0z" /><path d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z" />
+                </svg>
+               </div>
+              </div>
+              <div class="wpd-reply-button"> 
+               <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                <path d="M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z" /><path d="M0 0h24v24H0z" fill="none" />
+               </svg> <span>Reply</span>
+              </div>
+              <div class="wpd-space"></div>
+             </div>
+            </div>
+           </div>
+           <div id="wpdiscuz_form_anchor-1043785_0"></div>
+          </div>
+          <div id="wpd-comm-138837_0" class="wpd-comment wpd_comment_level-1">
+           <div class="wpd-comment-wrap wpd-blog-guest">
+            <div class="wpd-comment-left ">
+             <div class="wpd-avatar "> 
+             </div>
+            </div>
+            <div id="comment-138837" class="wpd-comment-right">
+             <div class="wpd-comment-header">
+              <div class="wpd-comment-author ">
+                Gaurav
+              </div>
+              <div class="wpd-comment-date" title="October 20, 2013 6:44 pm"> <i class="far fa-clock" aria-hidden="true"></i> 7 years ago
+              </div>
+              <div class="wpd-space"></div>
+              <div class="wpd-comment-link wpd-hidden">
+               <div style="" class="comment_flag comment_flag_modal wc_flag_tooltipster wpf-cta wpd-field-desc" wpd-tooltip-position="left" id="fc_138837" wpd-tooltip="Click to flag and open «Comment Reporting» form. You can choose reporting category and send message to website administrator. Admins may or may not choose to remove the comment or block the author. And please don" t worry, your report will be anonymous.'>
+                <i class="fas fa-flag"></i>
+               </div>
+              </div>
+             </div>
+             <div class="wpd-comment-text">
+              <p>Amazingly practical knowledge presented in practical terms! 🙂</p>
+             </div>
+             <div class="wpd-comment-footer">
+              <div class="wpd-vote">
+               <div class="wpd-vote-up wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0V0z" /><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z" />
+                </svg>
+               </div>
+               <div class="wpd-vote-result" title="0">
+                0
+               </div>
+               <div class="wpd-vote-down wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0z" /><path d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z" />
+                </svg>
+               </div>
+              </div>
+              <div class="wpd-reply-button"> 
+               <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                <path d="M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z" /><path d="M0 0h24v24H0z" fill="none" />
+               </svg> <span>Reply</span>
+              </div>
+              <div class="wpd-space"></div>
+             </div>
+            </div>
+           </div>
+           <div id="wpdiscuz_form_anchor-138837_0"></div>
+          </div>
+          <div id="wpd-comm-138192_0" class="wpd-comment wpd_comment_level-1">
+           <div class="wpd-comment-wrap wpd-blog-guest">
+            <div class="wpd-comment-left ">
+             <div class="wpd-avatar "> 
+             </div>
+            </div>
+            <div id="comment-138192" class="wpd-comment-right">
+             <div class="wpd-comment-header">
+              <div class="wpd-comment-author ">
+                Gamola
+              </div>
+              <div class="wpd-comment-date" title="September 25, 2013 9:02 pm"> <i class="far fa-clock" aria-hidden="true"></i> 8 years ago
+              </div>
+              <div class="wpd-space"></div>
+              <div class="wpd-comment-link wpd-hidden">
+               <div style="" class="comment_flag comment_flag_modal wc_flag_tooltipster wpf-cta wpd-field-desc" wpd-tooltip-position="left" id="fc_138192" wpd-tooltip="Click to flag and open «Comment Reporting» form. You can choose reporting category and send message to website administrator. Admins may or may not choose to remove the comment or block the author. And please don" t worry, your report will be anonymous.'>
+                <i class="fas fa-flag"></i>
+               </div>
+              </div>
+             </div>
+             <div class="wpd-comment-text">
+              <p>? ????? MKYONG</p>
+             </div>
+             <div class="wpd-comment-footer">
+              <div class="wpd-vote">
+               <div class="wpd-vote-up wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0V0z" /><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z" />
+                </svg>
+               </div>
+               <div class="wpd-vote-result" title="0">
+                0
+               </div>
+               <div class="wpd-vote-down wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0z" /><path d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z" />
+                </svg>
+               </div>
+              </div>
+              <div class="wpd-reply-button"> 
+               <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                <path d="M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z" /><path d="M0 0h24v24H0z" fill="none" />
+               </svg> <span>Reply</span>
+              </div>
+              <div class="wpd-space"></div>
+             </div>
+            </div>
+           </div>
+           <div id="wpdiscuz_form_anchor-138192_0"></div>
+          </div>
+          <div id="wpd-comm-138191_0" class="wpd-comment wpd_comment_level-1">
+           <div class="wpd-comment-wrap wpd-blog-guest">
+            <div class="wpd-comment-left ">
+             <div class="wpd-avatar "> 
+             </div>
+            </div>
+            <div id="comment-138191" class="wpd-comment-right">
+             <div class="wpd-comment-header">
+              <div class="wpd-comment-author ">
+                Gamola
+              </div>
+              <div class="wpd-comment-date" title="September 25, 2013 9:01 pm"> <i class="far fa-clock" aria-hidden="true"></i> 8 years ago
+              </div>
+              <div class="wpd-space"></div>
+              <div class="wpd-comment-link wpd-hidden">
+               <div style="" class="comment_flag comment_flag_modal wc_flag_tooltipster wpf-cta wpd-field-desc" wpd-tooltip-position="left" id="fc_138191" wpd-tooltip="Click to flag and open «Comment Reporting» form. You can choose reporting category and send message to website administrator. Admins may or may not choose to remove the comment or block the author. And please don" t worry, your report will be anonymous.'>
+                <i class="fas fa-flag"></i>
+               </div>
+              </div>
+             </div>
+             <div class="wpd-comment-text">
+              <p>MKYONG ????????? ????? ????? ???? ???????!</p>
+             </div>
+             <div class="wpd-comment-footer">
+              <div class="wpd-vote">
+               <div class="wpd-vote-up wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0V0z" /><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z" />
+                </svg>
+               </div>
+               <div class="wpd-vote-result" title="0">
+                0
+               </div>
+               <div class="wpd-vote-down wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0z" /><path d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z" />
+                </svg>
+               </div>
+              </div>
+              <div class="wpd-reply-button"> 
+               <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                <path d="M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z" /><path d="M0 0h24v24H0z" fill="none" />
+               </svg> <span>Reply</span>
+              </div>
+              <div class="wpd-space"></div>
+             </div>
+            </div>
+           </div>
+           <div id="wpdiscuz_form_anchor-138191_0"></div>
+          </div>
+          <div id="wpd-comm-138026_0" class="wpd-comment wpd_comment_level-1">
+           <div class="wpd-comment-wrap wpd-blog-guest">
+            <div class="wpd-comment-left ">
+             <div class="wpd-avatar "> 
+             </div>
+            </div>
+            <div id="comment-138026" class="wpd-comment-right">
+             <div class="wpd-comment-header">
+              <div class="wpd-comment-author ">
+                Malathi
+              </div>
+              <div class="wpd-comment-date" title="September 18, 2013 2:11 pm"> <i class="far fa-clock" aria-hidden="true"></i> 8 years ago
+              </div>
+              <div class="wpd-space"></div>
+              <div class="wpd-comment-link wpd-hidden">
+               <div style="" class="comment_flag comment_flag_modal wc_flag_tooltipster wpf-cta wpd-field-desc" wpd-tooltip-position="left" id="fc_138026" wpd-tooltip="Click to flag and open «Comment Reporting» form. You can choose reporting category and send message to website administrator. Admins may or may not choose to remove the comment or block the author. And please don" t worry, your report will be anonymous.'>
+                <i class="fas fa-flag"></i>
+               </div>
+              </div>
+             </div>
+             <div class="wpd-comment-text">
+              <p>Hi,</p>
+              <p>Thanks for this tutorials .It is very simple to learn and achieves everything which we need</p>
+             </div>
+             <div class="wpd-comment-footer">
+              <div class="wpd-vote">
+               <div class="wpd-vote-up wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0V0z" /><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z" />
+                </svg>
+               </div>
+               <div class="wpd-vote-result" title="0">
+                0
+               </div>
+               <div class="wpd-vote-down wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0z" /><path d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z" />
+                </svg>
+               </div>
+              </div>
+              <div class="wpd-reply-button"> 
+               <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                <path d="M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z" /><path d="M0 0h24v24H0z" fill="none" />
+               </svg> <span>Reply</span>
+              </div>
+              <div class="wpd-space"></div>
+             </div>
+            </div>
+           </div>
+           <div id="wpdiscuz_form_anchor-138026_0"></div>
+          </div>
+          <div id="wpd-comm-137748_0" class="wpd-comment wpd_comment_level-1">
+           <div class="wpd-comment-wrap wpd-blog-guest">
+            <div class="wpd-comment-left ">
+             <div class="wpd-avatar "> 
+             </div>
+            </div>
+            <div id="comment-137748" class="wpd-comment-right">
+             <div class="wpd-comment-header">
+              <div class="wpd-comment-author ">
+                Amol
+              </div>
+              <div class="wpd-comment-date" title="September 5, 2013 3:34 pm"> <i class="far fa-clock" aria-hidden="true"></i> 8 years ago
+              </div>
+              <div class="wpd-space"></div>
+              <div class="wpd-comment-link wpd-hidden">
+               <div style="" class="comment_flag comment_flag_modal wc_flag_tooltipster wpf-cta wpd-field-desc" wpd-tooltip-position="left" id="fc_137748" wpd-tooltip="Click to flag and open «Comment Reporting» form. You can choose reporting category and send message to website administrator. Admins may or may not choose to remove the comment or block the author. And please don" t worry, your report will be anonymous.'>
+                <i class="fas fa-flag"></i>
+               </div>
+              </div>
+             </div>
+             <div class="wpd-comment-text">
+              <p>Thanks.Very helpful</p>
+             </div>
+             <div class="wpd-comment-footer">
+              <div class="wpd-vote">
+               <div class="wpd-vote-up wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0V0z" /><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z" />
+                </svg>
+               </div>
+               <div class="wpd-vote-result" title="0">
+                0
+               </div>
+               <div class="wpd-vote-down wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0z" /><path d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z" />
+                </svg>
+               </div>
+              </div>
+              <div class="wpd-reply-button"> 
+               <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                <path d="M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z" /><path d="M0 0h24v24H0z" fill="none" />
+               </svg> <span>Reply</span>
+              </div>
+              <div class="wpd-space"></div>
+             </div>
+            </div>
+           </div>
+           <div id="wpdiscuz_form_anchor-137748_0"></div>
+          </div>
+          <div id="wpd-comm-135748_0" class="wpd-comment wpd_comment_level-1">
+           <div class="wpd-comment-wrap wpd-blog-guest">
+            <div class="wpd-comment-left ">
+             <div class="wpd-avatar "> 
+             </div>
+            </div>
+            <div id="comment-135748" class="wpd-comment-right">
+             <div class="wpd-comment-header">
+              <div class="wpd-comment-author ">
+                Laura
+              </div>
+              <div class="wpd-comment-date" title="July 4, 2013 6:35 pm"> <i class="far fa-clock" aria-hidden="true"></i> 8 years ago
+              </div>
+              <div class="wpd-space"></div>
+              <div class="wpd-comment-link wpd-hidden">
+               <div style="" class="comment_flag comment_flag_modal wc_flag_tooltipster wpf-cta wpd-field-desc" wpd-tooltip-position="left" id="fc_135748" wpd-tooltip="Click to flag and open «Comment Reporting» form. You can choose reporting category and send message to website administrator. Admins may or may not choose to remove the comment or block the author. And please don" t worry, your report will be anonymous.'>
+                <i class="fas fa-flag"></i>
+               </div>
+              </div>
+             </div>
+             <div class="wpd-comment-text">
+              <p>Your tutorials are so simple and yet covers all that matters…<br> Thank you very much!</p>
+             </div>
+             <div class="wpd-comment-footer">
+              <div class="wpd-vote">
+               <div class="wpd-vote-up wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0V0z" /><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z" />
+                </svg>
+               </div>
+               <div class="wpd-vote-result" title="0">
+                0
+               </div>
+               <div class="wpd-vote-down wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0z" /><path d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z" />
+                </svg>
+               </div>
+              </div>
+              <div class="wpd-reply-button"> 
+               <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                <path d="M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z" /><path d="M0 0h24v24H0z" fill="none" />
+               </svg> <span>Reply</span>
+              </div>
+              <div class="wpd-space"></div>
+             </div>
+            </div>
+           </div>
+           <div id="wpdiscuz_form_anchor-135748_0"></div>
+          </div>
+          <div id="wpd-comm-133205_0" class="wpd-comment wpd_comment_level-1">
+           <div class="wpd-comment-wrap wpd-blog-guest">
+            <div class="wpd-comment-left ">
+             <div class="wpd-avatar "> 
+             </div>
+            </div>
+            <div id="comment-133205" class="wpd-comment-right">
+             <div class="wpd-comment-header">
+              <div class="wpd-comment-author ">
+                Benson
+              </div>
+              <div class="wpd-comment-date" title="May 21, 2013 2:04 pm"> <i class="far fa-clock" aria-hidden="true"></i> 8 years ago
+              </div>
+              <div class="wpd-space"></div>
+              <div class="wpd-comment-link wpd-hidden">
+               <div style="" class="comment_flag comment_flag_modal wc_flag_tooltipster wpf-cta wpd-field-desc" wpd-tooltip-position="left" id="fc_133205" wpd-tooltip="Click to flag and open «Comment Reporting» form. You can choose reporting category and send message to website administrator. Admins may or may not choose to remove the comment or block the author. And please don" t worry, your report will be anonymous.'>
+                <i class="fas fa-flag"></i>
+               </div>
+              </div>
+             </div>
+             <div class="wpd-comment-text">
+              <p>Hey,mkyong.May I ask you a question?<br> I created a Maven Project using maven-archetype-quikstart plugin in Eclipse 4.2.2. When I right click the pom.xml and run mvn test command,what I saw in console is the following:</p>
+              <p>[INFO] Scanning for projects…<br> [INFO]<br> [INFO] ————————————————————————<br> [INFO] Building Maven Hello World Project 1.0-SNAPSHOT<br> [INFO] ————————————————————————<br> —————————————————<br> constituent[0]: file:/E:/ASF/apache-maven-3.0.5-bin/apache-maven-3.0.5/lib/aether-api-1.13.1.jar<br> constituent[1]: file:/E:/ASF/apache-maven-3.0.5-bin/apache-maven-3.0.5/lib/aether-connector-wagon-1.13.1.jar<br> constituent[2]: file:/E:/ASF/apache-maven-3.0.5-bin/apache-maven-3.0.5/lib/aether-impl-1.13.1.jar<br> constituent[3]: file:/E:/ASF/apache-maven-3.0.5-bin/apache-maven-3.0.5/lib/aether-spi-1.13.1.jar<br> constituent[4]: file:/E:/ASF/apache-maven-3.0.5-bin/apache-maven-3.0.5/lib/aether-util-1.13.1.jar<br> constituent[5]: file:/E:/ASF/apache-maven-3.0.5-bin/apache-maven-3.0.5/lib/commons-cli-1.2.jar<br> constituent[6]: file:/E:/ASF/apache-maven-3.0.5-bin/apache-maven-3.0.5/lib/maven-aether-provider-3.0.5.jar<br> constituent[7]: file:/E:/ASF/apache-maven-3.0.5-bin/apache-maven-3.0.5/lib/maven-artifact-3.0.5.jar<br> constituent[8]: file:/E:/ASF/apache-maven-3.0.5-bin/apache-maven-3.0.5/lib/maven-compat-3.0.5.jar<br> constituent[9]: file:/E:/ASF/apache-maven-3.0.5-bin/apache-maven-3.0.5/lib/maven-core-3.0.5.jar<br> constituent[10]: file:/E:/ASF/apache-maven-3.0.5-bin/apache-maven-3.0.5/lib/maven-embedder-3.0.5.jar<br> constituent[11]: file:/E:/ASF/apache-maven-3.0.5-bin/apache-maven-3.0.5/lib/maven-model-3.0.5.jar<br> constituent[12]: file:/E:/ASF/apache-maven-3.0.5-bin/apache-maven-3.0.5/lib/maven-model-builder-3.0.5.jar<br> constituent[13]: file:/E:/ASF/apache-maven-3.0.5-bin/apache-maven-3.0.5/lib/maven-plugin-api-3.0.5.jar<br> constituent[14]: file:/E:/ASF/apache-maven-3.0.5-bin/apache-maven-3.0.5/lib/maven-repository-metadata-3.0.5.jar<br> constituent[15]: file:/E:/ASF/apache-maven-3.0.5-bin/apache-maven-3.0.5/lib/maven-settings-3.0.5.jar<br> constituent[16]: file:/E:/ASF/apache-maven-3.0.5-bin/apache-maven-3.0.5/lib/maven-settings-builder-3.0.5.jar<br> constituent[17]: file:/E:/ASF/apache-maven-3.0.5-bin/apache-maven-3.0.5/lib/plexus-cipher-1.7.jar<br> constituent[18]: file:/E:/ASF/apache-maven-3.0.5-bin/apache-maven-3.0.5/lib/plexus-component-annotations-1.5.5.jar<br> constituent[19]: file:/E:/ASF/apache-maven-3.0.5-bin/apache-maven-3.0.5/lib/plexus-interpolation-1.14.jar<br> constituent[20]: file:/E:/ASF/apache-maven-3.0.5-bin/apache-maven-3.0.5/lib/plexus-sec-dispatcher-1.3.jar<br> constituent[21]: file:/E:/ASF/apache-maven-3.0.5-bin/apache-maven-3.0.5/lib/plexus-utils-2.0.6.jar<br> constituent[22]: file:/E:/ASF/apache-maven-3.0.5-bin/apache-maven-3.0.5/lib/sisu-guava-0.9.9.jar<br> constituent[23]: file:/E:/ASF/apache-maven-3.0.5-bin/apache-maven-3.0.5/lib/sisu-guice-3.1.0-no_aop.jar<br> constituent[24]: file:/E:/ASF/apache-maven-3.0.5-bin/apache-maven-3.0.5/lib/sisu-inject-bean-2.3.0.jar<br> constituent[25]: file:/E:/ASF/apache-maven-3.0.5-bin/apache-maven-3.0.5/lib/sisu-inject-plexus-2.3.0.jar<br> constituent[26]: file:/E:/ASF/apache-maven-3.0.5-bin/apache-maven-3.0.5/lib/wagon-file-2.4.jar<br> constituent[27]: file:/E:/ASF/apache-maven-3.0.5-bin/apache-maven-3.0.5/lib/wagon-http-2.4-shaded.jar<br> constituent[28]: file:/E:/ASF/apache-maven-3.0.5-bin/apache-maven-3.0.5/lib/wagon-provider-api-2.4.jar<br> —————————————————<br> Exception in thread “main” java.lang.UnsatisfiedLinkError: sun.nio.ch.IOUtil.iovMax()I<br> at sun.nio.ch.IOUtil.iovMax(Native Method)<br> at sun.nio.ch.IOUtil.(Unknown Source)<br> at sun.nio.ch.Util.(Unknown Source)<br> at sun.nio.ch.FileChannelImpl.(Unknown Source)<br> at java.io.FileInputStream.getChannel(Unknown Source)<br> at org.sonatype.aether.impl.internal.TrackingFileManager.read(TrackingFileManager.java:58)<br> at org.sonatype.aether.impl.internal.EnhancedLocalRepositoryManager.readRepos(EnhancedLocalRepositoryManager.java:144)<br> at org.sonatype.aether.impl.internal.EnhancedLocalRepositoryManager.find(EnhancedLocalRepositoryManager.java:69)<br> at org.sonatype.aether.impl.internal.DefaultArtifactResolver.resolve(DefaultArtifactResolver.java:307)<br> at org.sonatype.aether.impl.internal.DefaultArtifactResolver.resolveArtifacts(DefaultArtifactResolver.java:216)<br> at org.sonatype.aether.impl.internal.DefaultArtifactResolver.resolveArtifact(DefaultArtifactResolver.java:193)<br> at org.apache.maven.repository.internal.DefaultArtifactDescriptorReader.loadPom(DefaultArtifactDescriptorReader.java:281)<br> at org.apache.maven.repository.internal.DefaultArtifactDescriptorReader.readArtifactDescriptor(DefaultArtifactDescriptorReader.java:186)<br> at org.sonatype.aether.impl.internal.DefaultRepositorySystem.readArtifactDescriptor(DefaultRepositorySystem.java:279)<br> at org.apache.maven.plugin.internal.DefaultPluginDependenciesResolver.resolve(DefaultPluginDependenciesResolver.java:115)<br> at org.apache.maven.plugin.internal.DefaultMavenPluginManager.getPluginDescriptor(DefaultMavenPluginManager.java:142)<br> at org.apache.maven.plugin.internal.DefaultMavenPluginManager.getMojoDescriptor(DefaultMavenPluginManager.java:261)<br> at org.apache.maven.plugin.DefaultBuildPluginManager.getMojoDescriptor(DefaultBuildPluginManager.java:185)<br> at org.apache.maven.lifecycle.internal.DefaultLifecycleExecutionPlanCalculator.setupMojoExecution(DefaultLifecycleExecutionPlanCalculator.java:152)<br> at org.apache.maven.lifecycle.internal.DefaultLifecycleExecutionPlanCalculator.setupMojoExecutions(DefaultLifecycleExecutionPlanCalculator.java:139)<br> at org.apache.maven.lifecycle.internal.DefaultLifecycleExecutionPlanCalculator.calculateExecutionPlan(DefaultLifecycleExecutionPlanCalculator.java:116)<br> at org.apache.maven.lifecycle.internal.DefaultLifecycleExecutionPlanCalculator.calculateExecutionPlan(DefaultLifecycleExecutionPlanCalculator.java:129)<br> at org.apache.maven.lifecycle.internal.BuilderCommon.resolveBuildPlan(BuilderCommon.java:92)<br> at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:81)<br> at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:59)<br> at org.apache.maven.lifecycle.internal.LifecycleStarter.singleThreadedBuild(LifecycleStarter.java:183)<br> at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:161)<br> at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:320)<br> at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:156)<br> at org.apache.maven.cli.MavenCli.execute(MavenCli.java:537)<br> at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:196)<br> at org.apache.maven.cli.MavenCli.main(MavenCli.java:141)<br> at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br> at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)<br> at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)<br> at java.lang.reflect.Method.invoke(Unknown Source)<br> at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:290)<br> at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:230)<br> at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:409)<br> at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:352)</p>
+              <p>BTW,it works when I run it in prompt.<br> Any helps would be appreciated!<br> THX…</p>
+             </div>
+             <div class="wpd-comment-footer">
+              <div class="wpd-vote">
+               <div class="wpd-vote-up wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0V0z" /><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z" />
+                </svg>
+               </div>
+               <div class="wpd-vote-result" title="0">
+                0
+               </div>
+               <div class="wpd-vote-down wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0z" /><path d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z" />
+                </svg>
+               </div>
+              </div>
+              <div class="wpd-reply-button"> 
+               <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                <path d="M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z" /><path d="M0 0h24v24H0z" fill="none" />
+               </svg> <span>Reply</span>
+              </div>
+              <div class="wpd-space"></div>
+             </div>
+            </div>
+           </div>
+           <div id="wpdiscuz_form_anchor-133205_0"></div>
+          </div>
+          <div id="wpd-comm-133060_0" class="wpd-comment wpd_comment_level-1">
+           <div class="wpd-comment-wrap wpd-blog-guest">
+            <div class="wpd-comment-left ">
+             <div class="wpd-avatar "> 
+             </div>
+            </div>
+            <div id="comment-133060" class="wpd-comment-right">
+             <div class="wpd-comment-header">
+              <div class="wpd-comment-author ">
+                satish
+              </div>
+              <div class="wpd-comment-date" title="May 17, 2013 12:57 am"> <i class="far fa-clock" aria-hidden="true"></i> 8 years ago
+              </div>
+              <div class="wpd-space"></div>
+              <div class="wpd-comment-link wpd-hidden">
+               <div style="" class="comment_flag comment_flag_modal wc_flag_tooltipster wpf-cta wpd-field-desc" wpd-tooltip-position="left" id="fc_133060" wpd-tooltip="Click to flag and open «Comment Reporting» form. You can choose reporting category and send message to website administrator. Admins may or may not choose to remove the comment or block the author. And please don" t worry, your report will be anonymous.'>
+                <i class="fas fa-flag"></i>
+               </div>
+              </div>
+             </div>
+             <div class="wpd-comment-text">
+              <p>Hai mkyong, this satish developing web application using spring3 mvc and Hibernate with maven and jboss,I’m configuring all the dependecies in pom.xml but my problem is how to configure jboss4.2.3 in pom.xml using maven 2.x to deploy the web application war file in jboss server deploy folder automatically.? Can you guide me Regarding this post????????</p>
+             </div>
+             <div class="wpd-comment-footer">
+              <div class="wpd-vote">
+               <div class="wpd-vote-up wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0V0z" /><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z" />
+                </svg>
+               </div>
+               <div class="wpd-vote-result" title="0">
+                0
+               </div>
+               <div class="wpd-vote-down wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0z" /><path d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z" />
+                </svg>
+               </div>
+              </div>
+              <div class="wpd-reply-button"> 
+               <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                <path d="M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z" /><path d="M0 0h24v24H0z" fill="none" />
+               </svg> <span>Reply</span>
+              </div>
+              <div class="wpd-space"></div>
+             </div>
+            </div>
+           </div>
+           <div id="wpdiscuz_form_anchor-133060_0"></div>
+          </div>
+          <div id="wpd-comm-132467_0" class="wpd-comment wpd_comment_level-1">
+           <div class="wpd-comment-wrap wpd-blog-guest">
+            <div class="wpd-comment-left ">
+             <div class="wpd-avatar "> 
+             </div>
+            </div>
+            <div id="comment-132467" class="wpd-comment-right">
+             <div class="wpd-comment-header">
+              <div class="wpd-comment-author ">
+                Meenu Khurana
+              </div>
+              <div class="wpd-comment-date" title="May 2, 2013 2:19 pm"> <i class="far fa-clock" aria-hidden="true"></i> 8 years ago
+              </div>
+              <div class="wpd-space"></div>
+              <div class="wpd-comment-link wpd-hidden">
+               <div style="" class="comment_flag comment_flag_modal wc_flag_tooltipster wpf-cta wpd-field-desc" wpd-tooltip-position="left" id="fc_132467" wpd-tooltip="Click to flag and open «Comment Reporting» form. You can choose reporting category and send message to website administrator. Admins may or may not choose to remove the comment or block the author. And please don" t worry, your report will be anonymous.'>
+                <i class="fas fa-flag"></i>
+               </div>
+              </div>
+             </div>
+             <div class="wpd-comment-text">
+              <p>whenver I try to use any MVN command i get the following error.</p>
+              <p>C:\&gt;mvn eclipse:eclipse -Dwtpversion=1.5<br> [INFO] Scanning for projects…<br> [INFO] Searching repository for plugin with prefix: ‘eclipse’.<br> [INFO] org.apache.maven.plugins: checking for updates from central<br> [WARNING] repository metadata for: ‘org.apache.maven.plugins’ could not be retri<br> eved from repository: central due to an error: Error transferring file: Connecti<br> on refused: connect<br> [INFO] Repository ‘central’ will be blacklisted<br> [INFO] ————————————————————————<br> [ERROR] BUILD ERROR<br> [INFO] ————————————————————————<br> [INFO] The plugin ‘org.apache.maven.plugins:maven-eclipse-plugin’ does not exist<br> or no valid version could be found<br> [INFO] ————————————————————————<br> [INFO] For more information, run Maven with the -e switch<br> [INFO] ————————————————————————<br> [INFO] Total time: 1 second<br> [INFO] Finished at: Thu May 02 11:47:01 IST 2013<br> [INFO] Final Memory: 1M/4M<br> [INFO] ————————————————————————</p>
+              <p>How to resolve this error?</p>
+             </div>
+             <div class="wpd-comment-footer">
+              <div class="wpd-vote">
+               <div class="wpd-vote-up wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0V0z" /><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z" />
+                </svg>
+               </div>
+               <div class="wpd-vote-result" title="0">
+                0
+               </div>
+               <div class="wpd-vote-down wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0z" /><path d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z" />
+                </svg>
+               </div>
+              </div>
+              <div class="wpd-reply-button"> 
+               <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                <path d="M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z" /><path d="M0 0h24v24H0z" fill="none" />
+               </svg> <span>Reply</span>
+              </div>
+              <div class="wpd-space"></div>
+              <div class="wpd-toggle wpd-hidden wpd_not_clicked" wpd-tooltip="Hide Replies"> <i class="fas fa-chevron-up"></i>
+              </div>
+             </div>
+            </div>
+           </div>
+           <div id="wpdiscuz_form_anchor-132467_0"></div>
+           <div id="wpd-comm-134658_132467" class="wpd-comment wpd-reply wpd_comment_level-2">
+            <div class="wpd-comment-wrap wpd-blog-guest">
+             <div class="wpd-comment-left ">
+              <div class="wpd-avatar "> 
+              </div>
+             </div>
+             <div id="comment-134658" class="wpd-comment-right">
+              <div class="wpd-comment-header">
+               <div class="wpd-comment-author ">
+                 Praveen Kumar
+               </div>
+               <div class="wpd-comment-date" title="June 14, 2013 2:38 pm"> <i class="far fa-clock" aria-hidden="true"></i> 8 years ago
+               </div>
+               <div class="wpd-space"></div>
+               <div class="wpd-comment-link wpd-hidden">
+                <div style="" class="comment_flag comment_flag_modal wc_flag_tooltipster wpf-cta wpd-field-desc" wpd-tooltip-position="left" id="fc_134658" wpd-tooltip="Click to flag and open «Comment Reporting» form. You can choose reporting category and send message to website administrator. Admins may or may not choose to remove the comment or block the author. And please don" t worry, your report will be anonymous.'>
+                 <i class="fas fa-flag"></i>
+                </div>
+               </div>
+              </div>
+              <div class="wpd-reply-to"> <i class="far fa-comments"></i> Reply to&nbsp; 
+              </div>
+              <div class="wpd-comment-text">
+               <p>Everything in maven done through plugins.And “org.apache.maven.plugins:maven-eclipse-plugin” is not available in your repository. To solve this issue, try to point remote reopsitory( configure it in settings.xml in maven installed dir),so that maven can download required plugins from from remote repositories.</p>
+              </div>
+              <div class="wpd-comment-footer">
+               <div class="wpd-vote">
+                <div class="wpd-vote-up wpd_not_clicked"> 
+                 <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                  <path fill="none" d="M0 0h24v24H0V0z" /><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z" />
+                 </svg>
+                </div>
+                <div class="wpd-vote-result" title="0">
+                 0
+                </div>
+                <div class="wpd-vote-down wpd_not_clicked"> 
+                 <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                  <path fill="none" d="M0 0h24v24H0z" /><path d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z" />
+                 </svg>
+                </div>
+               </div>
+               <div class="wpd-reply-button"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path d="M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z" /><path d="M0 0h24v24H0z" fill="none" />
+                </svg> <span>Reply</span>
+               </div>
+               <div class="wpd-space"></div>
+              </div>
+             </div>
+            </div>
+            <div id="wpdiscuz_form_anchor-134658_132467"></div>
+           </div>
+          </div>
+          <div id="wpd-comm-130957_0" class="wpd-comment wpd_comment_level-1">
+           <div class="wpd-comment-wrap wpd-blog-guest">
+            <div class="wpd-comment-left ">
+             <div class="wpd-avatar "> 
+             </div>
+            </div>
+            <div id="comment-130957" class="wpd-comment-right">
+             <div class="wpd-comment-header">
+              <div class="wpd-comment-author ">
+                Anonymous
+              </div>
+              <div class="wpd-comment-date" title="March 29, 2013 8:06 am"> <i class="far fa-clock" aria-hidden="true"></i> 8 years ago
+              </div>
+              <div class="wpd-space"></div>
+              <div class="wpd-comment-link wpd-hidden">
+               <div style="" class="comment_flag comment_flag_modal wc_flag_tooltipster wpf-cta wpd-field-desc" wpd-tooltip-position="left" id="fc_130957" wpd-tooltip="Click to flag and open «Comment Reporting» form. You can choose reporting category and send message to website administrator. Admins may or may not choose to remove the comment or block the author. And please don" t worry, your report will be anonymous.'>
+                <i class="fas fa-flag"></i>
+               </div>
+              </div>
+             </div>
+             <div class="wpd-comment-text">
+              <p>Can you message me with some hints on how you made this web site look this cool, I??d be thankful.</p>
+             </div>
+             <div class="wpd-comment-footer">
+              <div class="wpd-vote">
+               <div class="wpd-vote-up wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0V0z" /><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z" />
+                </svg>
+               </div>
+               <div class="wpd-vote-result" title="0">
+                0
+               </div>
+               <div class="wpd-vote-down wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0z" /><path d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z" />
+                </svg>
+               </div>
+              </div>
+              <div class="wpd-reply-button"> 
+               <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                <path d="M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z" /><path d="M0 0h24v24H0z" fill="none" />
+               </svg> <span>Reply</span>
+              </div>
+              <div class="wpd-space"></div>
+             </div>
+            </div>
+           </div>
+           <div id="wpdiscuz_form_anchor-130957_0"></div>
+          </div>
+          <div id="wpd-comm-129704_0" class="wpd-comment wpd_comment_level-1">
+           <div class="wpd-comment-wrap wpd-blog-guest">
+            <div class="wpd-comment-left ">
+             <div class="wpd-avatar "> 
+             </div>
+            </div>
+            <div id="comment-129704" class="wpd-comment-right">
+             <div class="wpd-comment-header">
+              <div class="wpd-comment-author ">
+                yacoubi
+              </div>
+              <div class="wpd-comment-date" title="February 24, 2013 4:06 am"> <i class="far fa-clock" aria-hidden="true"></i> 8 years ago
+              </div>
+              <div class="wpd-space"></div>
+              <div class="wpd-comment-link wpd-hidden">
+               <div style="" class="comment_flag comment_flag_modal wc_flag_tooltipster wpf-cta wpd-field-desc" wpd-tooltip-position="left" id="fc_129704" wpd-tooltip="Click to flag and open «Comment Reporting» form. You can choose reporting category and send message to website administrator. Admins may or may not choose to remove the comment or block the author. And please don" t worry, your report will be anonymous.'>
+                <i class="fas fa-flag"></i>
+               </div>
+              </div>
+             </div>
+             <div class="wpd-comment-text">
+              <p>Please can i find here maven+ hibernate/facetsJPA/spring3+jsf</p>
+             </div>
+             <div class="wpd-comment-footer">
+              <div class="wpd-vote">
+               <div class="wpd-vote-up wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0V0z" /><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z" />
+                </svg>
+               </div>
+               <div class="wpd-vote-result" title="0">
+                0
+               </div>
+               <div class="wpd-vote-down wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0z" /><path d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z" />
+                </svg>
+               </div>
+              </div>
+              <div class="wpd-reply-button"> 
+               <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                <path d="M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z" /><path d="M0 0h24v24H0z" fill="none" />
+               </svg> <span>Reply</span>
+              </div>
+              <div class="wpd-space"></div>
+             </div>
+            </div>
+           </div>
+           <div id="wpdiscuz_form_anchor-129704_0"></div>
+          </div>
+          <div id="wpd-comm-129352_0" class="wpd-comment wpd_comment_level-1">
+           <div class="wpd-comment-wrap wpd-blog-guest">
+            <div class="wpd-comment-left ">
+             <div class="wpd-avatar "> 
+             </div>
+            </div>
+            <div id="comment-129352" class="wpd-comment-right">
+             <div class="wpd-comment-header">
+              <div class="wpd-comment-author ">
+                Matt
+              </div>
+              <div class="wpd-comment-date" title="February 21, 2013 6:44 pm"> <i class="far fa-clock" aria-hidden="true"></i> 8 years ago
+              </div>
+              <div class="wpd-space"></div>
+              <div class="wpd-comment-link wpd-hidden">
+               <div style="" class="comment_flag comment_flag_modal wc_flag_tooltipster wpf-cta wpd-field-desc" wpd-tooltip-position="left" id="fc_129352" wpd-tooltip="Click to flag and open «Comment Reporting» form. You can choose reporting category and send message to website administrator. Admins may or may not choose to remove the comment or block the author. And please don" t worry, your report will be anonymous.'>
+                <i class="fas fa-flag"></i>
+               </div>
+              </div>
+             </div>
+             <div class="wpd-comment-text">
+              <p>I actually Feel posting, _Maven Tutorial_ was good!<br> I actuallycan’t see eye to eye together with u more! Finally looks like Istumbled upon a blog truly worth browsing. I appreciate it, Cynthia</p>
+             </div>
+             <div class="wpd-comment-footer">
+              <div class="wpd-vote">
+               <div class="wpd-vote-up wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0V0z" /><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z" />
+                </svg>
+               </div>
+               <div class="wpd-vote-result" title="0">
+                0
+               </div>
+               <div class="wpd-vote-down wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0z" /><path d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z" />
+                </svg>
+               </div>
+              </div>
+              <div class="wpd-reply-button"> 
+               <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                <path d="M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z" /><path d="M0 0h24v24H0z" fill="none" />
+               </svg> <span>Reply</span>
+              </div>
+              <div class="wpd-space"></div>
+             </div>
+            </div>
+           </div>
+           <div id="wpdiscuz_form_anchor-129352_0"></div>
+          </div>
+          <div id="wpd-comm-127908_0" class="wpd-comment wpd_comment_level-1">
+           <div class="wpd-comment-wrap wpd-blog-guest">
+            <div class="wpd-comment-left ">
+             <div class="wpd-avatar "> 
+             </div>
+            </div>
+            <div id="comment-127908" class="wpd-comment-right">
+             <div class="wpd-comment-header">
+              <div class="wpd-comment-author ">
+                iraj
+              </div>
+              <div class="wpd-comment-date" title="February 6, 2013 4:04 am"> <i class="far fa-clock" aria-hidden="true"></i> 8 years ago
+              </div>
+              <div class="wpd-space"></div>
+              <div class="wpd-comment-link wpd-hidden">
+               <div style="" class="comment_flag comment_flag_modal wc_flag_tooltipster wpf-cta wpd-field-desc" wpd-tooltip-position="left" id="fc_127908" wpd-tooltip="Click to flag and open «Comment Reporting» form. You can choose reporting category and send message to website administrator. Admins may or may not choose to remove the comment or block the author. And please don" t worry, your report will be anonymous.'>
+                <i class="fas fa-flag"></i>
+               </div>
+              </div>
+             </div>
+             <div class="wpd-comment-text">
+              <p>I want to create a table as below:</p>
+              <p> | ID | BlockerID | BlockedID |<br> | 1 | 5 | 6 |<br> | 2 | 5 | 7 |<br> | 3 | 5 | 8 |<br> | 4 | 5 | 10 |<br> | 5 | 9 | 5 |</p>
+              <p>So 5 has blocked 6, 7, 8, 10 and 9 has blocked 5.</p>
+              <p>Is possible to do thins like this:</p>
+              <p> @Entity<br> @Table(name=”BLOCKEE”)<br> @XmlRootElement<br> @XmlAccessorType(XmlAccessType.FIELD)<br> public class Blockee<br> {</p>
+              <p> @Id<br> @GeneratedValue(strategy= GenerationType.AUTO)<br> @Column(name=”BLOCKEE_ID”)<br> @XmlElement<br> private int blockeeid;</p>
+              <p> @OneToMany(cascade= {CascadeType.PERSIST, CascadeType.MERGE})<br> @JoinTable(name=”BLOCKEE”, joinColumns= {@JoinColumn(name=”BLOCKER_ID”)},<br> inverseJoinColumns=@JoinColumn(table=”USER”,name=”USER_ID”))<br> private User userid;</p>
+              <p> @OneToMany(cascade= {CascadeType.PERSIST, CascadeType.MERGE})<br> @JoinTable(name=”BLOCKEE”, joinColumns={@JoinColumn(name=”BLOCKED_ID”)},<br> inverseJoinColumns=@JoinColumn(table=”USER”,name=”USER_ID”))<br> private Collection userlistId;</p>
+              <p> //getters and setters</p>
+              <p>}</p>
+              <p>Here is my User class:</p>
+              <p>Entity<br> @Table(name = “USER”)<br> @XmlRootElement<br> @XmlAccessorType(XmlAccessType.FIELD)<br> public class User<br> {</p>
+              <p> @Id<br> @Column(name = “USER_ID”)<br> @GeneratedValue(strategy = GenerationType.AUTO)<br> @XmlElement<br> private int userid;</p>
+              <p> @Column(name = “FIRSTNAME”, nullable = true, unique = false)<br> @XmlElement<br> private String firstname;</p>
+              <p> @Column(name = “LASTAME”, nullable = true, unique = false)<br> @XmlElement<br> private String lastname;<br> //getters and setters</p>
+              <p>}</p>
+              <p>Or who can I do it with JPA?</p>
+              <p>Thanks</p>
+             </div>
+             <div class="wpd-comment-footer">
+              <div class="wpd-vote">
+               <div class="wpd-vote-up wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0V0z" /><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z" />
+                </svg>
+               </div>
+               <div class="wpd-vote-result" title="0">
+                0
+               </div>
+               <div class="wpd-vote-down wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0z" /><path d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z" />
+                </svg>
+               </div>
+              </div>
+              <div class="wpd-reply-button"> 
+               <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                <path d="M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z" /><path d="M0 0h24v24H0z" fill="none" />
+               </svg> <span>Reply</span>
+              </div>
+              <div class="wpd-space"></div>
+             </div>
+            </div>
+           </div>
+           <div id="wpdiscuz_form_anchor-127908_0"></div>
+          </div>
+          <div class="wpdiscuz-comment-pagination">
+           <div class="wpd-load-more-submit-wrap"> 
+           </div> 
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div id="wpdiscuz-loading-bar" class="wpdiscuz-loading-bar-unauth"></div>
+      <div id="wpdiscuz-comment-message" class="wpdiscuz-comment-message-unauth"></div>
+     </article>
+    </main> <!-- right -->
+    <div id="sidebar-right" class="d-none d-xl-block col-xl-3">
+     <div class="ads-container-height1080">
+      <div class="ads-container-sticky">
+       <div class="ads-container">
+        <div align="center" data-freestar-ad="__300x600" id="mkyong_rail_right_1">  
+        </div>
+       </div>
+      </div>
+     </div>
+     <div class="ads-container-sticky">
+      <div class="ads-container">
+       <div align="center" data-freestar-ad="__300x600" id="mkyong_rail_right_2">  
+       </div>
+      </div>
+     </div>
+    </div>
+   </div> <!--/.row -->
+  </div> <!--/.container-fluid -->  <!-- Dynamic page generated in 0.173 seconds. --><!-- Cached page generated by WP-Super-Cache on 2021-09-29 21:03:49 -->
+ </body>
+</html>

@@ -1,0 +1,1079 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="google-site-verification" content="VsVvSTVAouAluNodWeR30BeIWTr4c84HvN4Fn9WBsak"> <!-- wp_head --> <!-- This site is optimized with the Yoast SEO plugin v15.5 - https://yoast.com/wordpress/plugins/seo/ -->
+  <title>What is new in Java 17 - Mkyong.com</title>
+  <meta name="description" content="Java 17 contains 14 JEP items, main features includes pseudorandom number generator, pattern matching for switch (preview), sealed class (standard feature), foreign function &amp; memory API (incubator), dynamic deserialization filters, also deprecated the RMI activation, Applet API and Security manager for removal, and etc.">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="What is new in Java 17 - Mkyong.com">
+  <meta property="og:description" content="Java 17 contains 14 JEP items, main features includes pseudorandom number generator, pattern matching for switch (preview), sealed class (standard feature), foreign function &amp; memory API (incubator), dynamic deserialization filters, also deprecated the RMI activation, Applet API and Security manager for removal, and etc.">
+  <meta property="og:url" content="https://mkyong.com/java/what-is-new-in-java-17/">
+  <meta property="og:site_name" content="Mkyong.com">
+  <meta property="article:published_time" content="2021-09-29T09:03:11+00:00">
+  <meta property="og:image" content="https://mkyong.com/wp-content/uploads/2021/09/java-17-logo.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:label1" content="Written by">
+  <meta name="twitter:data1" content="mkyong">
+  <meta name="twitter:label2" content="Est. reading time">
+  <meta name="twitter:data2" content="12 minutes">  <!-- / Yoast SEO plugin. -->  
+ </head>
+ <body>
+  <div class="container-fluid">
+   <div class="row"> <!-- left -->
+    <div id="sidebar-left" class="col-12 col-lg-3 col-xl-2"> <!-- sidebar-left-menu, see functions.php-->
+     <div class="offcanvas offcanvas-start" tabindex="-1" id="left-nav" aria-labelledby="left-nav">
+      <div class="offcanvas-header">
+       <h5 class="offcanvas-title">Main Tutorials</h5>
+      </div>
+      <div class="offcanvas-body sidebar-left-no-highlight">
+       <div>
+        <ul>
+         <li class="active"></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+        </ul>
+       </div>
+      </div>
+     </div> <!-- ads -->
+     <div class="ads-container-sticky d-none d-lg-block">
+      <div class="ads-container">
+       <div align="center" data-freestar-ad="__160x600" id="mkyong_rail_left">  
+       </div>
+      </div>
+     </div>
+    </div> <!-- middle -->
+    <main id="main-middle" role="main" class="col-12 col-lg-9 col-xl-7">
+     <article id="main-content" class="dont-break-out">
+      <div id="title-container">
+       <h1>What is new in Java 17</h1>
+       <div class="post-meta d-flex align-items-center position-relative">
+        <div></div>
+        <div>
+         <p><small class="extra-info">By  | <time datetime="2021-09-29T17:03:11+08:00"> Last updated: September 29, 2021</time></small></p>
+         <p><small class="extra-info"></small></p>
+         <p><small class="extra-info"></small></p>
+         <div class="post-tag">
+          <small class="extra-info">Tags: |  |  | </small>
+         </div>
+         <p></p>
+        </div>
+       </div>
+      </div>
+      <div class="pre-next-container d-flex justify-content-between"></div>
+      <div class="pic"> 
+      </div>
+      <p> is a long-term support (LTS) release, reached General Availability on 14 September 2021, .</p>
+      <p>Java 17 has 14 JEP items.</p>
+      <ul class="list-toc">
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li>
+        <ul>
+         <li></li>
+         <li></li>
+         <li></li>
+        </ul></li>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+      </ul>
+      <h2 id="jep-306-restore-always-strict-floating-point-semantics"> 1. JEP 306: Restore Always-Strict Floating-Point Semantics<br></h2>
+      <p>This JEP is for numerically-sensitive programs, mainly scientific purposes; It again made default floating-point operations strict or <code>Strictfp</code>, ensure the same results from the floating-point calculations on every platform.</p>
+      <p><em>Short history</em></p>
+      <ol>
+       <li>Before Java 1.2, all floating-point calculations were strict; and it caused overheats on x87-based hardware.</li>
+       <li>Since Java 1.2, we need the keyword <code>strictfp</code> to enable the strict floating-point calculation. The default floating-point calculation was changed from strict to subtly different floating-point calculations (avoid overheats issues).</li>
+       <li>Now, since Intel and AMD have both support  extensions, which could support for the strict JVM floating-point operations without the overheats, so, the previous (before Java 1.2) overheats issues on x87-based hardware are irreverent in nowaday hardware.</li>
+       <li>Java 17 restores the pre-Java 1.2 strict floating-point calculations as default, which means the keyword <code>strictfp</code> is now optional.</li>
+      </ol>
+      <div class="note">
+       <p><strong>Further Reading</strong></p>
+       <ul>
+        <li></li>
+        <li></li>
+       </ul>
+      </div>
+      <div class="ads-container ads-container-video">
+       <div id="mkyongFreeStarVideoAdContainer">
+        <div id="freestar-video-parent">
+         <div id="freestar-video-child"></div>
+        </div>
+       </div>
+      </div>
+      <h2 id="jep-356-enhanced-pseudo-random-number-generators"> 2. JEP 356: Enhanced Pseudo-Random Number Generators<br></h2>
+      <p>This JEP introduced a new interface called <code>RandomGenerator</code> to make future  algorithms easier to implement or use.</p>
+      <div class="filename">
+       RandomGenerator.java
+      </div>
+      <pre><code class="language-java">
+package java.util.random;
+
+public interface RandomGenerator {
+  //...
+}
+</code></pre>
+      <p>The below example uses the new Java 17 <code>RandomGeneratorFactory</code> to get the famous <code>Xoshiro256PlusPlus</code> PRNG algorithms to generate random integers within a specific range, 0 – 10.</p>
+      <div class="filename">
+       JEP356.java
+      </div>
+      <pre><code class="language-java">
+package com.mkyong.java17.jep356;
+
+import java.util.random.RandomGenerator;
+import java.util.random.RandomGeneratorFactory;
+
+public class JEP356 {
+
+  public static void main(String[] args) {
+
+      // legacy
+      // RandomGeneratorFactory.of("Random").create(42);
+
+      // default L32X64MixRandom
+      // RandomGenerator randomGenerator = RandomGeneratorFactory.getDefault().create();
+
+      // Passing the same seed to random, and then calling it will give you the same set of numbers
+      // for example, seed = 999
+      RandomGenerator randomGenerator = RandomGeneratorFactory.of("Xoshiro256PlusPlus").create(999);
+
+      System.out.println(randomGenerator.getClass());
+
+      int counter = 0;
+      while(counter&lt;=10){
+          // 0-10
+          int result = randomGenerator.nextInt(11);
+          System.out.println(result);
+          counter++;
+      }
+
+  }
+}
+</code></pre>
+      <p>Output</p>
+      <div class="filename">
+       Terminal
+      </div>
+      <pre><code class="language-bash">
+class jdk.random.Xoshiro256PlusPlus
+4
+6
+9
+5
+7
+6
+5
+0
+6
+10
+4
+</code></pre>
+      <p>The below code generates all the Java 17 PRNG algorithms.</p>
+      <pre><code class="language-java">
+  RandomGeneratorFactory.all()
+              .map(fac -&gt; fac.group()+ " : " +fac.name())
+              .sorted()
+              .forEach(System.out::println);
+</code></pre>
+      <p>Output</p>
+      <div class="filename">
+       Terminal
+      </div>
+      <pre><code class="language-bash">
+LXM : L128X1024MixRandom
+LXM : L128X128MixRandom
+LXM : L128X256MixRandom
+LXM : L32X64MixRandom
+LXM : L64X1024MixRandom
+LXM : L64X128MixRandom
+LXM : L64X128StarStarRandom
+LXM : L64X256MixRandom
+Legacy : Random
+Legacy : SecureRandom
+Legacy : SplittableRandom
+Xoroshiro : Xoroshiro128PlusPlus
+Xoshiro : Xoshiro256PlusPlus
+</code></pre>
+      <p>Java 17 also refactored the legacy random classes like <code>java.util.Random</code>, <code>SplittableRandom</code> and <code>SecureRandom</code> to extend the new <code>RandomGenerator</code> interface.</p>
+      <div class="note">
+       <p><strong>Further Reading</strong></p>
+       <ul>
+        <li></li>
+        <li></li>
+       </ul>
+      </div>
+      <h2 id="jep-382-new-macos-rendering-pipeline"> 3. JEP 382: New macOS Rendering Pipeline<br></h2>
+      <p>Apple deprecated the OpenGL rendering library in (September 2018), in favor of the new  for better performance.</p>
+      <p>This JEP changes the Java 2D (like Swing GUI) internal rendering pipeline for macOS from Apple OpenGL API to Apple Metal API; this is an internal change; there are no new Java 2D APIs, nor change any existing APIs.</p>
+      <div class="note">
+       <p><strong>Further Reading</strong></p>
+       <ul>
+        <li></li>
+       </ul>
+      </div>
+      <h2 id="jep-391-macosaarch64-port"> 4. JEP 391: macOS/AArch64 Port<br></h2>
+      <p>Apple has a long-term plan to  (e.g., Apple M1 processors).</p>
+      <p>This JEP port JDK to run on AArch64 platforms on macOS.</p>
+      <div class="note">
+       <p><strong>Further Reading</strong></p>
+       <ul>
+        <li></li>
+       </ul>
+      </div>
+      <h2 id="jep-398-deprecate-the-applet-api-for-removal"> 5. JEP 398: Deprecate the Applet API for Removal<br></h2>
+      <p>The  is irrelevant because most of the web-browser has removed support for Java browser plug-ins.</p>
+      <p>Java 9 deprecated the Applet API.</p>
+      <pre><code class="language-java">
+@Deprecated(since = "9")
+public class Applet extends Panel {
+  //...
+}
+</code></pre>
+      <p>This JEP marked the Applet API for removal.</p>
+      <pre><code class="language-java">
+@Deprecated(since = "9", forRemoval = true)
+@SuppressWarnings("removal")
+public class Applet extends Panel {
+  //...
+}
+</code></pre>
+      <div class="note">
+       <p><strong>Further Reading</strong></p>
+       <ul>
+        <li></li>
+       </ul>
+      </div>
+      <h2 id="jep-403-strongly-encapsulate-jdk-internals"> 6. JEP 403: Strongly Encapsulate JDK Internals<br></h2>
+      <p>Many third-party libraries, frameworks, and tools are accessing the internal APIs and packages of the JDK. The Java 16,  make the strong encapsulation by default (we are not allowed to access the internal APIs easily). However, we can still use <code>--illegal-access</code> to switch to the simple encapsulation to still access the internal APIs.</p>
+      <p>This JEP is the successor to the above Java 16 JEP 396, and it takes one more step by removing the <code>--illegal-access</code> option, which means we have no ways to access the internal APIs, except for critical internal APIs such as <code>sun.misc.Unsafe</code>.</p>
+      <p>Try the <code>--illegal-access=warn</code> in Java 17.</p>
+      <div class="filename">
+       Terminal
+      </div>
+      <pre><code class="language-bash">
+java --illegal-access=warn
+
+OpenJDK 64-Bit Server VM warning: Ignoring option --illegal-access=warn; support was removed in 17.0  
+</code></pre>
+      <div class="note">
+       <p><strong>Further Reading</strong></p>
+       <ul>
+        <li></li>
+       </ul>
+      </div>
+      <h2 id="jep-406-pattern-matching-for-switch-preview"> 7. JEP 406: Pattern Matching for switch (Preview)<br></h2>
+      <p>This JEP adds pattern matching for <code>switch</code> statements and expressions. Since this is a preview feature, we need to use <code>--enable-preview</code> option to enable it.</p>
+      <h3 id="ifelse-chain"> 7.1 if…else chain<br></h3>
+      <p>Before Java 17, typically, we use a chain of <code>if...else</code> tests for several possibilities.</p>
+      <div class="filename">
+       JEP406.java
+      </div>
+      <pre><code class="language-java">
+package com.mkyong.java17.jep406;
+
+public class JEP406 {
+
+  public static void main(String[] args) {
+
+      System.out.println(formatter("Java 17"));
+      System.out.println(formatter(17));
+
+  }
+
+  static String formatter(Object o) {
+      String formatted = "unknown";
+      if (o instanceof Integer i) {
+          formatted = String.format("int %d", i);
+      } else if (o instanceof Long l) {
+          formatted = String.format("long %d", l);
+      } else if (o instanceof Double d) {
+          formatted = String.format("double %f", d);
+      } else if (o instanceof String s) {
+          formatted = String.format("String %s", s);
+      }
+      return formatted;
+  }
+
+}
+</code></pre>
+      <p>In Java 17, we can rewrite the above code like this:</p>
+      <div class="filename">
+       JEP406.java
+      </div>
+      <pre><code class="language-java">
+package com.mkyong.java17.jep406;
+
+public class JEP406 {
+
+    public static void main(String[] args) {
+
+        System.out.println(formatterJava17("Java 17"));
+        System.out.println(formatterJava17(17));
+
+    }
+
+    static String formatterJava17(Object o) {
+        return switch (o) {
+            case Integer i -&gt; String.format("int %d", i);
+            case Long l    -&gt; String.format("long %d", l);
+            case Double d  -&gt; String.format("double %f", d);
+            case String s  -&gt; String.format("String %s", s);
+            default        -&gt; o.toString();
+        };
+    }
+
+}
+</code></pre>
+      <h3 id="pattern-matching-and-null"> 7.2 Pattern matching and null<br></h3>
+      <p>Now we can test the <code>null</code> in <code>switch</code> directly.</p>
+      <p>Old code.</p>
+      <div class="filename">
+       JEP406.java
+      </div>
+      <pre><code class="language-java">
+package com.mkyong.java17.jep406;
+
+public class JEP406 {
+
+  public static void main(String[] args) {
+
+      testString("Java 16");  // Ok
+      testString("Java 11");  // LTS
+      testString("");         // Ok
+      testString(null);       // Unknown!
+  }
+
+  static void testString(String s) {
+      if (s == null) {
+          System.out.println("Unknown!");
+          return;
+      }
+      switch (s) {
+          case "Java 11", "Java 17"   -&gt; System.out.println("LTS");
+          default                     -&gt; System.out.println("Ok");
+      }
+  }
+
+}
+</code></pre>
+      <p>New code.</p>
+      <div class="filename">
+       JEP406.java
+      </div>
+      <pre><code class="language-java">
+package com.mkyong.java17.jep406;
+
+public class JEP406 {
+
+    public static void main(String[] args) {
+
+        testStringJava17("Java 16");  // Ok
+        testStringJava17("Java 11");  // LTS
+        testStringJava17("");         // Ok
+        testStringJava17(null);       // Unknown!
+    }
+
+    static void testStringJava17(String s) {
+        switch (s) {
+            case null                   -&gt; System.out.println("Unknown!");
+            case "Java 11", "Java 17"   -&gt; System.out.println("LTS");
+            default                     -&gt; System.out.println("Ok");
+        }
+    }
+
+}
+
+</code></pre>
+      <h3 id="refining-patterns-in-switch"> 7.3 Refining patterns in switch<br></h3>
+      <p>Review the below code snippet. To test the <code>Triangle t</code> and <code>t.calculateArea()</code>, we need to create an extra <code>if</code> condition.</p>
+      <pre><code class="language-java">
+class Shape {}
+  class Rectangle extends Shape {}
+  class Triangle  extends Shape {
+      int calculateArea(){
+          //...
+      } }
+
+  static void testTriangle(Shape s) {
+      switch (s) {
+          case null:
+              break;
+          case Triangle t:
+              if (t.calculateArea() &gt; 100) {
+                  System.out.println("Large triangle");
+                  break;
+              }else{
+                  System.out.println("Triangle");
+              }
+          default:
+              System.out.println("Unknown!");
+      }
+  }
+</code></pre>
+      <p>Java 17 allows so-called redefined patterns or <code>guarded patterns</code> like below:</p>
+      <pre><code class="language-java">
+  static void testTriangle2(Shape s) {
+      switch (s) {
+          case null -&gt;
+                  {}
+          case Triangle t &amp;&amp; (t.calculateArea() &gt; 100) -&gt;
+                  System.out.println("Large triangle");
+          case Triangle t -&gt;
+                  System.out.println("Triangle");
+          default -&gt;
+                  System.out.println("Unknown!");
+      }
+  }
+</code></pre>
+      <div class="note">
+       <p><strong>Further Reading</strong></p>
+       <p>For more examples and explanation please visit this </p>
+      </div>
+      <h2 id="jep-407-remove-rmi-activation"> 8. JEP 407: Remove RMI Activation<br></h2>
+      <p>Java 15,  deprecated the  for removal.</p>
+      <p>This JEP removed the RMI Activation or <code>java.rmi.activation</code> package.</p>
+      <div class="note">
+       <p><strong>Further Reading</strong></p>
+       <ul>
+        <li></li>
+       </ul>
+      </div>
+      <h2 id="jep-409-sealed-classes"> 9. JEP 409: Sealed Classes<br></h2>
+      <p>Java 15,  and Java 16,  introduced [sealed class(https://cr.openjdk.java.net/~briangoetz/amber/datum.html) as a preview feature.</p>
+      <p>This JEP finalized the sealed classes as the standard feature in Java 17, with no changes from Java 16.</p>
+      <p>The sealed classes and interfaces control or restrict who can be a subtype.</p>
+      <pre><code class="language-java">
+public sealed interface Command
+    permits LoginCommand, LogoutCommand, PluginCommand{
+    //...
+}
+</code></pre>
+      <div class="note">
+       <p><strong>Further Reading</strong></p>
+       <ul>
+        <li></li>
+       </ul>
+      </div>
+      <h2 id="jep-410-remove-the-experimental-aot-and-jit-compiler"> 10. JEP 410: Remove the Experimental AOT and JIT Compiler<br></h2>
+      <p>Java 9,  introduced the Ahead-of-time compilation (the <code>jaotc</code> tool) as an experimental feature. Later Java 10,  proposed it again as an experimental JIT compiler.</p>
+      <p>However, this feature has little use since they were introduced and required significant effort to maintain it, so this JEP removed the experimental Java-based  and  compiler</p>
+      <p>The following AOT packages, classes, tools and codes are removed:</p>
+      <ul>
+       <li><code>jdk.aot</code> — the jaotc tool</li>
+       <li><code>jdk.internal.vm.compiler</code> — the Graal compiler</li>
+       <li><code>jdk.internal.vm.compiler.management</code> — Graal’s MBean</li>
+       <li><code>src/hotspot/share/aot</code> — dumps and loads AOT code</li>
+       <li>Additional code guarded by #if INCLUDE_AOT</li>
+      </ul>
+      <div class="note">
+       <p><strong>Further Reading</strong></p>
+       <ul>
+        <li></li>
+       </ul>
+      </div>
+      <h2 id="jep-411-deprecate-the-security-manager-for-removal"> 11. JEP 411: Deprecate the Security Manager for Removal<br></h2>
+      <p>Java 1.0 introduced the  to secure the client-side Java code, and irrelevant now.</p>
+      <p>This JEP deprecates the Security Manager for removal.</p>
+      <div class="filename">
+       SecurityManager.java
+      </div>
+      <pre><code class="language-java">
+package java.lang;
+
+ * @since   1.0
+ * @deprecated The Security Manager is deprecated and subject to removal in a
+ *       future release. There is no replacement for the Security Manager.
+ *       See &lt;a href="https://openjdk.java.net/jeps/411"&gt;JEP 411&lt;/a&gt; for
+ *       discussion and alternatives.
+ */
+@Deprecated(since="17", forRemoval=true)
+public class SecurityManager {
+  //...
+}
+</code></pre>
+      <div class="note">
+       <p><strong>Further Reading</strong></p>
+       <ul>
+        <li></li>
+       </ul>
+      </div>
+      <h2 id="jep-412-foreign-function-memory-api-incubator"> 12. JEP 412: Foreign Function &amp; Memory API (Incubator)<br></h2>
+      <p>This Foreign Function &amp; Memory API allows the developer to access the code outside the JVM (foreign functions), data stored outside the JVM (off-heap data), and accessing memory not managed by the JVM (foreign memory).</p>
+      <p><em>P.S This is an incubating feature; need add <code>--add-modules jdk.incubator.foreign</code> to compile and run the Java code.</em></p>
+      <p><em>History</em></p>
+      <ul>
+       <li>Java 14  introduced Foreign-Memory Access API (Incubator).</li>
+       <li>Java 15  introduced Foreign-Memory Access API (Second Incubator).</li>
+       <li>Java 16  introduced Foreign Linker API (Incubator).</li>
+       <li>Java 17  introduced Foreign Function &amp; Memory API (Incubator).</li>
+      </ul>
+      <p>Please refer to previous .</p>
+      <div class="note">
+       <p><strong>Further Reading</strong></p>
+       <ul>
+        <li></li>
+       </ul>
+      </div>
+      <h2 id="jep-414-vector-api-second-incubator"> 13. JEP 414: Vector API (Second incubator)<br></h2>
+      <p>Java 16,  introduced new Vector API as an .</p>
+      <p>This JEP improves the Vector API performance and other enhancements like support operations on characters, translating byte vectors to and from boolean arrays, etc.</p>
+      <div class="note">
+       <p><strong>Further Reading</strong></p>
+       <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+       </ul>
+      </div>
+      <h2 id="jep-415-context-specific-deserialization-filters"> 14. JEP 415: Context-Specific Deserialization Filters<br></h2>
+      <p>In Java, deserializing untrusted data is dangerous, read the  and .</p>
+      <p>Java 9,  introduced serialization filtering to help prevent deserialization vulnerabilities.</p>
+      <p>14.1 The below example creates a custom filter using a pattern.</p>
+      <div class="filename">
+       DdosExample.java
+      </div>
+      <pre><code class="language-java">
+package com.mkyong.java17.jep415;
+
+import java.io.Serializable;
+
+public class DdosExample implements Serializable {
+  @Override
+  public String toString() {
+      return "running ddos...!";
+  }
+}
+</code></pre>
+      <div class="filename">
+       JEP290.java
+      </div>
+      <pre><code class="language-java">
+package com.mkyong.java17.jep415;
+
+import java.io.*;
+
+public class JEP290 {
+
+  public static void main(String[] args) throws IOException {
+
+      byte[] bytes = convertObjectToStream(new DdosExample());
+      InputStream is = new ByteArrayInputStream(bytes);
+      ObjectInputStream ois = new ObjectInputStream(is);
+
+      // Setting a Custom Filter Using a Pattern
+      // need full package path
+      // the maximum number of bytes in the input stream = 1024
+      // allows classes in com.mkyong.java17.jep415.*
+      // allows classes in the java.base module
+      // rejects all other classes !*
+      ObjectInputFilter filter1 =
+              ObjectInputFilter.Config.createFilter(
+                  "maxbytes=1024;com.mkyong.java17.jep415.*;java.base/*;!*");
+      ois.setObjectInputFilter(filter1);
+
+      try {
+          Object obj = ois.readObject();
+          System.out.println("Read obj: " + obj);
+      } catch (ClassNotFoundException e) {
+          e.printStackTrace();
+      }
+  }
+
+  private static byte[] convertObjectToStream(Object obj) {
+      ByteArrayOutputStream boas = new ByteArrayOutputStream();
+      try (ObjectOutputStream ois = new ObjectOutputStream(boas)) {
+          ois.writeObject(obj);
+          return boas.toByteArray();
+      } catch (IOException ioe) {
+          ioe.printStackTrace();
+      }
+      throw new RuntimeException();
+  }
+
+}
+</code></pre>
+      <p>Output</p>
+      <div class="filename">
+       Terminal
+      </div>
+      <pre><code class="language-bash">
+  Read obj: running ddos...!
+</code></pre>
+      <p>The below example will reject all classes in package <code>com.mkyong.java17.jep415.*</code>:</p>
+      <pre><code class="language-java">
+  byte[] bytes = convertObjectToStream(new DdosExample());
+
+  ObjectInputFilter filter1 =
+        ObjectInputFilter.Config.createFilter(
+          "!com.mkyong.java17.jep415.*;java.base/*;!*");  
+</code></pre>
+      <p>Rerun it; this time, we will not be able to deserialize the object.</p>
+      <div class="filename">
+       Terminal
+      </div>
+      <pre><code class="language-bash">
+  Exception in thread "main" java.io.InvalidClassException: filter status: REJECTED
+    at java.base/java.io.ObjectInputStream.filterCheck(ObjectInputStream.java:1412)
+</code></pre>
+      <p>14.2 The below example creates a deserialization filter to reject all classes that extended <code>JComponent</code>.</p>
+      <div class="filename">
+       JComponentExample.java
+      </div>
+      <pre><code class="language-java">
+package com.mkyong.java17.jep415;
+
+import javax.swing.*;
+import java.io.Serializable;
+
+public class JComponentExample extends JComponent implements Serializable {
+}
+</code></pre>
+      <div class="filename">
+       JEP290_B.java
+      </div>
+      <pre><code class="language-java">
+package com.mkyong.java17.jep415;
+
+import javax.swing.*;
+import java.io.*;
+
+public class JEP290_B {
+
+    public static void main(String[] args) throws IOException {
+
+        byte[] bytes = convertObjectToStream(new JComponentExample());
+        InputStream is = new ByteArrayInputStream(bytes);
+        ObjectInputStream ois = new ObjectInputStream(is);
+
+        ois.setObjectInputFilter(createObjectFilter());
+
+        try {
+            Object obj = ois.readObject();
+            System.out.println("Read obj: " + obj);
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+
+    // reject all JComponent classes
+    private static ObjectInputFilter createObjectFilter() {
+        return filterInfo -&gt; {
+            Class&lt;?&gt; clazz = filterInfo.serialClass();
+            if (clazz != null) {
+                return (JComponent.class.isAssignableFrom(clazz))
+                        ? ObjectInputFilter.Status.REJECTED
+                        : ObjectInputFilter.Status.ALLOWED;
+            }
+            return ObjectInputFilter.Status.UNDECIDED;
+        };
+    }
+
+    private static byte[] convertObjectToStream(Object obj) {
+        ByteArrayOutputStream boas = new ByteArrayOutputStream();
+        try (ObjectOutputStream ois = new ObjectOutputStream(boas)) {
+            ois.writeObject(obj);
+            return boas.toByteArray();
+        } catch (IOException ioe) {
+            ioe.printStackTrace();
+        }
+        throw new RuntimeException();
+    }
+
+}
+</code></pre>
+      <p>Output</p>
+      <div class="filename">
+       Terminal
+      </div>
+      <pre><code class="language-bash">
+Exception in thread "main" java.io.InvalidClassException: filter status: REJECTED
+at java.base/java.io.ObjectInputStream.filterCheck(ObjectInputStream.java:1412)
+at java.base/java.io.ObjectInputStream.readNonProxyDesc(ObjectInputStream.java:2053)
+at java.base/java.io.ObjectInputStream.readClassDesc(ObjectInputStream.java:1907)
+at java.base/java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:2209)
+at java.base/java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1742)
+at java.base/java.io.ObjectInputStream.readObject(ObjectInputStream.java:514)
+at java.base/java.io.ObjectInputStream.readObject(ObjectInputStream.java:472)
+at com.mkyong.java17.jep415.JEP290_B.main(JEP290_B.java:17)
+</code></pre>
+      <p>14.3 Java 17 added <code>allowFilter</code> and <code>rejectFilter</code> for <code>ObjectInputFilter</code> interface to create deserialization filters faster.</p>
+      <pre><code class="language-java">
+  allowFilter(Predicate&lt;Class&lt;?&gt;&gt;, ObjectInputFilter.Status)
+
+  rejectFilter(Predicate&lt;Class&lt;?&gt;&gt;, ObjectInputFilter.Status)
+</code></pre>
+      <p>For the above example in 14.2, now we can refactor the code like below:</p>
+      <pre><code class="language-java">
+    // Java 9
+    private static ObjectInputFilter createObjectFilter() {
+        return filterInfo -&gt; {
+            Class&lt;?&gt; clazz = filterInfo.serialClass();
+            if (clazz != null) {
+                return (JComponent.class.isAssignableFrom(clazz))
+                        ? ObjectInputFilter.Status.REJECTED
+                        : ObjectInputFilter.Status.ALLOWED;
+            }
+            return ObjectInputFilter.Status.UNDECIDED;
+        };
+    }
+
+    // Java 17
+    // reject all JComponent classes
+    ObjectInputFilter jComponentFilter = ObjectInputFilter.rejectFilter(
+            JComponent.class::isAssignableFrom,
+            ObjectInputFilter.Status.UNDECIDED);
+    ois.setObjectInputFilter(jComponentFilter);
+</code></pre>
+      <p>14.4 Back to Java 17, this JEP 415 introduced a concept of filter factory, a <code>BinaryOperator</code>, to choose differents deserialization filters dynamically or context-specific. The factory determines how to combine the two filters or replace the filter.</p>
+      <p>Below is a Java 17 filter factory example of combining two deserialize filters.</p>
+      <div class="filename">
+       JEP415_B.java
+      </div>
+      <pre><code class="language-java">
+package com.mkyong.java17.jep415;
+
+import java.io.*;
+import java.util.function.BinaryOperator;
+
+public class JEP415_B {
+
+  static class PrintFilterFactory implements BinaryOperator&lt;ObjectInputFilter&gt; {
+
+      @Override
+      public ObjectInputFilter apply(
+              ObjectInputFilter currentFilter, ObjectInputFilter nextFilter) {
+
+          System.out.println("Current filter: " + currentFilter);
+          System.out.println("Requested filter: " + nextFilter);
+
+          // Returns a filter that merges the status of a filter and another filter
+          return ObjectInputFilter.merge(nextFilter, currentFilter);
+
+          // some logic and return other filters
+          // reject all JComponent classes
+          /*return filterInfo -&gt; {
+              Class&lt;?&gt; clazz = filterInfo.serialClass();
+              if (clazz != null) {
+                  if(JComponent.class.isAssignableFrom(clazz)){
+                      return ObjectInputFilter.Status.REJECTED;
+                  }
+              }
+              return ObjectInputFilter.Status.ALLOWED;
+          };*/
+
+      }
+  }
+
+  public static void main(String[] args) throws IOException {
+
+      // Set a filter factory
+      PrintFilterFactory filterFactory = new PrintFilterFactory();
+      ObjectInputFilter.Config.setSerialFilterFactory(filterFactory);
+
+      // create a maxdepth and package filter
+      ObjectInputFilter filter1 =
+              ObjectInputFilter.Config.createFilter(
+                  "com.mkyong.java17.jep415.*;java.base/*;!*");
+      ObjectInputFilter.Config.setSerialFilter(filter1);
+
+      // Create a filter to allow String.class only
+      ObjectInputFilter intFilter = ObjectInputFilter.allowFilter(
+              cl -&gt; cl.equals(String.class), ObjectInputFilter.Status.REJECTED);
+
+      // if pass anything other than String.class, hits filter status: REJECTED
+      //byte[] byteStream =convertObjectToStream(99);
+
+      // Create input stream
+      byte[] byteStream =convertObjectToStream("hello");
+      InputStream is = new ByteArrayInputStream(byteStream);
+      ObjectInputStream ois = new ObjectInputStream(is);
+
+      ois.setObjectInputFilter(intFilter);
+
+      try {
+          Object obj = ois.readObject();
+          System.out.println("Read obj: " + obj);
+      } catch (ClassNotFoundException e) {
+          e.printStackTrace();
+      }
+  }
+
+  private static byte[] convertObjectToStream(Object obj) {
+      ByteArrayOutputStream boas = new ByteArrayOutputStream();
+      try (ObjectOutputStream ois = new ObjectOutputStream(boas)) {
+          ois.writeObject(obj);
+          return boas.toByteArray();
+      } catch (IOException ioe) {
+          ioe.printStackTrace();
+      }
+      throw new RuntimeException();
+  }
+
+}
+</code></pre>
+      <p>Output</p>
+      <div class="filename">
+       Terminal
+      </div>
+      <pre><code class="language-bash">
+Current filter: null
+Requested filter: com.mkyong.java17.jep415.*;java.base/*;!*
+Current filter: com.mkyong.java17.jep415.*;java.base/*;!*
+Requested filter: predicate(
+    com.mkyong.java17.jep415.JEP415_B$$Lambda$22/0x0000000800c01460@15aeb7ab,
+      ifTrue: ALLOWED, ifFalse:REJECTED)
+Read obj: hello
+</code></pre>
+      <div class="note">
+       <p><strong>Further Reading</strong></p>
+       <p>Please read below links for more deserialization filters examples:</p>
+       <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+       </ul>
+      </div>
+      <h2 id="download-source-code"> Download Source Code<br></h2>
+      <div class="github">
+       <p>$ git clone </p>
+       <p>$ cd java-17</p>
+      </div>
+      <h2 id="references"> References<br></h2>
+      <ul>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+      </ul>
+      <div class="pre-next-container d-flex justify-content-between"></div> <!-- current post ID --> 
+      <div class="d-flex justify-content-center ads-container-after-post ads-container"> <!-- Tag ID: mkyong_leaderboard_btf -->
+       <div align="center" data-freestar-ad="__320x100 __336x280" id="mkyong_leaderboard_btf">  
+       </div>
+      </div> <!-- loaded via JS -->
+      <div id="mk-afterpost-related"></div> <!-- author -->
+      <div id="author-container" class="d-flex align-items-center position-relative">
+       <div></div>
+       <div>
+        <h5></h5>
+        <p>Founder of , love Java and open source stuff. Follow him on . If you like my tutorials, consider make a donation to .</p>
+        <p></p>
+       </div>
+      </div> <!-- comments -->
+      <h4>Comments</h4>
+      <div class="wpdiscuz_top_clearing"></div>
+      <div id="comments" class="comments-area">
+       <div id="respond" style="width: 0;height: 0;clear: both;margin: 0;padding: 0;"></div>
+       <div id="wpdcom" class="wpdiscuz_unauth wpd-default wpd-layout-1 wpd-comments-open">
+        <div class="wc_social_plugin_wrapper"></div>
+        <div class="wpd-form-wrap">
+         <div class="wpd-form-head">
+          <div class="wpd-auth">
+           <div class="wpd-login"></div>
+          </div>
+         </div>
+         <div class="wpd-form wpd-form-wrapper wpd-main-form-wrapper" id="wpd-main-form-wrapper-0_0"></div>
+         <div id="wpdiscuz_hidden_secondary_form" style="display: none;">
+          <div class="wpd-form wpd-form-wrapper wpd-secondary-form-wrapper" id="wpd-secondary-form-wrapper-wpdiscuzuniqueid" style="display: none;">
+           <div class="wpd-secondary-forms-social-content"></div>
+           <div class="clearfix"></div>
+          </div>
+         </div>
+        </div>
+        <div id="wpd-threads" class="wpd-thread-wrapper">
+         <div class="wpd-thread-head">
+          <div class="wpd-thread-info " data-comments-count="2"> <span class="wpdtc" title="2">2</span> Comments
+          </div>
+          <div class="wpd-space"></div>
+          <div class="wpd-thread-filter">
+           <div class="wpd-filter wpdf-sorting"> <span class="wpdiscuz-sort-button wpdiscuz-vote-sort-up wpdiscuz-sort-button-active" data-sorting="by_vote">Most Voted</span> <i class="fas fa-sort-down"></i>
+            <div class="wpdiscuz-sort-buttons"> <span class="wpdiscuz-sort-button wpdiscuz-date-sort-desc" data-sorting="newest">Newest</span> <span class="wpdiscuz-sort-button wpdiscuz-date-sort-asc" data-sorting="oldest">Oldest</span>
+            </div>
+           </div>
+          </div>
+         </div>
+         <div class="wpd-comment-info-bar">
+          <div class="wpd-current-view">
+           <i class="fas fa-quote-left"></i> Inline Feedbacks
+          </div>
+          <div class="wpd-filter-view-all">
+           View all comments
+          </div>
+         </div>
+         <div class="wpd-thread-list">
+          <div id="wpd-comm-1061871_0" class="wpd-comment wpd_comment_level-1">
+           <div class="wpd-comment-wrap wpd-blog-guest">
+            <div class="wpd-comment-left ">
+             <div class="wpd-avatar "> 
+             </div>
+            </div>
+            <div id="comment-1061871" class="wpd-comment-right">
+             <div class="wpd-comment-header">
+              <div class="wpd-comment-author ">
+                Thomas
+              </div>
+              <div class="wpd-comment-date" title="October 1, 2021 11:54 pm"> <i class="far fa-clock" aria-hidden="true"></i> 11 hours ago
+              </div>
+              <div class="wpd-space"></div>
+              <div class="wpd-comment-link wpd-hidden">
+               <div style="" class="comment_flag comment_flag_modal wc_flag_tooltipster wpf-cta wpd-field-desc" wpd-tooltip-position="left" id="fc_1061871" wpd-tooltip="Click to flag and open «Comment Reporting» form. You can choose reporting category and send message to website administrator. Admins may or may not choose to remove the comment or block the author. And please don" t worry, your report will be anonymous.'>
+                <i class="fas fa-flag"></i>
+               </div>
+              </div>
+             </div>
+             <div class="wpd-comment-text">
+              <p>I ‘m using java 8 in 2021 😀</p>
+             </div>
+             <div class="wpd-comment-footer">
+              <div class="wpd-vote">
+               <div class="wpd-vote-up wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0V0z" /><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z" />
+                </svg>
+               </div>
+               <div class="wpd-vote-result" title="0">
+                0
+               </div>
+               <div class="wpd-vote-down wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0z" /><path d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z" />
+                </svg>
+               </div>
+              </div>
+              <div class="wpd-reply-button"> 
+               <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                <path d="M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z" /><path d="M0 0h24v24H0z" fill="none" />
+               </svg> <span>Reply</span>
+              </div>
+              <div class="wpd-space"></div>
+              <div class="wpd-toggle wpd-hidden wpd_not_clicked" wpd-tooltip="Hide Replies"> <i class="fas fa-chevron-up"></i>
+              </div>
+             </div>
+            </div>
+           </div>
+           <div id="wpdiscuz_form_anchor-1061871_0"></div>
+           <div id="wpd-comm-1061873_1061871" class="wpd-comment wpd-reply wpd_comment_level-2">
+            <div class="wpd-comment-wrap wpd-blog-guest">
+             <div class="wpd-comment-left ">
+              <div class="wpd-avatar "> 
+              </div>
+             </div>
+             <div id="comment-1061873" class="wpd-comment-right">
+              <div class="wpd-comment-header">
+               <div class="wpd-comment-author ">
+                 Edward
+               </div>
+               <div class="wpd-comment-date" title="October 2, 2021 8:57 am"> <i class="far fa-clock" aria-hidden="true"></i> 2 hours ago
+               </div>
+               <div class="wpd-space"></div>
+               <div class="wpd-comment-link wpd-hidden">
+                <div style="" class="comment_flag comment_flag_modal wc_flag_tooltipster wpf-cta wpd-field-desc" wpd-tooltip-position="left" id="fc_1061873" wpd-tooltip="Click to flag and open «Comment Reporting» form. You can choose reporting category and send message to website administrator. Admins may or may not choose to remove the comment or block the author. And please don" t worry, your report will be anonymous.'>
+                 <i class="fas fa-flag"></i>
+                </div>
+               </div>
+              </div>
+              <div class="wpd-reply-to"> <i class="far fa-comments"></i> Reply to&nbsp; 
+              </div>
+              <div class="wpd-comment-text">
+               <p>Me too 🤣</p>
+              </div>
+              <div class="wpd-comment-footer">
+               <div class="wpd-vote">
+                <div class="wpd-vote-up wpd_not_clicked"> 
+                 <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                  <path fill="none" d="M0 0h24v24H0V0z" /><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z" />
+                 </svg>
+                </div>
+                <div class="wpd-vote-result" title="0">
+                 0
+                </div>
+                <div class="wpd-vote-down wpd_not_clicked"> 
+                 <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                  <path fill="none" d="M0 0h24v24H0z" /><path d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z" />
+                 </svg>
+                </div>
+               </div>
+               <div class="wpd-reply-button"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path d="M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z" /><path d="M0 0h24v24H0z" fill="none" />
+                </svg> <span>Reply</span>
+               </div>
+               <div class="wpd-space"></div>
+              </div>
+             </div>
+            </div>
+            <div id="wpdiscuz_form_anchor-1061873_1061871"></div>
+           </div>
+          </div>
+          <div class="wpdiscuz-comment-pagination"></div>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div id="wpdiscuz-loading-bar" class="wpdiscuz-loading-bar-unauth"></div>
+      <div id="wpdiscuz-comment-message" class="wpdiscuz-comment-message-unauth"></div>
+     </article>
+    </main> <!-- right -->
+    <div id="sidebar-right" class="d-none d-xl-block col-xl-3">
+     <div class="ads-container-height1080">
+      <div class="ads-container-sticky">
+       <div class="ads-container">
+        <div align="center" data-freestar-ad="__300x600" id="mkyong_rail_right_1">  
+        </div>
+       </div>
+      </div>
+     </div>
+     <div class="ads-container-sticky">
+      <div class="ads-container">
+       <div align="center" data-freestar-ad="__300x600" id="mkyong_rail_right_2">  
+       </div>
+      </div>
+     </div>
+    </div>
+   </div> <!--/.row -->
+  </div> <!--/.container-fluid -->  <!-- Dynamic page generated in 0.126 seconds. --><!-- Cached page generated by WP-Super-Cache on 2021-10-02 11:42:35 -->
+ </body>
+</html>

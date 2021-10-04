@@ -1,0 +1,887 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="google-site-verification" content="VsVvSTVAouAluNodWeR30BeIWTr4c84HvN4Fn9WBsak"> <!-- wp_head --> <!-- This site is optimized with the Yoast SEO plugin v15.5 - https://yoast.com/wordpress/plugins/seo/ -->
+  <title>What is new in Java 16 - Mkyong.com</title>
+  <meta name="description" content="jpackage, records (standard), pattern matching (standard), sealed types (second preview), foreign-memory access APIs (third incubator), foreign linker APIs to replace JNI (incubator), vector APIs (incubator)">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="What is new in Java 16 - Mkyong.com">
+  <meta property="og:description" content="jpackage, records (standard), pattern matching (standard), sealed types (second preview), foreign-memory access APIs (third incubator), foreign linker APIs to replace JNI (incubator), vector APIs (incubator)">
+  <meta property="og:url" content="https://mkyong.com/java/what-is-new-in-java-16/">
+  <meta property="og:site_name" content="Mkyong.com">
+  <meta property="article:published_time" content="2021-03-16T08:50:28+00:00">
+  <meta property="article:modified_time" content="2021-03-16T09:27:50+00:00">
+  <meta property="og:image" content="https://mkyong.com/wp-content/uploads/2021/03/java16-logo.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:label1" content="Written by">
+  <meta name="twitter:data1" content="mkyong">
+  <meta name="twitter:label2" content="Est. reading time">
+  <meta name="twitter:data2" content="10 minutes">  <!-- / Yoast SEO plugin. -->  
+ </head>
+ <body>
+  <div class="container-fluid">
+   <div class="row"> <!-- left -->
+    <div id="sidebar-left" class="col-12 col-lg-3 col-xl-2"> <!-- sidebar-left-menu, see functions.php-->
+     <div class="offcanvas offcanvas-start" tabindex="-1" id="left-nav" aria-labelledby="left-nav">
+      <div class="offcanvas-header">
+       <h5 class="offcanvas-title">Main Tutorials</h5>
+      </div>
+      <div class="offcanvas-body sidebar-left-no-highlight">
+       <div>
+        <ul>
+         <li></li>
+         <li class="active"></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+        </ul>
+       </div>
+      </div>
+     </div> <!-- ads -->
+     <div class="ads-container-sticky d-none d-lg-block">
+      <div class="ads-container">
+       <div align="center" data-freestar-ad="__160x600" id="mkyong_rail_left">  
+       </div>
+      </div>
+     </div>
+    </div> <!-- middle -->
+    <main id="main-middle" role="main" class="col-12 col-lg-9 col-xl-7">
+     <article id="main-content" class="dont-break-out">
+      <div id="title-container">
+       <h1>What is new in Java 16</h1>
+       <div class="post-meta d-flex align-items-center position-relative">
+        <div></div>
+        <div>
+         <p><small class="extra-info">By  | <time datetime="2021-03-16T17:27:50+08:00"> Last updated: March 16, 2021</time></small></p>
+         <p><small class="extra-info">Viewed: 31,318 (+836 pv/w)</small></p>
+         <p><small class="extra-info"></small></p>
+         <div class="post-tag">
+          <small class="extra-info">Tags: |  |  |  |  | </small>
+         </div>
+         <p></p>
+        </div>
+       </div>
+      </div>
+      <div class="pre-next-container d-flex justify-content-between"></div>
+      <p></p>
+      <div class="pic"> 
+      </div>
+      <p></p>
+      <p> reached General Availability on 16 March 2021, .</p>
+      <p>Java 16 features.</p>
+      <ul class="list-toc">
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+      </ul>
+      <p><em>Java 16 developer features.</em></p>
+      <p>jpackage, records (standard), pattern matching (standard), sealed types (second preview), foreign-memory access APIs (third incubator), foreign linker APIs to replace JNI (incubator), vector APIs (incubator)</p>
+      <h2 id="jep-338-vector-api-incubator"> 1. JEP 338: Vector API (Incubator)<br></h2>
+      <p>Java supports  to optimize the arithmetic algorithms, which means the Java () will transform some scalar operations (one item at a time) into vector operations (multiple items at a time) automatically; However, the developers have no control of this vector operation conversion, it totally depends on the JIT compiler to optimize the code, furthermore, not all scalar operations are transformable.</p>
+      <p>This JEP introduces new Vector APIs to allow developers to perform the vector operations explicitly.</p>
+      <ul>
+       <li>A  processes multiple data at a time, known as .</li>
+       <li>A  processes only one data at a time, known as .</li>
+      </ul>
+      <p><em>Further Reading</em></p>
+      <ul>
+       <li></li>
+       <li></li>
+      </ul>
+      <div class="ads-container ads-container-video">
+       <div id="mkyongFreeStarVideoAdContainer">
+        <div id="freestar-video-parent">
+         <div id="freestar-video-child"></div>
+        </div>
+       </div>
+      </div>
+      <h2 id="jep-347enable-c14-language-features"> 2. JEP 347: Enable C++14 Language Features<br></h2>
+      <p>This JEP allows the [C++ 14 features]((https://en.wikipedia.org/wiki/C%2B%2B14) to be used in the C++ source code within the JDK.</p>
+      <p><em>Further Reading</em></p>
+      <ul>
+       <li></li>
+      </ul>
+      <h2 id="jep-357-migrate-from-mercurial-to-git"> 3. JEP 357: Migrate from Mercurial to Git<br></h2>
+      <p>This JEP migrate the OpenJDK source code from Mercurial to Git or GitHub, relates to the below </p>
+      <p>The reasons for migrating to Git:</p>
+      <ol>
+       <li>File size of version control system metadata (Mercurial) is too big.</li>
+       <li>Available tooling</li>
+       <li>Available hosting</li>
+      </ol>
+      <p><em>Further Reading</em></p>
+      <ul>
+       <li></li>
+      </ul>
+      <h2 id="jep-369-migrate-to-github"> 4. JEP 369: Migrate to GitHub<br></h2>
+      <p>This JEP joins the above , migrate the OpenJDK source code from Mercurial to .</p>
+      <p><em>Further Reading</em></p>
+      <ul>
+       <li></li>
+      </ul>
+      <h2 id="jep-376-zgc-concurrent-thread-stack-processing"> 5. JEP 376: ZGC: Concurrent Thread-Stack Processing<br></h2>
+      <p>This JEP improves the Z Garbage Collector (ZGC) by moving the ZGC thread-stack processing from safepoints to a concurrent phase.</p>
+      <p><em>History</em></p>
+      <ul>
+       <li>Java 11  introduced the Z Garbage Collector (ZGC) as a experimental garbage collector.</li>
+       <li>Java 15 , the ZGC became a product feature.</li>
+      </ul>
+      <p><em>Further Reading</em></p>
+      <ul>
+       <li></li>
+      </ul>
+      <h2 id="jep-380-unix-domain-socket-channels"> 6. JEP 380: Unix-Domain Socket Channels<br></h2>
+      <p>The  are used for inter-process communication (IPC) on the same host, which means exchanging data between processes executing on the same host. The Unix-domain sockets are similar to TCP/IP sockets except that they are addressed by filesystem pathnames rather than the Internet Protocol (IP) addresses and port numbers. Most Unix platforms, Windows 10 and Windows Server 2019, also supported the Unix-domain sockets.</p>
+      <p>This JEP add  support to the existing  and .</p>
+      <p>New Unix-domain Socket classes or APIs:</p>
+      <ul>
+       <li>New socket address class, <code>java.net.UnixDomainSocketAddress</code></li>
+       <li>New <code>enum</code>, <code>java.net.StandardProtocolFamily.UNIX</code></li>
+      </ul>
+      <p><em>Further Reading</em></p>
+      <ul>
+       <li></li>
+      </ul>
+      <h2 id="jep-386-alpine-linux-port"> 7. JEP 386: Alpine Linux Port<br></h2>
+      <p>This JEP port the JDK to  and other Linux distributions that use  implementation. This JDK port enables Java to run out-of-the-box in Alpine Linux, which benefits those Java-dependent frameworks or tools like Tomcat and Spring.</p>
+      <p><em>P.S The Alpine Linux contains small image size, widely adopted in cloud deployments, microservices, and container environments.</em></p>
+      <p><em>Further Reading</em></p>
+      <ul>
+       <li></li>
+      </ul>
+      <h2 id="jep-387-elastic-metaspace"> 8. JEP 387: Elastic Metaspace<br></h2>
+      <p>Java 8  removed the PermGen (Permanent Generation), and introduced , a native off-heap memory manager in the hotspot.</p>
+      <p>This JEP improves the metaspace memory management by returning unused HotSpot class-metadata or metaspace memory to the operating system more promptly, reducing the metaspace footprint, and simplifying the metaspace code.</p>
+      <ul>
+       <li></li>
+      </ul>
+      <h2 id="jep-388-windowsaarch64-port"> 9. JEP 388: Windows/AArch64 Port<br></h2>
+      <p>This JEP port the JDK to Windows/AArch64, running JDK + Windows on ARM hardware, server, or ARM-based laptop.</p>
+      <p><em>P.S The Windows/AArch64 is a popular demand in the end-user market.</em></p>
+      <p><em>Further Reading</em></p>
+      <ul>
+       <li></li>
+      </ul>
+      <h2 id="jep-389-foreign-linker-api-incubator"> 10. JEP 389: Foreign Linker API (Incubator)<br></h2>
+      <p>This JEP enables Java code to call or can be called by native code written in other languages like C or C++, replace </p>
+      <p><em>P.S This is an incubating feature; need add <code>--add-modules jdk.incubator.foreign</code> to compile and run the Java code.</em></p>
+      <p>10.1 Below example shows how to use the foreign linker APIs to call the standard C library <code>strlen</code> to return the string’s length.</p>
+      <pre><code class="language-c">
+size_t strlen(const char *s);
+</code></pre>
+      <div class="filename">
+       CStrLen.java
+      </div>
+      <pre><code class="language-java">
+import jdk.incubator.foreign.*;
+
+import java.lang.invoke.MethodHandle;
+import java.lang.invoke.MethodType;
+
+import static jdk.incubator.foreign.CLinker.C_LONG;
+import static jdk.incubator.foreign.CLinker.C_POINTER;
+
+// Java call standard C library
+// size_t strlen(const char *s);
+public class CStrLen {
+
+  public static void main(String[] args) throws Throwable {
+
+      if (args.length == 0) {
+          throw new IllegalArgumentException("Please provide an argument.");
+      }
+
+      String input = args[0];
+
+      MethodHandle strlen = CLinker.getInstance().downcallHandle(
+              LibraryLookup.ofDefault().lookup("strlen").get(),
+              MethodType.methodType(long.class, MemoryAddress.class),
+              FunctionDescriptor.of(C_LONG, C_POINTER)
+      );
+
+      try (MemorySegment str = CLinker.toCString(input)) {
+          long len = (long) strlen.invokeExact(str.address()); // 5
+          System.out.println(len);
+      }
+
+  }
+}
+</code></pre>
+      <p>Compile with incubator modules enabled.</p>
+      <div class="filename">
+       Terminal
+      </div>
+      <pre><code class="language-bash">
+$ javac --add-modules jdk.incubator.foreign CStrLen.java
+
+warning: using incubating module(s): jdk.incubator.foreign
+1 warning
+</code></pre>
+      <p>Run with incubator modules enabled.</p>
+      <div class="filename">
+       Terminal
+      </div>
+      <pre><code class="language-bash">
+$ java --add-modules jdk.incubator.foreign -Dforeign.restricted=permit CStrLen mkyong
+
+WARNING: Using incubator modules: jdk.incubator.foreign
+6
+</code></pre>
+      <p>10.2 Below is another example of calling a function defined in a C code.</p>
+      <p>A simple C function to print a hello world.</p>
+      <pre><code class="language-c">
+#include &lt;stdio.h&gt;
+
+void printHello() {
+        printf("hello world!\n");
+}
+</code></pre>
+      <p>Compile the above C code and output to a shared library <code>hello.so</code>.</p>
+      <div class="filename">
+       Terminal
+      </div>
+      <pre><code class="language-bash">
+$ gcc -c -fPIC hello.c
+$ gcc -shared -o hello.so hello.o
+</code></pre>
+      <p>Below the Java program, find the <code>hello.so</code> and call its method <code>printHello</code>.</p>
+      <div class="filename">
+       JEP389.java
+      </div>
+      <pre><code class="language-java">
+import jdk.incubator.foreign.CLinker;
+import jdk.incubator.foreign.FunctionDescriptor;
+import jdk.incubator.foreign.LibraryLookup;
+
+import java.lang.invoke.MethodHandle;
+import java.lang.invoke.MethodType;
+import java.nio.file.Path;
+import java.util.Optional;
+
+public class JEP389 {
+
+  public static void main(String[] args) throws Throwable {
+
+      Path path = Path.of("/home/mkyong/projects/core-java/java-16/hello.so");
+
+      LibraryLookup libraryLookup = LibraryLookup.ofPath(path);
+
+      Optional&lt;LibraryLookup.Symbol&gt; optionalSymbol = libraryLookup.lookup("printHello");
+      if (optionalSymbol.isPresent()) {
+
+          LibraryLookup.Symbol symbol = optionalSymbol.get();
+
+          FunctionDescriptor functionDescriptor = FunctionDescriptor.ofVoid();
+
+          MethodType methodType = MethodType.methodType(Void.TYPE);
+
+          MethodHandle methodHandle = CLinker.getInstance().downcallHandle(
+                  symbol.address(),
+                  methodType,
+                  functionDescriptor);
+          methodHandle.invokeExact();
+
+      }
+
+  }
+}
+</code></pre>
+      <p>Compile.</p>
+      <div class="filename">
+       Terminal
+      </div>
+      <pre><code class="language-bash">
+$ javac --add-modules jdk.incubator.foreign JEP389.java
+
+warning: using incubating module(s): jdk.incubator.foreign
+1 warning
+</code></pre>
+      <p>Run.</p>
+      <div class="filename">
+       Terminal
+      </div>
+      <pre><code class="language-bash">
+$ java --add-modules jdk.incubator.foreign -Dforeign.restricted=permit JEP389
+
+WARNING: Using incubator modules: jdk.incubator.foreign
+hello world!
+</code></pre>
+      <p><em>Further Reading</em></p>
+      <ul>
+       <li></li>
+      </ul>
+      <h2 id="jep-390-warnings-for-value-based-classes"> 11. JEP 390: Warnings for Value-Based Classes<br></h2>
+      <p>This JEP provides a new warning if we synchronize instances of ; Also deprecating the primitive wrapper class (value-based) constructors for removal.</p>
+      <p>11.1 How to identify value-based classes?<br> The annotation <code>@jdk.internal.ValueBased</code> tells if a class is a value-based class. Review the following two classes, and we can tell both the primitive wrapper class <code>Double</code> and <code>Optional</code> are value-based classes.</p>
+      <div class="filename">
+       Optional.java
+      </div>
+      <pre><code class="language-java">
+package java.util;
+
+@jdk.internal.ValueBased
+public final class Optional&lt;T&gt; {
+  //...
+}
+</code></pre>
+      <div class="filename">
+       Double.java
+      </div>
+      <pre><code class="language-java">
+package java.lang;
+
+@jdk.internal.ValueBased
+public final class Double extends Number
+        implements Comparable&lt;Double&gt;, Constable, ConstantDesc {
+
+  //...
+}
+</code></pre>
+      <div class="note">
+       <p><strong>Note</strong><br> Refer  for complete list of value-based classes.</p>
+      </div>
+      <p>11.2 Below example try to <code>synchronized</code> a value-based class.</p>
+      <div class="filename">
+       JEP390.java
+      </div>
+      <pre><code class="language-java">
+public class JEP390 {
+
+    public static void main(String[] args) {
+
+        Double d = 20.0;
+        synchronized (d) {} // javac warning &amp; HotSpot warning
+    }
+}
+</code></pre>
+      <p>Compile the above code and hits the new warning.</p>
+      <div class="filename">
+       Terminal
+      </div>
+      <pre><code class="language-bash">
+$ javac JEP390.java
+JEP390.java:7: warning: [synchronization] attempt to synchronize on an instance of a value-based class
+        synchronized (d) {} // javac warning &amp; HotSpot warning
+        ^
+1 warning
+</code></pre>
+      <p>11.3 Java 9 deprecated the primitive wrapper class (value-based) constructors and is now marked for removal.</p>
+      <div class="filename">
+       Double.java
+      </div>
+      <pre><code class="language-java">
+package java.lang;
+
+//...
+
+@jdk.internal.ValueBased
+public final class Double extends Number
+        implements Comparable&lt;Double&gt;, Constable, ConstantDesc {
+
+  @Deprecated(since="9", forRemoval = true)
+  public Double(double value) {
+      this.value = value;
+  }
+
+  @Deprecated(since="9", forRemoval = true)
+  public Double(String s) throws NumberFormatException {
+      value = parseDouble(s);
+  }
+
+  //...
+}
+</code></pre>
+      <p><em>Further Reading</em></p>
+      <ul>
+       <li></li>
+      </ul>
+      <p>Is this about the value types in the future release?</p>
+      <ul>
+       <li></li>
+       <li></li>
+      </ul>
+      <h2 id="jep-392-packaging-tool"> 12. JEP 392: Packaging Tool<br></h2>
+      <p>The JEP move the <code>jpackage</code> tool from <code>jdk.incubator.jpackage</code> to <code>jdk.jpackage</code>, and became a standard or product feature in Java 16. This <code>jpackage</code> is a packaging tool to package Java application into a platform-specific package like:</p>
+      <ul>
+       <li>Linux: deb and rpm</li>
+       <li>macOS: pkg and dmg</li>
+       <li>Windows: msi and exe</li>
+      </ul>
+      <p><em>History</em></p>
+      <ul>
+       <li>Java 14  introduced an <code>jpackage</code> incubating tool and it remained an incubating tool in Java 15.</li>
+      </ul>
+      <p>12.1 Below example shows the use of <code>jpackage</code> to package a simple Java Swing program into a <code>deb</code> format in the Linux system (Ubuntu).</p>
+      <p>A simple Java Swing program to display a hello world.</p>
+      <div class="filename">
+       JEP392.java
+      </div>
+      <pre><code class="language-java">
+import javax.swing.*;
+import java.awt.*;
+
+public class JEP392 {
+
+    public static void main(String[] args) {
+
+        JFrame frame = new JFrame("Hello World Java Swing");
+        // display frame site
+        frame.setMinimumSize(new Dimension(800, 600));
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        // center the JLabel
+        JLabel lblText = new JLabel("Hello World!", SwingConstants.CENTER);
+        // add JLabel to JFrame
+        frame.getContentPane().add(lblText);
+
+        // display it
+        frame.pack();
+        frame.setVisible(true);
+
+    }
+}
+</code></pre>
+      <p>Create a <code>jar</code> file and <code>jpackage</code> it into a platform-specific package; since this is tested in an Ubuntu system, it will create a <code>.deb</code> file.</p>
+      <div class="filename">
+       Terminal
+      </div>
+      <pre><code class="language-bash">
+# compile
+$ javac JEP392.java
+
+# create a jar file
+$ jar cvf hello.jar JEP392.class
+
+# package the jar file into platform-specific package
+$ /opt/jdk-16/bin/jpackage -i . -n JEP392 --main-jar hello.jar --main-class JEP392
+
+# The jpackage created this jep392_1.0-1_amd64.deb
+$ ls -lsah
+4.0K -rw-rw-r--  1 mkyong mkyong  994 Mac  15 13:52 hello.jar
+ 30M -rw-r--r--  1 mkyong mkyong  30M Mac  15 14:01 jep392_1.0-1_amd64.deb
+</code></pre>
+      <p>;</p>
+      <div class="filename">
+       Terminal
+      </div>
+      <pre><code class="language-bash">
+sudo dpkg -i jep392_1.0-1_amd64.deb
+Selecting previously unselected package jep392.
+(Reading database ... 225576 files and directories currently installed.)
+Preparing to unpack jep392_1.0-1_amd64.deb ...
+Unpacking jep392 (1.0-1) ...
+Setting up jep392 (1.0-1) ...
+
+$ ls -lsah /opt/jep392/bin/JEP392
+1.6M -rwxr-xr-x 1 root root 1.6M Mac  15 14:01 /opt/jep392/bin/JEP392
+</code></pre>
+      <p>The default installation directory on</p>
+      <ul>
+       <li>Linux is <code>/opt</code></li>
+       <li>macOS is <code>/Applications</code></li>
+       <li>Windows is <code>C:\Program Files\</code></li>
+      </ul>
+      <p><em>P.S This can be overridden via the <code>jpackage --install-dir</code> option.</em></p>
+      <p>Run the installed Java Swing program.</p>
+      <div class="filename">
+       Terminal
+      </div>
+      <pre><code class="language-bash">
+$ /opt/jep392/bin/JEP392
+</code></pre>
+      <p>Output</p>
+      <div class="pic"> 
+      </div>
+      <p></p>
+      <p>The <code>jpackage -h</code> is always your best friend:</p>
+      <div class="filename">
+       Terminal
+      </div>
+      <pre><code class="language-bash">
+$ /opt/jdk-16/bin/jpackage -h
+Usage: jpackage &lt;options&gt;
+
+Sample usages:
+--------------
+  Generate an application package suitable for the host system:
+      For a modular application:
+          jpackage -n name -p modulePath -m moduleName/className
+      For a non-modular application:
+          jpackage -i inputDir -n name \
+              --main-class className --main-jar myJar.jar
+      From a pre-built application image:
+          jpackage -n name --app-image appImageDir
+  Generate an application image:
+      For a modular application:
+          jpackage --type app-image -n name -p modulePath \
+              -m moduleName/className
+      For a non-modular application:
+          jpackage --type app-image -i inputDir -n name \
+              --main-class className --main-jar myJar.jar
+      To provide your own options to jlink, run jlink separately:
+          jlink --output appRuntimeImage -p modulePath -m moduleName \
+              --no-header-files [&lt;additional jlink options&gt;...]
+          jpackage --type app-image -n name \
+              -m moduleName/className --runtime-image appRuntimeImage
+  Generate a Java runtime package:
+      jpackage -n name --runtime-image &lt;runtime-image&gt;
+
+  //...
+</code></pre>
+      <p><em>Further Reading</em></p>
+      <ul>
+       <li></li>
+      </ul>
+      <h2 id="jep-393-foreign-memory-access-api-third-incubator"> 13. JEP 393: Foreign-Memory Access API (Third Incubator)<br></h2>
+      <p>The Foreign-Memory Access APIs allow Java API to access the foreign memory outside of the Java heap, such as , , etc.</p>
+      <p>This JEP updated the Foreign-Memory access APIs and remained the .</p>
+      <p><em>History</em></p>
+      <ul>
+       <li>Java 14  first introduced the Foreign-Memory access APIs as an incubator module.</li>
+       <li>Java 15  remained the Foreign-Memory access APIs as an incubator module.</li>
+      </ul>
+      <p><em>Further Reading</em></p>
+      <ul>
+       <li></li>
+      </ul>
+      <h2 id="jep-394-pattern-matching-for-instanceof"> 14. JEP 394: Pattern Matching for instanceof<br></h2>
+      <p>The pattern matching for <code>instanceof</code> is a standard or product feature in Java 16.</p>
+      <p>Before pattern matching, we check the object’s type and cast to a variable manually.</p>
+      <pre><code class="language-java">
+if (obj instanceof String) {
+    String s = (String) obj;    // cast
+}
+</code></pre>
+      <p>Now we can heck the object’s type and cast it automatically</p>
+      <pre><code class="language-java">
+if (obj instanceof String s) {
+    //... s is a string
+}
+</code></pre>
+      <p>For example, below is a common check and cast example.</p>
+      <pre><code class="language-java">
+  if (obj instanceof String) {
+      String s = (String) obj;
+      if (s.length() &gt; 5) {
+          if (s.equalsIgnoreCase("java16")) {
+              //...
+          }
+      }
+  }
+</code></pre>
+      <p>And, we can refactor the above code using the new <code>instanceof</code>.</p>
+      <pre><code class="language-java">
+  if (obj instanceof String s &amp;&amp; s.length() &gt; 5) {
+      if (s.equalsIgnoreCase("java16")) {
+          //...
+      }
+  }
+</code></pre>
+      <p><em>History</em></p>
+      <ul>
+       <li>Java 14 , first preview.</li>
+       <li>Java 15 , second preview.</li>
+       <li>Java 16, standard feature.</li>
+      </ul>
+      <p><em>Further Reading</em></p>
+      <ul>
+       <li></li>
+      </ul>
+      <h2 id="jep-395-records"> 15. JEP 395: Records<br></h2>
+      <p>The <code>record</code> is finalized and becomes a standard feature.</p>
+      <div class="filename">
+       JEP395.java
+      </div>
+      <pre><code class="language-java">
+package com.mkyong.java16.jep395;
+
+public class JEP395 {
+
+    record Point(int x, int y) { }
+
+    public static void main(String[] args) {
+
+        Point p1 = new Point(10, 20);
+        System.out.println(p1.x());         // 10
+        System.out.println(p1.y());         // 20
+
+        Point p2 = new Point(11, 22);
+        System.out.println(p2.x());         // 11
+        System.out.println(p2.y());         // 22
+
+        Point p3 = new Point(10, 20);
+        System.out.println(p3.x());         // 10
+        System.out.println(p3.y());         // 20
+
+        System.out.println(p1.hashCode());  // 330
+        System.out.println(p2.hashCode());  // 363
+        System.out.println(p3.hashCode());  // 330
+
+        System.out.println(p1.equals(p2));  // false
+        System.out.println(p1.equals(p3));  // true
+        System.out.println(p2.equals(p3));  // false
+
+    }
+}
+</code></pre>
+      <p><em>History</em></p>
+      <ul>
+       <li>Java 14 , first preview.</li>
+       <li>Java 15 , second preview.</li>
+       <li>Java 16, standard feature.</li>
+      </ul>
+      <p><em>Further Reading</em></p>
+      <ul>
+       <li></li>
+      </ul>
+      <h2 id="jep-396-strongly-encapsulate-jdk-internals-by-default"> 16. JEP 396: Strongly Encapsulate JDK Internals by Default<br></h2>
+      <p>Java 9  introduced the <code>--illegal-access</code> option to control the access of the internal APIs and packaged of the JDK.</p>
+      <p>This JEP change the default mode of <code>--illegal-access</code> option from permit to deny. With this change, the internal packages and APIs (except the ) of the JDK will no longer open by default.</p>
+      <p>This JEP’s motivation is to discourage the third-party libraries, frameworks, and tools from using the internal APIs and packages of the JDK.</p>
+      <p><em>Further Reading</em></p>
+      <ul>
+       <li></li>
+      </ul>
+      <h2 id="jep-397-sealed-classes-second-preview"> 17. JEP 397: Sealed Classes (Second Preview)<br></h2>
+      <p>Java 15  introduced  to restrict which class can extend or implement them. This JEP is the second preview with some improvements.</p>
+      <p><em>Further Reading</em></p>
+      <ul>
+       <li></li>
+      </ul>
+      <h2 id="download-source-code"> Download Source Code<br></h2>
+      <div class="github">
+       <p>$ git clone </p>
+       <p>$ cd java-16</p>
+      </div>
+      <h2 id="references"> References<br></h2>
+      <ul>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+      </ul>
+      <div class="pre-next-container d-flex justify-content-between"></div> <!-- current post ID --> 
+      <div class="d-flex justify-content-center ads-container-after-post ads-container"> <!-- Tag ID: mkyong_leaderboard_btf -->
+       <div align="center" data-freestar-ad="__320x100 __336x280" id="mkyong_leaderboard_btf">  
+       </div>
+      </div> <!-- loaded via JS -->
+      <div id="mk-afterpost-related"></div> <!-- author -->
+      <div id="author-container" class="d-flex align-items-center position-relative">
+       <div></div>
+       <div>
+        <h5></h5>
+        <p>Founder of , love Java and open source stuff. Follow him on . If you like my tutorials, consider make a donation to .</p>
+        <p></p>
+       </div>
+      </div> <!-- comments -->
+      <h4>Comments</h4>
+      <div class="wpdiscuz_top_clearing"></div>
+      <div id="comments" class="comments-area">
+       <div id="respond" style="width: 0;height: 0;clear: both;margin: 0;padding: 0;"></div>
+       <div id="wpdcom" class="wpdiscuz_unauth wpd-default wpd-layout-1 wpd-comments-open">
+        <div class="wc_social_plugin_wrapper"></div>
+        <div class="wpd-form-wrap">
+         <div class="wpd-form-head">
+          <div class="wpd-auth">
+           <div class="wpd-login"></div>
+          </div>
+         </div>
+         <div class="wpd-form wpd-form-wrapper wpd-main-form-wrapper" id="wpd-main-form-wrapper-0_0"></div>
+         <div id="wpdiscuz_hidden_secondary_form" style="display: none;">
+          <div class="wpd-form wpd-form-wrapper wpd-secondary-form-wrapper" id="wpd-secondary-form-wrapper-wpdiscuzuniqueid" style="display: none;">
+           <div class="wpd-secondary-forms-social-content"></div>
+           <div class="clearfix"></div>
+          </div>
+         </div>
+        </div>
+        <div id="wpd-threads" class="wpd-thread-wrapper">
+         <div class="wpd-thread-head">
+          <div class="wpd-thread-info " data-comments-count="2"> <span class="wpdtc" title="2">2</span> Comments
+          </div>
+          <div class="wpd-space"></div>
+          <div class="wpd-thread-filter">
+           <div class="wpd-filter wpdf-sorting"> <span class="wpdiscuz-sort-button wpdiscuz-vote-sort-up wpdiscuz-sort-button-active" data-sorting="by_vote">Most Voted</span> <i class="fas fa-sort-down"></i>
+            <div class="wpdiscuz-sort-buttons"> <span class="wpdiscuz-sort-button wpdiscuz-date-sort-desc" data-sorting="newest">Newest</span> <span class="wpdiscuz-sort-button wpdiscuz-date-sort-asc" data-sorting="oldest">Oldest</span>
+            </div>
+           </div>
+          </div>
+         </div>
+         <div class="wpd-comment-info-bar">
+          <div class="wpd-current-view">
+           <i class="fas fa-quote-left"></i> Inline Feedbacks
+          </div>
+          <div class="wpd-filter-view-all">
+           View all comments
+          </div>
+         </div>
+         <div class="wpd-thread-list">
+          <div id="wpd-comm-1061676_0" class="wpd-comment wpd_comment_level-1">
+           <div class="wpd-comment-wrap wpd-blog-guest">
+            <div class="wpd-comment-left ">
+             <div class="wpd-avatar "> 
+             </div>
+            </div>
+            <div id="comment-1061676" class="wpd-comment-right">
+             <div class="wpd-comment-header">
+              <div class="wpd-comment-author ">
+                Prasad Honrao
+              </div>
+              <div class="wpd-comment-date" title="July 16, 2021 5:14 am"> <i class="far fa-clock" aria-hidden="true"></i> 2 months ago
+              </div>
+              <div class="wpd-space"></div>
+              <div class="wpd-comment-link wpd-hidden">
+               <div style="" class="comment_flag comment_flag_modal wc_flag_tooltipster wpf-cta wpd-field-desc" wpd-tooltip-position="left" id="fc_1061676" wpd-tooltip="Click to flag and open «Comment Reporting» form. You can choose reporting category and send message to website administrator. Admins may or may not choose to remove the comment or block the author. And please don" t worry, your report will be anonymous.'>
+                <i class="fas fa-flag"></i>
+               </div>
+              </div>
+             </div>
+             <div class="wpd-comment-text">
+              <p>Good information, thanks!</p>
+             </div>
+             <div class="wpd-comment-footer">
+              <div class="wpd-vote">
+               <div class="wpd-vote-up wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0V0z" /><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z" />
+                </svg>
+               </div>
+               <div class="wpd-vote-result" title="0">
+                0
+               </div>
+               <div class="wpd-vote-down wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0z" /><path d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z" />
+                </svg>
+               </div>
+              </div>
+              <div class="wpd-reply-button"> 
+               <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                <path d="M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z" /><path d="M0 0h24v24H0z" fill="none" />
+               </svg> <span>Reply</span>
+              </div>
+              <div class="wpd-space"></div>
+             </div>
+            </div>
+           </div>
+           <div id="wpdiscuz_form_anchor-1061676_0"></div>
+          </div>
+          <div id="wpd-comm-1061379_0" class="wpd-comment wpd_comment_level-1">
+           <div class="wpd-comment-wrap wpd-blog-guest">
+            <div class="wpd-comment-left ">
+             <div class="wpd-avatar "> 
+             </div>
+            </div>
+            <div id="comment-1061379" class="wpd-comment-right">
+             <div class="wpd-comment-header">
+              <div class="wpd-comment-author ">
+                Kicha
+              </div>
+              <div class="wpd-comment-date" title="March 31, 2021 4:38 pm"> <i class="far fa-clock" aria-hidden="true"></i> 5 months ago
+              </div>
+              <div class="wpd-space"></div>
+              <div class="wpd-comment-link wpd-hidden">
+               <div style="" class="comment_flag comment_flag_modal wc_flag_tooltipster wpf-cta wpd-field-desc" wpd-tooltip-position="left" id="fc_1061379" wpd-tooltip="Click to flag and open «Comment Reporting» form. You can choose reporting category and send message to website administrator. Admins may or may not choose to remove the comment or block the author. And please don" t worry, your report will be anonymous.'>
+                <i class="fas fa-flag"></i>
+               </div>
+              </div>
+             </div>
+             <div class="wpd-comment-text">
+              <p>Nice</p>
+             </div>
+             <div class="wpd-comment-footer">
+              <div class="wpd-vote">
+               <div class="wpd-vote-up wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0V0z" /><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z" />
+                </svg>
+               </div>
+               <div class="wpd-vote-result" title="0">
+                0
+               </div>
+               <div class="wpd-vote-down wpd_not_clicked"> 
+                <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                 <path fill="none" d="M0 0h24v24H0z" /><path d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z" />
+                </svg>
+               </div>
+              </div>
+              <div class="wpd-reply-button"> 
+               <svg xmlns="https://www.w3.org/2000/svg" viewbox="0 0 24 24">
+                <path d="M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z" /><path d="M0 0h24v24H0z" fill="none" />
+               </svg> <span>Reply</span>
+              </div>
+              <div class="wpd-space"></div>
+             </div>
+            </div>
+           </div>
+           <div id="wpdiscuz_form_anchor-1061379_0"></div>
+          </div>
+          <div class="wpdiscuz-comment-pagination"></div>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div id="wpdiscuz-loading-bar" class="wpdiscuz-loading-bar-unauth"></div>
+      <div id="wpdiscuz-comment-message" class="wpdiscuz-comment-message-unauth"></div>
+     </article>
+    </main> <!-- right -->
+    <div id="sidebar-right" class="d-none d-xl-block col-xl-3">
+     <div class="ads-container-height1080">
+      <div class="ads-container-sticky">
+       <div class="ads-container">
+        <div align="center" data-freestar-ad="__300x600" id="mkyong_rail_right_1">  
+        </div>
+       </div>
+      </div>
+     </div>
+     <div class="ads-container-sticky">
+      <div class="ads-container">
+       <div align="center" data-freestar-ad="__300x600" id="mkyong_rail_right_2">  
+       </div>
+      </div>
+     </div>
+    </div>
+   </div> <!--/.row -->
+  </div> <!--/.container-fluid -->  <!-- Dynamic page generated in 0.101 seconds. --><!-- Cached page generated by WP-Super-Cache on 2021-09-29 17:40:14 -->
+ </body>
+</html>
