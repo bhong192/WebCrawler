@@ -79,8 +79,15 @@ public class App
                 for(Element page: linksOnPage){
                     getLinks(page.attr("abs:href"), depth);
                 }
+                
+                String lang = getLang(document.body().text().substring(0,Math.min(75, document.body().text().length())));
+                if (!lang.equals("English")){
+                    System.out.println("Not English");
+                    System.out.println(lang);
+                }
+                System.out.println(lang);
 
-                String path = "./repository/";
+                String path = "./repository/" + lang;
                 FileWriter writer; 
 
                 File directory_check = new File (path);
@@ -89,7 +96,7 @@ public class App
                     directory_check.mkdir();
                 }
 
-                writer = new FileWriter(path + document.title() + ".html", true);
+                writer = new FileWriter(path + "/" + document.title() + ".html", true);
                 writer.write(doc.outerHtml());
                 writer.close();
             
