@@ -1,81 +1,77 @@
-URL,Outlinks
-https://mkyong.com/page/53/,68
-https://mkyong.com/all-tutorials-on-mkyong-com/,66
-https://www.javacodegeeks.com/,258
-https://maven.apache.org/,83
-https://gradle.org/,36
-https://mkyong.com/,122
-https://adoptopenjdk.net/,65
-https://mkyong.com/tutorials/java-json-tutorials/,92
-https://mkyong.com/java/java-lang-noclassdeffounderror-javax-xml-bind-jaxbexception/,64
-https://mkyong.com/webservices/jax-rs/jakarta-activation-datasource-was-not-found/,54
-https://mkyong.com/mac/virtualbox-kernel-driver-not-installed-rc-1908/,58
-https://mkyong.com/java/what-is-new-in-java-11/,169
-https://mkyong.com/java/what-is-new-in-java-15/,149
-https://mkyong.com/python/python-difference-between-r-w-and-a-in-open/,88
-https://mkyong.com/java/java-lang-classnotfoundexception-com-sun-xml-bind-v2-contextfactory/,57
-https://mkyong.com/#left-nav,122
-https://mkyong.com/python/how-to-write-a-file-in-python/,68
-https://mkyong.com/webservices/jax-rs/jax-rs-how-to-read-response-body-from-a-post-request/,56
-https://mkyong.com/quarkus/gradle-quarkus-hello-world-example/,91
-https://mkyong.com/mac/go-to-a-specified-folder-on-macos/,51
-https://mkyong.com/mac/virtualbox-running-slow-and-lag-on-macos-macbook-pro/,54
-https://mkyong.com/code-license/,40
-https://docs.oracle.com/javase/tutorial/,47
-https://mkyong.com/java/java-how-to-add-and-remove-bom-from-utf-8-file/,119
-https://mkyong.com/java/java-how-to-update-the-value-of-a-key-in-hashmap/,75
-https://mkyong.com/tutorials/maven-tutorials/,83
-https://spring.io/,104
-https://kotlinlang.org/,68
-https://mkyong.com/contact-mkyong/,38
-https://mkyong.com/java/jaxbexception-implementation-of-jaxb-api-has-not-been-found-on-module-path-or-classpath/,83
-https://mkyong.com/tutorials/jdbc-tutorials/,100
-https://mkyong.com/web/curl-display-request-headers-and-response-headers/,53
-https://mkyong.com/mac/go-to-the-parent-folder-on-macos/,51
-https://mkyong.com/java/what-is-new-in-java-14/,138
-https://mkyong.com/logging/java-logging-apis-tutorial/,76
-https://mkyong.com/python/how-to-read-a-file-in-python/,69
-https://www.oracle.com/java/technologies/javase-downloads.html,236
-https://mkyong.com/java/java-how-to-remove-items-from-a-list-while-iterating/,69
-https://mkyong.com/privacy-policy/,51
-https://mkyong.com/tutorials/spring-boot-tutorials/,123
-https://mkyong.com/java/how-to-simulate-java-lang-outofmemoryerror-in-java/,50
-https://openjdk.java.net/,137
-https://mkyong.com/tutorials/java-io-tutorials/,160
-https://mkyong.com/author/mkyong/,126
-https://mkyong.com/java/how-to-decompile-class-in-java/,72
-https://mkyong.com/tutorials/java-8-tutorials/,164
-https://developer.android.com/,89
-https://mkyong.com/java/how-to-read-and-parse-csv-file-in-java/,127
-https://mkyong.com/junit5/junit-5-tutorials/,72
-https://mkyong.com/git/unable-to-resolve-reference-refs-remotes-origin-master-reference-broken/,48
-https://www.journaldev.com/,131
-https://mkyong.com/java/what-is-new-in-java-13/,94
-https://mkyong.com/webservices/jax-rs/jersey-and-hk2-dependency-injection-auto-scanning/,92
-https://mkyong.com/webservices/jax-rs/jersey-and-jetty-http-server-examples/,83
-https://mkyong.com/gradle/gradle-how-to-run-a-single-unit-test-class/,56
-https://mkyong.com/java/what-is-new-in-java-17/,158
-https://mkyong.com/java/how-to-write-xml-file-in-java-stax-writer/,80
-https://mkyong.com/java/java-get-keys-from-value-hashmap/,63
-https://mkyong.com/linux/how-to-backup-a-website-to-amazon-s3-using-shell-script/,67
-https://mkyong.com/webservices/jax-rs/jersey-and-json-examples-eclipselink-moxy/,102
-https://mkyong.com/page/52/,123
-https://choosealicense.com/licenses/mit/,18
-https://mkyong.com/tutorials/java-xml-tutorials/,103
-https://mkyong.com/java/pretty-print-xml-with-java-dom-and-xslt/,74
-https://mkyong.com/logging/how-to-load-logging-properties-for-java-util-logging/,64
-https://mkyong.com/java/java-lang-noclassdeffounderror-jakarta-servlet-servletinputstream/,55
-https://mkyong.com/swing/java-swing-hello-world-example/,48
-https://mkyong.com/python/how-to-append-a-file-in-python/,63
-https://mkyong.com/intellij/convert-a-java-project-to-maven-project-in-intellij-idea/,61
-https://mkyong.com/page/2/,123
-https://twitter.com/mkyong,6
-https://mkyong.com/java/how-to-read-xml-file-in-java-stax-parser/,96
-https://github.com/mkyong,91
-https://www.docker.com/,105
-https://mkyong.com/java/what-is-new-in-java-12/,106
-https://mkyong.com/logging/tinylog-tutorial/,89
-https://martinfowler.com/,199
-https://mkyong.com/logging/logging-properties-example/,55
-https://mkyong.com/java/what-is-new-in-java-16/,164
-https://mkyong.com/quarkus/maven-quarkus-hello-world-example/,98
+https://www.cpp.edu/philanthropy/, 28
+https://www.cpp.edu/faculty-staff-gateway/index.shtml, 130
+https://www.cpp.edu/~alumni/, 74
+https://my.cpp.edu, 8
+https://www.cpp.edu/safer-return/health-and-safety-protocols/index.shtml, 44
+https://www.cpp.edu/library/index.shtml, 46
+https://broncoathletics.com/, 120
+https://www.cpp.edu/class/, 60
+https://polycentric.cpp.edu/2021/09/u-s-news-ranks-cal-poly-pomona-no-3-top-public-school-in-west/, 74
+https://www.cpp.edu/cafe/, 37
+https://www.cpp.edu/em/, 99
+https://www.cpp.edu/broncodreamers/index.shtml, 61
+https://www.cpp.edu/#CPPCarousel, 85
+https://www.cpp.edu/studentsuccess/virtual-advising-toolkit.shtml, 103
+https://www.cpp.edu/campus-safety-plan.shtml, 15
+https://www.cpp.edu/president/campus-conversations/campus-budget-update.shtml, 38
+https://www.cpp.edu/student-affairs/covid19.shtml, 38
+https://www.cpp.edu/alumni/, 74
+http://www.cpp.edu/student-affairs/index.shtml, 70
+https://outlook.office365.com/cpp.edu, 0
+https://polycentric.cpp.edu/2021/07/cal-poly-pomona-alum-timothy-lam-to-compete-in-olympic-games/, 73
+https://www.cpp.edu/collins/, 47
+https://www.cpp.edu/index.shtml, 85
+https://www.cpp.edu/engineering/, 96
+https://www.cpp.edu/agri/, 122
+https://www.cpp.edu/admissions/, 72
+https://www.cpp.edu/lanterman/, 19
+https://www.cpp.edu/ai/pop-up-course/index.shtml, 43
+https://www.cpp.edu/website-feedback.shtml, 11
+https://www.cpp.edu/events/, 22
+https://broncoathletics.com/calendar.aspx, 121
+http://www.cpp.edu/it/index.shtml, 55
+https://cpp.service-now.com/ehelp, 2
+http://portfolios.cpp.edu/, 96
+https://www.cpp.edu/, 85
+https://cpp.service-now.com/ehelp?id=kb_article&sysparm_article=KB0001273, 2
+https://www.cpp.edu/accessibility.shtml, 19
+https://www.cpp.edu/#main, 85
+https://www.cpp.edu/contact.shtml, 21
+https://www.cpp.edu/~pumpkinfestival/, 43
+https://www.cpp.edu/officeofequity/titleIX/index.shtml, 57
+https://www.cpp.edu/sci, 58
+https://www2.calstate.edu, 151
+https://www.cpp.edu/cba/, 85
+https://www.facebook.com/calpolypomona, 46
+https://twitter.com/calpolypomona, 6
+https://www.cpp.edu/academic-manual, 38
+https://www.cpp.edu/president/from-the-president/2021-spring/a-transformative-gift-for-a-transformative-university.shtml, 39
+https://polycentric.cpp.edu/2021/09/jet-pack-cow-to-soar-over-cal-poly-universities-2022-rose-float/, 82
+https://www.cpp.edu/family/index.shtml, 37
+https://www.cpp.edu/studentsuccess/advising/advising-month.shtml, 68
+https://apps.cpp.edu/bronco411/search/, 24
+https://polycentric.cpp.edu, 78
+https://www.cpp.edu/stratcomm/for-the-media.shtml, 89
+http://www.cpp.edu/president/, 45
+http://www.cpp.edu/admin-affairs/index.shtml, 65
+https://maps.cpp.edu/, 0
+http://www.cpp.edu/academic-affairs/index.shtml, 106
+https://www.cpp.edu/file-viewers.shtml, 15
+https://www.cpp.edu/prospective-student-gateway/index.shtml, 152
+https://www.ceu.cpp.edu/, 0
+https://www.cpp.edu/safer-return/index.shtml, 39
+https://www.cpp.edu/giving/about-us.shtml, 26
+https://www.cpp.edu/student-gateway/index.shtml, 163
+https://my.cpp.edu/, 8
+https://www.cpp.edu/jobs/index.shtml, 93
+https://www.cpp.edu/alpha-index/index.shtml, 15
+https://www.cpp.edu/annual-security-report.shtml, 11
+https://polycentric.cpp.edu/2021/09/hispanic-heritage-month-celebrating-the-cal-poly-pomona-community/, 63
+http://asi.cpp.edu/, 84
+https://www.cpp.edu/env/, 78
+https://www.cpp.edu/privacy.shtml, 17
+https://www.youtube.com/user/calpolypomona, 14
+https://www.cpp.edu/~aboutcpp/index.shtml, 61
+https://www.instagram.com/calpolypomona/, 0
+https://www.cpp.edu/ceis/, 93
+https://www.cpp.edu/giving/index.shtml, 29

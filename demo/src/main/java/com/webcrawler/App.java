@@ -33,17 +33,23 @@ public class App
 {
     
     private static final int MAX_DEPTH = 2;
-    //private HashSet<String> links; 
+    //public static String titleOne = "URL";
+    //public static int titleTwo = 25; 
     private HashMap<String, Integer> links; 
     private String[] removedTags = {"audio", "button", "img", "input", "nav", "video", "script", "style", "a", "link", "footer", "object", "figure", "track", "noscript", "form" };
 
     public App()
     {
         links = new HashMap<String, Integer>();
+
+        //int titleTwo = 25;
+        //int titleTwo = Integer.parseInt(title);
     
     }
 
     public void getLinks(String URL, int depth) throws IOException{
+
+        //links.put(titleOne, titleTwo);
 
         if(!links.containsKey(URL) && (depth < MAX_DEPTH)){
             System.out.println(">> Depth: " + depth + " [" + URL + "]");
@@ -88,6 +94,7 @@ public class App
                 System.out.println(lang);
 
                 String path = "./repository/" + lang;
+                //String path = "./repository";
                 FileWriter writer; 
 
                 File directory_check = new File (path);
@@ -166,7 +173,7 @@ public class App
     {
         App webCrawler = new App();
         
-        webCrawler.getLinks("https://mkyong.com/", 0);
+        webCrawler.getLinks("https://www.cpp.edu/", 0);
 
         String pathToCsv = "./report.csv";
         File csvFile = new File(pathToCsv);
