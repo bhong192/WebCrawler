@@ -1,0 +1,473 @@
+Don B. Huntley College of Agriculture at Cal Poly Pomona, Los Angeles County   
+ 
+ 
+ 
+ 
+  for old logo uncomment
+<div class="span4 logo">
+<a href="/index.shtml" id="cpp-header-logo-link"><img alt="Cal Poly Pomona" src="https://www.cpp.edu/common/resources/img/logo.png"/></a>
+</div>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ SEARCH Box 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Athletics 
+ 
+ 
+ 
+ Alumni 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  End Carousel  
+ 
+  Start Carousel  
+ 
+ Slideshow 
+ This slideshow contains 5 slides that will change every  8  seconds. The first button is to play and pause the slideshow, followed by buttons to go to the previous slide, next slide, or choose individual slides. 
+ 
+ 
+ Pause 
+ Play 
+ 
+ 
+ 
+ 
+ 
+ 
+ loop for dot buttons  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ loop for slide content  
+ 
+ make sure slide has text information  
+ 
+ set up slide link  
+ 
+ Nutrition & Food Science 
+ HNFS students apply chemistry, physics, and engineering in their studies as they prepare to become leaders in the nutrition, food, and health fields. 
+ 
+ 
+ make sure slide has text information  
+ 
+ set up slide link  
+ 
+ Plant Science 
+ Plant Science students gain valuable work experience in our on-campus greenhouses, farm, and vineyards. 
+ 
+ 
+ make sure slide has text information  
+ 
+ set up slide link  
+ 
+ Apparel Merchandising & Management 
+ Apparel Merchandising & Management AMM students design, create, market, and sell products from their own clothing lines. 
+ 
+ 
+ make sure slide has text information  
+ 
+ set up slide link  
+ 
+ Animal & Veterinary Sciences 
+ Animal and veterinary science students participate in hands-on lab courses. 
+ 
+ 
+  long description method applied described in https://www.w3.org/WAI/tutorials/images/complex/#providing-a-link-to-the-long-description-via-longdesc  
+ make sure slide has text information  
+ 
+ set up slide link  
+ 
+ Slide5 
+                            Agribusiness students learn about the farm production business from field to plate.
+                         
+ Agribusiness & Food Industry Management/Agricultural Science 
+ Agribusiness students learn about the farm production business from field to plate. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  everything in p tag is user generated content  
+ 
+ 
+ Who knew you could do all of this at a  
+ College of Agriculture? 
+   
+ Check out the new "Ag" to build a career around something you're really passionate about. Maybe you're into animals.  Or bio and chem.  Or growing things.  Or making food healthier.  Or high-tech clothing.  Or creating a better future for our planet. Our learn by doing makes you career ready. 
+ 
+  the following link should be optional for all frontpage-modules  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Learn by Doing 
+ 
+ 
+ 
+ 
+ 
+ Learn more about our commitment to give back to our community. 
+ 
+ 
+ 
+ 
+ 
+ 
+ Learn more through internships with our industry partners. 
+ 
+ 
+ 
+ 
+ 
+ 
+ Learn how our students benefit from participation in faculty research.  
+ 
+ 
+ 
+ 
+ 
+ 
+ Learn about jobs in your career field. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+              The Cal Poly Pomona Pumpkin Fest returns Oct. 2-31, weekends 10 a.m. to 8 p.m. and Wednesday-Friday, 3-8 p.m. To ensure everyone’s safety, advance tickets are required this year to limit the number of attendees and masks may be required for some activities. Walk-up admission will not be allowed.¬¬¬¬¬¬¬ Cal Poly Pomona will continue to follow Los Angeles County Department of Public Health and CPP Campus Guidelines. It is possible those may change, and more masking will be required. 
+                 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+              Cal Poly Pomona will receive $75,000 in USDA grant funding as part of a five-institution team to develop virtual and remote labs for enhanced food science and engineering education.
+                 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+              The Animal and Veterinary Science (AVS) Lab in the Huntley College of Agriculture got some much-needed improvements in time for the Fall 2021 semester, thanks to university grants.
+                 
+ 
+ 
+ 
+ 
+ Slide for Pumpkin Fest Returns Oct. 2 
+ Slide for Grant to Help Develop Virtual, Remote Labs 
+ Slide for Grant Help Revamp AVS Lab 
+ 
+ 
+ 
+ 
+ 
+ Majors 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ News and Events 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  everything in p tag is user generated content  
+ 
+ 
+ 
+  the following link should be optional for all frontpage-modules  
+ 
+ 
+ 
+ 
+ Contact Us 
+ 
+ Buildings 2, 7, & 45 
+ 
+                                    
+                909-869-2200
+              
+                             
+ 
+                                    
+                888-2DAYSAG	(Toll Free)
+              
+                             
+ 
+                                    
+                909-869-4074
+              
+                             
+ 
+ 
+ 
+ 
+  all social-detail items are optional  
+ 
+ Stay Connected to AG 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+           
+ 
+ ©
+ 
+California State Polytechnic University, Pomona   All Rights Reserved 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

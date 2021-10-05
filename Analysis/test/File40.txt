@@ -1,0 +1,139 @@
+Pumpkin Fest Cal Poly Pomona 
+ 
+  MESSAGE AT THE TOP OF THE PAGE - change this text to edit the message at the top of the page, comment out to remove it  
+ October 2 - 31, 2021 
+  To add a new item on a drop down, just copy and paste an existing one. Change the anchor tag after the # and the text.  
+  The onClick="navReload()" is javascript for refreshing the page in order to close the responsive menu  
+  if you want to add a new dropdown, if you copy and paste, you need to change the for and the id, so, for example, 
+		change drop-1 on both to drop-4 on both.  
+ ☰ 
+ 
+ 
+  Drop Down 1  
+ ABOUT 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  Drop Down 2  
+ ATTEND 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  Drop Down 3  
+ ATTRACTIONS 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+    end NavWrapper  
+  InstanceBeginEditable name="CarouselArea"  
+ 
+ 
+ 
+  Wrapper for slides  
+ 
+   
+ 
+   
+ 
+   
+ 
+   
+ 
+ Left and right controls  
+ Previous 
+ Next 
+ 
+ 
+ 
+  InstanceEndEditable  
+  InstanceBeginEditable name="FestivalCountdown"  
+  InstanceEndEditable  
+ 
+ 
+ 
+ 
+ 
+  InstanceBeginEditable name="ContentArea"  
+ 
+ 
+ 
+ 
+ It’s time to Come Back to the Farm as the incredible Cal Poly Pomona Pumpkin Fest returns  October 2 – 31, 2021! 
+Pumpkin Fest, now in it’s 28th year, is back and better than ever! All 5 Weekends in October will be filled with  your favorite Activities and Farm  Fun!  Pick a Perfect Pumpkin, Pet a Goat, Ride a Hay Wagon, get lost in the Giant Corn Maze, and so much more!  Along with the popular Festival Food and Live Entertainment, we’ve got fun Farm Demonstrations like Cow Milking and Bee Keeping. Antique Tractors and Farm Equipment, as well as some some new attractions will be on display.  Visit the Marketplace to pick up CPP Farm Fresh Produce, Apiary Honey, Specialty Pumpkins & Fall Decorations and Artisan goods.   Also new  is the Moo Moo Cow Train and Children’s Garden activities including Creepy Bugs and Squirmy Snakes.  
+ This year, Admission Tickets will only be available Online, in advance, and there will be capacity limits so get yours Today!
+ 
+ TICKETS WILL NOT BE AVAILABLE FOR PURCHASE AT THE GATE. 
+ 
+ All Covid precautions will be taken to maintain Health and Safety following current LA County Health and CPP Campus Guidelines. Please do not attend the event if you are experiencing any COVID-19 symptoms or are under quarantine or isolations orders.  
+ 
+ 
+ 
+  InstanceEndEditable  
+ 
+  InstanceBeginEditable name="Content2Area"  
+  This is to have the image change depending on the size of the screen. 
+     Currently, any screen width above 700px will show activities2.png, otherwise it will show activities.png  
+  InstanceEndEditable  
+   FOOTER  
+ 
+ 
+			Stay up to date on events at AGRIscapes 
+ 
+ 
+			Pumpkin Festival at AGRIscapes  
+			4102 S. University Drive  
+			Pomona, CA 91768 
+		 
+ 
+ Enter your starting address: 
+ 
+ 
+   
+ 
+ General email:     
+ Vendors/Exhibitors/Media:  Craig Walters, Event Director    
+ Phone:  (909) 869-6722 
+		 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+   | 
+		   | 
+		   | 
+		   | 
+		   | 
+		 
+ 
+ 

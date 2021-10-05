@@ -1,0 +1,409 @@
+
+	
+    California State University Office of the Chancellor
+| CSU
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ You may be trying to access this site from a secured browser on the server. Please enable scripts and reload this page. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Attend 
+ Campuses Degrees, Certificates & Credentials Admissions Paying for College Freshman Transfer Graduate International Student Services Counselor Resources 
+ Impact of the CSU 
+ Diversity Student Success Teacher and Educator Preparation Research Business & Economy Sustainability Technology Alumni Government Community 
+ The CSU System 
+ About the CSU Graduation Initiative 2025 Why the CSU Matters Leadership Faculty & Staff Administration Auxiliary Organizations CSU Budget Data Insights Doing Business with the CSU Transparency & Accountability 
+ Resource Center 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  Localizer Widget Code  
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ California State University Office of the Chancellor 
+ 
+ 
+ 
+ 
+ 
+ 
+                                        
+	Home
+
+                                     
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  Do not render left nav on this layout  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Only load angular when in Display Mode, so it doesn't trach Script Editor webparts 
+ 
+ stopindex 
+ 
+ PC3 ​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​ 
+ 
+ startindex 
+ 
+ 
+ PCW 
+ 
+ 
+ 
+ 
+  Single Slide for Special Occasions  <div id="single-slider" class="carousel-inner">
+      <div class="item height-full active"> <img src="/csu-system/news/PublishingImages/Dolores-Huerta-Hero.jpg" alt="" />
+        <div class="hinton carousel-caption caption-style-5 wide-3 shift-right bottom-3">
+          <h2>The CSU pays homage to Dolores Huerta, guardian of the farmworkers’ rights movement</h2>
+          <a style="margin-top:15px;" class="btn btn-default" href="/csu-system/news/Pages/Celebrating-Her-Story.aspx" unselectable="on">Read Her-Story</a> </div>
+      </div>
+    </div>  
+ 
+   
+ 
+ The CSU Welcomes Students Back to Campus 
+   
+ 
+   
+ 
+ 10 Reasons to Choose the CSU 
+   
+ 
+   
+ 
+ Reflections from CSU Alumni-Teachers 
+ 
+ 
+   
+ 
+ Meet 30 Latinx Americans of the CSU Who Knew They Could 
+   
+ 
+ 
+     
+ 
+   
+   
+   
+   
+   
+  <li data-slide-to="4" data-target="#myCarousel">&#160;</li>  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+   
+ 
+ Watch the Board of Trustees Live 
+ November 9-10, 2021 
+ Click the video player on the left to watch the live proceeding of the CSU Board of Trustees meeting. 
+ 
+   
+     
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ {{SpotlightTitle}} 
+  Tab panes  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ {{item.Title}} 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+                        "Receiving Financial Aid At CSU San Marcos Helped Me Focus On My Studies And Stay On A Timeline."
+                     
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Recruiting the Executive Vice Chancellor, Academic and Student Affairs The California State University – one of the most ethnically, economically, and academically diverse university systems in the United States – is seeking its next Executive Vice Chancellor of Academic and Student Affairs.​ 
+ 
+ 
+ 
+ 
+   The CSU Responds to Coronavirus Pandemic January 28-29, 2020 The safety and well-being of California State University students, faculty and staff are foundational concerns for the institution. On this site, you’ll find Information about the university’s response to the pandemic, as well as links to individual campuses. 
+ CSU Campuses 
+   
+   
+ ​ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Attend 
+ Campuses Degrees, Certificates & Credentials Admissions Paying for College Freshman Transfer Graduate International Student Services Counselor Resources 
+ Impact of the CSU 
+ Diversity Student Success Teacher and Educator Preparation Research Business & Economy Sustainability Technology Alumni Government Community 
+ The CSU System 
+ About the CSU Graduation Initiative 2025 Why the CSU Matters Leadership Faculty & Staff Administration Auxiliary Organizations CSU Budget Data Insights Doing Business with the CSU Transparency & Accountability 
+ Resource Center 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ California State University Office of the Chancellor 
+ 401 Golden Shore 
+	                                    Long Beach CA 90802 
+ (562) 951-4000 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+			x 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

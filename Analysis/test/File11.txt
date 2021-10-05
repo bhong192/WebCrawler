@@ -1,0 +1,276 @@
+Office of Emergency Management 
+ 
+ 
+ 
+ 
+  for old logo uncomment
+<div class="span4 logo">
+<a href="/index.shtml" id="cpp-header-logo-link"><img alt="Cal Poly Pomona" src="https://www.cpp.edu/common/resources/img/logo.png"/></a>
+</div>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ SEARCH Box 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Athletics 
+ 
+ 
+ 
+ Alumni 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  End Carousel  
+ 
+ 
+ 
+  Needed to update rows to fluid and use span 12 in each row  
+ 
+ 
+ breadcrumbs commented out for usablity  
+  (put back in hash tag when uncommented) displayBreadcrumbs([[Element: <system-folder/>]] Office of Emergency Management ) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Office of Emergency Management 
+ MASTHEAD IMAGE OR SLIDESHOW HERE 
+ 
+ 
+ Emergency Management 
+ 
+ The Cal Poly Pomona, Office of Emergency Management (EM) website, is a starting place for information and resources for emergency management/preparedness, whenever you need it. Our goal is to ensure that the emergency management information you need is updated, easy to locate and understand. 
+ We are proud of our emergency management programs and look to enhance our programs, to ensure the campus community is as prepared as possible for an emergency, or catastrophic event. 
+ Our job in the Office of EM is to assist Cal Poly to be a great and safe place of education and work. We have a great Emergency Management team and partner with a fantastic team of campus Building Marshals & Floor Captains. These employee volunteers, do their very best to ensure the building occupants, of their respective building are provided with great resources, and are prepared for an emergency. 
+ We appreciate you visiting our website and look forward to working with you, as EM partners. 
+   
+ Our Mission: 
+ The Office of Emergency Management supports our students, faculty, and staff to ensure that as a university we work together to build, sustain, and improve our capability to prepare for, respond to, recover from, and mitigate all hazards that may impact our campus. 
+ Our Goal: 
+ Develop, maintain, and sustain a campus-wide, comprehensive, all-hazard, risk based emergency management program that engages the whole community. 
+ Our Plan: 
+ The Cal Poly Pomona Emergency Operations Plan (EOP) establishes the emergency organization, assigns tasks, specifies policies and general procedures, and provides for coordination of planning efforts of the various emergency staff and service elements of the jurisdiction.  
+ 
+   
+ Know what to do in an earthquake: 
+ 
+   
+ • Download the   (pdf)  or the   (doc) 
+   
+ What to do in the event of an armed intruder: 
+ 
+ Stay informed 
+ • Find us on   and  
+ • Get the   for your Smartphone to access emergency information. • Register your mobile phone and email with PolyAlert 
+   
+ • Severe weather:  • Road closures:  • California fire maps:  
+   
+   
+ 
+ 
+ 
+ 
+ 
+ In an Emergency 
+ 
+ Dial  911  on a campus phone,  or 
+ Dial (909) 869- 3070  from a mobile device 
+ 
+ Did You Know? 
+ 
+ Blue Light Emergency Phones, and elevator phones on campus also connect with University Police 
+ 
+ Download Campus Emergency Evacuation Map 
+ 
+ 
+ 
+ Resources 
+  (non-emergency) 
+ 
+ (909) 869-3070 
+ 
+ 
+ 
+ (909) 869-4697 
+ 
+ 
+ 
+ (909) 869-3030 
+ 
+ 
+ 
+ (909) 869-3220 
+ After hours: (909) 869-3220, then press option 2 
+ 
+ 
+ 
+ (909) 869-4000 
+ After hours nurse hotline: (855) 272-1723 
+ 
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+           
+ 
+ ©
+ 
+California State Polytechnic University, Pomona   All Rights Reserved 
+ 
+ 
+ 
+ 
+ 
