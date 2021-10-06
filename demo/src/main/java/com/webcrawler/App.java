@@ -33,7 +33,7 @@ import com.detectlanguage.DetectLanguage;
 public class App 
 {
     
-    private static final int MAX_DEPTH = 4;
+    private static final int MAX_DEPTH = 2;
     private HashMap<String, Integer> links; 
     private String[] removedTags = {"audio", "button", "img", "input", "nav", "video", "script", "style", "a", "link", "footer", "object", "figure", "track", "noscript", "form" };
 
@@ -115,13 +115,7 @@ public class App
     }
     public String getLang(String sampleText){ 
 
-        //DetectLanguage.apiKey = "0a6eac1e86ea2d44613723b79536da4d";
-        //DetectLanguage.apiKey = "790684f253459b059afcda2c71fc6f99"; 
-        //DetectLanguage.apiKey = "cfc686471352c74b16fa69a20ec9e854";
-        //DetectLanguage.apiKey = "8cce4cd0813737d596ae3ed9c52fdc66";
-        //DetectLanguage.apiKey = "46db3a0c729017582c944ee81c3513d1";
-        //DetectLanguage.apiKey = "71719821431c712b5b76a0bb48c09490";
-        DetectLanguage.apiKey = "ab75b34bef724ab18d915623689a9dff";
+        DetectLanguage.apiKey = "b63a90100ef7be81f2287e033f95fb75";
 
 
         String newSampleText = "";
@@ -151,7 +145,7 @@ public class App
     {
         App webCrawler = new App();
         
-        webCrawler.getLinks("https://laviedesidees.fr/", 0);
+        webCrawler.getLinks("https://www.milenio.com/", 0);
 
         String pathToCsv = "./report.csv";
         File csvFile = new File(pathToCsv);
