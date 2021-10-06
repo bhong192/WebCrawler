@@ -77,7 +77,11 @@ public class App
                 }
                 
                 String lang = getLang(document.body().text().substring(0,Math.min(75, document.body().text().length())));
-                if (!lang.equals("en")){
+                if (lang == null){
+                    lang = "Unknown";
+                }
+
+                if(!lang.equals("en")){
                     System.out.println("Not English, it's " + lang);
                 }
 
@@ -111,7 +115,9 @@ public class App
     }
     public String getLang(String sampleText){ 
 
-        DetectLanguage.apiKey = "0a6eac1e86ea2d44613723b79536da4d";
+        //DetectLanguage.apiKey = "0a6eac1e86ea2d44613723b79536da4d";
+        //DetectLanguage.apiKey = "790684f253459b059afcda2c71fc6f99"; 
+        DetectLanguage.apiKey = "cfc686471352c74b16fa69a20ec9e854";
 
         String newSampleText = "";
 
@@ -126,9 +132,10 @@ public class App
         try{            
             language = DetectLanguage.simpleDetect(newSampleText); 
         }catch (Exception e){
+            language = "Unknown";
             e.printStackTrace();
             System.out.println(e.getMessage()); 
-            language = "Unknown"; 
+             
         }
 
         return language; 
