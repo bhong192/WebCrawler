@@ -1,0 +1,356 @@
+Academic Affairs 
+ 
+ 
+ 
+ 
+  for old logo uncomment
+<div class="span4 logo">
+<a href="/index.shtml" id="cpp-header-logo-link"><img alt="Cal Poly Pomona" src="https://www.cpp.edu/common/resources/img/logo.png"/></a>
+</div>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ SEARCH Box 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Athletics 
+ 
+ 
+ 
+ Alumni 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  End Carousel  
+ 
+ 
+  Start Carousel  
+ 
+ Slideshow 
+ This slideshow contains 5 slides that will change every  8  seconds. The first button is to play and pause the slideshow, followed by buttons to go to the previous slide, next slide, or choose individual slides. 
+ 
+ 
+ Pause 
+ Play 
+ 
+ 
+ 
+ 
+ 
+ 
+ loop for dot buttons  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ loop for slide content  
+ 
+ make sure slide has text information  
+ 
+ set up slide link  
+ 
+ 
+ Commencement 
+ Rooftop view of the 2017 commencement ceremony 
+ 
+ 
+ make sure slide has text information  
+ 
+ set up slide link  
+ 
+ 
+ First Day 
+ Students going to the bookstore on the first day of classes 
+ 
+ 
+ make sure slide has text information  
+ 
+ set up slide link  
+ 
+ 
+ Strategic Planning 
+ Dr. Alva presenting at a town hall presentation  
+ 
+ 
+ make sure slide has text information  
+ 
+ set up slide link  
+ 
+ 
+ The Collins College of Hospitality Management 
+ A taste of the college 
+ 
+ 
+ make sure slide has text information  
+ 
+ set up slide link  
+ 
+ 
+ College of Business Administration 
+ Students attending a lecture at the CBA complex. 
+ 
+ 
+ 
+ 
+ 
+  Needed to update rows to fluid and use span 12 in each row  
+ 
+ 
+ breadcrumbs commented out for usablity  
+  (put back in hash tag when uncommented) displayBreadcrumbs([[Element: <system-folder/>]] Academic Affairs ) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Academic Affairs 
+ MASTHEAD IMAGE OR SLIDESHOW HERE 
+ 
+ 
+ 
+ The Division of Academic Affairs encompasses a wide array of activities and functions in support of the academic mission of the university. Cal Poly Pomona takes great pride in our continuing efforts to sustain excellence in undergraduate and graduate education and is especially proud that U.S. News & World Report's 2017 "America's Best Colleges" listed Cal Poly Pomona among the best public universities in the Western United States - tying for eighth place among non-doctorate-granting institutions. 
+ Mission of Academic Affairs – Central Offices 
+ Academic Affairs Central Offices provide leadership and support to faculty, staff, and students in the pursuit of excellence in undergraduate and graduate education and scholarly activity. The Central Offices fulfill this mission by: 
+ 
+ Providing services to support students in reaching their academic goals. 
+ Facilitating the professional development of faculty in all phases of their careers as teacher-scholars. 
+ Building and enhancing an international perspective. 
+ Advancing a culture of civic engagement. 
+ Assisting faculty and staff in obtaining external support for their professional activities. 
+ Facilitating program innovation, assessment, and review. 
+ Providing data and analytic support to guide planning and decision-making. 
+ Administering financial, physical, and technological resources, and working on matters of shared governance with the Academic Senate and other constituencies. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Division of Academic Affairs 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+           
+ 
+ ©
+ 
+California State Polytechnic University, Pomona   All Rights Reserved 
+ 
+ 
+ 
+ 
+ 

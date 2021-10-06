@@ -1,0 +1,381 @@
+College of Education & Integrative Studies   
+ 
+ 
+ 
+ 
+  for old logo uncomment
+<div class="span4 logo">
+<a href="/index.shtml" id="cpp-header-logo-link"><img alt="Cal Poly Pomona" src="https://www.cpp.edu/common/resources/img/logo.png"/></a>
+</div>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ SEARCH Box 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Athletics 
+ 
+ 
+ 
+ Alumni 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Connect with us on Social Media! 
+ 
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ <div class="clearfix"></div> 
+  End Social Media Banner  
+ 
+ 
+ 
+ 
+ 
+ Health Alert on COVID-19 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Future Undergraduates 
+ 
+ 
+ 
+ 
+ 
+ 
+ Teaching Credentials & Graduate Studies 
+ 
+ 
+ 
+ 
+ 
+ 
+ Programs 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  End Carousel  
+ 
+  Start Carousel  
+ 
+ Slideshow 
+ This slideshow contains 3 slides that will change every  8  seconds. The first button is to play and pause the slideshow, followed by buttons to go to the previous slide, next slide, or choose individual slides. 
+ 
+ 
+ Pause 
+ Play 
+ 
+ 
+ 
+ 
+ 
+ 
+ loop for dot buttons  
+ 
+ 
+ 
+ 
+ 
+ loop for slide content  
+ 
+ make sure slide has text information  
+ 
+ set up slide link  
+ 
+ 
+ INFLUENCE, INSPIRE AND TRANSFORM THE WORLD 
+ Whether as an educator, community leader, business innovator or anything you want to be. 
+ 
+ 
+ make sure slide has text information  
+ 
+ set up slide link  
+ 
+ 
+ CONNECT THE DOTS BETWEEN DIFFERENT DISCIPLINES AND WAYS OF THINKING. 
+ The capacity to think across boundaries is a key to making your mark in a complex world. 
+ 
+ 
+ make sure slide has text information  
+ 
+ set up slide link  
+ 
+ 
+ CELEBRATE DIVERSITY.LEARN IT. LIVE IT. 
+ Understanding people from different backgrounds will help you in any career. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ CEIS Monthly Shout-Out 
+  everything in p tag is user generated content  
+ 
+ Brighten up someone’s day by giving a shout-out to faculty and staff in CEIS! Simply fill out the form and submit your words of appreciation and encouragement and we’ll post it in our monthly newsletter. Thank you for participating! 
+   
+ 
+ 
+  the following link should be optional for all frontpage-modules  
+ 
+ 
+ 
+ 
+ News 
+  limit to 4 news items maximum, only first item shows picture  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+                                               September 28, 2021
+                                                   
+ 
+  max description characters: 68 
+                        The College of Education and Integrative Studies will kick off it...                    
+                                      
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+                                               September 27, 2021
+                                                   
+ 
+  max description characters: 68 
+                        A new book co-edited by Interdisciplinary General Education lectu...                    
+                                      
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Thank you to our donors! 
+  everything in p tag is user generated content  
+ 
+ The College of Education & Integrative Studies relies on the  generosity  of our alumni, faculty, staff, industry and community friends to help us sustain our standards of excellence as a learn by doing institution. 
+   
+ 
+  the following link should be optional for all frontpage-modules  
+ 
+ 
+ Contact Us 
+ 
+ Bldg. 6-215 
+ 
+                                    
+                909-869-2307
+              
+                             
+ 
+                                    
+                909-869-4747
+              
+                             
+ 
+ 
+ 
+ 
+  all social-detail items are optional  
+ 
+ Stay Connected to CEIS 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+           
+ 
+ ©
+ 
+California State Polytechnic University, Pomona   All Rights Reserved 
+ 
+ 
+ 
+ 
+ 
+ 

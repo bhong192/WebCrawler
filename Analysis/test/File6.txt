@@ -1,0 +1,466 @@
+
+			University Library
+		 
+ 
+ We use cookies to make your website experience better. To learn about how we keep your information safe, view our  .
+ 
+ 
+ 
+ Safer Return to Campus 
+ 
+ 
+   
+ 
+ Popular Searches 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+				
+				
+				
+				
+				  
+			
+			
+			
+			
+			 
+ 
+ 
+ 
+  
+				
+				
+				
+				
+				 
+ 
+ 
+ 
+ 
+  
+
+				
+				
+				
+				 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ University Library 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  Customizable Parameters  
+ 
+ 
+ 
+ 
+  Fixed parameters  
+ 
+ Search for books, articles, and more 
+ 
+  Search Button  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  Start Carousel  
+ 
+ 
+ 
+ 
+  ** Do not change code from here to comment above **  
+  Indicators  
+  The number of indicators must match number of slides
+				 Five indicators have been set up; two have been commented out
+				 Comment out or remove comment to use appropriate number  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  Button 
+						<li>
+							<button aria-label="slide 4 " class="" data-slide-to="3"
+								data-target="#CPPCarousel">4</button>
+						</li>
+						Button  
+  Button 
+						<li>
+							<button aria-label="slide 5 " class="" data-slide-to="4"
+							    data-target="#CPPCarousel">5</button>
+						</li>
+Button  
+ 
+ 
+  The slideshow  
+ 
+ make sure slide has text information  
+  This type of slide uses no overlay  
+ 
+ 
+ 
+ make sure slide has text information  
+  This type of slide uses no overlay  
+ 
+ 
+ 
+ make sure slide has text information  
+  This type of slide uses no overlay  
+ 
+ 
+ 
+ make sure slide has text information  
+  This type of slide uses no overlay  
+  Slide
+					<div class="carousel-item standard-slide">
+						<a class="imageAnchor"
+							href="https://cpp.libcal.com/calendar/events/gradsymposium">
+							<img
+								alt="Library graduate research symposium Saturday September 18 - click for additional information"
+								src="img/banners/081321-lib-grad-symp.jpg" />
+						</a>
+					</div>
+					Slide  
+ make sure slide has text information  
+  This type of slide uses no overlay  
+  Slide 
+					<div class="carousel-item standard-slide">
+						<a class="imageAnchor"
+							href="https://cpp.libcal.com/event/8203252">
+							<img
+								alt="choosing a college major for your personality type - Sept. 15 2:00pm and Sept. 30 at noon - zoom id 918 4837 8620"
+								src="img/banners/090921-choose-major.jpg" />
+						</a>
+					</div>
+					Slide  
+ make sure slide has text information  
+  This type of slide uses no overlay  
+  Slide 
+					<div class="carousel-item standard-slide">
+						<a class="imageAnchor"
+							href="https://cpp.libcal.com/calendar/events?cid=5014&t=d&d=0000-00-00&cal=5014&ct=27775&inc=0">
+							<img alt="Avoiding plagiarism workshops for fall 2021 - click for dates and times on Library calendar"
+								src="img/banners/081321-avoid-plag-f21.jpg" />
+						</a>
+					</div>
+					Slide  
+  make sure slide has text information  
+  This type of slide uses no overlay  
+  Slide 
+					<div class="carousel-item standard-slide">
+						<a class="imageAnchor" href="https://www.cpp.edu/lockers/">
+							<img alt="24/7 Bronco lockers now available for contactless method of library materials"
+								src="img/banners/041921-lib-lockers.jpg" />
+						</a>
+					</div>
+						Slide 
+ make sure slide has text information  
+  This type of slide uses an overlay  
+  Slide
+					<div class="carousel-item standard-slide"><a class="imageAnchor" href="https://libguides.library.cpp.edu/storytime"><img alt="Spring storytime series March 29th to  May 7th" src="img/banners/032421-storytime-spring.jpg" /></a><div class="carousel-caption text-left"><div class="caption-shade-left"><p class="slide-title">Spring Storytime Series</p><span class="inline-break"></span><p class="slide-description">The University Library and Early Childhood Studies ECS courses are pleased to partner in a series of Children's Story Times.</p></div></div></div>
+					Slide  
+  Do not change code below this comment  
+ Previous 
+ Next 
+ 
+  End Carousel  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  ** Do not edit this code to comment below **  
+ 
+ 
+ 
+  ** Do not edit this code to comment above **  
+ 
+ 
+ Library Chat 
+ 
+ 
+ 
+ 
+ Spotlight 
+ 
+		<a class="list-group-item list-group-item-action" href="https://www.cpp.edu/library/about/open-positions/index.shtml">The University Library is Hiring!</a>
+		 
+ 
+ 
+ 
+  Uncomment this link to use
+		<a class="list-group-item list-group-item-action" href="add your link URL here">add your link text here</a>
+		 
+ 
+ 
+ Questions? 
+ Check out the
+			
+			
+			 
+ 
+ for answers!
+		
+		
+		 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Bronco ScholarWorks 
+                                                        
+        
+               
+          
+       
+        
+        
+    
+    
+                                                                                Bronco ScholarWorks is Cal Poly Pomona’s institutional repository, which includes student research projects, student theses, and faculty created learning materials.  
+                                                        
+                                                
+                                                                              
+                        
+                        
+                                                
+                         
+ 
+ 
+ 
+ 
+ 
+ 
+ Affordable Learning Initiative 
+                                                        
+        
+               
+          
+       
+        
+        
+    
+    
+                                                                                Faculty and students have been voicing their concern about the high cost of textbooks. The ALI project is our response to this concern.  
+                                                        
+                                                
+                                                                              
+                        
+                        
+                                                
+                         
+ 
+ 
+ 
+ 
+ 
+ 
+ Special Collections 
+                                                        
+        
+               
+          
+       
+        
+        
+    
+    
+                                                                                Special Collections and Archives collect, organize, preserve, and make available Cal Poly Pomona's rare books and archival collections.  
+                                                        
+                                                
+                                                                              
+                        
+                        
+                                                
+                         
+ 
+ 
+ 
+ 
+ 
+ 
+ Library Club 
+ The Library Club was formed with the purpose of educating students about the Library, its services, and resources. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ University Library
+			 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+      909-869-3074
+		 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 3801 West Temple Avenue, Pomona, CA 91768 
+ 
+ ©2021 California State Polytechnic University, Pomona 
+ All Rights Reserved 
+ 
+ 
+         
+ 
+ 

@@ -1,0 +1,187 @@
+U.S. News Ranks Cal Poly Pomona No. 3 Top Public School in West | PolyCentric 
+ 
+ 
+ 
+ 
+ 
+ ADDED TEMPORARY SCREENSHOT OF HEADER BELOW; STATIC IMAGE FOR NOW 
+  <link rel="stylesheet" href="https://www-dev.cpp.edu/common/resources/css/cpp-headers1.css" type="text/css" />  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Search search 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ University News Center 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Expand/Collapse Menu 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  !!!!!!!!!!!!!!!!!!! COMMENT OUT AFTER PRODUCTION LAUNCH - DO NOT DELETE !!!!!!!!!!!!!!!!!!!!!!!!!! 
+ <div class="campus-alert" style="margin-bottom: 20px;">
+	<div class="container">
+	<p align="center"><STRONG>IMPORTANT MESSAGE</strong><br />
+	February 27th, 2014 <br />
+	PolyCentric is currently being upgraded. We expect to have the site fully functional by 11:30 p.m. today. We apologize for any inconvenience.  </p>
+	</div>
+</div> 
+  !!!!!!!!!!!!!!!!! END MESSAGE !!!!!!!!!!!!!!!!!!!!!!!!!!!!  
+ 
+ 
+ Browse:   
+ /   
+ /   
+ /   U.S. News Ranks Cal Poly Pomona No. 3 Top Public School in West 
+  #topbar  
+ Menu 
+ 
+   
+   
+   
+   
+ 
+ 
+ 
+ 
+   
+   
+   
+   
+ 
+ 
+   
+   
+ 
+ 
+   
+   
+ 
+ 
+   
+   
+   
+  #header  
+ 
+ 
+ 
+ 
+ U.S. News Ranks Cal Poly Pomona No. 3 Top Public School in West Posted on  September 13, 2021  .entry-header  
+ 
+ Cal Poly Pomona is No. 3 among the “ ” and No. 14 among “ ” according to the U.S. News 2022 Best Colleges Ranking. The western region includes 159 universities in 15 states. 
+ The university was recognized for stellar performance in undergraduate teaching, innovation in higher education and providing an education that helps students climb the economic ladder of success following graduation. In those areas, the university listed: 
+ No. 3 Most Innovative School West – by college presidents, provosts and admissions deans voting for schools making the most innovative improvements in terms of curriculum, faculty, students, campus life, technology or facilities No. 6 Best Undergraduate Teaching West (tie) No. 7 Top Performers on Social Mobility West (tie) 
+ Nationally the   was recognized among the best, tied at No. 11 for “ ,” where doctorate degrees are not offered, and No. 3 in California. The computer engineering program was rated No. 3 nationally, civil engineering No. 4, electrical/electronic/computer engineering No. 4 and mechanical engineering No. 9. 
+ Over the last five years, Cal Poly Pomona has moved up 17 places in the “Top Public Schools West” category, with increasing recognition for its high-quality education and commitment to experiential learning and professional readiness. 
+ This year, seven California State University campuses were in the top 10 “Top Public Schools West.” Joining Cal Poly Pomona (No.3) were Cal Poly San Luis Obispo (No. 1), Cal State Long Beach (No. 2), Cal State Fullerton (No. 5), San Jose State (No.7), Cal State LA (No. 8) and Cal State Monterey Bay (No.9). 
+ The California State University system consists of 23 campuses and educates approximately 485,550 students every year, who comprise some of the most diverse student bodies in the nation. Half of all undergraduates receive Pell Grants. Nearly one-third of students are the first in their families to attend college. 
+ For the 2022 ranking, U.S. News rated 1,466 colleges and universities nationally measuring academic quality   in the areas of student outcomes (40 percent), faculty resources (20 percent), expert opinion (20 percent), financial resources (10 percent), student excellence (7 percent) and alumni giving (3 percent). 
+  .entry-content  
+ Posted in    | Tags  ,  ,  ,  ,  ,  ,  ,  ,  ,   .entry-footer  
+  .hentry  
+  #content  
+  #primary  
+ 
+ POPULAR   
+ 
+				COVID-19 Mass Vaccination Hub Opening at Cal Poly Pomona			 
+			16698 views / Posted  February 4, 2021   
+ 
+ 
+ 
+				U.S. News Ranks Cal Poly Pomona No. 3 Top Public School in West			 
+			7442 views / Posted  September 13, 2021   
+ 
+ 
+ 
+				Cal Poly Pomona Alum Timothy Lam to Compete in Olympic Games			 
+			4609 views / Posted  July 19, 2021   
+ 
+ 
+ 
+				Top 10 Things to Know in Preparation for the Return to Campus			 
+			3952 views / Posted  July 13, 2021   
+ 
+ 
+ 
+				Newly Launched Vaccination Hub at CPP to Serve Thousands in the Region			 
+			3533 views / Posted  February 5, 2021   
+ 
+ »   
+ 
+				A New Group Show at Neutra’s VDL II House Remembers Those Who Loved There			 
+ A collection of new site-specific art works is on display at the Neutra VDL House, which has reopened for tours. The architectural landmark is under the management of the College… 
+ 
+   
+ 
+				House party of a group show at Neutra VDL House in LA			 
+ 
+ 
+   
+ 
+				17 things gardeners and plant lovers can do in L.A. to welcome fall – and Halloween			 
+ 
+ 
+   
+ 
+				Cal Poly Pumpkin Fest Fans, Get Your Tickets in Advance			 
+ 
+ 
+   
+ 
+				Halloween 2021: What you’ll find at Southern California pumpkin patches			 
+ 
+ 
+ 
+  #secondary .widget-area  
+ 
+ Tags  ,  ,  ,  ,  ,  ,  ,  ,  ,     echo apply_atomic_shortcode( 'entry_meta', '<div class="sidebar-meta">' . __( '[entry-terms before="Tags <br/>"]', 'fearless' ) );  
+  #tertiary  
+ 
+  #main  
+   
+ 
+ 
+ 
+         
+ 
+ 3801 West Temple Avenue,Pomona, CA 91768 
+ 
+ ©2021 California State Polytechnic University, Pomona 
+ All Rights Reserved 
+ 
+ 
+ 

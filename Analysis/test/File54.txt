@@ -1,0 +1,221 @@
+For the Media 
+ 
+ 
+ 
+ 
+  for old logo uncomment
+<div class="span4 logo">
+<a href="/index.shtml" id="cpp-header-logo-link"><img alt="Cal Poly Pomona" src="https://www.cpp.edu/common/resources/img/logo.png"/></a>
+</div>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ SEARCH Box 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Athletics 
+ 
+ 
+ 
+ Alumni 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  End Carousel  
+  Needed to update rows to fluid and use span 12 in each row  
+ 
+ 
+ breadcrumbs commented out for usablity  
+  (put back in hash tag when uncommented) displayBreadcrumbs([[Element: <system-folder/>]] For the Media ) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ For the Media 
+ MASTHEAD IMAGE OR SLIDESHOW HERE 
+ 
+ 
+ Welcome to Cal Poly Pomona's Online News Room! 
+ Cal Poly Pomona is a rich resource for news — news about accomplishments and events, research and discovery, and opportunities and trends. We also have some of the region’s finest experts across a range of disciplines who can add perspective and depth to your reporting. 
+ You can reach the Department of Strategic Communications at (909) 869-3342 or  . 
+ Contacts 
+ 
+ 
+ 
+ 
+ 
+ Cynthia Peters 
+ Senior Media Relations Specialist 
+ office: (909) 869-3501 or cell: (310) 989-6825 
+ 
+ 
+ 
+ 
+   
+ How to Find What 
+   Experts and speakers from Accounting to Zoology 
+ :  Information about the university’s mission, heritage, uniqueness and more 
+ Data and Research:  Institutional information on enrollment, demographics, admissions and more 
+   Read the latest university news 
+ Rankings:  The university ranks among the best in the nation while providing unparalleled affordability   
+   Explore the university’s heritage and connection to W.K. Kellogg 
+  Find your way to campus 
+ 
+ 
+ 
+ 
+ 
+ Building a strong start on social media 
+ 
+ 
+ 
+ 
+ 
+ Before you Tweet, know your CHIRPS 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+           
+ 
+ ©
+ 
+California State Polytechnic University, Pomona   All Rights Reserved 
+ 
+ 
+ 
+ 
+ 

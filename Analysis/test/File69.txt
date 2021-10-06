@@ -1,0 +1,205 @@
+Hispanic Heritage Month: Celebrating the Cal Poly Pomona Community | PolyCentric 
+ 
+ 
+ 
+ 
+ 
+ ADDED TEMPORARY SCREENSHOT OF HEADER BELOW; STATIC IMAGE FOR NOW 
+  <link rel="stylesheet" href="https://www-dev.cpp.edu/common/resources/css/cpp-headers1.css" type="text/css" />  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Search search 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ University News Center 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Expand/Collapse Menu 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  !!!!!!!!!!!!!!!!!!! COMMENT OUT AFTER PRODUCTION LAUNCH - DO NOT DELETE !!!!!!!!!!!!!!!!!!!!!!!!!! 
+ <div class="campus-alert" style="margin-bottom: 20px;">
+	<div class="container">
+	<p align="center"><STRONG>IMPORTANT MESSAGE</strong><br />
+	February 27th, 2014 <br />
+	PolyCentric is currently being upgraded. We expect to have the site fully functional by 11:30 p.m. today. We apologize for any inconvenience.  </p>
+	</div>
+</div> 
+  !!!!!!!!!!!!!!!!! END MESSAGE !!!!!!!!!!!!!!!!!!!!!!!!!!!!  
+ 
+ 
+ Browse:   
+ /   
+ /   
+ /   Hispanic Heritage Month: Celebrating the Cal Poly Pomona Community 
+  #topbar  
+ Menu 
+ 
+   
+   
+   
+   
+ 
+ 
+ 
+ 
+   
+   
+   
+   
+ 
+ 
+   
+   
+ 
+ 
+   
+   
+ 
+ 
+   
+   
+   
+  #header  
+ 
+ 
+ 
+ 
+ Hispanic Heritage Month: Celebrating the Cal Poly Pomona Community Posted on  September 28, 2021  .entry-header  
+ 
+ In recognition of Hispanic Heritage Month, we’re highlighting several Hispanic members of the Cal Poly Pomona community whose contributions and accomplishments have made an impact on our campus and beyond. As the most diverse polytechnic university in the country, CPP is fortunate to benefit from such great role models for the Hispanic community and the Cal Poly Pomona community.   
+ 
+ Alvaro Huerta   
+ Cal Poly Pomona Associate Professor, Urban and Regional Planning, and Ethnic and Women’s Studies  
+ , an author, scholar-activist, researcher and associate professor, regularly displays his passion for the Hispanic community through speaking engagements, written works and collaborative projects addressing topics including immigration, diversity, social justice and economic development. The son of Mexican immigrants emerged from the infamous Ramona Gardens public housing projects in East L.A. to rise through the educational ranks. His latest accomplishment came this summer, when he was  .  
+ 
+ 
+ Maria Alvarez  
+ Microsoft General Manager, Artificial Intelligence Platform – Cloud + Artificial Intelligence Division  
+ Alumna Maria Alvarez joined Microsoft in 2011 and became general manager, AI Platform – Cloud + AI Division following 20 years in software development, security, Internet and AI industries. To encourage more women and minorities to enter technology,   (’95, computer science) created a scholarship at Cal Poly Pomona to help students of color in financial need to pursue technical or computer science majors.  
+ 
+ 
+ Reggie Robles   
+ Leadership Development Coordinator, Cal Poly Pomona Bronco LEAD   
+ Reggie Robles, an alumnus and a current staff member at Cal Poly Pomona, runs Bronco LEAD (Leadership, Engagement, Advocacy and Development), an initiative that has certified hundreds of students in leadership. Robles (’12, political science) was inspired by the impact of his own mentors to find a way to inspire others to lead, and    
+ 
+ 
+ Terri Gomez   
+ Associate Provost, Cal Poly Pomona Office of Student Success   
+ As a faculty member, department chair and now as associate provost, Terri Gomez has always pursued her passion of expanding educational opportunities and fostering access and equity. She has been  , helping to break down barriers and solve problems so students can be successful and graduate.   
+ 
+ 
+ Rosalia Armas   
+ Graduate Student, Azusa Pacific University   
+ Alumna Rosalia Armas cleared many hurdles   and seemed to thrive no matter the circumstance. The first-generation college student had her daughter, Lillian, while attending CPP and managed to finish her last semester despite the challenges of caring for her daughter while taking classes remotely. Through it all, Armas (’21, sociology) wasn’t just a mother and a college student, but also an involved Associated Students Inc. representative and a researcher.  
+ Who inspires you and why? We welcome nominations of other members our community who are leaders or role models at Cal Poly Pomona. Share your nominations via email to  polycentric@cpp.edu .   
+  .entry-content  
+ Posted in    | Tags   .entry-footer  
+  .hentry  
+  #content  
+  #primary  
+ 
+ POPULAR   
+ 
+				COVID-19 Mass Vaccination Hub Opening at Cal Poly Pomona			 
+			16698 views / Posted  February 4, 2021   
+ 
+ 
+ 
+				U.S. News Ranks Cal Poly Pomona No. 3 Top Public School in West			 
+			7442 views / Posted  September 13, 2021   
+ 
+ 
+ 
+				Cal Poly Pomona Alum Timothy Lam to Compete in Olympic Games			 
+			4609 views / Posted  July 19, 2021   
+ 
+ 
+ 
+				Top 10 Things to Know in Preparation for the Return to Campus			 
+			3952 views / Posted  July 13, 2021   
+ 
+ 
+ 
+				Newly Launched Vaccination Hub at CPP to Serve Thousands in the Region			 
+			3533 views / Posted  February 5, 2021   
+ 
+ »   
+ 
+				A New Group Show at Neutra’s VDL II House Remembers Those Who Loved There			 
+ A collection of new site-specific art works is on display at the Neutra VDL House, which has reopened for tours. The architectural landmark is under the management of the College… 
+ 
+   
+ 
+				House party of a group show at Neutra VDL House in LA			 
+ 
+ 
+   
+ 
+				17 things gardeners and plant lovers can do in L.A. to welcome fall – and Halloween			 
+ 
+ 
+   
+ 
+				Cal Poly Pumpkin Fest Fans, Get Your Tickets in Advance			 
+ 
+ 
+   
+ 
+				Halloween 2021: What you’ll find at Southern California pumpkin patches			 
+ 
+ 
+ 
+  #secondary .widget-area  
+ 
+ Tags     echo apply_atomic_shortcode( 'entry_meta', '<div class="sidebar-meta">' . __( '[entry-terms before="Tags <br/>"]', 'fearless' ) );  
+  #tertiary  
+ 
+  #main  
+   
+ 
+ 
+ 
+         
+ 
+ 3801 West Temple Avenue,Pomona, CA 91768 
+ 
+ ©2021 California State Polytechnic University, Pomona 
+ All Rights Reserved 
+ 
+ 
+ 

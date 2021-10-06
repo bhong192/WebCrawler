@@ -1,0 +1,266 @@
+PolyCentric | University News Center 
+ 
+ 
+ 
+ 
+ 
+ ADDED TEMPORARY SCREENSHOT OF HEADER BELOW; STATIC IMAGE FOR NOW 
+  <link rel="stylesheet" href="https://www-dev.cpp.edu/common/resources/css/cpp-headers1.css" type="text/css" />  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Search search 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ University News Center 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Expand/Collapse Menu 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  !!!!!!!!!!!!!!!!!!! COMMENT OUT AFTER PRODUCTION LAUNCH - DO NOT DELETE !!!!!!!!!!!!!!!!!!!!!!!!!! 
+ <div class="campus-alert" style="margin-bottom: 20px;">
+	<div class="container">
+	<p align="center"><STRONG>IMPORTANT MESSAGE</strong><br />
+	February 27th, 2014 <br />
+	PolyCentric is currently being upgraded. We expect to have the site fully functional by 11:30 p.m. today. We apologize for any inconvenience.  </p>
+	</div>
+</div> 
+  !!!!!!!!!!!!!!!!! END MESSAGE !!!!!!!!!!!!!!!!!!!!!!!!!!!!  
+  #topbar  
+ Menu 
+ 
+   
+   
+   
+   
+ 
+ 
+ 
+ 
+   
+   
+   
+   
+ 
+ 
+   
+   
+ 
+ 
+   
+   
+ 
+ 
+   
+   
+   
+  #header  
+ 
+ 
+ 
+ News Study Finds Photosynthesis in Venus’ Clouds Could Support Life Posted by Cynthia Peters on September 28, 2021 in News News Hispanic Heritage Month: Celebrating the Cal Poly Pomona Community Posted by Clay Fowler on September 28, 2021 in News Budget Briefs Budget Brief: CPP to See $31.9 Million Increase to Base Operations Posted by Melanie Johnson on September 20, 2021 in Budget Briefs, News News Jetpack Cow to Soar Over Cal Poly Universities 2022 Rose Float Posted by Cynthia Peters on September 17, 2021 in News News U.S. News Ranks Cal Poly Pomona No. 3 Top Public School in West Posted by Cynthia Peters on September 13, 2021 in News In Memoriam In Memoriam: Alumnus Ron Simons, Embodiment of the Cal Poly Pomona Spirit Posted by Melanie Johnson on September 8, 2021 in In Memoriam, News News Cal Poly Pomona Pumpkin Fest Returns Oct. 2 Posted by Dan Lee on September 3, 2021 in News News University Embraces Community Policing, Launches Police Chief Search Posted by Melanie Johnson on September 1, 2021 in News 
+ »   
+ 
+				Project CAMINOS Wins Inaugural One Team Award			 
+			Posted  October 1, 2021  / Melanie Johnson		 If there is one lesson the team overseeing Project CAMINOS learned during the pandemic, it’s… 
+ 
+ 
+ 
+				New Class Pass Pilot Program Offers Students Free Rides			 
+			Posted  September 30, 2021  / Anika Ausness		 
+ 
+ 
+ 
+				Study Finds Photosynthesis in Venus’ Clouds Could Support Life			 
+			Posted  September 28, 2021  / Cynthia Peters		 
+ 
+ 
+ 
+				Teamwork Helps Revitalize Practice Fields for Bronco Soccer Teams			 
+			Posted  September 28, 2021  / PolyCentric Editor		 
+ 
+  .boxed  »   
+ 
+				IGE Professors Debut Second Book in Series on Women Making History			 
+			Posted  September 30, 2021  / Ashley Jones		 A new book co-edited by Interdisciplinary General Education lecturers Rosanne Welch and Peg Lamphier examines… 
+ 
+ 
+ 
+				Anthropology Professor Amy Dao Awarded National Science Foundation Research Grant			 
+			Posted  September 13, 2021  / Diana Cansino		 
+ 
+ 
+ 
+				GEMS Alum Accepts Faculty Position with Duke University			 
+			Posted  July 23, 2021  / Ashley Jones		 
+ 
+ 
+ 
+				Professor’s Doc on Women Who Served Prison Time Earns Top Film Prize			 
+			Posted  July 8, 2021  / Melanie Johnson		 
+ 
+  .boxed  »   
+ 
+				Watch Bronco Volleyball and Soccer			 
+			Posted  October 5, 2021  / Janean Sorrell		 The California Collegiate Athletic Association (CCAA) and its member institutions throughout the state are offering… 
+ 
+ 
+ 
+				ASI Offers Complimentary Menstrual Products			 
+			Posted  September 28, 2021  / Janean Sorrell		 
+ 
+ 
+ 
+				CEIS to Host Series of Faculty Meet and Greets			 
+			Posted  September 27, 2021  / Ashley Jones		 
+ 
+ 
+ 
+				CPP CommunityCast			 
+			Posted  September 14, 2021  / Janean Sorrell		 
+ 
+  .boxed  »   
+ 
+				In Memoriam: Alumnus Ron Simons, Embodiment of the Cal Poly Pomona Spirit			 
+			Posted  September 8, 2021  / Melanie Johnson		 They called him “Mr. Cal Poly Pomona,” and for good reason. Ron Simons’ dedication to… 
+ 
+ 
+ 
+				In Memoriam: Don Brinkerhoff			 
+			Posted  August 3, 2021  / Samantha Gonzaga		 
+ 
+ 
+ 
+				In Memoriam:  Professor Emeritus David Levering			 
+			Posted  July 16, 2021  / Diana Cansino		 
+ 
+ 
+ 
+				In Memoriam: Jill Adler-Moore			 
+			Posted  July 8, 2021  / Daniel Griggs		 
+ 
+  .boxed  »   
+ 
+				Budget Brief: CPP to See $31.9 Million Increase to Base Operations			 
+ 
+ 
+ 
+ 
+				Budget Brief: Governor’s Proposal to Bolster CSU Funding Will Help CPP Meet Its Priorities			 
+ 
+ 
+   
+ 
+				Budget Brief: CPP Expedites Federal Emergency Grants to Students Starting in April			 
+ 
+ 
+ 
+ 
+				Budget Brief: Early Exit Program Helps Fill Budget Gap, Prompts Reimagining Work			 
+ 
+ 
+ 
+  #content  
+  #primary  
+ 
+ POPULAR   
+ 
+				COVID-19 Mass Vaccination Hub Opening at Cal Poly Pomona			 
+			16698 views / Posted  February 4, 2021   
+ 
+ 
+ 
+				U.S. News Ranks Cal Poly Pomona No. 3 Top Public School in West			 
+			7442 views / Posted  September 13, 2021   
+ 
+ 
+ 
+				Cal Poly Pomona Alum Timothy Lam to Compete in Olympic Games			 
+			4609 views / Posted  July 19, 2021   
+ 
+ 
+ 
+				Top 10 Things to Know in Preparation for the Return to Campus			 
+			3952 views / Posted  July 13, 2021   
+ 
+ 
+ 
+				Newly Launched Vaccination Hub at CPP to Serve Thousands in the Region			 
+			3533 views / Posted  February 5, 2021   
+ 
+ »   
+ 
+				A New Group Show at Neutra’s VDL II House Remembers Those Who Loved There			 
+ A collection of new site-specific art works is on display at the Neutra VDL House, which has reopened for tours. The architectural landmark is under the management of the College… 
+ 
+   
+ 
+				House party of a group show at Neutra VDL House in LA			 
+ 
+ 
+   
+ 
+				17 things gardeners and plant lovers can do in L.A. to welcome fall – and Halloween			 
+ 
+ 
+   
+ 
+				Cal Poly Pumpkin Fest Fans, Get Your Tickets in Advance			 
+ 
+ 
+   
+ 
+				Halloween 2021: What you’ll find at Southern California pumpkin patches			 
+ 
+ 
+ 
+  #secondary .widget-area  
+ 
+  #main  
+   
+ 
+ 
+ 
+         
+ 
+ 3801 West Temple Avenue,Pomona, CA 91768 
+ 
+ ©2021 California State Polytechnic University, Pomona 
+ All Rights Reserved 
+ 
+ 
+ 
