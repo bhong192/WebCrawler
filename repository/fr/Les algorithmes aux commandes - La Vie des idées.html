@@ -1,0 +1,535 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><!--[if lt IE 7 ]> 
+<html dir="ltr" lang="fr" xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" class="ltr fr no-js ie ie6">
+<![endif]--><!--[if IE 7 ]> 
+<html dir="ltr" lang="fr" xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" class="ltr fr no-js ie ie7">
+<![endif]--><!--[if IE 8 ]> 
+<html dir="ltr" lang="fr" xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" class="ltr fr no-js ie ie8">
+<![endif]--><!--[if IE 9 ]> 
+<html dir="ltr" lang="fr" xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" class="ltr fr no-js ie ie9">
+<![endif]--><!--[if (gt IE 9)|!(IE)]><!-->
+<html dir="ltr" lang="fr" xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" class="ltr fr no-js"> <!--<![endif]--> 
+ <head>  
+  <title>Les algorithmes aux commandes - La Vie des idées</title>  
+  <meta name="description" content="Quel raisonnement aboutit à la recommandation d'un morceau, d'un film ou d'une personne à rencontrer ? Puisqu'un algorithme est un système dont le code est seulement le reflet, il est essentiel de comprendre les ingénieurs et les organisations qui ont contribué à sa conception."> 
+  <meta property="article:author" content="Jérémie Poiroux"> 
+  <meta name="author" content="Jérémie Poiroux"> 
+  <meta property="og:image" content="https://laviedesidees.fr/IMG/png/algogaga-card.png"> 
+  <meta property="og:image" content=""> 
+  <meta property="og:image" content="https://laviedesidees.fr/IMG/arton5192.jpg?1632753536"> 
+  <meta property="og:image" content="https://laviedesidees.fr/IMG/png/algogaga-bkg.png"> 
+  <meta property="og:image" content="https://laviedesidees.fr/IMG/png/algogaga-card.png"> 
+  <meta property="og:image" content="https://laviedesidees.fr/IMG/png/gaga-bkg.png"> 
+  <meta property="og:image" content="https://laviedesidees.fr/IMG/jpg/types-of-recommendation-systems.jpg"> 
+  <meta property="og:image" content="https://laviedesidees.fr/IMG/png/capture_d_e_cran_2020-03-11_a_16.04.23.png"> 
+  <meta property="og:image" content="https://laviedesidees.fr/IMG/png/capture_d_e_cran_2020-03-11_a_16.05.00.png"> 
+  <meta property="og:title" content="Les algorithmes aux commandes"> 
+  <meta property="og:url" content="https://laviedesidees.fr/Les-algorithmes-aux-commandes.html"> 
+  <meta property="og:description" content=" Quel raisonnement aboutit à la recommandation d'un morceau, d'un film ou d'une personne à rencontrer ? Puisqu'un algorithme est un système dont le code est seulement le reflet, il est essentiel de comprendre les ingénieurs et les organisations qui ont contribué à sa conception. Qu'est-ce qu'un algorithme ? Les algorithmes sont un objet d'étude grandissant en sociologie et en sciences de l'information et de la communication. Leur utilisation croissante par les entreprises et les administrations publiques (...) "> 
+  <meta property="og:type" content="article"> 
+  <meta name="bepress_citation_author" content="Jérémie Poiroux"> 
+  <meta name="bepress_citation_title" content="Les algorithmes aux commandes"> 
+  <meta name="bepress_citation_date" content="2021-09-28"> 
+  <meta name="bepress_citation_abstract_html_url" content="https://laviedesidees.fr/Les-algorithmes-aux-commandes.html"> 
+  <meta name="DC.language" content="fr"> 
+  <meta name="DC.title" content="Les algorithmes aux commandes"> 
+  <meta name="DC.creator" content="Jérémie Poiroux"> 
+  <meta name="DC.source" content="La Vie des idées"> 
+  <meta name="DC.publisher" content="La Vie des idées"> 
+  <meta name="DC:date" content="2021-09-28"> 
+  <meta name="DC.description" content=" Quel raisonnement aboutit à la recommandation d'un morceau, d'un film ou d'une personne à rencontrer ? Puisqu'un algorithme est un système dont le code (...) "> 
+  <meta name="DC:type" content="journalArticle"> 
+  <meta name="twitter:card" content="summary_large_image"> 
+  <meta name="twitter:site" content="@laviedesidees
+				"> 
+  <meta name="twitter:creator" content="@laviedesidees
+				"> 
+  <meta name="twitter:title" content="Les algorithmes aux commandes"> 
+  <meta name="twitter:description" content=" Quel raisonnement aboutit à la recommandation d'un morceau, d'un film ou d'une personne à rencontrer ? Puisqu'un algorithme est un système dont le code est seulement le reflet, il est essentiel de comprendre les ingénieurs et les organisations qui ont contribué à sa conception. Qu'est-ce qu'un algorithme ? Les algorithmes sont un objet d'étude grandissant en sociologie et en sciences de l'information et de la communication. Leur utilisation croissante par les entreprises et les administrations publiques (...) 
+		
+		"> 
+  <meta name="twitter:image" content="https://laviedesidees.fr/IMG/png/algogaga-card.png"> 
+  <meta property="fb:app_id" content="1513923505598044"> 
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">   <!-- insert_head_css -->  <!-- insert_head -->             
+  <meta name="msapplication-TileImage" content="local/cache-gd2/af/166d120026049d07ac81fe78d01fdc.png?1522137012"> 
+  <meta name="msapplication-TileColor" content="#f6a623"> 
+  <meta name="theme-color" content="#f6a623">     <!--[if IE 8]>
+<link rel="stylesheet" href="squelettes/css/ie8.css" type="text/css" media="projection, screen, tv" />
+<![endif]--> <!--[if IE 7]>
+<link rel="stylesheet" href="squelettes/css/ie7.css" type="text/css" media="projection, screen, tv" />
+<![endif]-->   
+  <meta name="generator" content="SPIP 3.2.11 SVN [22928]">   <!-- For third-generation iPad with high-resolution Retina display: --> <!-- For iPhone with high-resolution Retina display: --> <!-- For first- and second-generation iPad: --> <!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: --> <!-- <meta name="viewport" content="width=device-width, height=device-height" /> --> 
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable = no"> 
+  <meta name="format-detection" content="telephone=no">    
+ </head> 
+ <body class="page_article fr"> <!-- Facebook SDK --> 
+  <div id="fb-root"></div>  <!-- / Facebook SDK --> 
+  <div id="page"> 
+   <ul id="skip" class="no_print"> 
+    <li></li> 
+    <li></li> 
+    <li></li> 
+   </ul> 
+   <div id="sub_menu_container" class="no_print"> 
+    <div id="sub_menu"> 
+     <div class="subc"> 
+      <div id="tools">  |  |  |  |   
+      </div> 
+     </div><!-- /subc --> 
+    </div><!-- / sub menu --> 
+   </div><!-- / sub menu container --> 
+   <div id="header_container" class="no_print"> 
+    <div id="entete"> 
+     <div class="subc"> 
+      <div class="logo_college">  
+      </div> 
+      <div class="logo_site_vdi">  
+      </div> 
+      <div class="nettoyeur"></div> 
+     </div><!-- /subc --> 
+    </div><!-- / entete --> 
+   </div><!-- / header container --> 
+   <div class="search_control no_print">
+    Recherche
+   </div> 
+   <div id="search_box" class="no_print">
+    <div id="search_wrapper">
+     <div class="formulaire_spip formulaire_recherche" id="formulaire_recherche">  
+     </div> 
+    </div>
+   </div> 
+   <div class="nav_control no_print">
+    Navigation
+   </div> 
+   <div id="big_menu_container" class="no_print"> 
+    <div id="big_menu_wrapper"> 
+     <div class="subc"> 
+      <div id="menu_them"> 
+       <ul> 
+        <li></li> 
+        <li></li> 
+        <li></li> 
+        <li></li> 
+        <li></li> 
+        <li></li> 
+        <li></li> 
+        <li></li> 
+        <li class="menu_rub"></li> 
+        <li class="menu_rub"></li> 
+        <li class="menu_rub"></li> 
+        <li class="BIlink"></li> 
+       </ul> 
+       <div class="nettoyeur"></div> 
+      </div><!-- / menu them --> 
+     </div><!-- /subc --> 
+     <div class="nettoyeur"></div> 
+    </div><!-- / big_menu_wrapper --> 
+    <div class="nettoyeur"></div> 
+   </div><!-- / menu them container --> 
+   <div class="conteneur large_simple"> 
+    <div class="conteneur_inner"> 
+     <div id="contenu_article" class="subc"> 
+      <div id="content_article_wrapper container-fluid"> 
+       <div id="content_article"> 
+        <div class="cartouche flex_conteneur"> 
+         <div class="cartouche_logo flex_bloc_50"> 
+          <div class="subcl"> 
+           <div class="logo_wrapper">  
+           </div> 
+          </div> 
+         </div> 
+         <div class="cartouche_titres flex_bloc_50"> 
+          <div class="cartouche_titres_inner subcr"> 
+           <p class="cartouches_entetes">   </p> <!-- debut_surligneconditionnel --> 
+           <h1> 
+            <div class="titre">
+             Les algorithmes aux commandes
+            </div> </h1> <!-- finde_surligneconditionnel--> 
+           <hr> 
+           <div class="cartouche_bis"> 
+            <div class="signature"> <span class="par"> par <span class="vcard author nom_auteur"></span> </span> <span class="date">, le 28 septembre</span> 
+             <br>
+             <br>  
+             <div id="jq-dropdown-mots" class="jq-dropdown jq-dropdown-tip"> 
+              <ul class="jq-dropdown-menu"> 
+               <li></li> 
+               <li></li> 
+              </ul> 
+             </div>  
+             <div id="jq-dropdown-telecharger" class="jq-dropdown jq-dropdown-tip"> 
+              <ul class="jq-dropdown-menu"> 
+               <li></li> 
+               <li>  </li> 
+               <li>  </li> 
+              </ul> 
+             </div> 
+            </div> 
+           </div> <!-- / cartouche bis --> 
+           <div class="nettoyeur"></div> 
+          </div> 
+         </div> 
+        </div> <!-- / cartouche --> <!-- debut_surligneconditionnel --> 
+        <div class="entry-content chapo">
+         <p>Quel raisonnement aboutit à la recommandation d’un morceau, d’un film ou d’une personne à rencontrer<small class="fine d-inline">&nbsp;</small>? Puisqu’un algorithme est un système dont le code est seulement le reflet, il est essentiel de comprendre les ingénieurs et les organisations qui ont contribué à sa conception.</p>
+        </div> 
+        <div class="nettoyeur"></div> 
+        <div class="texte_wrapper"> 
+         <div class="entry-content texte">
+          <h3 class="spip">Qu’est-ce qu’un algorithme<small class="fine d-inline">&nbsp;</small>?</h3> 
+          <p>Les algorithmes sont un objet d’étude grandissant en sociologie et en sciences de l’information et de la communication. Leur utilisation croissante par les entreprises et les administrations publiques (notamment sous le terme «<small class="fine d-inline">&nbsp;</small>intelligence artificielle<small class="fine d-inline">&nbsp;</small>») a suscité la curiosité médiatique et académique. La question n’est plus seulement technique (par exemple, comment faire mieux et plus vite<small class="fine d-inline">&nbsp;</small>?) mais également sociale&nbsp;: quels sont les effets des algorithmes<small class="fine d-inline">&nbsp;</small>? Qu’implique l’automatisation du recrutement, de la distribution et l’organisation du travail, de la validation de demandes de crédit ou encore de la prédiction des récidives<small class="fine d-inline">&nbsp;</small>? De ce fait, les algorithmes sont parfois vus comme des objets obscurs et suscitent craintes, fantasmes et espoirs.</p> 
+          <p>Mais qu’est-ce qu’un algorithme<small class="fine d-inline">&nbsp;</small>? Définir le terme dans un cadre sociologique demanderait un article en soi, et certains chercheurs se sont déjà penchés sur cette question complexe<span class="spip_note_ref">&nbsp;[]</span>. Nous avancerons simplement ici qu’un algorithme ne peut pas être réduit à une recette ou à un programme informatique. En plus d’être du code, des données et des instructions, un algorithme comprend des intentions et des stratégies entrepreneuriales ou politiques<span class="spip_note_ref">&nbsp;[]</span>. En 2011, Eli Pariser développe dans son livre le concept de <i>filter bubble</i> («<small class="fine d-inline">&nbsp;</small>bulle de filtre<small class="fine d-inline">&nbsp;</small>» ou «<small class="fine d-inline">&nbsp;</small>bulle filtrante<small class="fine d-inline">&nbsp;</small>»)<span class="spip_note_ref">&nbsp;[]</span> largement repris en 2016 lors du Brexit et de l’élection présidentielle américaine. Les algorithmes de Google ou de Facebook (pour ne citer qu’eux) provoqueraient un phénomène de renforcement de l’existant, voire enfermeraient les personnes dans leur zone de confort informationnelle en se basant sur des critères dits personnalisés tels que l’historique de navigation ou la position géographique. Cette bulle de filtre pourrait être considérée comme un effet indirect d’un des objectifs de Google ou Facebook<small class="fine d-inline">&nbsp;</small>; que les résultats correspondent aux personnes et les incitent à continuer à utiliser le service.</p> 
+          <p>Un second exemple a défrayé la chronique en France en 2017&nbsp;: Admission Post-Bac (<span class="caps">APB</span>). Mise en place en 2008, la plateforme d’affectation des lycéens dans des formations du supérieur était critiquée pour son manque de transparence. Malgré la publicisation du code, il était impossible de comprendre les directives du gouvernement derrière les affectations. Ce dernier exemple rappelle que le programme informatique peut être considéré comme une «<small class="fine d-inline">&nbsp;</small>boîte noire<small class="fine d-inline">&nbsp;</small>»<span class="spip_note_ref">&nbsp;[]</span> (s’il n’est pas libre d’accès et expliqué) qu’il faudrait nécessairement décoder. L’algorithme est un système dont le code est seulement le reflet. Une compréhension des acteurs et des organisations derrière les algorithmes est nécessaire. Cet essai s’efforce de contribuer à une littérature encore émergente&nbsp;: l’étude de la conception des algorithmes et du travail effectué par les ingénieurs.</p> 
+          <h3 class="spip">Les algorithmes de recommandation</h3> 
+          <p>L’adjectif «<small class="fine d-inline">&nbsp;</small>recommandation<small class="fine d-inline">&nbsp;</small>» apporte assez de précision pour qualifier les «<small class="fine d-inline">&nbsp;</small>algorithmes de recommandation<small class="fine d-inline">&nbsp;</small>» comme objet de recherche. Cet essai se base sur une enquête de trente entretiens avec des ingénieurs menée entre mars 2017 et juin 2018. Les algorithmes développés par ceux-ci sont notamment utilisés pour nous faire découvrir de la musique, des vidéos, des livres, nous conseiller des «<small class="fine d-inline">&nbsp;</small>objets similaires<small class="fine d-inline">&nbsp;</small>» à acheter, à consommer de l’information pertinente et de qualité ou encore pour nous faire rencontrer des personnes. Grâce aux données de navigation et aux préférences des utilisateurs, les algorithmes de recommandation automatisent la prescription. Leur but est de prédire nos goûts et envies pour s’y adapter le mieux possible. Dans ce cadre, une des problématiques majeures est, comme nous l’avons vu, de formuler des recommandations qui soient convaincantes pour l’utilisateur sans tomber dans un enfermement informationnel (ce que nous consommons) ou interactionnel (avec qui nous échangeons)<span class="spip_note_ref">&nbsp;[]</span>. Avant de s’intéresser à ses méthodes, prenons une situation illustrant les subtilités de la recommandation musicale impliquant soit un disquaire, soit un algorithme. La seule différence notable est ici la taille du catalogue connu par le disquaire (les vinyles en rayon) et l’algorithme (la base de données du service de streaming musical). À l’instar du disquaire, l’algorithme va au bout d’un certain temps d’écoute vous connaître musicalement et commencera à vous prescrire des albums ou des chansons. L’art de la recommandation musicale consiste, entre autres, à proposer d’une part de la musique que l’on connaît, que ce soit du même artiste, du même album, voire les mêmes chansons à nouveau (ce qui est moins valable lorsqu’on recommande des films) et d’autre part de la musique que l’on ne connaît pas mais qui nous plairait, sans s’éloigner trop de vos goûts musicaux. Pour le dire autrement et à l’aide d’un raisonnement par l’absurde, la meilleure recommandation est par définition une chanson qui a déjà été appréciée.</p> 
+          <h3 class="spip">Des recommandations intrinsèques et extrinsèques</h3> 
+          <p>Dans le cadre d’une plateforme en ligne, un système de recommandation propose des objets à des utilisateurs en fonction des propriétés de ces objets et/ou de la consommation des utilisateurs. Gardons l’exemple d’une plateforme de streaming musical. Pour retenir les utilisateurs, un de ses objectifs est de faire découvrir de la musique à ses utilisateurs, comme le rappelle cet ingénieur&nbsp;: «<small class="fine d-inline">&nbsp;</small>Une entreprise qui fait du streaming doit faire découvrir de la musique aux gens. Pas seulement pour une raison d’éthique mais aussi, car si les gens tournent sur leurs quatre albums favoris, ils n’ont aucune raison de payer dix euros par mois. Ils ont juste à acheter leurs mp3<small class="fine d-inline">&nbsp;</small>».</p> 
+          <p>Pour cela, la plateforme peut recommander des albums ou des titres grâce à deux méthodes.</p> 
+          <p>La première est la recommandation intrinsèque qui repose sur les qualités des objets. Vous recommander un album des Rolling Stones après l’écoute des Beatles fait sens, car les deux groupes étaient actifs dans les années 1960 et peuvent être classés en pop/rock. La plateforme pourrait aussi vous proposer d’écouter <i>Dancing In The Street</i>, une chanson qui réunit Mick Jagger et David Bowie (1985). La méthode content-based peut aller plus loin, et trouver des similarités (car c’est de cela qu’il s’agit) dans le rythme, les instruments ou encore les émotions véhiculées par les musiques. Pour cela, les ingénieurs analysent le signal audio pour quantifier et catégoriser la musique. Avec les dernières évolutions du <i>machine learning</i> (et plus précisément des techniques utilisant des réseaux de neurones), le traitement du signal a gagné en performance et peut de nouveau faire concurrence à la seconde méthode, le «<small class="fine d-inline">&nbsp;</small>filtrage collaboratif<small class="fine d-inline">&nbsp;</small>» qui permet des recommandations extrinsèques.</p> 
+          <p>Comme son nom l’indique, le filtrage collaboratif permet de tirer parti des coopérations explicites (mettre une note, aimer la musique) et implicites (passer à la piste suivante, effectuer une recherche dans le catalogue) ainsi que des schémas de consommation des utilisateurs pour effectuer des recommandations. Avec cette méthode, il est possible de recommander un album de Lady Gaga après l’écoute des Rolling Stones (dont la musique a intrinsèquement peu de propriétés communes), simplement parce qu’une certaine part d’utilisateurs écoutent Lady Gaga et les Rolling Stones dans la même session (peu importe la raison). Certaines habitudes d’écoute sont d’ailleurs liées à des événements ou des jours particuliers et peuvent servir à proposer des recommandations aux utilisateurs. Pour l’anecdote, Paul Lamere, <i>data scientist </i>chez Spotify, a identifié ce qu’il appelle &nbsp;: une des chansons les plus célèbres du groupe, <i>I don’t want to miss a thing</i>, est écoutée significativement plus à certains jours précis (sur une période de deux ans, voir image 1). Après avoir écarté la piste de «<small class="fine d-inline">&nbsp;</small>la boom de la Saint-Valentin<small class="fine d-inline">&nbsp;</small>» (qui se trouve être une coïncidence sur les dates), il a identifié (voire image 2) que l’important volume d’écoute correspondait à chaque fois à une actualité impliquant une comète. Pourquoi<small class="fine d-inline">&nbsp;</small>? C’est que la chanson fait partie de la bande originale du film <i>Armageddon</i> dans lequel Bruce Willis doit sauver la Terre d’un impact de comète. Il est très probable, pour en revenir au filtrage collaboratif, que les algorithmes aient détecté ce schéma d’écoute et recommandent <i>I don’t want to miss a thing</i> lors d’une actualité «<small class="fine d-inline">&nbsp;</small>comète<small class="fine d-inline">&nbsp;</small>» (Paul Lamere ne précise pas si c’est effectivement le cas).</p> 
+          <dl class="spip_document_15179 spip_documents spip_doc_bloc spip_documents_center"> 
+           <dt></dt> 
+           <dt class="spip_doc_titre" style="width:549px; max-width:95%;">
+            <strong><span class="caps">IMAGE</span> 1</strong>
+           </dt> 
+           <div class="nettoyeur"></div> 
+          </dl>
+          <dl class="spip_document_15180 spip_documents spip_doc_bloc spip_documents_center"> 
+           <dt></dt> 
+           <dt class="spip_doc_titre" style="width:547px; max-width:95%;">
+            <strong><span class="caps">IMAGE</span> 2</strong>
+           </dt> 
+           <div class="nettoyeur"></div> 
+          </dl> 
+          <p>Voici un schéma illustrant les deux méthodes&nbsp;:</p> 
+          <p><span class="spip_document_15181 spip_documents spip_documents_center"> </span></p> 
+          <p>Pour la première méthode basée sur les contenus, la plateforme a besoin d’un maximum d’informations sur les musiques de son catalogue. Pour la seconde basée sur le filtrage collaboratif, la plateforme doit en savoir le plus possible sur ses utilisateurs et leur consommation. Cette course aux signaux explicites (ce que l’on demande aux utilisateurs) et implicites (leurs traces) soulève un certain nombre de problématiques que nous allons présenter ci-après.</p> 
+          <h3 class="spip">Pourquoi parler de représentation<small class="fine d-inline">&nbsp;</small>?</h3> 
+          <p>Plus l’algorithme en sait sur les utilisateurs, meilleures seront ses recommandations. On peut considérer qu’une bonne recommandation mène à un acte de consommation de la part de l’utilisateur. Par conséquent, pour notre plateforme de streaming musical, l’utilisateur continuera son abonnement. Ainsi, rares sont les algorithmes de recommandation reposant uniquement sur la méthode dite <i>content-based</i>&nbsp;: un des objectifs des ingénieurs est d’améliorer la quantité et la qualité de la connaissance des utilisateurs. S’opère alors une représentation qui recouvre plusieurs réalités. La représentation<span class="spip_note_ref">&nbsp;[]</span> se définit comme (i) «<small class="fine d-inline">&nbsp;</small>donner une illustration, constituer un exemple de, être représentatif de<small class="fine d-inline">&nbsp;</small>» ou être «<small class="fine d-inline">&nbsp;</small>l’action, [le] fait d’agir ou de parler au nom de quelqu’un<small class="fine d-inline">&nbsp;</small>». Elle peut également être (ii) «<small class="fine d-inline">&nbsp;</small>l’action de rendre quelque chose ou quelqu’un présent sous la forme d’un substitut ou en recourant à un artifice<small class="fine d-inline">&nbsp;</small>; ce substitut<small class="fine d-inline">&nbsp;</small>». Enfin, c’est (iii) «<small class="fine d-inline">&nbsp;</small>l’action, [le] fait de se représenter quelque chose<small class="fine d-inline">&nbsp;</small>; [la] manière dont on se représente quelque chose<small class="fine d-inline">&nbsp;</small>». Dans le cadre de la fabrique des algorithmes de recommandation, nous avons affaire aux représentations suivantes&nbsp;: la représentation de tous les utilisateurs par un groupe d’utilisateurs (représentativité)<span class="spip_note_ref">&nbsp;[]</span> et la représentation comme image que se font les ingénieurs des utilisateurs (spéculation)<span class="spip_note_ref">&nbsp;[]</span>. Pour finir, nous nous pencherons sur ce qui nous semble le plus novateur avec les algorithmes de recommandation&nbsp;: la catégorisation implicite et en temps réel des utilisateurs. Dans ces trois cas, il est important de souligner dès à présent que les utilisateurs des plateformes de streaming musical délèguent une partie de leur découverte musicale aux algorithmes. S’installe ici une relation de «<small class="fine d-inline">&nbsp;</small>représentation<small class="fine d-inline">&nbsp;</small>» des utilisateurs par les algorithmes, en revisitant un extrait de «<small class="fine d-inline">&nbsp;</small>La représentation politique<small class="fine d-inline">&nbsp;</small>» dans lequel Hanna F. Pitkin explique du représentant que&nbsp;: «<small class="fine d-inline">&nbsp;</small>Son action [à l’algorithme] doit exiger de la sagesse et du jugement<small class="fine d-inline">&nbsp;</small>; il doit être celui qui agit [recommande]. Les représentés [les utilisateurs] aussi doivent être […] capables d’agir et de juger de façon indépendante.<small class="fine d-inline">&nbsp;</small>»<span class="spip_note_ref">&nbsp;[]</span></p> 
+          <p>Pour aller plus loin, rappelons ce qu’avance Michael Saward<span class="spip_note_ref">&nbsp;[]</span>, en rupture avec le propos de Hanna F. Pitkin&nbsp;: les utilisateurs d’un service (ici, de streaming musical) existent uniquement car ils sont «<small class="fine d-inline">&nbsp;</small>représentés<small class="fine d-inline">&nbsp;</small>» par l’algorithme de recommandation. Le parallèle avec les différents idéaux-types de la représentation politique proposés par Virginie Dutoya et Samuel Hayat<span class="spip_note_ref">&nbsp;[]</span> prend alors tout son sens avec l’opposition entre la «<small class="fine d-inline">&nbsp;</small>représentation comme imposition<small class="fine d-inline">&nbsp;</small>» et la «<small class="fine d-inline">&nbsp;</small>représentation comme proposition<small class="fine d-inline">&nbsp;</small>». Celle-ci nous permet de développer la deuxième partie de cet essai avec les éléments suivants en tête&nbsp;: dans le cadre d’une «<small class="fine d-inline">&nbsp;</small>représentation comme imposition<small class="fine d-inline">&nbsp;</small>» ce qui est effectivement le cas de la majorité des services utilisant un algorithme de recommandation, «<small class="fine d-inline">&nbsp;</small>les prétentions à la représentation imposent au représenté [à l’utilisateur] son identité [son profil créé à partir des traces d’utilisation]<small class="fine d-inline">&nbsp;</small>» tandis qu’une «<small class="fine d-inline">&nbsp;</small>représentation comme proposition<small class="fine d-inline">&nbsp;</small>» prétend proposer «<small class="fine d-inline">&nbsp;</small>au représenté [à l’utilisateur] des représentations de lui-même [son profil] qu’il peut accepter, modifier ou contester<small class="fine d-inline">&nbsp;</small>», ce qui fait écho aux questions de discrimination et de transparence que nous aborderons dans la dernière partie.</p> 
+          <h3 class="spip">Différentes représentations</h3> 
+          <p><i>La représentation comme représentativité</i></p> 
+          <p>Le sens le plus évident de la représentation dans le cadre de la fabrique des algorithmes de recommandation est la représentativité, au sens où représenter, c’est donner une illustration, constituer un exemple de, être représentatif de.</p> 
+          <p>À l’instar des méthodes traditionnelles d’étude de marché et de marketing, les ingénieurs se servent de panels qui sont constitués d’un nombre limité d’utilisateurs. Ceux-ci sont, de différentes manières, représentatifs de tous les utilisateurs. La première manière est celle des<i> focus groups</i>. Les ingénieurs invitent physiquement des utilisateurs sélectionnés pour tester le produit et/ou l’algorithme de recommandation. Sans se déplacer, ces derniers peuvent également contribuer en tant que «<small class="fine d-inline">&nbsp;</small>bêta-testeurs<small class="fine d-inline">&nbsp;</small>», en remplissant des questionnaires ou – d’après un ingénieur – en envoyant des commentaires via un chat sur WhatsApp. Ces méthodes peuvent donner des résultats quantitatifs et qualitatifs explicites et approfondis, mais elles ne sont pas systématiquement mises en place&nbsp;: seulement neuf ingénieurs (sur trente) les mentionnent.</p> 
+          <p>Outre ces méthodes traditionnelles, les ingénieurs se servent d’une approche très répandue dans le milieu du développement web&nbsp;: le test. Contrairement au <i>focus group </i>et au questionnaire, le test peut être déployé en temps réel<span class="spip_note_ref">&nbsp;[]</span>. Il va d’ailleurs plutôt servir à implémenter des fonctionnalités, des améliorations à la volée ou à valider des choix, tandis que les deux premières méthodes vont permettre de faire évoluer le cœur du produit ou de l’algorithme. Lorsque les ingénieurs parlent de «<small class="fine d-inline">&nbsp;</small>test<small class="fine d-inline">&nbsp;</small>», ils évoquent le plus souvent le test A/B, qui consiste à vérifier laquelle de la version A ou B permet d’atteindre les objectifs (<i>Key Performance Indicators</i>) fixés. Les tests A/B permettent par exemple de confronter une ancienne contre une nouvelle version d’un algorithme ou deux nouvelles versions (d’une nouvelle fonctionnalité).<br class="autobr"> Si, pour une plateforme de streaming de musique, l’objectif est par exemple d’augmenter la durée moyenne d’une session d’écoute, un test A/B peut permettre d’évaluer deux nouvelles versions d’un algorithme de recommandation grâce à deux panels d’utilisateurs distincts, ou encore de proposer «<small class="fine d-inline">&nbsp;</small>différentes playlists qui sont des variations du même algorithme<small class="fine d-inline">&nbsp;</small>». À cheval entre les méthodes explicites et les statistiques d’utilisations implicites (que nous aborderons dans la dernière partie), le test est la pièce maîtresse du développement et de l’amélioration d’un algorithme de recommandation – certains ingénieurs doivent nécessairement réaliser un test pour procéder à un «<small class="fine d-inline">&nbsp;</small>changement qui touche les consommateurs<small class="fine d-inline">&nbsp;</small>». En pratique, cela peut se traduire par un «<small class="fine d-inline">&nbsp;</small>premier test sur 1<small class="fine d-inline">&nbsp;</small>% des utilisateurs<small class="fine d-inline">&nbsp;</small>», et un lancement qui «<small class="fine d-inline">&nbsp;</small>ne se fait jamais sans un test sur 10<small class="fine d-inline">&nbsp;</small>% des utilisateurs<small class="fine d-inline">&nbsp;</small>». Ces usages révèlent une place surprenante du test dans le processus de développement. En effet, il semble moins mobilisé par les ingénieurs afin les aider à prendre les décisions les plus difficiles ou pour lancer les améliorations les plus importantes, qu’intégré à part entière dans ledit processus. D’une part, le test semble jouer le rôle d’un acteur-décisionnaire par les ingénieurs. D’autre part, il a dans certains cas le «<small class="fine d-inline">&nbsp;</small>dernier mot<small class="fine d-inline">&nbsp;</small>» sur les modifications proposées<small class="fine d-inline">&nbsp;</small>; du point de vue des ingénieurs, il applique la décision finale des utilisateurs.</p> 
+          <p><i>La représentation comme spéculation</i></p> 
+          <p>Bien que les ingénieurs aient à disposition un catalogue de méthodes limitant les ambiguïtés et les erreurs d’interprétations (les focus groups, les groupes WhatsApp, les questionnaires, les tests ainsi que les analyses des statistiques d’utilisation), ils reposent également leur développement sur des idées reçues. En d’autres termes, les ingénieurs spéculent sur le comportement et les envies des utilisateurs – et disent d’ailleurs être «<small class="fine d-inline">&nbsp;</small>capables d’imaginer ce que les gens ont apprécié ou pas<small class="fine d-inline">&nbsp;</small>».</p> 
+          <p>À l’inverse des tests A/B dont le déploiement aussi précis est propre au numérique (et qui peut s’apparenter à une procédure quasiment scientifique), ces spéculations se retrouvent dans tous les domaines et n’est pas nouvelle. Nous pourrions d’ailleurs également parler de démarche «<small class="fine d-inline">&nbsp;</small>empathique<small class="fine d-inline">&nbsp;</small>» consciente ou non, où les ingénieurs se représentent les utilisateurs selon leur activité. Par exemple «<small class="fine d-inline">&nbsp;</small>pour évaluer la qualité de l’expérience musicale<small class="fine d-inline">&nbsp;</small>», des ingénieurs se basent sur la durée de la session d’écoute. Ce positionnement intuitif n’est jamais référencé. Il obstrue parfois un développement fondé sur les données et les méthodes citées ci-dessus&nbsp;: «<small class="fine d-inline">&nbsp;</small>À vouloir faire plein de choses avec des critères qu’on trouvait à droite à gauche, on s’est retrouvé dans la situation où les gens nous disaient “si vous voulez que ça me corresponde, pourquoi vous ne me demandez pas<small class="fine d-inline">&nbsp;</small>?”<small class="fine d-inline">&nbsp;</small>».</p> 
+          <p>Les ingénieurs font finalement souvent confiance à leur propre intuition sur les envies et les comportements des utilisateurs. Puisque «<small class="fine d-inline">&nbsp;</small>les utilisateurs ne savent pas non plus toujours ce qui est important pour eux ou pensent le savoir mais ce n’est pas le cas<small class="fine d-inline">&nbsp;</small>», les ingénieurs se retrouvent parfois à généraliser des résultats. Ils jouent ici un numéro d’équilibriste<small class="fine d-inline">&nbsp;</small>; ils doivent jauger l’importance à donner aux différents résultats, signaux faibles et forts ainsi qu’à leurs intuitions&nbsp;: «<small class="fine d-inline">&nbsp;</small>Si on s’aperçoit que ce client est en train de préparer son voyage et qu’il a déjà fait des réservations dans deux endroits, on va lui proposer une troisième destination en tête de page. Comme tout le monde a envie de la même chose, dans 9 cas sur 10, ça marche<small class="fine d-inline">&nbsp;</small>».</p> 
+          <p>Malgré la quantité de données que les ingénieurs ont à leur disposition, la fabrique d’un algorithme de recommandation se base souvent, sous couvert des envies et des besoins des utilisateurs, sur la propre consommation de ces ingénieurs. Le risque étant de tomber dans un cercle vicieux où ceux-ci testent leurs intuitions plutôt que des améliorations à des problèmes identifiés.</p> 
+          <p><i>La représentation comme catégorisation implicite</i></p> 
+          <p>En plus des méthodes considérées ci-dessus comme explicites et des idées reçues qu’ils ont a priori, les ingénieurs doivent traiter les statistiques d’utilisation. Celles-ci sont un calcul des traces et fournissent aux ingénieurs des informations sur l’utilisation du service. Ces traces sont des signaux implicites bruts qui peuvent faire appel, ici aussi, à l’intuition des ingénieurs pour les interpréter. C’est par exemple le cas du feed-back envoyé par un utilisateur lorsqu’il «<small class="fine d-inline">&nbsp;</small>n’écoute pas la piste de musique jusqu’au bout<small class="fine d-inline">&nbsp;</small>».</p> 
+          <p>Pour un service de streaming de musique en ligne, on rencontre deux catégories de statistiques reposant sur les traces d’utilisation, rendant les utilisateurs «<small class="fine d-inline">&nbsp;</small>présents sous la forme d’un substitut<small class="fine d-inline">&nbsp;</small>». La première regroupe les statistiques de navigation et de collecte des données, par exemple sur la durée de connexion, les liens cliqués, les recherches effectuées, les albums, playlists, albums ou catégories parcourues. La seconde catégorie relève davantage des statistiques d’écoute, à savoir par exemple les musiques et albums joués, rejoués, mis en pause, passés, mis en favori ou encore les playlists créées. Il est intéressant de soulever ici que cette collecte de données se fait a priori et en continu, sans nécessairement avoir d’objectif précis&nbsp;: trouver du sens aux données et «<small class="fine d-inline">&nbsp;</small>raffiner ce pétrole brut<small class="fine d-inline">&nbsp;</small>» est d’ailleurs une des principales missions d’un data scientist.</p> 
+          <p>Si la première catégorie sert plutôt à améliorer le service au sens large (le design d’interface, l’expérience utilisateur, les vitesses d’exécution, etc.), la seconde est primordiale pour les algorithmes de recommandation qui peuvent les utiliser à la volée, proposant par exemple du contenu sur «<small class="fine d-inline">&nbsp;</small>les dix dernières destinations à la mode ou Neymar<small class="fine d-inline">&nbsp;</small>», car ils ont «<small class="fine d-inline">&nbsp;</small>détecté que vous cliquiez souvent sur les articles foot et voyage<small class="fine d-inline">&nbsp;</small>».</p> 
+          <p>Ce maniement des traces par les algorithmes se fait, à l’inverse des autres méthodes, sans intervention humaine significative et leur permet de créer de nouvelles catégories implicites<span class="spip_note_ref">&nbsp;[]</span> éloignées des catégories socio-démographiques et géographiques traditionnelles<span class="spip_note_ref">&nbsp;[]</span>&nbsp;:</p> 
+          <blockquote class="spip"> 
+           <p>Plus tu rajoutes de la data, plus tu rajoutes de la personnalisation. Notre but c’était de recommander aux gens des lieux qui leur correspondaient, donc nos algorithmes catégorisaient l’utilisateur en fonction de qui il est, du quartier et des endroits qu’il aime bien pour conditionner l’apparition des lieux.</p> 
+          </blockquote> 
+          <p>Cet extrait est intéressant par son paradoxe sur lequel nous revenons peu après&nbsp;: la collecte (massive) de données est censée améliorer la recommandation par une personnalisation toujours plus fine, autrement dit un «<small class="fine d-inline">&nbsp;</small>hyper-ciblage<small class="fine d-inline">&nbsp;</small>»<span class="spip_note_ref">&nbsp;[]</span>, mais en même temps la catégorisation des utilisateurs reste basique (leurs goûts et caractéristiques socio-démographiques).</p> 
+          <p>Historiquement et avant la montée en puissance des algorithmes de recommandation, les techniques de vente se basent majoritairement sur les catégories explicites pour augmenter le chiffre d’affaires. Les cibles sont clairement identifiées en fonction du produit vendu et surtout se recoupent avec les catégories socio-démographiques comme le sexe, l’âge ou la profession et la catégorie socioprofessionnelle (<span class="caps">PCS</span>). La segmentation du marché se fait en fonction de ces catégories explicites renseignées par les personnes elles-mêmes via l’<span class="caps">INSEE</span> (en France)<span class="spip_note_ref">&nbsp;[]</span>.</p> 
+          <p>Aujourd’hui, les systèmes de recommandation permettent (et pas seulement pour des services en ligne) de non plus partir de ces informations explicites offrant une «<small class="fine d-inline">&nbsp;</small>vision stable et rassurante<small class="fine d-inline">&nbsp;</small>», mais de créer des profils éphémères en continu<span class="spip_note_ref">&nbsp;[]</span> en fonction des traces de consommation, à l’instar des catégories d’intérêt dans le marketing. Un site de streaming de musique ne recommandera pas Lady Gaga à une personne «<small class="fine d-inline">&nbsp;</small>par convention<small class="fine d-inline">&nbsp;</small>», car celle-ci est une jeune femme habitant dans une grande ville, mais parce que sa consommation (ou sa catégorie d’intérêt) induit une probabilité forte qu’elle aime Lady Gaga. Les consommateurs-types ne sont plus pertinents, car les données qualifiant un utilisateur (ses écoutes et ses favoris) sont constamment modifiées.</p> 
+          <p>Depuis leur utilisation à grande échelle, les algorithmes soulèvent la question de la personnalisation (ou de l’individualisation) des contenus accessibles et consommés par les utilisateurs<span class="spip_note_ref">&nbsp;[]</span>. S’ils sont plutôt encensés pour la recommandation de biens de consommation standards, leur rôle est régulièrement discuté dans le cadre de la personnalisation de l’accès à l’information et aux contenus culturels<span class="spip_note_ref">&nbsp;[]</span>. Sans rentrer dans le débat, nous souhaitons relativiser cette personnalisation qui n’en porterait que le nom&nbsp;: nous avons plutôt affaire à différents degrés de catégorisation, avec d’une part une catégorisation macro explicite (les caractéristiques socio-démographiques et géographiques) et de l’autre une catégorisation micro implicite au niveau de l’utilisateur (ses interactions avec le service). La personnalisation parfois redoutée ne serait qu’une catégorisation utilisant d’autres critères. Peu importe si nous sommes des femmes ou des hommes, des citadins ou des ruraux, c’est notre consommation de contenus qui nous classifie et au prisme de celle-ci que les services basent leurs recommandations et leur marketing.</p> 
+          <p>Dans le cadre de la recommandation, les seules catégories explicites sont finalement celles qui qualifient les objets recommandés (le rythme d’une musique, par exemple). Les algorithmes de filtrage collaboratif font abstraction de ce que les utilisateurs «<small class="fine d-inline">&nbsp;</small>sont<small class="fine d-inline">&nbsp;</small>» pour s’intéresser à ce qu’ils «<small class="fine d-inline">&nbsp;</small>font<small class="fine d-inline">&nbsp;</small>»&nbsp;: «<small class="fine d-inline">&nbsp;</small>On a des pourcentages, on a des ratios de clics et on va calculer la pertinence d’une chanson pour les gens à partir de ça<small class="fine d-inline">&nbsp;</small>».</p> 
+          <h3 class="spip">Questions soulevées</h3> 
+          <p>Bien que les ingénieurs soient les «<small class="fine d-inline">&nbsp;</small>fabricants<small class="fine d-inline">&nbsp;</small>» des algorithmes, leur implication, voire leur responsabilité dans les recommandations effectuées peuvent dans certains cas être limitées. Un ingénieur va même jusqu’à dire qu’il ne peut et ne doit pas forcer l’algorithme à agir d’une manière ou d’une autre (soit à coder en dur une variable), «<small class="fine d-inline">&nbsp;</small>l’algorithme décide tout seul en fonction de ses objectifs<small class="fine d-inline">&nbsp;</small>».</p> 
+          <p>Sans aller jusqu’à aborder les problématiques soulevées par les algorithmes de deep learning dont les résultats sont parfois incompréhensibles pour leurs ingénieurs, nous observons que ces derniers laissent volontairement aux algorithmes de recommandation le dernier mot, considérant que «<small class="fine d-inline">&nbsp;</small>l’algorithme est lui-même un test, sa fonctionnalité principale étant d’apprendre et de modifier ses paramètres lui-même pour lui permettre d’être plus performant<small class="fine d-inline">&nbsp;</small>».</p> 
+          <p>En s’affranchissant des catégories explicites traditionnelles finalement trop «<small class="fine d-inline">&nbsp;</small>humaines<small class="fine d-inline">&nbsp;</small>», les algorithmes proposent leur propre réalité socio-économique. Pourtant, plusieurs études montrent que les algorithmes (ici plus largement, d’affectation, de prise de décision, de prédiction) ont un pouvoir discriminant sur les catégories explicites traditionnelles<span class="spip_note_ref">&nbsp;[]</span>. D’ailleurs, Beauvisage et al. soulignent dans leur enquête que les acteurs de la publicité programmatique en ligne utilisent peu (<i>a fortiori</i> moins qu’avant) les catégories d’intérêt et considèrent les «<small class="fine d-inline">&nbsp;</small>micro-cibles comme des exceptions<small class="fine d-inline">&nbsp;</small>», leur préférant «<small class="fine d-inline">&nbsp;</small>le socio-démographique<small class="fine d-inline">&nbsp;</small>» qui a fait ses preuves.</p> 
+          <p>En d’autres termes, malgré la liberté donnée aux algorithmes pour créer des catégories implicites (par exemple, les fans de Lady Gaga ou les experts de tel logiciel de comptabilité), ils reproduisent des biais humains (recommander Lady Gaga à de jeunes femmes ou recruter des hommes blancs).</p> 
+          <p>Pour élargir la réflexion sur ce propos, nous souhaitons proposer deux pistes de discussion. La première est de donner la possibilité aux utilisateurs d’un service de connaître leur «<small class="fine d-inline">&nbsp;</small>profil algorithmique<small class="fine d-inline">&nbsp;</small>»&nbsp;: dans quelles catégories implicites, et par ricochet catégories explicites sont-ils classés par l’algorithme<small class="fine d-inline">&nbsp;</small>? La seconde est de permettre à ces utilisateurs d’une part de ne pas alimenter l’algorithme avec leurs traces et d’autre part de pouvoir bénéficier, à l’instar du droit à l’oubli entré en vigueur en Europe en 2012, d’un droit à donner un consentement éclairé et explicite pour l’exploitation de leurs traces<span class="spip_note_ref">&nbsp;[]</span>.</p>
+         </div> <!--nouveau lien dossier--> <!--fin nouveau lien dossier--> 
+         <p class="signature signature_box"> <span class="par"> par <span class="vcard author nom_auteur"></span></span><span class="date">, le 28 septembre</span> </p> <!-- sharing buttons --> 
+         <div class="socialBox no_print"> 
+          <div class="socialTw">   
+          </div> 
+          <div class="socialFB"> 
+           <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-width="" data-layout="button_count" data-action="recommend" data-size="large" data-show-faces="true" data-share="true"></div> 
+          </div> 
+          <div class="nettoyeur"></div> 
+         </div> 
+         <div class="social_bloc"> 
+          <hr class="zigzag"> 
+          <h3>Gardons le contact</h3>      
+          <hr class="zigzag"> 
+         </div> 
+         <div class="ps"> 
+          <h2> Aller plus loin </h2> <!-- debut_surligneconditionnel --> 
+          <div class="">
+           <p>Cet essai a été partiellement écrit dans le cadre du projet Algodiv (<span class="caps">ANR</span>-15-<span class="caps">CE38</span>-0001) financé par l’Agence Nationale pour la Recherche et mené par Camille Roth que je remercie pour ses conseils et relectures.</p>
+          </div> <!-- finde_surligneconditionnel--> 
+         </div> 
+         <div class="newsletter_article"> 
+          <div style="padding-top:20px;" id="formContent"> 
+           <fieldset>  
+           </fieldset> 
+          </div> 
+         </div><!-- /newsletter_popin --> 
+         <div class="texte_plus_container"> <!--Pour citer cet article--> 
+          <div class="pourciter"> 
+           <h2> Pour citer cet article : </h2> 
+           <p> Jérémie Poiroux, « Les algorithmes aux commandes », <em> La Vie des idées </em> , 28 septembre 2021. ISSN&nbsp;:&nbsp;2105-3030. URL&nbsp;:&nbsp;https://laviedesidees.fr/Les-algorithmes-aux-commandes.html </p> 
+          </div> <!--fin pour citer cet article--> 
+          <div class="proposer"> 
+           <h2> Nota bene : </h2> 
+           <p> Si vous souhaitez critiquer ou développer cet article, vous êtes invité à proposer un texte au comité de rédaction (). Nous vous répondrons dans les meilleurs délais. </p> 
+          </div> 
+          <div class="nettoyeur"></div> 
+         </div><!-- /texte_plus_container --> <!-- finde_surligneconditionnel--> 
+         <div class="nettoyeur"></div> 
+        </div><!-- /texte_wrapper --> 
+       </div><!-- /content article --> 
+      </div><!-- /content_article_wrapper --> 
+     </div><!-- /contenu_article --> 
+    </div><!-- conteneur inner --> 
+   </div><!-- conteneur --> 
+   <div class="conteneur large_gray"> 
+    <div class="conteneur_inner"> 
+     <div class="large_box"> 
+      <h2 class="box_title">À lire aussi </h2> 
+      <div class="article_liste subc"> 
+       <ul class="article_liste_line"> 
+        <li class=""> 
+         <div class=""> 
+          <div class="article_liste_item_line"> 
+           <div class="item_logo_bloc_line"> 
+            <div class="zoom_logo_box_line">  
+            </div> 
+           </div> 
+           <div class="mini_logo_trad"> 
+            <div></div> 
+            <div></div> 
+           </div> 
+           <div class="item_cartouche">  
+            <h2 class="titre"></h2> 
+            <div class="article_liste_infos">
+              par <span class="vcard author nom_auteur"></span>, le 26 septembre 2014 
+            </div><!-- / article_liste_infos --> 
+            <div class="intro"></div> 
+            <div class="nettoyeur"></div> 
+           </div> 
+          </div> 
+         </div> </li> 
+        <li class=""> 
+         <div class=""> 
+          <div class="article_liste_item_line"> 
+           <div class="item_logo_bloc_line"> 
+            <div class="zoom_logo_box_line">  
+            </div> 
+           </div> 
+           <div class="item_cartouche">  
+            <h2 class="titre"></h2> 
+            <div class="article_liste_infos">
+              par <span class="vcard author nom_auteur"></span>, le 9 mai 2018 
+            </div><!-- / article_liste_infos --> 
+            <div class="intro"></div> 
+            <div class="nettoyeur"></div> 
+           </div> 
+          </div> 
+         </div> </li> 
+        <li class=""> 
+         <div class=""> 
+          <div class="article_liste_item_line"> 
+           <div class="item_logo_bloc_line"> 
+            <div class="zoom_logo_box_line">  
+            </div> 
+           </div> 
+           <div class="item_cartouche">  
+            <h2 class="titre"></h2> 
+            <div class="article_liste_infos">
+              par <span class="vcard author nom_auteur"></span>, le 12 juin 2019 
+            </div><!-- / article_liste_infos --> 
+            <div class="intro"></div> 
+            <div class="nettoyeur"></div> 
+           </div> 
+          </div> 
+         </div> </li> 
+        <li class=""> 
+         <div class=""> 
+          <div class="article_liste_item_line"> 
+           <div class="item_logo_bloc_line"> 
+            <div class="zoom_logo_box_line">  
+            </div> 
+           </div> 
+           <div class="item_cartouche">  
+            <h2 class="titre"></h2> 
+            <div class="article_liste_infos">
+              par <span class="vcard author nom_auteur"></span> &amp; <span class="vcard author nom_auteur"></span>, le 17 avril 2017 
+            </div><!-- / article_liste_infos --> 
+            <div class="intro"></div> 
+            <div class="nettoyeur"></div> 
+           </div> 
+          </div> 
+         </div> </li> 
+       </ul><!-- /subcolumns--> 
+      </div><!-- / article liste --> 
+     </div><!-- /large box --> 
+    </div><!-- conteneur inner --> 
+   </div><!-- conteneur --> 
+   <div class="conteneur large_simple"> 
+    <div class="conteneur_inner"> 
+     <div class="subc"> 
+      <div class="notes"> 
+       <h2> Notes </h2> <!-- debut_surligneconditionnel -->
+       <div id="nb1"> 
+        <p><span class="spip_note_ref">[]&nbsp;</span>Rob Kitchin, «<small class="fine d-inline">&nbsp;</small>Thinking critically about and researching algorithms<small class="fine d-inline">&nbsp;</small>», <i>Information, Communication &amp; Society</i>, 2017, vol. 20, n°&nbsp;1, p. 14-29.</p> 
+       </div>
+       <div id="nb2"> 
+        <p><span class="spip_note_ref">[]&nbsp;</span>Jenna Burrell, «<small class="fine d-inline">&nbsp;</small>How the machine ‘thinks’&nbsp;: Understanding opacity in machine learning algorithms<small class="fine d-inline">&nbsp;</small>», <i>Big Data &amp; Society</i>, 2016, vol. 3, n°&nbsp;1.</p> 
+       </div>
+       <div id="nb3"> 
+        <p><span class="spip_note_ref">[]&nbsp;</span>Eli Pariser. <i>The filter bubble&nbsp;: What the Internet is hiding from you</i>, Penguin <span class="caps"><span class="caps">UK</span></span>, 2011.</p> 
+       </div>
+       <div id="nb4"> 
+        <p><span class="spip_note_ref">[]&nbsp;</span>Frank Pasquale, <i>The black box society. </i>Harvard University Press, 2015.</p> 
+       </div>
+       <div id="nb5"> 
+        <p><span class="spip_note_ref">[]&nbsp;</span>Frederik Zuiderveen Borgesius, et al., «<small class="fine d-inline">&nbsp;</small>Should we worry about filter bubbles<small class="fine d-inline">&nbsp;</small>?<small class="fine d-inline">&nbsp;</small>», <i>Internet Policy Review. Journal on Internet Regulation</i>, 2016, vol. 5, n°&nbsp;1.</p> 
+       </div>
+       <div id="nb6"> 
+        <p><span class="spip_note_ref">[]&nbsp;</span>Les définitions proviennent du dictionnaire en ligne .</p> 
+       </div>
+       <div id="nb7"> 
+        <p><span class="spip_note_ref">[]&nbsp;</span>Hanna F. Pitkin, <i>The concept of representation</i>, University of California Press, 1967.</p> 
+       </div>
+       <div id="nb8"> 
+        <p><span class="spip_note_ref">[]&nbsp;</span>Pierre Mannoni.<i> Les représentations sociales</i>, Que sais-je<small class="fine d-inline">&nbsp;</small>? n°&nbsp;3329, <span class="caps"><span class="caps">PUF</span></span>, 2016.</p> 
+       </div>
+       <div id="nb9"> 
+        <p><span class="spip_note_ref">[]&nbsp;</span>Hanna F. Pitkin, trad. Samuel Hayat, «<small class="fine d-inline">&nbsp;</small>La représentation politique<small class="fine d-inline">&nbsp;</small>», <i>Raisons politiques</i>, 2013, n°2, p. 35-51.</p> 
+       </div>
+       <div id="nb10"> 
+        <p><span class="spip_note_ref">[]&nbsp;</span>Michael Saward, «<small class="fine d-inline">&nbsp;</small>The representative claim<small class="fine d-inline">&nbsp;</small>», <i>Contemporary political theory</i>, 2006, vol. 5, n°3, p. 297-318.</p> 
+       </div>
+       <div id="nb11"> 
+        <p><span class="spip_note_ref">[]&nbsp;</span>Virginie Dutoya, Samuel Hayat, «<small class="fine d-inline">&nbsp;</small>Prétendre représenter<small class="fine d-inline">&nbsp;</small>», <i>Revue française de science politique</i>, 2016, vol. 66, n°1, p. 7-25.</p> 
+       </div>
+       <div id="nb12"> 
+        <p><span class="spip_note_ref">[]&nbsp;</span>Zeynep Tufekci, «<small class="fine d-inline">&nbsp;</small>Engineering the public&nbsp;: Big data, surveillance and computational politics<small class="fine d-inline">&nbsp;</small>», <i>First Monday</i>, 2014, vol. 19, n°7.</p> 
+       </div>
+       <div id="nb13"> 
+        <p><span class="spip_note_ref">[]&nbsp;</span>Cathy O’Neil, <i>Weapons of Math Destruction&nbsp;: How Big Data Increases Inequality and Threatens Democracy</i>, Crown, 2016.</p> 
+       </div>
+       <div id="nb14"> 
+        <p><span class="spip_note_ref">[]&nbsp;</span>T.B Beane, D.M.&nbsp;Ennis, «<small class="fine d-inline">&nbsp;</small>La segmentation des marchés&nbsp;: une revue de la littérature<small class="fine d-inline">&nbsp;</small>», <i>Recherche et Applications en Marketing</i>, 1989, vol 4, n°&nbsp;3, p. 25-52.</p> 
+       </div>
+       <div id="nb15"> 
+        <p><span class="spip_note_ref">[]&nbsp;</span>Thomas Beauvisage et al., «<small class="fine d-inline">&nbsp;</small>Fabriquer des cibles dans la publicité programmatique. Enquête sur l’audience planning<small class="fine d-inline">&nbsp;</small>», 2019, Rapport de recherche, Orange Labs.</p> 
+       </div>
+       <div id="nb16"> 
+        <p><span class="spip_note_ref">[]&nbsp;</span>Olivier Sautory, «<small class="fine d-inline">&nbsp;</small>L’échantillon démographique permanent de l’<span class="caps"><span class="caps">INSEE</span></span><small class="fine d-inline">&nbsp;</small>», <i>Courrier des Statistiques</i>, 1987, n°41, p. 1-4.</p> 
+       </div>
+       <div id="nb17"> 
+        <p><span class="spip_note_ref">[]&nbsp;</span>Dominique Boullier, «<small class="fine d-inline">&nbsp;</small>Pour des sciences sociales de troisième génération (<span class="caps"><span class="caps">SS3G</span></span>)<small class="fine d-inline">&nbsp;</small>», in Pierre-Michel Menger et Simon Paye (dir.), <i>Big Data et Traçabilité Numérique&nbsp;: Les Sciences Sociales Face à La Quantification Massive Des Individus</i>, Paris, Open Editions Press (Collège de France), 2017, p. 163-184.</p> 
+       </div>
+       <div id="nb18"> 
+        <p><span class="spip_note_ref">[]&nbsp;</span>Antoinette Rouvroy, Thomas Berns, «<small class="fine d-inline">&nbsp;</small>Gouvernementalité algorithmique et perspectives d’émancipation<small class="fine d-inline">&nbsp;</small>», <i>Réseaux</i>, 2013, n°1, p. 163-196.</p> 
+       </div>
+       <div id="nb19"> 
+        <p><span class="spip_note_ref">[]&nbsp;</span>Seth Flaxman, Sharad Goel, Justin M.&nbsp;Rao, «<small class="fine d-inline">&nbsp;</small>Filter bubbles, echo chambers, and online news consumption<small class="fine d-inline">&nbsp;</small>», <i>Public opinion quarterly</i>, 2016, vol. 80, n°&nbsp;1, p. 298-320.</p> 
+       </div>
+       <div id="nb20"> 
+        <p><span class="spip_note_ref">[]&nbsp;</span>Joseph Turow, <i>The daily you&nbsp;: how the new advertising industry is defining your identity and your worth</i>, Yale University Press, 2012. Benjamin G. Edelman, Michael Luca, «<small class="fine d-inline">&nbsp;</small>Digital discrimination&nbsp;: the case of Airbnb.com<small class="fine d-inline">&nbsp;</small>», <i>Harvard Business School <span class="caps"><span class="caps">NOM</span></span> Unit Working Paper</i>, 2014, n°&nbsp;14-054.</p> 
+       </div>
+       <div id="nb21"> 
+        <p><span class="spip_note_ref">[]&nbsp;</span>Lilian Edwards and Michael Veale, «<small class="fine d-inline">&nbsp;</small>Slave to the algorithm&nbsp;: why a right to an explanation is probably not the remedy you are looking for<small class="fine d-inline">&nbsp;</small>», <i>Duke L. &amp; Tech Rev</i>., 2017, vol. 16, p. 18.</p> 
+       </div><!-- finde_surligneconditionnel--> 
+      </div> 
+     </div> 
+     <div class="nettoyeur"></div> 
+    </div><!-- conteneur inner --> 
+   </div><!-- conteneur --> 
+   <div class="conteneur large_border"> 
+    <div class="conteneur_inner"> 
+     <div class="large_box"> 
+      <h2 class="box_title">Nos partenaires</h2> 
+      <div class="partners_bottom_logos">    
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="conteneur large_black"> 
+    <div class="conteneur_inner"> 
+     <div id="pied" class="no_print"> <!-- TOP BUTTON -->   <!-- / TOP BUTTON --> 
+      <div class=""> 
+       <ul class="subcolumns"> 
+        <div class="c33l"> 
+         <div class="subc"> 
+          <h2>Articles les plus lus </h2> 
+          <ul class="pied_liste"> 
+           <li></li> 
+           <li></li> 
+           <li></li> 
+           <li></li> 
+           <li></li> 
+           <li></li> 
+           <li></li> 
+          </ul> 
+         </div> 
+        </div> 
+        <div class="c16l"> 
+         <div class="subc"> 
+          <h2>Thématiques </h2> 
+          <ul class="pied_liste"> 
+           <li></li> 
+           <li></li> 
+           <li></li> 
+           <li></li> 
+           <li></li> 
+           <li></li> 
+           <li></li> 
+           <li></li> 
+          </ul> 
+         </div> 
+        </div> 
+        <div class="c16l"> 
+         <div class="subc"> 
+          <h2>Catégories </h2> 
+          <ul class="pied_liste"> 
+           <li></li> 
+           <li></li> 
+           <li></li> 
+           <li></li> 
+          </ul> 
+         </div> 
+        </div> 
+        <div class="c16l"> 
+         <div class="subc"> 
+          <h2>À propos </h2> 
+          <ul class="pied_liste"> 
+           <li></li> 
+           <li></li> 
+           <li></li> 
+           <li></li> 
+           <li></li> 
+           <li></li> 
+           <li></li> 
+          </ul> 
+         </div> 
+        </div> 
+        <div class="c16r"> 
+         <div class="subc"> 
+          <h2>Réseaux </h2> 
+          <ul class="pied_liste"> 
+           <li></li> 
+           <li></li> 
+           <li></li> 
+           <li></li> 
+           <li></li> 
+           <li></li> 
+           <li></li> 
+          </ul> 
+         </div> 
+        </div> 
+       </ul><!-- /subcolumns --> 
+      </div><!-- /subc --> 
+      <div id="pied_legals"> 
+       <div class="subc"> 
+        <br>© laviedesidees.fr - Toute reproduction interdite sans autorisation explicite de la rédaction -  -  
+       </div><!-- /subc --> 
+      </div><!-- fin pieds legals --> 
+     </div><!-- fin pied --> <!--google!--> <!-- Géré par le plugin tarteaucitron -->   <!-- jQuery Modal -->   
+    </div><!-- conteneur inner --> 
+   </div><!-- conteneur --> 
+  </div><!-- fin page -->    <!-- Html + Script Barre de progression lecture --> 
+  <div id="progression"> 
+   <div id="barre"></div> 
+  </div>   <!-- Go to www.addthis.com/dashboard to customize your tools -->   
+ </body>
+</html>
