@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en"> 
+ <head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"> 
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"> 
+  <meta name="csrf-token" content="nRHA0NFg6jxRmbTPDgYJzNCSACaM1pszmeXVMv6d"> 
+  <title>Alumni Career Coaches</title>    
+ </head>  
+ <body class="bg-white"> 
+  <header class="border-bottom border-dark d-none d-sm-none d-md-block">   
+  </header>  
+  <div id="wrap"> 
+   <div id="main"> 
+    <div id="form"> 
+     <div class="container text-center pt-3" v-if="false"> 
+      <h1 class="text-info py-4"><i class="text-info fa fa-spinner fa-pulse fa-3x fa-fw"></i><span class="sr-only">Loading...</span><br>Alumni Career Coaches</h1> 
+      <div class="alert alert-secondary"> 
+       <p>Using Microsoft Internet Explorer is not supported. Please use another browser.</p> 
+      </div> 
+     </div> 
+     <div v-cloak> 
+      <div v-if="form.show_image" id="myCarousel" class="carousel slide" data-ride="carousel"> 
+       <div class="carousel-inner"> 
+        <div class="carousel-item active">  
+        </div> 
+       </div> 
+      </div> 
+      <div v-if="form.test" class="alert alert-danger text-center mb-0"> 
+       <h5 class="text-uppercase">Test Mode</h5> If this form processes payment you will be sent to the test payment processor. 
+      </div> 
+      <div class="container pt-5" v-if="open == false"> 
+       <h1 class="text-info">Alumni Career Coaches</h1> 
+       <h3>This form has closed</h3> 
+       <div v-if="form.description" class="pb-3">
+        <span v-html="form.description"></span>
+       </div> 
+      </div> 
+      <div class="container pt-5" v-else-if="singleEvent &amp;&amp; form.events[0].capacity == 0"> 
+       <h1 class="text-info">Alumni Career Coaches</h1> 
+       <h3>This event is sold out</h3> 
+       <div v-if="form.description" class="pb-3">
+        <span v-html="form.description"></span>
+       </div> 
+      </div> 
+      <div class="container pt-5" v-else-if="open"> 
+       <h1 class="text-info">Alumni Career Coaches</h1> 
+       <div v-if="form.description" class="pb-3">
+        <span v-html="form.description"></span>
+       </div> 
+       <div v-show="steps[current_step].name == 'gift'" dusk="gift-step"> 
+        <div v-if="steps[current_step].pivot.label" class="lead pb-2">
+          {{ steps[current_step].pivot.label }} 
+        </div> 
+        <div class="pb-2" v-if="steps[current_step].pivot.description" v-html="steps[current_step].pivot.description"></div> <fund-search :funds="form.funds" :query="query" :donation_levels="form.donation_levels.length > 0? form.donation_levels : undefined"></fund-search> 
+        <div class="row" v-show="canProceed"> 
+         <div v-show="current_step > 0" class="col-6">  
+         </div> 
+         <div v-show="canProceed" class="col-6" :class="{'col-12': current_step === 0}">  
+         </div> 
+        </div> 
+       </div> 
+       <div v-show="steps[current_step].name == 'product'" class="card" dusk="product-step"> 
+        <div class="card-header lead" v-if="steps[current_step].pivot.label">
+          {{ steps[current_step].pivot.label }} 
+        </div> 
+        <div class="card-body"> 
+         <div class="pb-2" v-if="steps[current_step].pivot.description" v-html="steps[current_step].pivot.description"></div> 
+         <div class="card-deck justify-content-center"> <product v-for="(product, index) in form.products" :key="product.id" :product="product" :form="form" :cart="products" :gifts="gifts"></product> 
+         </div> 
+        </div> 
+        <div class="card-footer" v-show="canProceed"> 
+         <div class="row"> 
+          <div v-show="current_step > 0" class="col-6" :class="{'col-12': !canProceed}">  
+          </div> 
+          <div v-show="canProceed" class="col-6" :class="{'col-12': current_step == 0}">  
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div v-show="steps[current_step].name == 'invites'" class="card" dusk="invites-step"> 
+        <div class="card-header lead" v-if="steps[current_step].pivot.label">
+          {{ steps[current_step].pivot.label }} 
+        </div> 
+        <div class="card-body"> 
+         <div class="pb-2" v-if="steps[current_step].pivot.description" v-html="steps[current_step].pivot.description"></div> 
+         <div class="row"> <invite :form_id="form.id" class="col-12"></invite> 
+         </div> 
+        </div> 
+        <div class="card-footer" v-show="canProceed"> 
+         <div class="row"> 
+          <div v-show="current_step > 0" class="col-6">  
+          </div> 
+          <div v-show="canProceed" class="col-6" :class="{'col-12': current_step === 0}">  
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div v-show="steps[current_step].name == 'field'" dusk="field-step"> 
+        <div v-show="errors.any()" class="alert alert-danger"> 
+         <ul>
+          <li v-for="(error, index) of errors.all()">{{ error }}</li>
+         </ul> 
+        </div> 
+        <div v-if="singleEvent" class="pt-2 pb-3"> 
+         <h4 v-if="form.events[0].short_description">{{ form.events[0].short_description }}</h4> <span v-else v-html="form.events[0].description"></span> 
+        </div> 
+        <div class="card-header border border-bottom-0" v-if="steps[current_step].pivot.label">
+          {{ steps[current_step].pivot.label }} 
+        </div> 
+        <div v-if="steps[current_step].pivot.description" v-html="steps[current_step].pivot.description"></div> 
+        <div class="card"> <single-form-event v-if="singleEvent" :form="form" :event="form.events[0]" :group="group" :registered-events.camel="registeredEvents"></single-form-event>  
+        </div> 
+       </div> 
+       <div v-show="steps[current_step].name == 'event' &amp;&amp; form.events.length > 1 &amp;&amp; rsvp == true" dusk="event-step"> 
+        <div v-if="steps[current_step].pivot.label" class="card-header border-top">
+          {{ steps[current_step].pivot.label }} 
+        </div> 
+        <div class="pb-2" v-if="steps[current_step].pivot.description" v-html="steps[current_step].pivot.description"></div> 
+        <div v-if="eventsOverlap"> 
+         <div v-for="(days, index) in eventsGroupedByTime"> 
+          <div v-for="(hours, index) in days"> <time-slot :start-time.camel="hours[0].start_time" :form="form" :events="hours" :group="group" :registered-events.camel="registeredEvents"></time-slot> 
+          </div> 
+         </div> 
+        </div> 
+        <div class="card-body col-12" v-else> 
+         <div class="card-deck justify-content-center"> <event v-for="(event, index) in form.events" :event="event" :group="group" :form="form" :time-slot-registered.camel="false" :key="'event'+event.id" :events-overlap.camel="false"></event> 
+         </div> 
+        </div> 
+        <div class="card-footer"> 
+         <div class="row"> 
+          <div v-show="current_step > 0" class="col-6" :class="{'col-12': !canProceed}">  
+          </div> 
+          <div class="col-6" v-show="canProceed" :class="{'col-12': current_step == 0}">  
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div v-show="steps[current_step].name == 'review'" class="card" dusk="review-step"> 
+        <div class="card-header">
+         Review
+        </div> 
+        <div class="card-body"> 
+         <div class="alert alert-info text-center">
+           Please review and press Proceed to complete your submission 
+         </div> 
+         <div v-if="form.require_contact_fields || form.require_address_fields" class="col-12 pb-3"> 
+          <h4>Your Information</h4> <review-contact-fields v-if="form.require_contact_fields" :form="form" :group="group"></review-contact-fields> <review-address-fields v-if="form.require_address_fields" :form="form" :group="group"></review-address-fields> 
+         </div> 
+         <div class="col-12 pt-3 pb-3"> <review-section v-for="(section, index) of form.sections" :section="section" :key="section.id"></review-section> 
+         </div> 
+         <div class="col-12  pt-3 pb-3"> <ticket-table :total_savings="totalSavings" :registered_events="registeredEvents" :participant_types="form.participant_types" :product_bag="products" :gift_bag="gifts" :gifts_total="giftsTotal" :grand_total="total"></ticket-table> 
+         </div>  
+        </div> 
+        <div class="card-header" v-if="form.products">
+         Promotional Code
+        </div> 
+        <div class="card-body" v-if="form.products"> 
+         <div class="row"> 
+          <div class="col-lg-6 col-md-3 col-sm-6 col-xs-12"> 
+           <div class="form-inline"> 
+            <div class="form-group has-feedback border border-secondary" id="promo-code" :class="{'border-danger': invalidPromoCode, 'border-success': promoCodeApplied}"> <label for="promo_code" class="sr-only">Promo Code</label>  
+            </div> 
+            <div id="apply-promo-code" class="btn btn-primary" style="margin-left: 4px;" @click="applyPromoCode()">
+             Apply
+            </div> 
+           </div> 
+           <div> 
+            <div v-if="invalidPromoCode" id="promo-code-invalid" class="help-block with-errors" style="color:red">
+             Invalid Promo Code
+            </div> 
+            <div v-if="promoCodeApplied" id="promo-code-success" class="help-block with-errors" style="color:green">
+             Promo Code Applied
+            </div> 
+           </div> 
+          </div> 
+          <div v-if="promoCodeApplied" class="col-lg-6 col-md-3 col-sm-6 col-xs-12"> 
+           <div id="promo-code-result" data-toggle="collapse" class="hidden"> 
+            <h4 id="promo-code-result-name" v-if="appliedPromoCode" class="text-muted"> Promotion: {{ appliedPromoCode.name }}</h4> 
+            <ul id="promo-code-result-content"> 
+             <li v-for="(discountedProduct, index) in appliedPromoCode.discountedProducts"> <span v-if="appliedPromoCode.discountType == '$'"> ${{ appliedPromoCode.discountAmount }} off {{ discountedProduct.product.name }} </span> <span v-else-if="appliedPromoCode.discountType == '%'"> {{ appliedPromoCode.discountAmount }}% off {{ discountedProduct.product.name }} </span> </li> 
+            </ul> 
+            <div v-if="promoCodeFreeProducts.length > 0" id="promo-code-free-gift-input-group" class="hidden"> 
+             <h5 class="text-muted">Free Gift: Please select your choice below</h5> <select id="promo_code_free_gift" name="promo_code_free_gift" class="form-control" v-model="promoCodeFreeProductChoice"> <option disabled :value="null">Select your Gift</option> <option v-for="product in promoCodeFreeProducts" :key="product.id" :value="product"> {{ product.name }}</option> </select> 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+        <div class="card-footer"> 
+         <div class="row"> 
+          <div class="col-6">  
+          </div> 
+          <div class="col-6">  
+          </div> 
+         </div> 
+        </div> 
+       </div>  
+      </div> <cart :form="form" :gifts="gifts" :products="products" :current_step="current_step" :steps="steps" :can_proceed="canProceed" dusk="cartModal"></cart> 
+      <div id="processing-modal" class="modal" tabindex="-1" role="dialog"> 
+       <div class="modal-dialog modal-dialog-centered" role="document"> 
+        <div class="modal-content"> 
+         <div class="modal-body text-center"> <i class="fa fa-circle-o-notch fa-spin fa-3x fa-fw"></i> 
+          <p>Processing...</p> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+      <div id="error-modal" class="modal" tabindex="-1" role="dialog"> 
+       <div class="modal-dialog modal-dialog-centered" role="document"> 
+        <div class="modal-content"> 
+         <div class="modal-body text-center"> <i class="fa fa-exclamation fa-3x"></i> 
+          <p>There has been an error please try again.</p> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div>      
+ </body>
+</html>

@@ -1,0 +1,998 @@
+<!doctype html>
+<html lang="en-US"> 
+ <head>  
+  <title>Handshake</title> 
+  <meta name="csrf-param" content="authenticity_token"> 
+  <meta name="csrf-token" content="U1Nfs8HnlAONF2+rSKeozv33v2v1bp9RL0lDAPQX1AuDV+Mg15Dijbk/mdsWGsSW4Jy+Yo+yfgJQjZsfzkWxlA=="> 
+  <meta content="https://app.joinhandshake.com/" name="root_url"> 
+  <meta content="app.joinhandshake.com" name="host"> 
+  <meta content="production" name="environment_name"> 
+  <meta content="true" name="in_production"> 
+  <meta content="https://app.joinhandshake.com" name="app_url"> 
+  <meta content="039fd2e559e75f038ec07fe7be95cc73" name="current_session_id"> 
+  <meta content="{}" name="current_user_feature_flags"> 
+  <meta content="https://fmc-tf.joinhandshake.com/v1" name="frontend_metrics_collector_url"> 
+  <meta content="pk.eyJ1Ijoic2dyaW5nd2UiLCJhIjoiY2l4MHZzaGh4MDF3ejJ0cXJ0bXpydzV3cSJ9.xy6arYVqJR9NiWQTpOa3kA" name="mapbox_api_key"> 
+  <meta content="mapbox.places-permanent" name="mapbox_mode"> 
+  <meta content="df4f038c2bd26fa471ab470c80371095fc7d9dac" name="bugsnag_app_version"> 
+  <meta content="production" name="bugsnag_release_stage"> 
+  <meta content="false" name="use_fullstory"> 
+  <meta content="false" name="use_appcues"> 
+  <meta content="H7TB" name="fullstory_org_id"> 
+  <meta content="true" name="record_fullstory_session_to_segment"> 
+  <meta content="UA-58165706-2" name="google_analytics_tracking_id"> 
+  <meta content="pnQHEivdIUFd9xRvgislwwVfPIFaAskT" name="js_segment_write_key"> 
+  <meta content="877547069097759" name="facebook_app_id"> 
+  <meta content="https://itunes.apple.com/app/apple-store/id1220620171?pt=96161867&amp;mt=8" name="ios_app_base_url"> 
+  <meta content="https://play.google.com/store/apps/details?id=com.joinhandshake.student" name="android_app_base_url"> 
+  <meta content="https://handshake-production-cdn.joinhandshake.com" name="cdn_url"> 
+  <meta content="https://handshake-production-cdn.joinhandshake.com/dist/" name="webpack_public_path"> 
+  <meta content="US" name="app_region"> 
+  <meta content="$" name="currency_symbol"> 
+  <meta content="USD" name="default_currency"> 
+  <meta content="2021-10-06 03:36:23 UTC" name="server_time_at_load"> 
+  <meta content="5000" name="campaign_size_calculation_segment_max"> 
+  <meta content="true" name="should_display_us_work_authorization"> 
+  <meta content="true" name="should_display_community_college_filters"> 
+  <meta content="true" name="should_display_gpa"> 
+  <meta content="false" name="should_display_award_tracker"> 
+  <meta content="true" name="should_display_work_study"> 
+  <meta content="false" name="should_obfuscate_appcues_pii"> 
+  <meta content="true" name="should_show_job_role_group_salaries_and_locations"> 
+  <meta content="true" name="should_show_sidebar_content_in_employer_registration"> 
+  <meta content="true" name="should_recommend_similar_jobs"> 
+  <meta content="true" name="should_recommend_vf_resume_upload"> 
+  <meta content="true" name="should_allow_touchnet_and_cashnet"> 
+  <meta content="true" name="should_use_geographic_region"> 
+  <meta content="true" name="should_show_fellowship_in_fds"> 
+  <meta content="false" name="should_display_short_address_in_student_onboarding"> 
+  <meta content="false" name="should_display_language_proficiency_in_student_onboarding"> 
+  <meta content="true" name="should_display_veterans_are_underrepresented"> 
+  <meta content="true" name="should_display_fortune_500_employers"> 
+  <meta content="false" name="should_use_extra_uk_tos_language"> 
+  <meta content="https://joinhandshake.com/tos/" name="terms_of_service_url"> 
+  <meta content=".edu" name="university_email_tld"> 
+  <meta content="{&quot;alma_mater&quot;:&quot;Alma Mater&quot;,&quot;career_center&quot;:&quot;Career Center&quot;,&quot;choose_timeline&quot;:&quot;Please choose your preferred timeline before attaching jobs.&quot;,&quot;connect_to_schools&quot;:&quot;Connect to Schools&quot;,&quot;connect_with_schools&quot;:&quot;Connect with Schools&quot;,&quot;favorite&quot;:&quot;Favorite&quot;,&quot;favorited&quot;:&quot;Favorited&quot;,&quot;finalize&quot;:&quot;Finalize&quot;,&quot;is_required&quot;:&quot;is required&quot;,&quot;major&quot;:&quot;Major&quot;,&quot;organization&quot;:&quot;Organization&quot;,&quot;school&quot;:&quot;school&quot;,&quot;school_capitalized&quot;:&quot;School&quot;,&quot;schools_capitalized&quot;:&quot;Schools&quot;,&quot;schools_selected&quot;:&quot;School&quot;,&quot;survey_reorder_skip_logic_error&quot;:&quot;You cannot reorder pages in a survey that has skip logic. Please remove the skip logic and try again.&quot;,&quot;unfavorite&quot;:&quot;Unfavorite&quot;}" name="unsafe_dictionary"> 
+  <meta content="app-id=1220620171, affiliate-data=ct=smart-app-banner" name="apple-itunes-app"> 
+  <meta content="f13b7c21af3c471d16dd" name="pusher_key"> 
+  <meta content="us3" name="pusher_region"> 
+  <meta content="false" name="enable_employer_hosted_meeting_public_link"> 
+  <meta content="true" name="enable_experience_approval_custom_questions"> 
+  <meta content="true" name="enable_mobile_web_event_checkin_landing_page"> 
+  <meta content="false" name="disable_employer_registration_changes"> 
+  <meta content="true" name="enable_time_zone_modal"> 
+  <meta content="false" name="enable_segment_with_filters_from_school_exp"> 
+  <meta content="false" name="enable_employer_checkin_predefined_questions"> 
+  <meta content="true" name="enable_employer_product_announcement_modal_globally"> 
+  <meta content="https://handshake-production-cdn.joinhandshake.com/assets/filetypes/img-e9679961b6c804ca19bc4b47d3c38c6a37e2278b7c9d5e72551ea611f7f818e4.png" name="data-img"> 
+  <meta content="https://handshake-production-cdn.joinhandshake.com/assets/filetypes/pdf-ba9af1b40998255be9df7f8bb10d3ffa3382efacdbc78e06b27036f3d06a4dfc.png" name="data-pdf"> 
+  <meta content="https://handshake-production-cdn.joinhandshake.com/assets/filetypes/doc-78649465e602a9748086a660ebf97af5f4acd237af35ad58d659779f0e87ebdb.png" name="data-doc"> 
+  <meta content="https://handshake-production-cdn.joinhandshake.com/assets/filetypes/xls-323142048af78b930d776e24bdb4888831c3afb10e249a885d08bd48c200cc2d.png" name="data-xls"> 
+  <meta content="https://handshake-production-cdn.joinhandshake.com/assets/filetypes/ppt-9742f904e8d9eb8f85028b3db13dbbe6b2769abd8fe3bbdf7cef1a1c2638b6b3.png" name="data-ppt"> 
+  <meta content="https://handshake-production-cdn.joinhandshake.com/assets/filetypes/zip-f76a2671c5e9a13978bdac812db9fe7a23c87867ec563fffe8577c75cf87cf6b.png" name="data-zip"> 
+  <meta content="https://handshake-production-cdn.joinhandshake.com/assets/filetypes/mp3-d7059baf17307f49586252c01ad00203447020e0b4596fe19216ebd33cba0f1e.png" name="data-mp3">  
+  <meta content="width=device-width, initial-scale=1" name="viewport">  
+  <meta content="none" name="msapplication-config">            
+  <meta content="#ffffff" name="theme-color"> 
+ </head> 
+ <body class="login-v2"> 
+  <div class="login-v2-container"> 
+   <div class="mobile-banner"> 
+    <div class="helper-links"> 
+     <p class="sign-up-here"> No account? <b></b> </p> 
+    </div> 
+   </div> 
+   <div class="main"> 
+    <div class="absolute no-account">
+      No account? <b></b> 
+    </div> 
+    <div class="centered-container top-aligned"> 
+     <div data-bind="visible: true" data-knockout-class="NewUnknownEmailAddressView" data-knockout-props="{&quot;show_school_dropdown&quot;:true}" style="display: none">
+      <!-- ko if: show_school_dropdown --> 
+      <h1>Sign in</h1> 
+      <div data-track-impression="show-app-domain"> 
+       <h2 class="no-bottom-margin"> <span>Students &amp; Alumni</span> <span class="normal-weight-text">(USA)</span> </h2> 
+       <p>Please select your school to sign in.</p>  
+       <div class="helper-text"> <b>New to Handshake?</b> Select your school to get started. 
+       </div> 
+      </div> 
+      <div class="divider"></div> 
+      <div class="form"> 
+       <h2 class="no-bottom-margin"> <span>Employers &amp; Career Centers</span> <span class="normal-weight-text">(USA)</span> </h2> 
+       <p class="no-top-margin">Please sign in with your email.</p>  
+      </div> 
+      <p class="coming-from-uk"> <span>Coming from the UK? Visit our</span> <span></span> </p> <!-- /ko --> <!-- ko ifnot: show_school_dropdown --> 
+      <h1>Please sign in</h1> 
+      <p> Enter your email for <span data-bind="text: selected_school"></span> (use your .edu email if applicable) </p>  <!-- /ko --> 
+     </div>
+     <div class="activation-tracking"> 
+      <div class="unknown_email_address"></div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="sidebar">  
+    <div class="content"> 
+     <h1 class="marketing-title"> Get the job done &nbsp; </h1> 
+     <div class="marketing-content"> 
+      <h3>Students</h3> 
+      <p>Launch the next step in your career.</p> 
+      <h3>Employers</h3> 
+      <p>Hire the next generation of talent.</p> 
+      <h3>Career Centers</h3> 
+      <p>Bring the best jobs to your students.</p> 
+     </div> 
+     <div class="marketing-learn-more">  
+     </div> 
+    </div>    
+   </div> 
+  </div>  
+ </body>
+</html><!doctype html>
+<html lang="en-US"> 
+ <head>  
+  <title>Handshake</title> 
+  <meta name="csrf-param" content="authenticity_token"> 
+  <meta name="csrf-token" content="UCIeVFMlVI/89j00nY+yp6B2pFSz7gJ3KQY9Z99/T6g6E+eLKVGC7YK8FOm+ZonMxdHZKgPel+4lRyyHa73G8w=="> 
+  <meta content="https://ucr.joinhandshake.com/" name="root_url"> 
+  <meta content="ucr.joinhandshake.com" name="host"> 
+  <meta content="production" name="environment_name"> 
+  <meta content="true" name="in_production"> 
+  <meta content="https://app.joinhandshake.com" name="app_url"> 
+  <meta content="ce5fb9be8c881e36163f961714f17637" name="current_session_id"> 
+  <meta content="{}" name="current_user_feature_flags"> 
+  <meta content="https://fmc-tf.joinhandshake.com/v1" name="frontend_metrics_collector_url"> 
+  <meta content="pk.eyJ1Ijoic2dyaW5nd2UiLCJhIjoiY2l4MHZzaGh4MDF3ejJ0cXJ0bXpydzV3cSJ9.xy6arYVqJR9NiWQTpOa3kA" name="mapbox_api_key"> 
+  <meta content="mapbox.places-permanent" name="mapbox_mode"> 
+  <meta content="df4f038c2bd26fa471ab470c80371095fc7d9dac" name="bugsnag_app_version"> 
+  <meta content="production" name="bugsnag_release_stage"> 
+  <meta content="false" name="use_fullstory"> 
+  <meta content="false" name="use_appcues"> 
+  <meta content="H7TB" name="fullstory_org_id"> 
+  <meta content="true" name="record_fullstory_session_to_segment"> 
+  <meta content="UA-58165706-2" name="google_analytics_tracking_id"> 
+  <meta content="pnQHEivdIUFd9xRvgislwwVfPIFaAskT" name="js_segment_write_key"> 
+  <meta content="877547069097759" name="facebook_app_id"> 
+  <meta content="https://itunes.apple.com/app/apple-store/id1220620171?pt=96161867&amp;mt=8" name="ios_app_base_url"> 
+  <meta content="https://play.google.com/store/apps/details?id=com.joinhandshake.student" name="android_app_base_url"> 
+  <meta content="https://handshake-production-cdn.joinhandshake.com" name="cdn_url"> 
+  <meta content="https://handshake-production-cdn.joinhandshake.com/dist/" name="webpack_public_path"> 
+  <meta content="US" name="app_region"> 
+  <meta content="$" name="currency_symbol"> 
+  <meta content="USD" name="default_currency"> 
+  <meta content="2021-10-06 03:36:24 UTC" name="server_time_at_load"> 
+  <meta content="5000" name="campaign_size_calculation_segment_max"> 
+  <meta content="true" name="should_display_us_work_authorization"> 
+  <meta content="true" name="should_display_community_college_filters"> 
+  <meta content="true" name="should_display_gpa"> 
+  <meta content="false" name="should_display_award_tracker"> 
+  <meta content="true" name="should_display_work_study"> 
+  <meta content="false" name="should_obfuscate_appcues_pii"> 
+  <meta content="true" name="should_show_job_role_group_salaries_and_locations"> 
+  <meta content="true" name="should_show_sidebar_content_in_employer_registration"> 
+  <meta content="true" name="should_recommend_similar_jobs"> 
+  <meta content="true" name="should_recommend_vf_resume_upload"> 
+  <meta content="true" name="should_allow_touchnet_and_cashnet"> 
+  <meta content="true" name="should_use_geographic_region"> 
+  <meta content="true" name="should_show_fellowship_in_fds"> 
+  <meta content="false" name="should_display_short_address_in_student_onboarding"> 
+  <meta content="false" name="should_display_language_proficiency_in_student_onboarding"> 
+  <meta content="true" name="should_display_veterans_are_underrepresented"> 
+  <meta content="true" name="should_display_fortune_500_employers"> 
+  <meta content="false" name="should_use_extra_uk_tos_language"> 
+  <meta content="https://joinhandshake.com/tos/" name="terms_of_service_url"> 
+  <meta content=".edu" name="university_email_tld"> 
+  <meta content="{&quot;alma_mater&quot;:&quot;Alma Mater&quot;,&quot;career_center&quot;:&quot;Career Center&quot;,&quot;choose_timeline&quot;:&quot;Please choose your preferred timeline before attaching jobs.&quot;,&quot;connect_to_schools&quot;:&quot;Connect to Schools&quot;,&quot;connect_with_schools&quot;:&quot;Connect with Schools&quot;,&quot;favorite&quot;:&quot;Favorite&quot;,&quot;favorited&quot;:&quot;Favorited&quot;,&quot;finalize&quot;:&quot;Finalize&quot;,&quot;is_required&quot;:&quot;is required&quot;,&quot;major&quot;:&quot;Major&quot;,&quot;organization&quot;:&quot;Organization&quot;,&quot;school&quot;:&quot;school&quot;,&quot;school_capitalized&quot;:&quot;School&quot;,&quot;schools_capitalized&quot;:&quot;Schools&quot;,&quot;schools_selected&quot;:&quot;School&quot;,&quot;survey_reorder_skip_logic_error&quot;:&quot;You cannot reorder pages in a survey that has skip logic. Please remove the skip logic and try again.&quot;,&quot;unfavorite&quot;:&quot;Unfavorite&quot;}" name="unsafe_dictionary"> 
+  <meta content="app-id=1220620171, affiliate-data=ct=smart-app-banner" name="apple-itunes-app"> 
+  <meta content="f13b7c21af3c471d16dd" name="pusher_key"> 
+  <meta content="us3" name="pusher_region"> 
+  <meta content="false" name="enable_employer_hosted_meeting_public_link"> 
+  <meta content="true" name="enable_experience_approval_custom_questions"> 
+  <meta content="true" name="enable_mobile_web_event_checkin_landing_page"> 
+  <meta content="false" name="disable_employer_registration_changes"> 
+  <meta content="true" name="enable_time_zone_modal"> 
+  <meta content="false" name="enable_segment_with_filters_from_school_exp"> 
+  <meta content="false" name="enable_employer_checkin_predefined_questions"> 
+  <meta content="true" name="enable_employer_product_announcement_modal_globally"> 
+  <meta content="https://handshake-production-cdn.joinhandshake.com/assets/filetypes/img-e9679961b6c804ca19bc4b47d3c38c6a37e2278b7c9d5e72551ea611f7f818e4.png" name="data-img"> 
+  <meta content="https://handshake-production-cdn.joinhandshake.com/assets/filetypes/pdf-ba9af1b40998255be9df7f8bb10d3ffa3382efacdbc78e06b27036f3d06a4dfc.png" name="data-pdf"> 
+  <meta content="https://handshake-production-cdn.joinhandshake.com/assets/filetypes/doc-78649465e602a9748086a660ebf97af5f4acd237af35ad58d659779f0e87ebdb.png" name="data-doc"> 
+  <meta content="https://handshake-production-cdn.joinhandshake.com/assets/filetypes/xls-323142048af78b930d776e24bdb4888831c3afb10e249a885d08bd48c200cc2d.png" name="data-xls"> 
+  <meta content="https://handshake-production-cdn.joinhandshake.com/assets/filetypes/ppt-9742f904e8d9eb8f85028b3db13dbbe6b2769abd8fe3bbdf7cef1a1c2638b6b3.png" name="data-ppt"> 
+  <meta content="https://handshake-production-cdn.joinhandshake.com/assets/filetypes/zip-f76a2671c5e9a13978bdac812db9fe7a23c87867ec563fffe8577c75cf87cf6b.png" name="data-zip"> 
+  <meta content="https://handshake-production-cdn.joinhandshake.com/assets/filetypes/mp3-d7059baf17307f49586252c01ad00203447020e0b4596fe19216ebd33cba0f1e.png" name="data-mp3">  
+  <meta content="width=device-width, initial-scale=1" name="viewport">  
+  <meta content="none" name="msapplication-config">            
+  <meta content="#ffffff" name="theme-color"> 
+ </head> 
+ <body class="login-v2"> 
+  <div class="login-v2-container"> 
+   <div class="mobile-banner"> 
+    <div class="helper-links"> 
+     <p class="sign-up-here"> No account? <b></b> </p> 
+    </div> 
+   </div> 
+   <div class="main"> 
+    <div class="absolute no-account">
+      No account? <b></b> 
+    </div> 
+    <div class="centered-container"> 
+     <div data-bind="visible: true" data-knockout-class="NewSchoolLoginView" data-knockout-props="{}" style="display: none">
+      <div data-bind="ifnot: show"> 
+       <div class="sso-button-wrapper" data-track-impression-properties="{&quot;auth_type&quot;:&quot;cas&quot;, &quot;user_known&quot;: false}" data-track-impression="show-sso-login">  
+        <h3>University of California, Riverside (UCR)</h3> <!-- / TODO: only what to show this for one school, exploring a long term, fundamental solution in the later sprints --> 
+        <div class="sign-in-with-email-address">
+          You can also  
+         <br> (Please use your .edu address, if applicable.) 
+        </div> 
+       </div> 
+      </div> 
+      <div data-bind="if: show">   
+      </div> 
+     </div>
+     <div class="activation-tracking"> 
+      <div class="unknown_email_address"></div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="sidebar">  
+    <div class="content"> 
+     <h1 class="marketing-title"> Get the job done &nbsp; </h1> 
+     <div class="marketing-content"> 
+      <h3>Students</h3> 
+      <p>Launch the next step in your career.</p> 
+      <h3>Employers</h3> 
+      <p>Hire the next generation of talent.</p> 
+      <h3>Career Centers</h3> 
+      <p>Bring the best jobs to your students.</p> 
+     </div> 
+     <div class="marketing-learn-more">  
+     </div> 
+    </div>    
+   </div> 
+  </div>  
+ </body>
+</html><!doctype html>
+<html lang="en-US"> 
+ <head>  
+  <title>Handshake</title> 
+  <meta name="csrf-param" content="authenticity_token"> 
+  <meta name="csrf-token" content="yrb8kouvZk8F40Mnv0eVPWDyS55AcPRolwE2VWpQ6zoMraU6Tk1DV/l8Soh7esx+jrrb9r/N6wIyxqe0Uef2nQ=="> 
+  <meta content="https://ucr.joinhandshake.com/" name="root_url"> 
+  <meta content="ucr.joinhandshake.com" name="host"> 
+  <meta content="production" name="environment_name"> 
+  <meta content="true" name="in_production"> 
+  <meta content="https://app.joinhandshake.com" name="app_url"> 
+  <meta content="a96c4afeaf506b1088fe9ed1a90cb3c1" name="current_session_id"> 
+  <meta content="{}" name="current_user_feature_flags"> 
+  <meta content="https://fmc-tf.joinhandshake.com/v1" name="frontend_metrics_collector_url"> 
+  <meta content="pk.eyJ1Ijoic2dyaW5nd2UiLCJhIjoiY2l4MHZzaGh4MDF3ejJ0cXJ0bXpydzV3cSJ9.xy6arYVqJR9NiWQTpOa3kA" name="mapbox_api_key"> 
+  <meta content="mapbox.places-permanent" name="mapbox_mode"> 
+  <meta content="df4f038c2bd26fa471ab470c80371095fc7d9dac" name="bugsnag_app_version"> 
+  <meta content="production" name="bugsnag_release_stage"> 
+  <meta content="false" name="use_fullstory"> 
+  <meta content="false" name="use_appcues"> 
+  <meta content="H7TB" name="fullstory_org_id"> 
+  <meta content="true" name="record_fullstory_session_to_segment"> 
+  <meta content="UA-58165706-2" name="google_analytics_tracking_id"> 
+  <meta content="pnQHEivdIUFd9xRvgislwwVfPIFaAskT" name="js_segment_write_key"> 
+  <meta content="877547069097759" name="facebook_app_id"> 
+  <meta content="https://itunes.apple.com/app/apple-store/id1220620171?pt=96161867&amp;mt=8" name="ios_app_base_url"> 
+  <meta content="https://play.google.com/store/apps/details?id=com.joinhandshake.student" name="android_app_base_url"> 
+  <meta content="https://handshake-production-cdn.joinhandshake.com" name="cdn_url"> 
+  <meta content="https://handshake-production-cdn.joinhandshake.com/dist/" name="webpack_public_path"> 
+  <meta content="US" name="app_region"> 
+  <meta content="$" name="currency_symbol"> 
+  <meta content="USD" name="default_currency"> 
+  <meta content="2021-10-06 03:36:48 UTC" name="server_time_at_load"> 
+  <meta content="5000" name="campaign_size_calculation_segment_max"> 
+  <meta content="true" name="should_display_us_work_authorization"> 
+  <meta content="true" name="should_display_community_college_filters"> 
+  <meta content="true" name="should_display_gpa"> 
+  <meta content="false" name="should_display_award_tracker"> 
+  <meta content="true" name="should_display_work_study"> 
+  <meta content="false" name="should_obfuscate_appcues_pii"> 
+  <meta content="true" name="should_show_job_role_group_salaries_and_locations"> 
+  <meta content="true" name="should_show_sidebar_content_in_employer_registration"> 
+  <meta content="true" name="should_recommend_similar_jobs"> 
+  <meta content="true" name="should_recommend_vf_resume_upload"> 
+  <meta content="true" name="should_allow_touchnet_and_cashnet"> 
+  <meta content="true" name="should_use_geographic_region"> 
+  <meta content="true" name="should_show_fellowship_in_fds"> 
+  <meta content="false" name="should_display_short_address_in_student_onboarding"> 
+  <meta content="false" name="should_display_language_proficiency_in_student_onboarding"> 
+  <meta content="true" name="should_display_veterans_are_underrepresented"> 
+  <meta content="true" name="should_display_fortune_500_employers"> 
+  <meta content="false" name="should_use_extra_uk_tos_language"> 
+  <meta content="https://joinhandshake.com/tos/" name="terms_of_service_url"> 
+  <meta content=".edu" name="university_email_tld"> 
+  <meta content="{&quot;alma_mater&quot;:&quot;Alma Mater&quot;,&quot;career_center&quot;:&quot;Career Center&quot;,&quot;choose_timeline&quot;:&quot;Please choose your preferred timeline before attaching jobs.&quot;,&quot;connect_to_schools&quot;:&quot;Connect to Schools&quot;,&quot;connect_with_schools&quot;:&quot;Connect with Schools&quot;,&quot;favorite&quot;:&quot;Favorite&quot;,&quot;favorited&quot;:&quot;Favorited&quot;,&quot;finalize&quot;:&quot;Finalize&quot;,&quot;is_required&quot;:&quot;is required&quot;,&quot;major&quot;:&quot;Major&quot;,&quot;organization&quot;:&quot;Organization&quot;,&quot;school&quot;:&quot;school&quot;,&quot;school_capitalized&quot;:&quot;School&quot;,&quot;schools_capitalized&quot;:&quot;Schools&quot;,&quot;schools_selected&quot;:&quot;School&quot;,&quot;survey_reorder_skip_logic_error&quot;:&quot;You cannot reorder pages in a survey that has skip logic. Please remove the skip logic and try again.&quot;,&quot;unfavorite&quot;:&quot;Unfavorite&quot;}" name="unsafe_dictionary"> 
+  <meta content="app-id=1220620171, affiliate-data=ct=smart-app-banner" name="apple-itunes-app"> 
+  <meta content="f13b7c21af3c471d16dd" name="pusher_key"> 
+  <meta content="us3" name="pusher_region"> 
+  <meta content="false" name="enable_employer_hosted_meeting_public_link"> 
+  <meta content="true" name="enable_experience_approval_custom_questions"> 
+  <meta content="true" name="enable_mobile_web_event_checkin_landing_page"> 
+  <meta content="false" name="disable_employer_registration_changes"> 
+  <meta content="true" name="enable_time_zone_modal"> 
+  <meta content="false" name="enable_segment_with_filters_from_school_exp"> 
+  <meta content="false" name="enable_employer_checkin_predefined_questions"> 
+  <meta content="true" name="enable_employer_product_announcement_modal_globally"> 
+  <meta content="https://handshake-production-cdn.joinhandshake.com/assets/filetypes/img-e9679961b6c804ca19bc4b47d3c38c6a37e2278b7c9d5e72551ea611f7f818e4.png" name="data-img"> 
+  <meta content="https://handshake-production-cdn.joinhandshake.com/assets/filetypes/pdf-ba9af1b40998255be9df7f8bb10d3ffa3382efacdbc78e06b27036f3d06a4dfc.png" name="data-pdf"> 
+  <meta content="https://handshake-production-cdn.joinhandshake.com/assets/filetypes/doc-78649465e602a9748086a660ebf97af5f4acd237af35ad58d659779f0e87ebdb.png" name="data-doc"> 
+  <meta content="https://handshake-production-cdn.joinhandshake.com/assets/filetypes/xls-323142048af78b930d776e24bdb4888831c3afb10e249a885d08bd48c200cc2d.png" name="data-xls"> 
+  <meta content="https://handshake-production-cdn.joinhandshake.com/assets/filetypes/ppt-9742f904e8d9eb8f85028b3db13dbbe6b2769abd8fe3bbdf7cef1a1c2638b6b3.png" name="data-ppt"> 
+  <meta content="https://handshake-production-cdn.joinhandshake.com/assets/filetypes/zip-f76a2671c5e9a13978bdac812db9fe7a23c87867ec563fffe8577c75cf87cf6b.png" name="data-zip"> 
+  <meta content="https://handshake-production-cdn.joinhandshake.com/assets/filetypes/mp3-d7059baf17307f49586252c01ad00203447020e0b4596fe19216ebd33cba0f1e.png" name="data-mp3">  
+  <meta content="width=device-width, initial-scale=1" name="viewport">  
+  <meta content="none" name="msapplication-config">            
+  <meta content="#ffffff" name="theme-color"> 
+ </head> 
+ <body class="login-v2"> 
+  <div class="login-v2-container"> 
+   <div class="mobile-banner"> 
+    <div class="helper-links"> 
+     <p class="sign-up-here"> No account? <b></b> </p> 
+    </div> 
+   </div> 
+   <div class="main"> 
+    <div class="absolute no-account">
+      No account? <b></b> 
+    </div> 
+    <div class="centered-container"> 
+     <div data-bind="visible: true" data-knockout-class="NewSchoolLoginView" data-knockout-props="{}" style="display: none">
+      <div data-bind="ifnot: show"> 
+       <div class="sso-button-wrapper" data-track-impression-properties="{&quot;auth_type&quot;:&quot;cas&quot;, &quot;user_known&quot;: false}" data-track-impression="show-sso-login">  
+        <h3>University of California, Riverside (UCR)</h3> <!-- / TODO: only what to show this for one school, exploring a long term, fundamental solution in the later sprints --> 
+        <div class="sign-in-with-email-address">
+          You can also  
+         <br> (Please use your .edu address, if applicable.) 
+        </div> 
+       </div> 
+      </div> 
+      <div data-bind="if: show">   
+      </div> 
+     </div>
+     <div class="activation-tracking"> 
+      <div class="unknown_email_address"></div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="sidebar">  
+    <div class="content"> 
+     <h1 class="marketing-title"> Get the job done &nbsp; </h1> 
+     <div class="marketing-content"> 
+      <h3>Students</h3> 
+      <p>Launch the next step in your career.</p> 
+      <h3>Employers</h3> 
+      <p>Hire the next generation of talent.</p> 
+      <h3>Career Centers</h3> 
+      <p>Bring the best jobs to your students.</p> 
+     </div> 
+     <div class="marketing-learn-more">  
+     </div> 
+    </div>    
+   </div> 
+  </div>  
+ </body>
+</html><!doctype html>
+<html lang="en-US"> 
+ <head>  
+  <title>Handshake</title> 
+  <meta name="csrf-param" content="authenticity_token"> 
+  <meta name="csrf-token" content="PnBaCeeqLhpgtNG29sNiUKEDw2rIiRsBN0vQMNqLP7hfm34XmIu3UjuEok+iUB1OS6lsmYlnVkn21WCJBJmz8g=="> 
+  <meta content="https://ucr.joinhandshake.com/" name="root_url"> 
+  <meta content="ucr.joinhandshake.com" name="host"> 
+  <meta content="production" name="environment_name"> 
+  <meta content="true" name="in_production"> 
+  <meta content="https://app.joinhandshake.com" name="app_url"> 
+  <meta content="b2834106acf4bd8e6d673e61f4a00b50" name="current_session_id"> 
+  <meta content="{}" name="current_user_feature_flags"> 
+  <meta content="https://fmc-tf.joinhandshake.com/v1" name="frontend_metrics_collector_url"> 
+  <meta content="pk.eyJ1Ijoic2dyaW5nd2UiLCJhIjoiY2l4MHZzaGh4MDF3ejJ0cXJ0bXpydzV3cSJ9.xy6arYVqJR9NiWQTpOa3kA" name="mapbox_api_key"> 
+  <meta content="mapbox.places-permanent" name="mapbox_mode"> 
+  <meta content="df4f038c2bd26fa471ab470c80371095fc7d9dac" name="bugsnag_app_version"> 
+  <meta content="production" name="bugsnag_release_stage"> 
+  <meta content="false" name="use_fullstory"> 
+  <meta content="false" name="use_appcues"> 
+  <meta content="H7TB" name="fullstory_org_id"> 
+  <meta content="true" name="record_fullstory_session_to_segment"> 
+  <meta content="UA-58165706-2" name="google_analytics_tracking_id"> 
+  <meta content="pnQHEivdIUFd9xRvgislwwVfPIFaAskT" name="js_segment_write_key"> 
+  <meta content="877547069097759" name="facebook_app_id"> 
+  <meta content="https://itunes.apple.com/app/apple-store/id1220620171?pt=96161867&amp;mt=8" name="ios_app_base_url"> 
+  <meta content="https://play.google.com/store/apps/details?id=com.joinhandshake.student" name="android_app_base_url"> 
+  <meta content="https://handshake-production-cdn.joinhandshake.com" name="cdn_url"> 
+  <meta content="https://handshake-production-cdn.joinhandshake.com/dist/" name="webpack_public_path"> 
+  <meta content="US" name="app_region"> 
+  <meta content="$" name="currency_symbol"> 
+  <meta content="USD" name="default_currency"> 
+  <meta content="2021-10-06 03:36:49 UTC" name="server_time_at_load"> 
+  <meta content="5000" name="campaign_size_calculation_segment_max"> 
+  <meta content="true" name="should_display_us_work_authorization"> 
+  <meta content="true" name="should_display_community_college_filters"> 
+  <meta content="true" name="should_display_gpa"> 
+  <meta content="false" name="should_display_award_tracker"> 
+  <meta content="true" name="should_display_work_study"> 
+  <meta content="false" name="should_obfuscate_appcues_pii"> 
+  <meta content="true" name="should_show_job_role_group_salaries_and_locations"> 
+  <meta content="true" name="should_show_sidebar_content_in_employer_registration"> 
+  <meta content="true" name="should_recommend_similar_jobs"> 
+  <meta content="true" name="should_recommend_vf_resume_upload"> 
+  <meta content="true" name="should_allow_touchnet_and_cashnet"> 
+  <meta content="true" name="should_use_geographic_region"> 
+  <meta content="true" name="should_show_fellowship_in_fds"> 
+  <meta content="false" name="should_display_short_address_in_student_onboarding"> 
+  <meta content="false" name="should_display_language_proficiency_in_student_onboarding"> 
+  <meta content="true" name="should_display_veterans_are_underrepresented"> 
+  <meta content="true" name="should_display_fortune_500_employers"> 
+  <meta content="false" name="should_use_extra_uk_tos_language"> 
+  <meta content="https://joinhandshake.com/tos/" name="terms_of_service_url"> 
+  <meta content=".edu" name="university_email_tld"> 
+  <meta content="{&quot;alma_mater&quot;:&quot;Alma Mater&quot;,&quot;career_center&quot;:&quot;Career Center&quot;,&quot;choose_timeline&quot;:&quot;Please choose your preferred timeline before attaching jobs.&quot;,&quot;connect_to_schools&quot;:&quot;Connect to Schools&quot;,&quot;connect_with_schools&quot;:&quot;Connect with Schools&quot;,&quot;favorite&quot;:&quot;Favorite&quot;,&quot;favorited&quot;:&quot;Favorited&quot;,&quot;finalize&quot;:&quot;Finalize&quot;,&quot;is_required&quot;:&quot;is required&quot;,&quot;major&quot;:&quot;Major&quot;,&quot;organization&quot;:&quot;Organization&quot;,&quot;school&quot;:&quot;school&quot;,&quot;school_capitalized&quot;:&quot;School&quot;,&quot;schools_capitalized&quot;:&quot;Schools&quot;,&quot;schools_selected&quot;:&quot;School&quot;,&quot;survey_reorder_skip_logic_error&quot;:&quot;You cannot reorder pages in a survey that has skip logic. Please remove the skip logic and try again.&quot;,&quot;unfavorite&quot;:&quot;Unfavorite&quot;}" name="unsafe_dictionary"> 
+  <meta content="app-id=1220620171, affiliate-data=ct=smart-app-banner" name="apple-itunes-app"> 
+  <meta content="f13b7c21af3c471d16dd" name="pusher_key"> 
+  <meta content="us3" name="pusher_region"> 
+  <meta content="false" name="enable_employer_hosted_meeting_public_link"> 
+  <meta content="true" name="enable_experience_approval_custom_questions"> 
+  <meta content="true" name="enable_mobile_web_event_checkin_landing_page"> 
+  <meta content="false" name="disable_employer_registration_changes"> 
+  <meta content="true" name="enable_time_zone_modal"> 
+  <meta content="false" name="enable_segment_with_filters_from_school_exp"> 
+  <meta content="false" name="enable_employer_checkin_predefined_questions"> 
+  <meta content="true" name="enable_employer_product_announcement_modal_globally"> 
+  <meta content="https://handshake-production-cdn.joinhandshake.com/assets/filetypes/img-e9679961b6c804ca19bc4b47d3c38c6a37e2278b7c9d5e72551ea611f7f818e4.png" name="data-img"> 
+  <meta content="https://handshake-production-cdn.joinhandshake.com/assets/filetypes/pdf-ba9af1b40998255be9df7f8bb10d3ffa3382efacdbc78e06b27036f3d06a4dfc.png" name="data-pdf"> 
+  <meta content="https://handshake-production-cdn.joinhandshake.com/assets/filetypes/doc-78649465e602a9748086a660ebf97af5f4acd237af35ad58d659779f0e87ebdb.png" name="data-doc"> 
+  <meta content="https://handshake-production-cdn.joinhandshake.com/assets/filetypes/xls-323142048af78b930d776e24bdb4888831c3afb10e249a885d08bd48c200cc2d.png" name="data-xls"> 
+  <meta content="https://handshake-production-cdn.joinhandshake.com/assets/filetypes/ppt-9742f904e8d9eb8f85028b3db13dbbe6b2769abd8fe3bbdf7cef1a1c2638b6b3.png" name="data-ppt"> 
+  <meta content="https://handshake-production-cdn.joinhandshake.com/assets/filetypes/zip-f76a2671c5e9a13978bdac812db9fe7a23c87867ec563fffe8577c75cf87cf6b.png" name="data-zip"> 
+  <meta content="https://handshake-production-cdn.joinhandshake.com/assets/filetypes/mp3-d7059baf17307f49586252c01ad00203447020e0b4596fe19216ebd33cba0f1e.png" name="data-mp3">  
+  <meta content="width=device-width, initial-scale=1" name="viewport">  
+  <meta content="none" name="msapplication-config">            
+  <meta content="#ffffff" name="theme-color"> 
+ </head> 
+ <body class="login-v2"> 
+  <div class="login-v2-container"> 
+   <div class="mobile-banner"> 
+    <div class="helper-links"> 
+     <p class="sign-up-here"> No account? <b></b> </p> 
+    </div> 
+   </div> 
+   <div class="main"> 
+    <div class="absolute no-account">
+      No account? <b></b> 
+    </div> 
+    <div class="centered-container"> 
+     <div data-bind="visible: true" data-knockout-class="NewSchoolLoginView" data-knockout-props="{}" style="display: none">
+      <div data-bind="ifnot: show"> 
+       <div class="sso-button-wrapper" data-track-impression-properties="{&quot;auth_type&quot;:&quot;cas&quot;, &quot;user_known&quot;: false}" data-track-impression="show-sso-login">  
+        <h3>University of California, Riverside (UCR)</h3> <!-- / TODO: only what to show this for one school, exploring a long term, fundamental solution in the later sprints --> 
+        <div class="sign-in-with-email-address">
+          You can also  
+         <br> (Please use your .edu address, if applicable.) 
+        </div> 
+       </div> 
+      </div> 
+      <div data-bind="if: show">   
+      </div> 
+     </div>
+     <div class="activation-tracking"> 
+      <div class="unknown_email_address"></div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="sidebar">  
+    <div class="content"> 
+     <h1 class="marketing-title"> Get the job done &nbsp; </h1> 
+     <div class="marketing-content"> 
+      <h3>Students</h3> 
+      <p>Launch the next step in your career.</p> 
+      <h3>Employers</h3> 
+      <p>Hire the next generation of talent.</p> 
+      <h3>Career Centers</h3> 
+      <p>Bring the best jobs to your students.</p> 
+     </div> 
+     <div class="marketing-learn-more">  
+     </div> 
+    </div>    
+   </div> 
+  </div>  
+ </body>
+</html><!doctype html>
+<html lang="en-US"> 
+ <head>  
+  <title>Handshake</title> 
+  <meta name="csrf-param" content="authenticity_token"> 
+  <meta name="csrf-token" content="lJVldG4zIwXxjCpS8bV1cffVuSxt5Z4Ao5jfXjHZt5IR1h3UlvP69XXC0gNipN3bpZLzXLmwT8ijF8ahJpod3g=="> 
+  <meta content="https://ucr.joinhandshake.com/" name="root_url"> 
+  <meta content="ucr.joinhandshake.com" name="host"> 
+  <meta content="production" name="environment_name"> 
+  <meta content="true" name="in_production"> 
+  <meta content="https://app.joinhandshake.com" name="app_url"> 
+  <meta content="531b584c230422c5452bebe2f4812e07" name="current_session_id"> 
+  <meta content="{}" name="current_user_feature_flags"> 
+  <meta content="https://fmc-tf.joinhandshake.com/v1" name="frontend_metrics_collector_url"> 
+  <meta content="pk.eyJ1Ijoic2dyaW5nd2UiLCJhIjoiY2l4MHZzaGh4MDF3ejJ0cXJ0bXpydzV3cSJ9.xy6arYVqJR9NiWQTpOa3kA" name="mapbox_api_key"> 
+  <meta content="mapbox.places-permanent" name="mapbox_mode"> 
+  <meta content="df4f038c2bd26fa471ab470c80371095fc7d9dac" name="bugsnag_app_version"> 
+  <meta content="production" name="bugsnag_release_stage"> 
+  <meta content="false" name="use_fullstory"> 
+  <meta content="false" name="use_appcues"> 
+  <meta content="H7TB" name="fullstory_org_id"> 
+  <meta content="true" name="record_fullstory_session_to_segment"> 
+  <meta content="UA-58165706-2" name="google_analytics_tracking_id"> 
+  <meta content="pnQHEivdIUFd9xRvgislwwVfPIFaAskT" name="js_segment_write_key"> 
+  <meta content="877547069097759" name="facebook_app_id"> 
+  <meta content="https://itunes.apple.com/app/apple-store/id1220620171?pt=96161867&amp;mt=8" name="ios_app_base_url"> 
+  <meta content="https://play.google.com/store/apps/details?id=com.joinhandshake.student" name="android_app_base_url"> 
+  <meta content="https://handshake-production-cdn.joinhandshake.com" name="cdn_url"> 
+  <meta content="https://handshake-production-cdn.joinhandshake.com/dist/" name="webpack_public_path"> 
+  <meta content="US" name="app_region"> 
+  <meta content="$" name="currency_symbol"> 
+  <meta content="USD" name="default_currency"> 
+  <meta content="2021-10-06 03:36:51 UTC" name="server_time_at_load"> 
+  <meta content="5000" name="campaign_size_calculation_segment_max"> 
+  <meta content="true" name="should_display_us_work_authorization"> 
+  <meta content="true" name="should_display_community_college_filters"> 
+  <meta content="true" name="should_display_gpa"> 
+  <meta content="false" name="should_display_award_tracker"> 
+  <meta content="true" name="should_display_work_study"> 
+  <meta content="false" name="should_obfuscate_appcues_pii"> 
+  <meta content="true" name="should_show_job_role_group_salaries_and_locations"> 
+  <meta content="true" name="should_show_sidebar_content_in_employer_registration"> 
+  <meta content="true" name="should_recommend_similar_jobs"> 
+  <meta content="true" name="should_recommend_vf_resume_upload"> 
+  <meta content="true" name="should_allow_touchnet_and_cashnet"> 
+  <meta content="true" name="should_use_geographic_region"> 
+  <meta content="true" name="should_show_fellowship_in_fds"> 
+  <meta content="false" name="should_display_short_address_in_student_onboarding"> 
+  <meta content="false" name="should_display_language_proficiency_in_student_onboarding"> 
+  <meta content="true" name="should_display_veterans_are_underrepresented"> 
+  <meta content="true" name="should_display_fortune_500_employers"> 
+  <meta content="false" name="should_use_extra_uk_tos_language"> 
+  <meta content="https://joinhandshake.com/tos/" name="terms_of_service_url"> 
+  <meta content=".edu" name="university_email_tld"> 
+  <meta content="{&quot;alma_mater&quot;:&quot;Alma Mater&quot;,&quot;career_center&quot;:&quot;Career Center&quot;,&quot;choose_timeline&quot;:&quot;Please choose your preferred timeline before attaching jobs.&quot;,&quot;connect_to_schools&quot;:&quot;Connect to Schools&quot;,&quot;connect_with_schools&quot;:&quot;Connect with Schools&quot;,&quot;favorite&quot;:&quot;Favorite&quot;,&quot;favorited&quot;:&quot;Favorited&quot;,&quot;finalize&quot;:&quot;Finalize&quot;,&quot;is_required&quot;:&quot;is required&quot;,&quot;major&quot;:&quot;Major&quot;,&quot;organization&quot;:&quot;Organization&quot;,&quot;school&quot;:&quot;school&quot;,&quot;school_capitalized&quot;:&quot;School&quot;,&quot;schools_capitalized&quot;:&quot;Schools&quot;,&quot;schools_selected&quot;:&quot;School&quot;,&quot;survey_reorder_skip_logic_error&quot;:&quot;You cannot reorder pages in a survey that has skip logic. Please remove the skip logic and try again.&quot;,&quot;unfavorite&quot;:&quot;Unfavorite&quot;}" name="unsafe_dictionary"> 
+  <meta content="app-id=1220620171, affiliate-data=ct=smart-app-banner" name="apple-itunes-app"> 
+  <meta content="f13b7c21af3c471d16dd" name="pusher_key"> 
+  <meta content="us3" name="pusher_region"> 
+  <meta content="false" name="enable_employer_hosted_meeting_public_link"> 
+  <meta content="true" name="enable_experience_approval_custom_questions"> 
+  <meta content="true" name="enable_mobile_web_event_checkin_landing_page"> 
+  <meta content="false" name="disable_employer_registration_changes"> 
+  <meta content="true" name="enable_time_zone_modal"> 
+  <meta content="false" name="enable_segment_with_filters_from_school_exp"> 
+  <meta content="false" name="enable_employer_checkin_predefined_questions"> 
+  <meta content="true" name="enable_employer_product_announcement_modal_globally"> 
+  <meta content="https://handshake-production-cdn.joinhandshake.com/assets/filetypes/img-e9679961b6c804ca19bc4b47d3c38c6a37e2278b7c9d5e72551ea611f7f818e4.png" name="data-img"> 
+  <meta content="https://handshake-production-cdn.joinhandshake.com/assets/filetypes/pdf-ba9af1b40998255be9df7f8bb10d3ffa3382efacdbc78e06b27036f3d06a4dfc.png" name="data-pdf"> 
+  <meta content="https://handshake-production-cdn.joinhandshake.com/assets/filetypes/doc-78649465e602a9748086a660ebf97af5f4acd237af35ad58d659779f0e87ebdb.png" name="data-doc"> 
+  <meta content="https://handshake-production-cdn.joinhandshake.com/assets/filetypes/xls-323142048af78b930d776e24bdb4888831c3afb10e249a885d08bd48c200cc2d.png" name="data-xls"> 
+  <meta content="https://handshake-production-cdn.joinhandshake.com/assets/filetypes/ppt-9742f904e8d9eb8f85028b3db13dbbe6b2769abd8fe3bbdf7cef1a1c2638b6b3.png" name="data-ppt"> 
+  <meta content="https://handshake-production-cdn.joinhandshake.com/assets/filetypes/zip-f76a2671c5e9a13978bdac812db9fe7a23c87867ec563fffe8577c75cf87cf6b.png" name="data-zip"> 
+  <meta content="https://handshake-production-cdn.joinhandshake.com/assets/filetypes/mp3-d7059baf17307f49586252c01ad00203447020e0b4596fe19216ebd33cba0f1e.png" name="data-mp3">  
+  <meta content="width=device-width, initial-scale=1" name="viewport">  
+  <meta content="none" name="msapplication-config">            
+  <meta content="#ffffff" name="theme-color"> 
+ </head> 
+ <body class="login-v2"> 
+  <div class="login-v2-container"> 
+   <div class="mobile-banner"> 
+    <div class="helper-links"> 
+     <p class="sign-up-here"> No account? <b></b> </p> 
+    </div> 
+   </div> 
+   <div class="main"> 
+    <div class="absolute no-account">
+      No account? <b></b> 
+    </div> 
+    <div class="centered-container"> 
+     <div data-bind="visible: true" data-knockout-class="NewSchoolLoginView" data-knockout-props="{}" style="display: none">
+      <div data-bind="ifnot: show"> 
+       <div class="sso-button-wrapper" data-track-impression-properties="{&quot;auth_type&quot;:&quot;cas&quot;, &quot;user_known&quot;: false}" data-track-impression="show-sso-login">  
+        <h3>University of California, Riverside (UCR)</h3> <!-- / TODO: only what to show this for one school, exploring a long term, fundamental solution in the later sprints --> 
+        <div class="sign-in-with-email-address">
+          You can also  
+         <br> (Please use your .edu address, if applicable.) 
+        </div> 
+       </div> 
+      </div> 
+      <div data-bind="if: show">   
+      </div> 
+     </div>
+     <div class="activation-tracking"> 
+      <div class="unknown_email_address"></div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="sidebar">  
+    <div class="content"> 
+     <h1 class="marketing-title"> Get the job done &nbsp; </h1> 
+     <div class="marketing-content"> 
+      <h3>Students</h3> 
+      <p>Launch the next step in your career.</p> 
+      <h3>Employers</h3> 
+      <p>Hire the next generation of talent.</p> 
+      <h3>Career Centers</h3> 
+      <p>Bring the best jobs to your students.</p> 
+     </div> 
+     <div class="marketing-learn-more">  
+     </div> 
+    </div>    
+   </div> 
+  </div>  
+ </body>
+</html><!doctype html>
+<html lang="en-US"> 
+ <head>  
+  <title>Handshake</title> 
+  <meta name="csrf-param" content="authenticity_token"> 
+  <meta name="csrf-token" content="p9lz82pTXsO32okJWfaHZDbmsDV0XiRGhkUeRNtQB+PQkJd/2kQYbB4+EihVFmE/jD3ogx6a+BJ7OqrnCrIFkQ=="> 
+  <meta content="https://ucr.joinhandshake.com/" name="root_url"> 
+  <meta content="ucr.joinhandshake.com" name="host"> 
+  <meta content="production" name="environment_name"> 
+  <meta content="true" name="in_production"> 
+  <meta content="https://app.joinhandshake.com" name="app_url"> 
+  <meta content="da2bd162b0bb76e7a4face8219944e99" name="current_session_id"> 
+  <meta content="{}" name="current_user_feature_flags"> 
+  <meta content="https://fmc-tf.joinhandshake.com/v1" name="frontend_metrics_collector_url"> 
+  <meta content="pk.eyJ1Ijoic2dyaW5nd2UiLCJhIjoiY2l4MHZzaGh4MDF3ejJ0cXJ0bXpydzV3cSJ9.xy6arYVqJR9NiWQTpOa3kA" name="mapbox_api_key"> 
+  <meta content="mapbox.places-permanent" name="mapbox_mode"> 
+  <meta content="df4f038c2bd26fa471ab470c80371095fc7d9dac" name="bugsnag_app_version"> 
+  <meta content="production" name="bugsnag_release_stage"> 
+  <meta content="false" name="use_fullstory"> 
+  <meta content="false" name="use_appcues"> 
+  <meta content="H7TB" name="fullstory_org_id"> 
+  <meta content="true" name="record_fullstory_session_to_segment"> 
+  <meta content="UA-58165706-2" name="google_analytics_tracking_id"> 
+  <meta content="pnQHEivdIUFd9xRvgislwwVfPIFaAskT" name="js_segment_write_key"> 
+  <meta content="877547069097759" name="facebook_app_id"> 
+  <meta content="https://itunes.apple.com/app/apple-store/id1220620171?pt=96161867&amp;mt=8" name="ios_app_base_url"> 
+  <meta content="https://play.google.com/store/apps/details?id=com.joinhandshake.student" name="android_app_base_url"> 
+  <meta content="https://handshake-production-cdn.joinhandshake.com" name="cdn_url"> 
+  <meta content="https://handshake-production-cdn.joinhandshake.com/dist/" name="webpack_public_path"> 
+  <meta content="US" name="app_region"> 
+  <meta content="$" name="currency_symbol"> 
+  <meta content="USD" name="default_currency"> 
+  <meta content="2021-10-06 03:36:52 UTC" name="server_time_at_load"> 
+  <meta content="5000" name="campaign_size_calculation_segment_max"> 
+  <meta content="true" name="should_display_us_work_authorization"> 
+  <meta content="true" name="should_display_community_college_filters"> 
+  <meta content="true" name="should_display_gpa"> 
+  <meta content="false" name="should_display_award_tracker"> 
+  <meta content="true" name="should_display_work_study"> 
+  <meta content="false" name="should_obfuscate_appcues_pii"> 
+  <meta content="true" name="should_show_job_role_group_salaries_and_locations"> 
+  <meta content="true" name="should_show_sidebar_content_in_employer_registration"> 
+  <meta content="true" name="should_recommend_similar_jobs"> 
+  <meta content="true" name="should_recommend_vf_resume_upload"> 
+  <meta content="true" name="should_allow_touchnet_and_cashnet"> 
+  <meta content="true" name="should_use_geographic_region"> 
+  <meta content="true" name="should_show_fellowship_in_fds"> 
+  <meta content="false" name="should_display_short_address_in_student_onboarding"> 
+  <meta content="false" name="should_display_language_proficiency_in_student_onboarding"> 
+  <meta content="true" name="should_display_veterans_are_underrepresented"> 
+  <meta content="true" name="should_display_fortune_500_employers"> 
+  <meta content="false" name="should_use_extra_uk_tos_language"> 
+  <meta content="https://joinhandshake.com/tos/" name="terms_of_service_url"> 
+  <meta content=".edu" name="university_email_tld"> 
+  <meta content="{&quot;alma_mater&quot;:&quot;Alma Mater&quot;,&quot;career_center&quot;:&quot;Career Center&quot;,&quot;choose_timeline&quot;:&quot;Please choose your preferred timeline before attaching jobs.&quot;,&quot;connect_to_schools&quot;:&quot;Connect to Schools&quot;,&quot;connect_with_schools&quot;:&quot;Connect with Schools&quot;,&quot;favorite&quot;:&quot;Favorite&quot;,&quot;favorited&quot;:&quot;Favorited&quot;,&quot;finalize&quot;:&quot;Finalize&quot;,&quot;is_required&quot;:&quot;is required&quot;,&quot;major&quot;:&quot;Major&quot;,&quot;organization&quot;:&quot;Organization&quot;,&quot;school&quot;:&quot;school&quot;,&quot;school_capitalized&quot;:&quot;School&quot;,&quot;schools_capitalized&quot;:&quot;Schools&quot;,&quot;schools_selected&quot;:&quot;School&quot;,&quot;survey_reorder_skip_logic_error&quot;:&quot;You cannot reorder pages in a survey that has skip logic. Please remove the skip logic and try again.&quot;,&quot;unfavorite&quot;:&quot;Unfavorite&quot;}" name="unsafe_dictionary"> 
+  <meta content="app-id=1220620171, affiliate-data=ct=smart-app-banner" name="apple-itunes-app"> 
+  <meta content="f13b7c21af3c471d16dd" name="pusher_key"> 
+  <meta content="us3" name="pusher_region"> 
+  <meta content="false" name="enable_employer_hosted_meeting_public_link"> 
+  <meta content="true" name="enable_experience_approval_custom_questions"> 
+  <meta content="true" name="enable_mobile_web_event_checkin_landing_page"> 
+  <meta content="false" name="disable_employer_registration_changes"> 
+  <meta content="true" name="enable_time_zone_modal"> 
+  <meta content="false" name="enable_segment_with_filters_from_school_exp"> 
+  <meta content="false" name="enable_employer_checkin_predefined_questions"> 
+  <meta content="true" name="enable_employer_product_announcement_modal_globally"> 
+  <meta content="https://handshake-production-cdn.joinhandshake.com/assets/filetypes/img-e9679961b6c804ca19bc4b47d3c38c6a37e2278b7c9d5e72551ea611f7f818e4.png" name="data-img"> 
+  <meta content="https://handshake-production-cdn.joinhandshake.com/assets/filetypes/pdf-ba9af1b40998255be9df7f8bb10d3ffa3382efacdbc78e06b27036f3d06a4dfc.png" name="data-pdf"> 
+  <meta content="https://handshake-production-cdn.joinhandshake.com/assets/filetypes/doc-78649465e602a9748086a660ebf97af5f4acd237af35ad58d659779f0e87ebdb.png" name="data-doc"> 
+  <meta content="https://handshake-production-cdn.joinhandshake.com/assets/filetypes/xls-323142048af78b930d776e24bdb4888831c3afb10e249a885d08bd48c200cc2d.png" name="data-xls"> 
+  <meta content="https://handshake-production-cdn.joinhandshake.com/assets/filetypes/ppt-9742f904e8d9eb8f85028b3db13dbbe6b2769abd8fe3bbdf7cef1a1c2638b6b3.png" name="data-ppt"> 
+  <meta content="https://handshake-production-cdn.joinhandshake.com/assets/filetypes/zip-f76a2671c5e9a13978bdac812db9fe7a23c87867ec563fffe8577c75cf87cf6b.png" name="data-zip"> 
+  <meta content="https://handshake-production-cdn.joinhandshake.com/assets/filetypes/mp3-d7059baf17307f49586252c01ad00203447020e0b4596fe19216ebd33cba0f1e.png" name="data-mp3">  
+  <meta content="width=device-width, initial-scale=1" name="viewport">  
+  <meta content="none" name="msapplication-config">            
+  <meta content="#ffffff" name="theme-color"> 
+ </head> 
+ <body class="login-v2"> 
+  <div class="login-v2-container"> 
+   <div class="mobile-banner"> 
+    <div class="helper-links"> 
+     <p class="sign-up-here"> No account? <b></b> </p> 
+    </div> 
+   </div> 
+   <div class="main"> 
+    <div class="absolute no-account">
+      No account? <b></b> 
+    </div> 
+    <div class="centered-container"> 
+     <div data-bind="visible: true" data-knockout-class="NewSchoolLoginView" data-knockout-props="{}" style="display: none">
+      <div data-bind="ifnot: show"> 
+       <div class="sso-button-wrapper" data-track-impression-properties="{&quot;auth_type&quot;:&quot;cas&quot;, &quot;user_known&quot;: false}" data-track-impression="show-sso-login">  
+        <h3>University of California, Riverside (UCR)</h3> <!-- / TODO: only what to show this for one school, exploring a long term, fundamental solution in the later sprints --> 
+        <div class="sign-in-with-email-address">
+          You can also  
+         <br> (Please use your .edu address, if applicable.) 
+        </div> 
+       </div> 
+      </div> 
+      <div data-bind="if: show">   
+      </div> 
+     </div>
+     <div class="activation-tracking"> 
+      <div class="unknown_email_address"></div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="sidebar">  
+    <div class="content"> 
+     <h1 class="marketing-title"> Get the job done &nbsp; </h1> 
+     <div class="marketing-content"> 
+      <h3>Students</h3> 
+      <p>Launch the next step in your career.</p> 
+      <h3>Employers</h3> 
+      <p>Hire the next generation of talent.</p> 
+      <h3>Career Centers</h3> 
+      <p>Bring the best jobs to your students.</p> 
+     </div> 
+     <div class="marketing-learn-more">  
+     </div> 
+    </div>    
+   </div> 
+  </div>  
+ </body>
+</html><!doctype html>
+<html lang="en-US"> 
+ <head>  
+  <title>Handshake</title> 
+  <meta name="csrf-param" content="authenticity_token"> 
+  <meta name="csrf-token" content="VIY7aSjTedBHU8HCfIf36oza/3ylTM4xE20pG3o5mV/1GvlCfgnttSGeI6tC1filzHtiNrrHOryYP7PkslJzKg=="> 
+  <meta content="https://ucr.joinhandshake.com/" name="root_url"> 
+  <meta content="ucr.joinhandshake.com" name="host"> 
+  <meta content="production" name="environment_name"> 
+  <meta content="true" name="in_production"> 
+  <meta content="https://app.joinhandshake.com" name="app_url"> 
+  <meta content="16c442e1c7fc7a03bf16d30a39c82abb" name="current_session_id"> 
+  <meta content="{}" name="current_user_feature_flags"> 
+  <meta content="https://fmc-tf.joinhandshake.com/v1" name="frontend_metrics_collector_url"> 
+  <meta content="pk.eyJ1Ijoic2dyaW5nd2UiLCJhIjoiY2l4MHZzaGh4MDF3ejJ0cXJ0bXpydzV3cSJ9.xy6arYVqJR9NiWQTpOa3kA" name="mapbox_api_key"> 
+  <meta content="mapbox.places-permanent" name="mapbox_mode"> 
+  <meta content="df4f038c2bd26fa471ab470c80371095fc7d9dac" name="bugsnag_app_version"> 
+  <meta content="production" name="bugsnag_release_stage"> 
+  <meta content="false" name="use_fullstory"> 
+  <meta content="false" name="use_appcues"> 
+  <meta content="H7TB" name="fullstory_org_id"> 
+  <meta content="true" name="record_fullstory_session_to_segment"> 
+  <meta content="UA-58165706-2" name="google_analytics_tracking_id"> 
+  <meta content="pnQHEivdIUFd9xRvgislwwVfPIFaAskT" name="js_segment_write_key"> 
+  <meta content="877547069097759" name="facebook_app_id"> 
+  <meta content="https://itunes.apple.com/app/apple-store/id1220620171?pt=96161867&amp;mt=8" name="ios_app_base_url"> 
+  <meta content="https://play.google.com/store/apps/details?id=com.joinhandshake.student" name="android_app_base_url"> 
+  <meta content="https://handshake-production-cdn.joinhandshake.com" name="cdn_url"> 
+  <meta content="https://handshake-production-cdn.joinhandshake.com/dist/" name="webpack_public_path"> 
+  <meta content="US" name="app_region"> 
+  <meta content="$" name="currency_symbol"> 
+  <meta content="USD" name="default_currency"> 
+  <meta content="2021-10-06 03:36:53 UTC" name="server_time_at_load"> 
+  <meta content="5000" name="campaign_size_calculation_segment_max"> 
+  <meta content="true" name="should_display_us_work_authorization"> 
+  <meta content="true" name="should_display_community_college_filters"> 
+  <meta content="true" name="should_display_gpa"> 
+  <meta content="false" name="should_display_award_tracker"> 
+  <meta content="true" name="should_display_work_study"> 
+  <meta content="false" name="should_obfuscate_appcues_pii"> 
+  <meta content="true" name="should_show_job_role_group_salaries_and_locations"> 
+  <meta content="true" name="should_show_sidebar_content_in_employer_registration"> 
+  <meta content="true" name="should_recommend_similar_jobs"> 
+  <meta content="true" name="should_recommend_vf_resume_upload"> 
+  <meta content="true" name="should_allow_touchnet_and_cashnet"> 
+  <meta content="true" name="should_use_geographic_region"> 
+  <meta content="true" name="should_show_fellowship_in_fds"> 
+  <meta content="false" name="should_display_short_address_in_student_onboarding"> 
+  <meta content="false" name="should_display_language_proficiency_in_student_onboarding"> 
+  <meta content="true" name="should_display_veterans_are_underrepresented"> 
+  <meta content="true" name="should_display_fortune_500_employers"> 
+  <meta content="false" name="should_use_extra_uk_tos_language"> 
+  <meta content="https://joinhandshake.com/tos/" name="terms_of_service_url"> 
+  <meta content=".edu" name="university_email_tld"> 
+  <meta content="{&quot;alma_mater&quot;:&quot;Alma Mater&quot;,&quot;career_center&quot;:&quot;Career Center&quot;,&quot;choose_timeline&quot;:&quot;Please choose your preferred timeline before attaching jobs.&quot;,&quot;connect_to_schools&quot;:&quot;Connect to Schools&quot;,&quot;connect_with_schools&quot;:&quot;Connect with Schools&quot;,&quot;favorite&quot;:&quot;Favorite&quot;,&quot;favorited&quot;:&quot;Favorited&quot;,&quot;finalize&quot;:&quot;Finalize&quot;,&quot;is_required&quot;:&quot;is required&quot;,&quot;major&quot;:&quot;Major&quot;,&quot;organization&quot;:&quot;Organization&quot;,&quot;school&quot;:&quot;school&quot;,&quot;school_capitalized&quot;:&quot;School&quot;,&quot;schools_capitalized&quot;:&quot;Schools&quot;,&quot;schools_selected&quot;:&quot;School&quot;,&quot;survey_reorder_skip_logic_error&quot;:&quot;You cannot reorder pages in a survey that has skip logic. Please remove the skip logic and try again.&quot;,&quot;unfavorite&quot;:&quot;Unfavorite&quot;}" name="unsafe_dictionary"> 
+  <meta content="app-id=1220620171, affiliate-data=ct=smart-app-banner" name="apple-itunes-app"> 
+  <meta content="f13b7c21af3c471d16dd" name="pusher_key"> 
+  <meta content="us3" name="pusher_region"> 
+  <meta content="false" name="enable_employer_hosted_meeting_public_link"> 
+  <meta content="true" name="enable_experience_approval_custom_questions"> 
+  <meta content="true" name="enable_mobile_web_event_checkin_landing_page"> 
+  <meta content="false" name="disable_employer_registration_changes"> 
+  <meta content="true" name="enable_time_zone_modal"> 
+  <meta content="false" name="enable_segment_with_filters_from_school_exp"> 
+  <meta content="false" name="enable_employer_checkin_predefined_questions"> 
+  <meta content="true" name="enable_employer_product_announcement_modal_globally"> 
+  <meta content="https://handshake-production-cdn.joinhandshake.com/assets/filetypes/img-e9679961b6c804ca19bc4b47d3c38c6a37e2278b7c9d5e72551ea611f7f818e4.png" name="data-img"> 
+  <meta content="https://handshake-production-cdn.joinhandshake.com/assets/filetypes/pdf-ba9af1b40998255be9df7f8bb10d3ffa3382efacdbc78e06b27036f3d06a4dfc.png" name="data-pdf"> 
+  <meta content="https://handshake-production-cdn.joinhandshake.com/assets/filetypes/doc-78649465e602a9748086a660ebf97af5f4acd237af35ad58d659779f0e87ebdb.png" name="data-doc"> 
+  <meta content="https://handshake-production-cdn.joinhandshake.com/assets/filetypes/xls-323142048af78b930d776e24bdb4888831c3afb10e249a885d08bd48c200cc2d.png" name="data-xls"> 
+  <meta content="https://handshake-production-cdn.joinhandshake.com/assets/filetypes/ppt-9742f904e8d9eb8f85028b3db13dbbe6b2769abd8fe3bbdf7cef1a1c2638b6b3.png" name="data-ppt"> 
+  <meta content="https://handshake-production-cdn.joinhandshake.com/assets/filetypes/zip-f76a2671c5e9a13978bdac812db9fe7a23c87867ec563fffe8577c75cf87cf6b.png" name="data-zip"> 
+  <meta content="https://handshake-production-cdn.joinhandshake.com/assets/filetypes/mp3-d7059baf17307f49586252c01ad00203447020e0b4596fe19216ebd33cba0f1e.png" name="data-mp3">  
+  <meta content="width=device-width, initial-scale=1" name="viewport">  
+  <meta content="none" name="msapplication-config">            
+  <meta content="#ffffff" name="theme-color"> 
+ </head> 
+ <body class="login-v2"> 
+  <div class="login-v2-container"> 
+   <div class="mobile-banner"> 
+    <div class="helper-links"> 
+     <p class="sign-up-here"> No account? <b></b> </p> 
+    </div> 
+   </div> 
+   <div class="main"> 
+    <div class="absolute no-account">
+      No account? <b></b> 
+    </div> 
+    <div class="centered-container"> 
+     <div data-bind="visible: true" data-knockout-class="NewSchoolLoginView" data-knockout-props="{}" style="display: none">
+      <div data-bind="ifnot: show"> 
+       <div class="sso-button-wrapper" data-track-impression-properties="{&quot;auth_type&quot;:&quot;cas&quot;, &quot;user_known&quot;: false}" data-track-impression="show-sso-login">  
+        <h3>University of California, Riverside (UCR)</h3> <!-- / TODO: only what to show this for one school, exploring a long term, fundamental solution in the later sprints --> 
+        <div class="sign-in-with-email-address">
+          You can also  
+         <br> (Please use your .edu address, if applicable.) 
+        </div> 
+       </div> 
+      </div> 
+      <div data-bind="if: show">   
+      </div> 
+     </div>
+     <div class="activation-tracking"> 
+      <div class="unknown_email_address"></div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="sidebar">  
+    <div class="content"> 
+     <h1 class="marketing-title"> Get the job done &nbsp; </h1> 
+     <div class="marketing-content"> 
+      <h3>Students</h3> 
+      <p>Launch the next step in your career.</p> 
+      <h3>Employers</h3> 
+      <p>Hire the next generation of talent.</p> 
+      <h3>Career Centers</h3> 
+      <p>Bring the best jobs to your students.</p> 
+     </div> 
+     <div class="marketing-learn-more">  
+     </div> 
+    </div>    
+   </div> 
+  </div>  
+ </body>
+</html><!doctype html>
+<html lang="en-US"> 
+ <head>  
+  <title>Handshake</title> 
+  <meta name="csrf-param" content="authenticity_token"> 
+  <meta name="csrf-token" content="cZ8YPqzOs+BJ58k7APTde/qLldQY+HRWWk0GVeTB2+McXy+PGKngwgll+qnIsIskiKMXz07zaXkPIK0KuyZHrg=="> 
+  <meta content="https://ucr.joinhandshake.com/" name="root_url"> 
+  <meta content="ucr.joinhandshake.com" name="host"> 
+  <meta content="production" name="environment_name"> 
+  <meta content="true" name="in_production"> 
+  <meta content="https://app.joinhandshake.com" name="app_url"> 
+  <meta content="56fabaee48ee090308aefba79fc31af1" name="current_session_id"> 
+  <meta content="{}" name="current_user_feature_flags"> 
+  <meta content="https://fmc-tf.joinhandshake.com/v1" name="frontend_metrics_collector_url"> 
+  <meta content="pk.eyJ1Ijoic2dyaW5nd2UiLCJhIjoiY2l4MHZzaGh4MDF3ejJ0cXJ0bXpydzV3cSJ9.xy6arYVqJR9NiWQTpOa3kA" name="mapbox_api_key"> 
+  <meta content="mapbox.places-permanent" name="mapbox_mode"> 
+  <meta content="df4f038c2bd26fa471ab470c80371095fc7d9dac" name="bugsnag_app_version"> 
+  <meta content="production" name="bugsnag_release_stage"> 
+  <meta content="false" name="use_fullstory"> 
+  <meta content="false" name="use_appcues"> 
+  <meta content="H7TB" name="fullstory_org_id"> 
+  <meta content="true" name="record_fullstory_session_to_segment"> 
+  <meta content="UA-58165706-2" name="google_analytics_tracking_id"> 
+  <meta content="pnQHEivdIUFd9xRvgislwwVfPIFaAskT" name="js_segment_write_key"> 
+  <meta content="877547069097759" name="facebook_app_id"> 
+  <meta content="https://itunes.apple.com/app/apple-store/id1220620171?pt=96161867&amp;mt=8" name="ios_app_base_url"> 
+  <meta content="https://play.google.com/store/apps/details?id=com.joinhandshake.student" name="android_app_base_url"> 
+  <meta content="https://handshake-production-cdn.joinhandshake.com" name="cdn_url"> 
+  <meta content="https://handshake-production-cdn.joinhandshake.com/dist/" name="webpack_public_path"> 
+  <meta content="US" name="app_region"> 
+  <meta content="$" name="currency_symbol"> 
+  <meta content="USD" name="default_currency"> 
+  <meta content="2021-10-06 03:36:55 UTC" name="server_time_at_load"> 
+  <meta content="5000" name="campaign_size_calculation_segment_max"> 
+  <meta content="true" name="should_display_us_work_authorization"> 
+  <meta content="true" name="should_display_community_college_filters"> 
+  <meta content="true" name="should_display_gpa"> 
+  <meta content="false" name="should_display_award_tracker"> 
+  <meta content="true" name="should_display_work_study"> 
+  <meta content="false" name="should_obfuscate_appcues_pii"> 
+  <meta content="true" name="should_show_job_role_group_salaries_and_locations"> 
+  <meta content="true" name="should_show_sidebar_content_in_employer_registration"> 
+  <meta content="true" name="should_recommend_similar_jobs"> 
+  <meta content="true" name="should_recommend_vf_resume_upload"> 
+  <meta content="true" name="should_allow_touchnet_and_cashnet"> 
+  <meta content="true" name="should_use_geographic_region"> 
+  <meta content="true" name="should_show_fellowship_in_fds"> 
+  <meta content="false" name="should_display_short_address_in_student_onboarding"> 
+  <meta content="false" name="should_display_language_proficiency_in_student_onboarding"> 
+  <meta content="true" name="should_display_veterans_are_underrepresented"> 
+  <meta content="true" name="should_display_fortune_500_employers"> 
+  <meta content="false" name="should_use_extra_uk_tos_language"> 
+  <meta content="https://joinhandshake.com/tos/" name="terms_of_service_url"> 
+  <meta content=".edu" name="university_email_tld"> 
+  <meta content="{&quot;alma_mater&quot;:&quot;Alma Mater&quot;,&quot;career_center&quot;:&quot;Career Center&quot;,&quot;choose_timeline&quot;:&quot;Please choose your preferred timeline before attaching jobs.&quot;,&quot;connect_to_schools&quot;:&quot;Connect to Schools&quot;,&quot;connect_with_schools&quot;:&quot;Connect with Schools&quot;,&quot;favorite&quot;:&quot;Favorite&quot;,&quot;favorited&quot;:&quot;Favorited&quot;,&quot;finalize&quot;:&quot;Finalize&quot;,&quot;is_required&quot;:&quot;is required&quot;,&quot;major&quot;:&quot;Major&quot;,&quot;organization&quot;:&quot;Organization&quot;,&quot;school&quot;:&quot;school&quot;,&quot;school_capitalized&quot;:&quot;School&quot;,&quot;schools_capitalized&quot;:&quot;Schools&quot;,&quot;schools_selected&quot;:&quot;School&quot;,&quot;survey_reorder_skip_logic_error&quot;:&quot;You cannot reorder pages in a survey that has skip logic. Please remove the skip logic and try again.&quot;,&quot;unfavorite&quot;:&quot;Unfavorite&quot;}" name="unsafe_dictionary"> 
+  <meta content="app-id=1220620171, affiliate-data=ct=smart-app-banner" name="apple-itunes-app"> 
+  <meta content="f13b7c21af3c471d16dd" name="pusher_key"> 
+  <meta content="us3" name="pusher_region"> 
+  <meta content="false" name="enable_employer_hosted_meeting_public_link"> 
+  <meta content="true" name="enable_experience_approval_custom_questions"> 
+  <meta content="true" name="enable_mobile_web_event_checkin_landing_page"> 
+  <meta content="false" name="disable_employer_registration_changes"> 
+  <meta content="true" name="enable_time_zone_modal"> 
+  <meta content="false" name="enable_segment_with_filters_from_school_exp"> 
+  <meta content="false" name="enable_employer_checkin_predefined_questions"> 
+  <meta content="true" name="enable_employer_product_announcement_modal_globally"> 
+  <meta content="https://handshake-production-cdn.joinhandshake.com/assets/filetypes/img-e9679961b6c804ca19bc4b47d3c38c6a37e2278b7c9d5e72551ea611f7f818e4.png" name="data-img"> 
+  <meta content="https://handshake-production-cdn.joinhandshake.com/assets/filetypes/pdf-ba9af1b40998255be9df7f8bb10d3ffa3382efacdbc78e06b27036f3d06a4dfc.png" name="data-pdf"> 
+  <meta content="https://handshake-production-cdn.joinhandshake.com/assets/filetypes/doc-78649465e602a9748086a660ebf97af5f4acd237af35ad58d659779f0e87ebdb.png" name="data-doc"> 
+  <meta content="https://handshake-production-cdn.joinhandshake.com/assets/filetypes/xls-323142048af78b930d776e24bdb4888831c3afb10e249a885d08bd48c200cc2d.png" name="data-xls"> 
+  <meta content="https://handshake-production-cdn.joinhandshake.com/assets/filetypes/ppt-9742f904e8d9eb8f85028b3db13dbbe6b2769abd8fe3bbdf7cef1a1c2638b6b3.png" name="data-ppt"> 
+  <meta content="https://handshake-production-cdn.joinhandshake.com/assets/filetypes/zip-f76a2671c5e9a13978bdac812db9fe7a23c87867ec563fffe8577c75cf87cf6b.png" name="data-zip"> 
+  <meta content="https://handshake-production-cdn.joinhandshake.com/assets/filetypes/mp3-d7059baf17307f49586252c01ad00203447020e0b4596fe19216ebd33cba0f1e.png" name="data-mp3">  
+  <meta content="width=device-width, initial-scale=1" name="viewport">  
+  <meta content="none" name="msapplication-config">            
+  <meta content="#ffffff" name="theme-color"> 
+ </head> 
+ <body class="login-v2"> 
+  <div class="login-v2-container"> 
+   <div class="mobile-banner"> 
+    <div class="helper-links"> 
+     <p class="sign-up-here"> No account? <b></b> </p> 
+    </div> 
+   </div> 
+   <div class="main"> 
+    <div class="absolute no-account">
+      No account? <b></b> 
+    </div> 
+    <div class="centered-container"> 
+     <div data-bind="visible: true" data-knockout-class="NewSchoolLoginView" data-knockout-props="{}" style="display: none">
+      <div data-bind="ifnot: show"> 
+       <div class="sso-button-wrapper" data-track-impression-properties="{&quot;auth_type&quot;:&quot;cas&quot;, &quot;user_known&quot;: false}" data-track-impression="show-sso-login">  
+        <h3>University of California, Riverside (UCR)</h3> <!-- / TODO: only what to show this for one school, exploring a long term, fundamental solution in the later sprints --> 
+        <div class="sign-in-with-email-address">
+          You can also  
+         <br> (Please use your .edu address, if applicable.) 
+        </div> 
+       </div> 
+      </div> 
+      <div data-bind="if: show">   
+      </div> 
+     </div>
+     <div class="activation-tracking"> 
+      <div class="unknown_email_address"></div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="sidebar">  
+    <div class="content"> 
+     <h1 class="marketing-title"> Get the job done &nbsp; </h1> 
+     <div class="marketing-content"> 
+      <h3>Students</h3> 
+      <p>Launch the next step in your career.</p> 
+      <h3>Employers</h3> 
+      <p>Hire the next generation of talent.</p> 
+      <h3>Career Centers</h3> 
+      <p>Bring the best jobs to your students.</p> 
+     </div> 
+     <div class="marketing-learn-more">  
+     </div> 
+    </div>    
+   </div> 
+  </div>  
+ </body>
+</html>

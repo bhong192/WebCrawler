@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en"> 
+ <head> 
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+  <meta charset="utf-8"> 
+  <meta name="dir" content="ltr"> 
+  <meta name="synchronizerToken" content="f9b0731e-adcf-42d4-b4b4-8b2db126a462"> 
+  <meta name="logLevel" content="ERROR"> 
+  <meta name="maxInactiveInterval" content="1800"> 
+  <meta name="transactionTimeout" content="300"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <meta name="apple-mobile-web-app-capable" content="yes">  
+  <meta name="keepAliveURL" content="/StudentRegistrationSsb/ssb/keepAlive/data"> 
+  <meta name="ssbMepDesc" content=""> 
+  <meta name="fullName" content=""> 
+  <meta name="loginEndpoint" content=""> 
+  <meta name="logoutEndpoint" content=""> 
+  <meta name="guestLoginEnabled" content="false"> 
+  <meta name="guestAuthenticationEnabled" content=""> 
+  <meta name="globalGuestProxyBaseURL" content=""> 
+  <meta name="userLocale" content="en_US"> 
+  <meta name="footerFadeAwayTime" content="10000"> 
+  <meta name="hideSSBHeaderComps" content="false"> 
+  <meta name="aboutUrl" content=""> 
+  <meta name="privacyPolicyUrl" content=""> 
+  <meta name="aboutUrlContextPath" content="/StudentRegistrationSsb/ssb"> 
+  <meta name="hasActiveActionItems" content=""> 
+  <meta name="aipUrl" content="">   
+  <title>Select a Term</title>                
+  <meta name="layout" content="bannerWebPage">   
+  <meta name="menuEndPoint" content="/StudentRegistrationSsb/ssb/selfServiceMenu/data"> 
+  <meta name="menuBaseURL" content="/StudentRegistrationSsb/ssb"> 
+  <meta name="headerAttributes" content="">       
+ </head> 
+ <body> 
+  <div id="splash"></div> 
+  <div id="spinner" class="spinner spinner-img" style="display:none;"> 
+  </div>  
+  <div id="dialogAppDiv"></div> 
+  <div id="userPreferenceDiv" dir="auto"> <xe-popup-modal show="modalShown" focusbackelement="tools" pageheader="Language Setting"> 
+    <popup-content ng-if="showDiv"> 
+     <div> <xe-ui-select id="preference" ng-model="language.selected" theme="select2" ng-required="true" text-selected="description"> 
+       <xe-ui-select-match placeholder="Select your Language">
+        <span ng-bind="$select.selected.description"></span>
+       </xe-ui-select-match> 
+       <xe-ui-select-choices repeat="localeLang in localeList | propsFilter: {description: $select.search}"> 
+        <div ng-bind-html="localeLang.description | highlight: $select.search"></div> 
+       </xe-ui-select-choices> 
+      </xe-ui-select> 
+     </div> 
+    </popup-content> 
+    <popup-buttons> 
+     <xe-button ng-click="saveLocale()" id="saveLanguage" xe-disabled="disableButton" xe-type="primary" xe-label="Save"></xe-button> 
+    </popup-buttons> 
+   </xe-popup-modal> 
+  </div> 
+  <div ng-cloak id="shortcut_module_added" dir="auto"> <xe-popup-modal show="modalShown" focusbackelement="tools" pageheader="Keyboard shortcuts"> 
+    <popup-content> 
+     <div> 
+      <div ng-repeat="bannershortcut in shortcutObj" class="banner_aria-shortcut_{{$index}}" ng-class="banner_shortcut_{{$id}} ? 'shortcut-container-collapse' : 'shortcut-container-expanded'"> <span class="content-heading-shortcut" tabindex="0" ng-keydown="showDescription($event)" data-ng-bind="bannershortcut.sectionHeading" ng-click="showDescription($event)"></span> <span class="shortcutAccordion" ng-keydown="showDescription($event)" ng-click="showDescription($event)" ng-class="!banner_shortcut_{{$id}} ? 'up' : 'down'"></span> 
+       <div class="banner-shortcut banner_shortcut_{{$index}}" id="banner_shortcut_{{$id}}" ng-show="!banner_shortcut_{{$id}}"> 
+        <div class="shortcut-row" ng-repeat="hotkey in bannershortcut.shortcutList"> 
+         <div class="shortcut-description" aria-label="{{hotkey.description}}" data-ng-bind="hotkey.description"></div> 
+         <div class="column-container"> <span ng-repeat-start="item in hotkey.combo" class="chicklet" data-ng-bind="item"></span>
+          <div class="delimiter-shortcut" ng-repeat-end ng-if="!$last">
+           &nbsp;
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </popup-content> 
+   </xe-popup-modal> 
+  </div>    
+  <main id="content" role="main"> 
+   <div class="custom-css-class"> 
+    <div id="title-panel" class="aurora-theme"></div> 
+   </div> 
+   <div class="ui-layout-north inner-north" id="inner-north"></div> 
+   <div class="ui-layout-center inner-center overflow-pane" id="inner-center"> 
+    <div class="body-wrapper"> 
+     <div class="body-content"> 
+      <div class="overlay"></div> 
+      <div id="term-date-selection" tabindex="0" class="ui-widget-content  vertical-form labels-above"> 
+       <div id="term-buttons"> 
+        <fieldset role="form"> <legend>Select a Term</legend> 
+         <div id="term-select" role="search"> 
+         </div> 
+         <div id="term-window"> 
+          <div id="term-search-combobox"> <label class="form-row" for="txt_term"> Select a Term for Class Search </label>  
+           <br> 
+           <div id="searchAdvisee"> 
+           </div> 
+          </div> 
+          <div id="search-dates"> <label id="startDate-label" class="datePicker form-row" for="startDatepicker">Start Date</label> 
+           <div class="search-date"> 
+           </div> <label id="endDate-label" class="datePicker form-row" for="endDatepicker">End Date</label> 
+           <div class="search-date"> 
+           </div> 
+          </div> 
+         </div> 
+        </fieldset> 
+       </div> 
+       <div id="termStudentEligibilityErrors"></div> 
+       <div class="form-end-controls">  
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </main> 
+  <div id="popups-container"></div>     
+ </body>
+</html><!doctype html>
+<html lang="en"> 
+ <head> 
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+  <meta charset="utf-8"> 
+  <meta name="dir" content="ltr"> 
+  <meta name="synchronizerToken" content="6c15e7bc-16b8-4728-9ae2-afdd63c459e4"> 
+  <meta name="logLevel" content="ERROR"> 
+  <meta name="maxInactiveInterval" content="1800"> 
+  <meta name="transactionTimeout" content="300"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <meta name="apple-mobile-web-app-capable" content="yes">  
+  <meta name="keepAliveURL" content="/StudentRegistrationSsb/ssb/keepAlive/data"> 
+  <meta name="ssbMepDesc" content=""> 
+  <meta name="fullName" content=""> 
+  <meta name="loginEndpoint" content=""> 
+  <meta name="logoutEndpoint" content=""> 
+  <meta name="guestLoginEnabled" content="false"> 
+  <meta name="guestAuthenticationEnabled" content=""> 
+  <meta name="globalGuestProxyBaseURL" content=""> 
+  <meta name="userLocale" content="en_US"> 
+  <meta name="footerFadeAwayTime" content="10000"> 
+  <meta name="hideSSBHeaderComps" content="false"> 
+  <meta name="aboutUrl" content=""> 
+  <meta name="privacyPolicyUrl" content=""> 
+  <meta name="aboutUrlContextPath" content="/StudentRegistrationSsb/ssb"> 
+  <meta name="hasActiveActionItems" content=""> 
+  <meta name="aipUrl" content="">   
+  <title>Select a Term</title>                
+  <meta name="layout" content="bannerWebPage">   
+  <meta name="menuEndPoint" content="/StudentRegistrationSsb/ssb/selfServiceMenu/data"> 
+  <meta name="menuBaseURL" content="/StudentRegistrationSsb/ssb"> 
+  <meta name="headerAttributes" content="">       
+ </head> 
+ <body> 
+  <div id="splash"></div> 
+  <div id="spinner" class="spinner spinner-img" style="display:none;"> 
+  </div>  
+  <div id="dialogAppDiv"></div> 
+  <div id="userPreferenceDiv" dir="auto"> <xe-popup-modal show="modalShown" focusbackelement="tools" pageheader="Language Setting"> 
+    <popup-content ng-if="showDiv"> 
+     <div> <xe-ui-select id="preference" ng-model="language.selected" theme="select2" ng-required="true" text-selected="description"> 
+       <xe-ui-select-match placeholder="Select your Language">
+        <span ng-bind="$select.selected.description"></span>
+       </xe-ui-select-match> 
+       <xe-ui-select-choices repeat="localeLang in localeList | propsFilter: {description: $select.search}"> 
+        <div ng-bind-html="localeLang.description | highlight: $select.search"></div> 
+       </xe-ui-select-choices> 
+      </xe-ui-select> 
+     </div> 
+    </popup-content> 
+    <popup-buttons> 
+     <xe-button ng-click="saveLocale()" id="saveLanguage" xe-disabled="disableButton" xe-type="primary" xe-label="Save"></xe-button> 
+    </popup-buttons> 
+   </xe-popup-modal> 
+  </div> 
+  <div ng-cloak id="shortcut_module_added" dir="auto"> <xe-popup-modal show="modalShown" focusbackelement="tools" pageheader="Keyboard shortcuts"> 
+    <popup-content> 
+     <div> 
+      <div ng-repeat="bannershortcut in shortcutObj" class="banner_aria-shortcut_{{$index}}" ng-class="banner_shortcut_{{$id}} ? 'shortcut-container-collapse' : 'shortcut-container-expanded'"> <span class="content-heading-shortcut" tabindex="0" ng-keydown="showDescription($event)" data-ng-bind="bannershortcut.sectionHeading" ng-click="showDescription($event)"></span> <span class="shortcutAccordion" ng-keydown="showDescription($event)" ng-click="showDescription($event)" ng-class="!banner_shortcut_{{$id}} ? 'up' : 'down'"></span> 
+       <div class="banner-shortcut banner_shortcut_{{$index}}" id="banner_shortcut_{{$id}}" ng-show="!banner_shortcut_{{$id}}"> 
+        <div class="shortcut-row" ng-repeat="hotkey in bannershortcut.shortcutList"> 
+         <div class="shortcut-description" aria-label="{{hotkey.description}}" data-ng-bind="hotkey.description"></div> 
+         <div class="column-container"> <span ng-repeat-start="item in hotkey.combo" class="chicklet" data-ng-bind="item"></span>
+          <div class="delimiter-shortcut" ng-repeat-end ng-if="!$last">
+           &nbsp;
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </popup-content> 
+   </xe-popup-modal> 
+  </div>    
+  <main id="content" role="main"> 
+   <div class="custom-css-class"> 
+    <div id="title-panel" class="aurora-theme"></div> 
+   </div> 
+   <div class="ui-layout-north inner-north" id="inner-north"></div> 
+   <div class="ui-layout-center inner-center overflow-pane" id="inner-center"> 
+    <div class="body-wrapper"> 
+     <div class="body-content"> 
+      <div class="overlay"></div> 
+      <div id="term-date-selection" tabindex="0" class="ui-widget-content  vertical-form labels-above"> 
+       <div id="term-buttons"> 
+        <fieldset role="form"> <legend>Select a Term</legend> 
+         <div id="term-select" role="search"> 
+         </div> 
+         <div id="term-window"> 
+          <div id="term-search-combobox"> <label class="form-row" for="txt_term"> Select a Term for Class Search </label>  
+           <br> 
+           <div id="searchAdvisee"> 
+           </div> 
+          </div> 
+          <div id="search-dates"> <label id="startDate-label" class="datePicker form-row" for="startDatepicker">Start Date</label> 
+           <div class="search-date"> 
+           </div> <label id="endDate-label" class="datePicker form-row" for="endDatepicker">End Date</label> 
+           <div class="search-date"> 
+           </div> 
+          </div> 
+         </div> 
+        </fieldset> 
+       </div> 
+       <div id="termStudentEligibilityErrors"></div> 
+       <div class="form-end-controls">  
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </main> 
+  <div id="popups-container"></div>     
+ </body>
+</html>

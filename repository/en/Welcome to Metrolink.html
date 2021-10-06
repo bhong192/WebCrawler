@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="en"> 
+ <head> <!-- Google Tag Manager -->  <!-- End Google Tag Manager --> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=10"> 
+  <meta name="title" content="Welcome to Metrolink"> 
+  <meta name="description" content="Metrolink is Southern California's premier regional passenger rail system serving over 55 stations across the region. Plan your trip or view train schedules, fares, and more!"> 
+  <meta name="keywords" content=""> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <meta property="og:url" content="https://www.metrolinktrains.com/"> 
+  <meta property="og:title" content="Welcome to Metrolink"> 
+  <meta property="og:description" content="Metrolink is Southern California's premier regional passenger rail system serving over 55 stations across the region. Plan your trip or view train schedules, fares, and more!"> 
+  <meta property="og:image" content="https://www.metrolinktrains.com"> 
+  <meta name="twitter:card"> 
+  <meta name="twitter:title" content="Welcome to Metrolink"> 
+  <meta name="twitter:description" content="Metrolink is Southern California's premier regional passenger rail system serving over 55 stations across the region. Plan your trip or view train schedules, fares, and more!"> 
+  <meta name="twitter:image" content="https://www.metrolinktrains.com"> 
+  <title>Welcome to Metrolink</title>      <!-- This GA script is used to track Google Translate events, only works on https -->  
+ </head> 
+ <body> <!-- Google Tag Manager (noscript) -->  <!-- End Google Tag Manager (noscript) --> 
+  <header class="header">  
+   <div class="siteNav"> 
+    <div class="siteNav__header">   
+    </div> 
+    <div class="siteNav__navigation collapse" id="siteNavigation" aria-expanded="false">   
+    </div> 
+   </div> 
+  </header> 
+  <div class="alerts"> 
+  </div> 
+  <main class="pageContent" id="mainPageContent"> <!-- Homepage Rotator --> 
+   <div class="rd-rotator js--rd-rotator"> 
+    <div class="rd-rotator__content-wrapper  rd-rotator__content-wrapper--left" data-bg-img="/globalassets/startpage/slider/safety-campaign.png"> 
+     <div class="rd-rotator__content rd-rotator__content--white"> <span class="rd-rotator__kicker">Your Safety is our Priority</span> 
+      <h1 class="rd-rotator__title">Rail Safety Month</h1>  
+     </div> 
+    </div> 
+    <div class="rd-rotator__content-wrapper rd-rotator__content-wrapper--has-gradient " data-bg-img="/globalassets/startpage/slider/flexpass_webbanner_v2.jpg"> 
+     <div class="rd-rotator__content rd-rotator__content--white"> <span class="rd-rotator__kicker">EXCLUSIVELY ON THE MOBILE APP</span> 
+      <h1 class="rd-rotator__title">5-DAY FLEX PASS</h1>  
+     </div> 
+    </div> 
+    <div class="rd-rotator__content-wrapper rd-rotator__content-wrapper--has-gradient " data-bg-img="/globalassets/startpage/slider/template3.jpg"> 
+     <div class="rd-rotator__content rd-rotator__content--white"> <span class="rd-rotator__kicker">Keeping Safe</span> 
+      <h1 class="rd-rotator__title">safety is a shared responsibility</h1>  
+     </div> 
+    </div> 
+   </div> <!-- Homepage Tabs - Schedule Picker and Advisories --> 
+   <div class="rd-tabs"> 
+    <ul class="rd-tabs__tabs tabs clearfix" data-tabgroup="first-tab-group"> 
+     <li></li> 
+     <li></li> 
+    </ul> 
+    <section id="first-tab-group" class="tabgroup"> 
+     <div id="tab1" class="rd-tabs__schedule-picker"> 
+      <div class="home__schedulePicker"> 
+       <div class="home__schedule-wrapper" id="homeSchedulePicker"> 
+        <div class="schedule-picker-wrapper"> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+     <div id="tab2" class="rd-tabs__advisories"> 
+      <div class="collapse in home__collapse--mobile-only" id="homeAdvisories"> 
+       <div id="advisoryDetails"> <!-- <div v-if="!isHomepage" class="row">
+            <div class="col-xs-6">
+                <h2 class="h-L2 margin-bottom-none advisory__header">Lines</h2>
+            </div>
+            <div class="col-xs-6">
+                <div class="pull-right">
+                    <div class="input-group input-group--checkbox margin-bottom-none">
+                        <input type="checkbox" id="checkAll" class="input-group__field" v-model="showAll">
+                        <label for="checkAll" class="input-group__label">All Lines</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div v-if="!isHomepage" class="row">
+            <div class="col-lg-12">
+                <hr/>
+            </div>
+        </div>
+        <div v-if="isHomepage" class="row">
+            <div class="col-lg-12">
+                <p class="advisoryMoreInfoHomepage">Select a train line to view advisories.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="lineFilter">
+                    <template v-for="serviceLine in advisoriesData.ServiceLines">
+                        <a v-if="isHomepage" href="/train-status/" class="lineFilter__link" v-bind:class="['lineFilter__link--' + serviceLine.replace(/\//g, '-').replace(/\s+/g, '-'), {'lineFilter__link--inactive': filteredTo8Hours[serviceLine].length === 0}]">
+                            {{serviceLine}}
+                            <span v-if="filteredTo8Hours[serviceLine].length > 0" class="lineFilter__count">{{filteredTo8Hours[serviceLine].length}}</span>
+                        </a>
+                        <div v-else class="lineFilter__line" v-bind:class="['lineFilter__line--' + serviceLine.replace(/\//g, '-').replace(/\s+/g, '-'), { 'lineFilter__line--selected': selectedLines.indexOf(serviceLine) > -1 }]">
+                            <input class="lineFilter__checkbox" type="checkbox" v-bind:id="serviceLine.replace(/\//g, '-').replace(/\s+/g, '-')" v-bind:value="serviceLine" v-model="selectedLines"/>
+                            <label class="lineFilter__toggle" v-bind:for="serviceLine.replace(/\//g, '-').replace(/\s+/g, '-')">{{serviceLine.replace(/\-/g, ' - ')}} {{serviceLine.SafeLineAbbreviation}}</label>
+                        </div>
+                    </template>
+                </div>
+            </div>
+        </div>
+        <div v-if="!isHomepage" class="row margin-top-md margin-bottom-lg">
+            <div class="advisoriesContent">
+                <div class="col-md-6">
+                    <h2 class="h-L2 text--centered">Service Advisories</h2>
+                    <div class="advisories__wrap advisories__wrap--service">
+                        <ul class="advisories">
+                            <template v-for="advisory in serviceAdvisories">
+                                <li class="advisory advisory--service" :class="'advisory--' + advisory.Line.replace(/\//g, '-')" v-if="advisory.Type ==='Service Advisory'">
+                                    <h3 class="h-M advisory__line">{{advisory.FullLine}}</h3>
+                                    <span class="advisory__time">{{advisory.Timestamp}}</span>
+                                    <p class="advisory__message">{{advisory.Message}}</p>
+                                </li>
+                            </template>
+                        </ul>
+                        <p class="text--centered"><em>{{serviceAdvisoriesErrorMsg}}</em>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h2 class="h-L2 text--centered">Planned Advisories</h2>
+                    <div class="advisories__wrap advisories__wrap--planned">
+                        <ul class="advisories">
+                            <template v-for="advisory in plannedAdvisories">
+                                <li class="advisory advisory--planned" :class="'advisory--' + advisory.Line.replace(/\//g, '-')" v-if="advisory.Type ==='Planned Advisory'">
+                                    <h3 class="h-M advisory__line">{{advisory.FullLine}}</h3>
+                                    <span class="advisory__time"><strong>Dates Affected:</strong> {{advisory.DateRangeOutput}}</span>
+                                    <a v-bind:href="advisory.DetailsPage" class="advisory__message">{{advisory.Message}} <strong>Read More</strong></a>
+                                </li>
+                            </template>
+                        </ul>
+                        <p class="text--centered"><em>{{plannedAdvisoriesErrorMsg}}</em>
+                        </p>
+                    </div>
+                </div>
+                <span class="advisories__divider"></span>
+            </div>
+        </div>
+            <div v-if="!isHomepage" class="row">
+                <div class="col-lg-12">
+                    <a href="/train-status/?adv=home" class="btn btn--solid btn--centered text--centered">View All Advisories</a>
+                </div>
+            </div>
+ --> 
+       </div> 
+       <div id="trainStatusAdvisories" class="accordionAdvisories"> 
+        <div v-if="lineData.length === 0"> 
+         <p class="accordionAdvisories__no-advisories"> There are currently no advisories. </p> 
+        </div> 
+        <div class="accordionAdvisories__advisory" v-for="line in lineData" v-if="line.ServiceAdvisories.length > 0"> 
+         <div class="accordionAdvisories__advisory-top-content" :class="'accordionAdvisories__advisory-top-content--' + line.LineAbbreviation.replace('/', '-')"> 
+          <div> 
+           <h4>{{line.Line}}</h4> 
+           <p>Latest: {{line.ServiceAdvisories[0].Timestamp.split(" ")[1]}} {{line.ServiceAdvisories[0].Timestamp.split(" ")[2]}}&nbsp;&nbsp;{{line.ServiceAdvisories[0].Timestamp.split(" ")[0]}}</p> 
+          </div> 
+          <div class="accordionAdvisories__icon-holder"> 
+           <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 48.81 44.02">
+            <title>{{line.ServiceAdvisories.length}} Advisories</title> <g> 
+             <path d="M24.4 3c1.14 0 2.39 1 3.41 2.79l17 29.35c1 1.77 1.29 3.35.72 4.34s-2.13 1.55-4.13 1.55h-34c-2 0-3.54-.57-4.11-1.55s-.31-2.57.72-4.34l17-29.35c1-1.77 2.27-2.79 3.41-2.79m0-3c-2.2 0-4.38 1.43-6.02 4.3l-17 29.34c-3.3 5.71-.6 10.39 6 10.39h34c6.6 0 9.3-4.68 6-10.39L30.4 4.3c-1.64-2.87-3.82-4.3-6-4.3z" fill="#e24912" /> 
+             <text x="24" y="32" font-size="18" font-weight="bold" text-anchor="middle" textlength="20">
+              {{line.ServiceAdvisories.length}}
+             </text> 
+            </g> 
+           </svg>  
+          </div> 
+         </div> 
+         <div class="accordionAdvisories__advisory-additional-content" aria-expanded="false"> 
+          <div> 
+           <div class="accordionAdvisories__advisory-section"> 
+            <h4>Service Advisories</h4> 
+            <div> 
+             <div class="accordionAdvisories__service-advisory" v-for="serviceAdvisory in line.ServiceAdvisories.filter(function(advisory){return advisory.Type === 'Service Advisory'})" v-if="line.ServiceAdvisories.filter(function(advisory){return advisory.Type === 'Service Advisory'}).length > 0"> 
+              <svg role="img" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 48.81 44.02">
+               <title>Exclamation Triangle</title><path d="M24.4 3c1.14 0 2.39 1 3.41 2.79l17 29.35c1 1.77 1.29 3.35.72 4.34s-2.13 1.55-4.13 1.55h-34c-2 0-3.54-.57-4.11-1.55s-.31-2.57.72-4.34l17-29.35c1-1.77 2.27-2.79 3.41-2.79m0-3c-2.2 0-4.38 1.43-6.02 4.3l-17 29.34c-3.3 5.71-.6 10.39 6 10.39h34c6.6 0 9.3-4.68 6-10.39L30.4 4.3c-1.64-2.87-3.82-4.3-6-4.3z" fill="#e24912" /><path d="M24.4 28.92a2.16 2.16 0 0 1-2.29-2.29V16.1a2.17 2.17 0 0 1 2.29-2.3 2.17 2.17 0 0 1 2.29 2.3v10.53a2.16 2.16 0 0 1-2.29 2.29zM26.69 33.51a2.29 2.29 0 0 1-4.58 0 2.29 2.29 0 1 1 4.58 0" fill="#e24912" />
+              </svg> 
+              <div> 
+               <p>{{serviceAdvisory.Timestamp.split(" ")[0]}}&nbsp;&nbsp;{{serviceAdvisory.Timestamp.split(" ")[1]}} {{serviceAdvisory.Timestamp.split(" ")[2]}}</p> 
+               <p>{{serviceAdvisory.Message}}</p> 
+              </div> 
+             </div> 
+             <div v-if="line.ServiceAdvisories.filter(function(advisory){return advisory.Type === 'Service Advisory'}).length === 0"> <i>There have been no advisories for the selected lines in the last 8 hours.</i> 
+             </div> 
+            </div> 
+           </div> 
+           <div class="accordionAdvisories__advisory-section"> 
+            <h4>Planned Advisories</h4> 
+            <div> 
+             <div class="accordionAdvisories__planned-advisory" v-for="plannedAdvisory in line.ServiceAdvisories.filter(function(advisory){return advisory.Type === 'Planned Advisory'})" v-if="line.ServiceAdvisories.filter(function(advisory){return advisory.Type === 'Planned Advisory'}).length > 0"> 
+              <svg role="img" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 48.81 44.02">
+               <title>Exclamation Triangle</title><path d="M24.4 3c1.14 0 2.39 1 3.41 2.79l17 29.35c1 1.77 1.29 3.35.72 4.34s-2.13 1.55-4.13 1.55h-34c-2 0-3.54-.57-4.11-1.55s-.31-2.57.72-4.34l17-29.35c1-1.77 2.27-2.79 3.41-2.79m0-3c-2.2 0-4.38 1.43-6.02 4.3l-17 29.34c-3.3 5.71-.6 10.39 6 10.39h34c6.6 0 9.3-4.68 6-10.39L30.4 4.3c-1.64-2.87-3.82-4.3-6-4.3z" fill="#e24912" /><path d="M24.4 28.92a2.16 2.16 0 0 1-2.29-2.29V16.1a2.17 2.17 0 0 1 2.29-2.3 2.17 2.17 0 0 1 2.29 2.3v10.53a2.16 2.16 0 0 1-2.29 2.29zM26.69 33.51a2.29 2.29 0 0 1-4.58 0 2.29 2.29 0 1 1 4.58 0" fill="#e24912" />
+              </svg> 
+              <div> 
+               <p><strong>Dates Affected: </strong>{{plannedAdvisory.DateRangeOutput}}</p> 
+               <p>{{plannedAdvisory.Message}} </p> 
+              </div> 
+             </div> 
+             <div v-if="line.ServiceAdvisories.filter(function(advisory){return advisory.Type === 'Planned Advisory'}).length === 0"> <i>There are no planned advisories for the selected lines.</i> 
+             </div> 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+       </div>  
+      </div> 
+     </div> 
+    </section> 
+   </div> 
+   <div> 
+    <div class="tcpb">  
+     <div class="tcpb__center" style="background-image: url('/globalassets/startpage/metrolink-homepage-middle-pattern.jpg')"> 
+      <p class="tcpb__title">clean air.</p> 
+      <p class="tcpb__title">disinfected<br>surfaces.</p> 
+      <p class="tcpb__sub-title">We're keeping you safe.</p> 
+      <p></p> 
+     </div>  
+    </div> 
+   </div> <!-- Homepage Three Column Spotlight --> 
+   <div class="rd-events"> 
+    <h2 class="rd-events__title">Happenings</h2> 
+    <div class="rd-events__wrapper">    
+    </div> 
+   </div> 
+   <div class="margin-bottom-xxl"> 
+    <div class="row"> 
+     <section class="pageSection pageSection--grey "> 
+      <div>
+       <div class="block htmlcontentblock col-lg-12 col-md-12 col-sm-12 col-xs-12"> 
+        <div> 
+         <p><iframe width="100%" height="240" style="height: 350px; border: 0px; margin: 10px 0px 0px 0;" src="https://register.metrolinktrains.com/web-assets/27th-anniversary/ghg-vmt-counter.html" title="green house gas calculator promo view"></iframe></p> 
+        </div>
+       </div>
+       <div class="block htmlcontentblock col-lg-12 col-md-12 col-sm-12 col-xs-12"> 
+        <div>  
+        </div>
+       </div>
+      </div> 
+     </section> 
+    </div> 
+   </div> <!-- Homepage Overlapping Cards -->  <!-- Homepage News List and Additional Info --> 
+   <div class="rd-info"> 
+    <div class="rd-info__news"> 
+     <h2 class="rd-info__title">Metrolink News</h2> 
+     <section class="newsFeed  newsFeed--linkAfter"> 
+      <ul class="newsFeed__list"> 
+       <li class="newsItem "> <p class="newsItem__date">1 October 2021 </p> <h3 class="h-L newsItem__heading">  </h3> </li> 
+       <li class="newsItem "> <p class="newsItem__date">15 September 2021 </p> <h3 class="h-L newsItem__heading">  </h3> </li> 
+       <li class="newsItem "> <p class="newsItem__date">10 September 2021 </p> <h3 class="h-L newsItem__heading">  </h3> </li> 
+      </ul>  
+     </section> 
+    </div> 
+    <div class="rd-info__spotlight"> 
+     <div> 
+      <h2 class="rd-info__title">I-5 CORRIDOR IMPROVEMENT PROJECTS</h2>  
+      <div class="rd-info__spotlight-text">
+       <p></p>
+      </div> 
+     </div> 
+     <div> 
+      <h2 class="rd-info__title">CURRENT BOARD AGENDAS</h2>  <!-- <a class="rd-info__link" href="/about/board-meetings/agendas--documents/"><p><a href="/about/board-meetings/agendas-documents/">Metrolink’s latest public meeting agendas and documents.</a></p></a> --> 
+      <div class="rd-info__spotlight-text">
+       <p></p>
+      </div> 
+     </div> 
+    </div> 
+   </div> <!-- Homepage Track Your Train --> 
+   <div class="rd-track-train pageSection"> 
+    <div class="container"> 
+     <div class="rd-track-train-empty"></div> 
+     <div class="rd-track-train-text"> 
+      <div> 
+       <h2 class="h-XL">Track your train</h2> 
+       <p>Check the real-time status of your train and track your train's location</p>  
+      </div> 
+     </div> 
+    </div> 
+   </div> <!-- Homepage Metrolink Mobile App --> 
+   <div class="rd-mobile-app pageSection"> 
+    <div class="container"> 
+     <div class="rd-mobile-app__content"> 
+      <div class="rd-mobile-app__text"> 
+       <h2 class="h-XL">Metrolink <span>Mobile App</span></h2> 
+       <ul> 
+        <li>Purchase tickets anywhere</li> 
+        <li>Activate your ticket prior to boarding</li> 
+        <li>The Metrolink App is free to download</li> 
+        <li>Tickets transfer if your phone is lost or stolen</li> 
+       </ul> 
+       <div>   
+       </div> 
+       <p>Mobile app tickets can now be </p> 
+      </div> 
+     </div> 
+     <div class="rd-mobile-app__image">  
+     </div> 
+    </div> 
+   </div> <!-- Homepage Scroll to Top --> 
+   <div class="rd-scrolltop"> 
+    <div class="container"> 
+     <div class="rd-scrolltop__link">  
+      <h3 class="h-M">Back to top</h3> 
+     </div> 
+    </div> 
+   </div> 
+  </main>          
+ </body>
+</html>
