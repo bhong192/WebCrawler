@@ -2,7 +2,7 @@ import xlsxwriter
 from stats import text_in_dir_stats
 
 # Root directory with all texts
-root_dir='repository'
+root_dir='test'
 
 # Check Zipf's law
 print('Working on Zipf\'s law...')
@@ -26,13 +26,13 @@ print('Done! Total words count: ' + str(total_words) + '\n')
 
 # Check Heaps' law
 print('Working on Heaps\' law...')
-files = 5 # of files being read
+files = 500 # of files being read
 workbook = xlsxwriter.Workbook('Heaps.xlsx')
 worksheet = workbook.add_worksheet()
 worksheet.write(0, 0, 'Texts analyzed')
 worksheet.write(0, 1, 'Unique Word Count')
 worksheet.write(0, 2, 'Total words in texts')
-for max_files in range (1, files):
+for max_files in range (0, files):
 	dictionary = text_in_dir_stats(root_dir, max_files)
 	worksheet.write(max_files, 0, max_files)
 	worksheet.write(max_files, 1, len(dictionary))

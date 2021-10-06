@@ -9,7 +9,7 @@ dir_name = os.path.dirname(__file__)
 regex = re.compile('\w+')
 cache = {}
 
-def text_in_dir_stats(root_dir='texts', maxfiles=9223372036854775807):
+def text_in_dir_stats(root_dir='test', maxfiles=9223372036854775807):
 	pattern = os.path.join(root_dir, '**\*.*')
 	dictionary = {}
 	files = 0
@@ -20,7 +20,7 @@ def text_in_dir_stats(root_dir='texts', maxfiles=9223372036854775807):
 		if filename in cache:
 			words = cache[filename]
 		else:
-			words = regex.findall(open(filename, 'r').read())
+			words = regex.findall(open(filename, encoding = "utf8").read())
 		for word in words:
 			if word == "s": # remove 's endings
 				pass
