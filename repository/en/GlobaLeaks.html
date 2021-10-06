@@ -1,0 +1,50 @@
+<!doctype html>
+<html data-ng-app="GL" data-ng-csp data-ng-strict-di data-ng-keydown="keypress($event)" lang="en"> 
+ <head> 
+  <meta charset="utf-8"> 
+  <title>GlobaLeaks</title> 
+  <meta name="description" content="Secure whistleblowing platform based on GlobaLeaks free and open-source software."> 
+  <meta name="viewport" content="width=device-width, user-scalable=yes">  
+ </head> 
+ <body class="container-fluid d-flex flex-column" data-ng-class="{{Utils.getCSSFlags()}}" data-flow-prevent-drop>  
+  <div id="PageOverlay" class="ng-cloak" data-ng-hide="!showLoadingPanel"> 
+   <div id="Loader"></div> 
+  </div> 
+  <div id="PageContent" class="ng-cloak" data-ng-if="started" data-ng-cloak> 
+   <div data-ng-if="!public.node.root_tenant &amp;&amp; public.node.mode === 'demo'" data-ng-include="'views/partials/demo.html'"></div> 
+   <div data-ng-if="Utils.isWhistleblowerPage() &amp;&amp; !public.node.disable_privacy_badge" data-ng-include="'views/partials/privacybadge.html'"></div> 
+   <div data-ng-include="'views/partials/header.html'"></div> 
+   <div id="MessagesConsoleBox" data-ng-include="'views/partials/messageconsole.html'"></div> 
+   <div id="ContentBox"> 
+    <div class="row">  
+     <main id="Content" data-ng-class="{'col-md-10': sidebar, 'col-md-12': !sidebar}" data-ng-view=""></main> 
+    </div> 
+   </div> 
+  </div>  
+  <div id="BrowserNotSupported"> 
+   <h1>Error!</h1>
+   <br>
+   <br> 
+   <div>
+     You are running an unsupported and potentially vulnerable browser.
+    <br>
+    <br> In order to use GlobaLeaks you are strongly advised to download and install the Tor Browser.
+    <br> The Tor Browser includes various privacy and security enhancements not present in other browsers.
+    <br>
+    <br> 
+    <br>
+    <br> This is the list of the other supported browsers:
+    <br> 
+    <ul> 
+     <li>Mozilla Firefox &gt;= 38</li> 
+     <li>Google Chrome &gt;= 45</li> 
+     <li>Safari: &gt;= 8</li> 
+     <li>Internet Explorer 11</li> 
+     <li>Edge (any)</li> 
+     <li>iOS &gt;= 9</li> 
+     <li>Android &gt;= 4.4</li> 
+    </ul> 
+   </div> 
+  </div>    
+ </body>
+</html>
