@@ -2,30 +2,15 @@ package com.webcrawler;
 
 import org.jsoup.Connection;
 import org.jsoup.Jsoup;
-import org.jsoup.helper.HttpConnection;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.PrintWriter;
-import java.util.HashSet;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.io.FileWriter;
-import java.net.HttpURLConnection;
-import java.net.URL;
 import java.net.URLEncoder;
-import java.io.File;
-import java.io.File;
-import java.net.URLEncoder;
-import java.util.Scanner;
-import java.util.regex.Pattern;
-
-import javax.lang.model.util.ElementScanner6;
-
-import java.util.regex.Matcher; 
+import java.io.File; 
 import com.detectlanguage.DetectLanguage;
 
 
@@ -33,7 +18,7 @@ import com.detectlanguage.DetectLanguage;
 public class App 
 {
     
-    private static final int MAX_DEPTH = 2;
+    private static final int MAX_DEPTH = 4;
     private HashMap<String, Integer> links; 
     private String[] removedTags = {"audio", "button", "img", "input", "nav", "video", "script", "style", "a", "link", "footer", "object", "figure", "track", "noscript", "form" };
 
@@ -50,21 +35,21 @@ public class App
 
              
             try{
+                
                 Document document = Jsoup.connect(URL).get(); 
                 Elements linksOnPage = document.select("a[href]"); 
-
 
                 int outlinks = Integer.valueOf(linksOnPage.size());
 
                 links.put(URL, outlinks);
-                //System.out.println(links);
-                String pathToCsv = "./report.csv";
+
+                /*String pathToCsv = "./report.csv";
                 File csvFile = new File(pathToCsv);
                 FileWriter csvWriter = new FileWriter(csvFile, true);
                 csvWriter.append(URL);
                 csvWriter.append("\n");
                 System.out.println("Wrote to file! pog :)");
-                csvWriter.close();
+                csvWriter.close();*/
 
                 depth++;
 
@@ -120,7 +105,6 @@ public class App
 
         DetectLanguage.apiKey = "db0fff51236a6a6e782eaf26891d0dbe";
 
-
         String newSampleText = "";
 
         try{
@@ -136,8 +120,7 @@ public class App
         }catch (Exception e){
             language = "Unknown";
             e.printStackTrace();
-            System.out.println(e.getMessage()); 
-             
+            System.out.println(e.getMessage());              
         }
 
         return language; 
@@ -148,7 +131,7 @@ public class App
     {
         App webCrawler = new App();
         
-        webCrawler.getLinks("https://www.faz.net/aktuell/", 0);
+        webCrawler.getLinks("https://www.cpp.edu/", 0);
 
         String pathToCsv = "./report.csv";
         File csvFile = new File(pathToCsv);
