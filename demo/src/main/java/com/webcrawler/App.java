@@ -33,7 +33,7 @@ import com.detectlanguage.DetectLanguage;
 public class App 
 {
     
-    private static final int MAX_DEPTH = 4;
+    private static final int MAX_DEPTH = 2;
     private HashMap<String, Integer> links; 
     private String[] removedTags = {"audio", "button", "img", "input", "nav", "video", "script", "style", "a", "link", "footer", "object", "figure", "track", "noscript", "form" };
 
@@ -58,10 +58,13 @@ public class App
 
                 links.put(URL, outlinks);
                 //System.out.println(links);
-                /*csvWriter.append(links(i).toString());
+                String pathToCsv = "./report.csv";
+                File csvFile = new File(pathToCsv);
+                FileWriter csvWriter = new FileWriter(csvFile, true);
+                csvWriter.append(URL);
                 csvWriter.append("\n");
                 System.out.println("Wrote to file! pog :)");
-                csvWriter.close();*/
+                csvWriter.close();
 
                 depth++;
 
@@ -115,7 +118,7 @@ public class App
     }
     public String getLang(String sampleText){ 
 
-        DetectLanguage.apiKey = "6a871da824f9b8d4e7f8e33168a02703";
+        DetectLanguage.apiKey = "db0fff51236a6a6e782eaf26891d0dbe";
 
 
         String newSampleText = "";
@@ -145,7 +148,7 @@ public class App
     {
         App webCrawler = new App();
         
-        webCrawler.getLinks("https://www.24-horas.mx/", 0);
+        webCrawler.getLinks("https://www.faz.net/aktuell/", 0);
 
         String pathToCsv = "./report.csv";
         File csvFile = new File(pathToCsv);
