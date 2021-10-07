@@ -33,7 +33,7 @@ import com.detectlanguage.DetectLanguage;
 public class App 
 {
     
-    private static final int MAX_DEPTH = 3;
+    private static final int MAX_DEPTH = 4;
     private HashMap<String, Integer> links; 
     private String[] removedTags = {"audio", "button", "img", "input", "nav", "video", "script", "style", "a", "link", "footer", "object", "figure", "track", "noscript", "form" };
 
@@ -115,7 +115,7 @@ public class App
     }
     public String getLang(String sampleText){ 
 
-        DetectLanguage.apiKey = "12d210f097ab3b360b77a08b8f153f4f";
+        DetectLanguage.apiKey = "6a871da824f9b8d4e7f8e33168a02703";
 
 
         String newSampleText = "";
@@ -145,7 +145,7 @@ public class App
     {
         App webCrawler = new App();
         
-        webCrawler.getLinks("https://www.publimetro.com.mx/", 0);
+        webCrawler.getLinks("https://www.24-horas.mx/", 0);
 
         String pathToCsv = "./report.csv";
         File csvFile = new File(pathToCsv);

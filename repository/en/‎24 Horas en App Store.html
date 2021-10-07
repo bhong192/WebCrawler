@@ -1,0 +1,365 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#" dir="ltr" lang="es-MX"> 
+ <head> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"> 
+  <meta name="applicable-device" content="pc,mobile">             
+  <meta name="web-experience-app/config/environment" content="%7B%22appVersion%22%3A1%2C%22modulePrefix%22%3A%22web-experience-app%22%2C%22environment%22%3A%22production%22%2C%22rootURL%22%3A%22%2F%22%2C%22locationType%22%3A%22history-hash-router-scroll%22%2C%22historySupportMiddleware%22%3Atrue%2C%22contentSecurityPolicyMeta%22%3Atrue%2C%22contentSecurityPolicy%22%3A%7B%22default-src%22%3A%5B%22'none'%22%5D%2C%22img-src%22%3A%5B%22'self'%22%2C%22http%3A%2F%2F*.mzstatic.com%22%2C%22*.mzstatic.com%22%2C%22*.apple.com%22%2C%22*.googleusercontent.com%22%2C%22data%3A%22%5D%2C%22style-src%22%3A%5B%22'self'%22%2C%22'unsafe-inline'%22%2C%22*.apple.com%22%5D%2C%22font-src%22%3A%5B%22'self'%22%2C%22http%3A%2F%2F*.apple.com%22%2C%22https%3A%2F%2F*.apple.com%22%5D%2C%22media-src%22%3A%5B%22'self'%22%2C%22blob%3A%22%2C%22http%3A%2F%2F*%22%2C%22https%3A%2F%2F*%22%5D%2C%22connect-src%22%3A%5B%22'self'%22%2C%22*.apple.com%22%2C%22https%3A%2F%2F*.mzstatic.com%22%2C%22*.mzstatic.com%22%5D%2C%22script-src%22%3A%5B%22'self'%22%2C%22'unsafe-inline'%22%2C%22'unsafe-eval'%22%2C%22*.apple.com%22%2C%22'sha256-4ywTGAe4rEpoHt8XkjbkdOWklMJ%2F1Py%2Fx6b3%2FaGbtSQ%3D'%22%5D%2C%22frame-src%22%3A%5B%22'self'%22%2C%22*.apple.com%22%2C%22itmss%3A%22%2C%22itms-appss%3A%22%2C%22itms-bookss%3A%22%2C%22itms-itunesus%3A%22%2C%22itms-messagess%3A%22%2C%22itms-podcasts%3A%22%2C%22itms-watchs%3A%22%2C%22macappstores%3A%22%2C%22musics%3A%22%2C%22apple-musics%3A%22%2C%22podcasts%3A%22%2C%22videos%3A%22%5D%7D%2C%22EmberENV%22%3A%7B%22FEATURES%22%3A%7B%7D%2C%22EXTEND_PROTOTYPES%22%3A%7B%22Date%22%3Afalse%7D%2C%22_APPLICATION_TEMPLATE_WRAPPER%22%3Afalse%2C%22_DEFAULT_ASYNC_OBSERVERS%22%3Afalse%2C%22_JQUERY_INTEGRATION%22%3Afalse%2C%22_TEMPLATE_ONLY_GLIMMER_COMPONENTS%22%3Atrue%7D%2C%22APP%22%3A%7B%22PROGRESS_BAR_DELAY%22%3A3000%2C%22CLOCK_INTERVAL%22%3A1000%2C%22LOADING_SPINNER_SPY%22%3Atrue%2C%22buildVariant%22%3A%22default%22%2C%22FASTBOOT_V2%22%3Afalse%2C%22name%22%3A%22web-experience-app%22%2C%22version%22%3A%222140.7.0%2Bec1ea99e%22%7D%2C%22MEDIA_API%22%3A%7B%22token%22%3A%22eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlU4UlRZVjVaRFMifQ.eyJpc3MiOiI3TktaMlZQNDhaIiwiaWF0IjoxNjMyOTQ4NDA2LCJleHAiOjE2NDAyMDYwMDZ9.CFRWWt7mtdE4rwP_RUI5B3HmF_T5na4VYcrl_VCygc2WlnRKqSAEgRg8hQQYuSMQ-n4Y8CfI-OCnTmBt758Y3w%22%7D%2C%22i18n%22%3A%7B%22defaultLocale%22%3A%22en-gb%22%2C%22useDevLoc%22%3Afalse%2C%22pathToLocales%22%3A%22dist%2Flocales%22%7D%2C%22API%22%3A%7B%22AppHost%22%3A%22https%3A%2F%2Famp-api.apps.apple.com%22%2C%22AppEventHost%22%3A%22https%3A%2F%2Fapi-edge.apps.apple.com%22%2C%22MZStore%22%3A%22https%3A%2F%2Fitunes.apple.com%22%2C%22PodcastHost%22%3A%22https%3A%2F%2Famp-api.podcasts.apple.com%22%2C%22StorePlatform%22%3A%22https%3A%2F%2Fuclient-api.itunes.apple.com%2FWebObjects%2FMZStorePlatform.woa%2Fwa%22%2C%22BookHost%22%3A%22https%3A%2F%2Famp-api.books.apple.com%22%2C%22globalElementsPath%22%3A%22%2Fglobal-elements%22%2C%22videoLocalizationPath%22%3A%22%2Fglobal%2Fac_media_player%2Fscripts%2Fac_media_languages%2F%22%2C%22appleAppsDomain%22%3A%22apps.apple.com%22%2C%22applePodcastsDomain%22%3A%22podcasts.apple.com%22%2C%22appleBooksDomain%22%3A%22books.apple.com%22%2C%22appleMusicDomain%22%3A%22music.apple.com%22%2C%22obcMetadataBaseUrl%22%3A%22%2Fapi%2Fbooks-metadata%22%7D%2C%22fastboot%22%3A%7B%22hostWhitelist%22%3A%5B%7B%7D%5D%7D%2C%22ember-short-number%22%3A%7B%22locales%22%3A%5B%22ar-dz%22%2C%22ar-bh%22%2C%22ar-eg%22%2C%22ar-iq%22%2C%22ar-jo%22%2C%22ar-kw%22%2C%22ar-lb%22%2C%22ar-ly%22%2C%22ar-ma%22%2C%22ar-om%22%2C%22ar-qa%22%2C%22ar-sa%22%2C%22ar-sd%22%2C%22ar-sy%22%2C%22ar-tn%22%2C%22ar-ae%22%2C%22ar-ye%22%2C%22he-il%22%2C%22iw-il%22%2C%22ca-es%22%2C%22cs-cz%22%2C%22da-dk%22%2C%22de-ch%22%2C%22de-de%22%2C%22el-gr%22%2C%22en-au%22%2C%22en-ca%22%2C%22en-gb%22%2C%22en-us%22%2C%22es-419%22%2C%22es-es%22%2C%22es-mx%22%2C%22es-xl%22%2C%22et-ee%22%2C%22fi-fi%22%2C%22fr-ca%22%2C%22fr-fr%22%2C%22hi-in%22%2C%22hr-hr%22%2C%22hu-hu%22%2C%22id-id%22%2C%22is-is%22%2C%22it-it%22%2C%22iw-il%22%2C%22ja-jp%22%2C%22ko-kr%22%2C%22lt-lt%22%2C%22lv-lv%22%2C%22ms-my%22%2C%22nl-nl%22%2C%22no-no%22%2C%22no-nb%22%2C%22nb-no%22%2C%22pl-pl%22%2C%22pt-br%22%2C%22pt-pt%22%2C%22ro-ro%22%2C%22ru-ru%22%2C%22sk-sk%22%2C%22sv-se%22%2C%22th-th%22%2C%22tr-tr%22%2C%22uk-ua%22%2C%22vi-vi%22%2C%22vi-vn%22%2C%22zh-cn%22%2C%22zh-hans%22%2C%22zh-hant%22%2C%22zh-hk%22%2C%22zh-tw%22%2C%22ar%22%2C%22ca%22%2C%22cs%22%2C%22da%22%2C%22de%22%2C%22el%22%2C%22en%22%2C%22es%22%2C%22fi%22%2C%22fr%22%2C%22he%22%2C%22hi%22%2C%22hr%22%2C%22hu%22%2C%22id%22%2C%22is%22%2C%22it%22%2C%22ja%22%2C%22ko%22%2C%22lt%22%2C%22lv%22%2C%22ms%22%2C%22nb%22%2C%22nl%22%2C%22no%22%2C%22pl%22%2C%22pt%22%2C%22ro%22%2C%22ru%22%2C%22sk%22%2C%22sv%22%2C%22th%22%2C%22tr%22%2C%22uk%22%2C%22vi%22%2C%22zh%22%5D%7D%2C%22BREAKPOINTS%22%3A%7B%22large%22%3A%7B%22min%22%3A1069%2C%22max%22%3A1440%2C%22content%22%3A980%7D%2C%22medium%22%3A%7B%22min%22%3A735%2C%22max%22%3A1068%2C%22content%22%3A692%7D%2C%22small%22%3A%7B%22min%22%3A320%2C%22max%22%3A734%2C%22content%22%3A280%7D%7D%2C%22METRICS%22%3A%7B%22variant%22%3A%22web%22%2C%22baseFields%22%3A%7B%22appName%22%3A%22web-experience-app%22%2C%22constraintProfiles%22%3A%5B%22AMPWeb%22%5D%7D%2C%22clickstream%22%3A%7B%22enabled%22%3Atrue%2C%22topic%22%3A%5B%22xp_amp_web_exp%22%5D%2C%22autoTrackClicks%22%3Atrue%7D%2C%22performance%22%3A%7B%22enabled%22%3Afalse%7D%7D%2C%22MEDIA_SHELF%22%3A%7B%22GRID_CONFIG%22%3A%7B%22books-brick-row%22%3A%7B%22small%22%3A1%2C%22medium%22%3A2%2C%22large%22%3A3%7D%7D%2C%22BREAKPOINTS%22%3A%7B%22large%22%3A%7B%22min%22%3A1069%2C%22max%22%3A1440%2C%22content%22%3A980%7D%2C%22medium%22%3A%7B%22min%22%3A735%2C%22max%22%3A1068%2C%22content%22%3A692%7D%2C%22small%22%3A%7B%22min%22%3A320%2C%22max%22%3A734%2C%22content%22%3A280%7D%7D%7D%2C%22SASSKIT_GENERATOR%22%3A%7B%22VIEWPORT_CONFIG%22%3A%7B%22BREAKPOINTS%22%3A%7B%22large%22%3A%7B%22min%22%3A1069%2C%22max%22%3A1440%2C%22content%22%3A980%7D%2C%22medium%22%3A%7B%22min%22%3A735%2C%22max%22%3A1068%2C%22content%22%3A692%7D%2C%22small%22%3A%7B%22min%22%3A320%2C%22max%22%3A734%2C%22content%22%3A280%7D%7D%7D%7D%2C%22features%22%3A%7B%22DEFAULT%22%3Atrue%2C%22TV%22%3Atrue%2C%22PODCASTS%22%3Afalse%2C%22BOOKS%22%3Atrue%2C%22APPS%22%3Atrue%2C%22ARTISTS%22%3Atrue%2C%22DEEPLINK_ROUTE%22%3Atrue%2C%22FEATURE_B%22%3Afalse%2C%22EMBER_DATA%22%3Atrue%2C%22CHARTS%22%3Afalse%7D%2C%22globalElements%22%3A%7B%22WEA_ROOT_ELEMENT_HANDLING%22%3Atrue%7D%2C%22contentSecurityPolicyHeader%22%3A%22Content-Security-Policy-Report-Only%22%2C%22exportApplicationGlobal%22%3Afalse%7D"> 
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' http://*.mzstatic.com *.mzstatic.com *.apple.com *.googleusercontent.com data:; style-src 'self' 'unsafe-inline' *.apple.com; font-src 'self' http://*.apple.com https://*.apple.com; media-src 'self' blob: http://* https://*; connect-src 'self' *.apple.com https://*.mzstatic.com *.mzstatic.com; script-src 'self' 'unsafe-inline' 'unsafe-eval' *.apple.com 'sha256-4ywTGAe4rEpoHt8XkjbkdOWklMJ/1Py/x6b3/aGbtSQ='; frame-src 'self' *.apple.com itmss: itms-appss: itms-bookss: itms-itunesus: itms-messagess: itms-podcasts: itms-watchs: macappstores: musics: apple-musics: podcasts: videos:; "> <!-- EMBER_CLI_FASTBOOT_TITLE --> 
+  <meta name="ember-cli-head-start" content> 
+  <title>‎24 Horas en App Store</title>  
+  <meta id="ember52254322" name="description" content="‎Lee reseñas, compara valoraciones de clientes, mira capturas de pantalla y obtén más información sobre 24 Horas. Descarga 24 Horas y disfrútalo en tu iPhone, iPad y iPod touch." class="ember-view"> 
+  <meta id="ember52254323" name="keywords" content="24 Horas, INFORMACION INTEGRAL 24/7, S.A.P.I. DE C.V., Noticias, Entretenimiento, ios apps, app, appstore, app store, iphone, ipad, ipod touch, itouch, itunes" class="ember-view"> 
+  <meta id="ember52254324" property="og:title" content="‎24 Horas" class="ember-view"> 
+  <meta id="ember52254325" property="og:description" content="‎24 Horas, El Diario Sin Límites, es un periódico mexicano fundado el 13 de octubre de 2011. Su impreso se distribuye gratuitamente en la República Mexicana de lunes a viernes, y vía Whatsapp a 28 países.  Es un periódico de información general, con contenidos propios, y cuya línea editorial está car…" class="ember-view"> 
+  <meta id="ember52254326" property="og:site_name" content="App&nbsp;Store" class="ember-view"> 
+  <meta id="ember52254327" property="og:url" content="https://apps.apple.com/mx/app/24-horas/id641673142" class="ember-view"> 
+  <meta id="ember52254328" property="og:image" content="https://is4-ssl.mzstatic.com/image/thumb/Purple125/v4/dd/69/c0/dd69c0cd-7354-d533-7f6e-70a7484b323d/AppIcon-1x_U007emarketing-0-7-0-0-85-220.png/1200x630wa.png" class="ember-view"> 
+  <meta id="ember52254329" property="og:image:alt" content="24 Horas en App Store" class="ember-view"> 
+  <meta id="ember52254330" property="og:image:secure_url" content="https://is4-ssl.mzstatic.com/image/thumb/Purple125/v4/dd/69/c0/dd69c0cd-7354-d533-7f6e-70a7484b323d/AppIcon-1x_U007emarketing-0-7-0-0-85-220.png/1200x630wa.png" class="ember-view"> 
+  <meta id="ember52254331" property="og:image:type" content="image/png" class="ember-view"> 
+  <meta id="ember52254332" property="og:image:width" content="1200" class="ember-view"> 
+  <meta id="ember52254333" property="og:image:height" content="630" class="ember-view"> 
+  <meta id="ember52254334" property="og:type" content="website" class="ember-view"> 
+  <meta id="ember52254335" property="og:locale" content="es_MX" class="ember-view"> 
+  <meta id="ember52254336" property="fb:app_id" content="116556461780510" class="ember-view"> 
+  <meta id="ember52254337" name="twitter:title" content="‎24 Horas" class="ember-view"> 
+  <meta id="ember52254338" name="twitter:description" content="‎24 Horas, El Diario Sin Límites, es un periódico mexicano fundado el 13 de octubre de 2011. Su impreso se distribuye gratuitamente en la República Mexicana de lunes a viernes, y vía Whatsapp a 28 países.  Es un periódico de información general, con contenidos propios, y cuya línea editorial está car…" class="ember-view"> 
+  <meta id="ember52254339" name="twitter:site" content="@AppStore" class="ember-view"> 
+  <meta id="ember52254340" name="twitter:image" content="https://is4-ssl.mzstatic.com/image/thumb/Purple125/v4/dd/69/c0/dd69c0cd-7354-d533-7f6e-70a7484b323d/AppIcon-1x_U007emarketing-0-7-0-0-85-220.png/600x600wa.png" class="ember-view"> 
+  <meta id="ember52254341" name="twitter:image:alt" content="24 Horas en App Store" class="ember-view"> 
+  <meta id="ember52254342" name="twitter:card" content="summary_large_image" class="ember-view"> 
+  <meta id="ember52254343" name="apple-itunes-app" content="app-id=375380948, app-argument=https://apps.apple.com/mx/app/24-horas/id641673142" class="ember-view">  
+  <meta id="ember52254345" name="apple:content_id" content="641673142" class="ember-view"> 
+  <meta name="ember-cli-head-end" content>   
+  <meta name="ac-gn-search-suggestions-enabled" content="false" data-global-elements-search-suggestions-enabled> 
+  <meta name="version" content="2140.7.0">  
+ </head> 
+ <body class="no-js no-touch"> 
+  <div id="ember-app"> 
+   <aside id="ac-gn-segmentbar" class="ac-gn-segmentbar" lang="es-MX" dir="ltr" data-strings="{ 'exit': 'Salir', 'view': 'Página de inicio de la tienda {%STOREFRONT%}', 'segments': { 'smb': 'Página de inicio - Apple Store para empresas', 'eduInd': 'Página de inicio - Apple Store para la educación', 'other': 'Página de inicio - Apple Store' } }"></aside>   
+   <div class="ac-gn-blur"></div> 
+   <div id="ac-gn-curtain" class="ac-gn-curtain"></div> 
+   <div id="ac-gn-placeholder" class="ac-nav-placeholder"></div> 
+   <div class="ember-view"> <!----> <!----> <!----> <!----> <!----> <!----> <!----> 
+    <main class="selfclear is-apps-theme">   <span class="we-localnav__shim" aria-hidden="true"></span> <label id="localnav-curtain" for="localnav-menustate"></label> 
+     <div class="animation-wrapper is-visible"> <!----> <!----> 
+      <section class="l-content-width section section--hero product-hero"> 
+       <div class="l-row"> 
+        <div class="product-hero__media l-column small-5 medium-4 large-3 small-valign-top"> <picture class="we-artwork we-artwork--downloaded product-hero__artwork we-artwork--fullwidth we-artwork--ios-app-icon" style="--background-color: #a20b11;" id="ember52254346"> 
+          <source class="we-artwork__source" srcset="https://is4-ssl.mzstatic.com/image/thumb/Purple125/v4/dd/69/c0/dd69c0cd-7354-d533-7f6e-70a7484b323d/AppIcon-1x_U007emarketing-0-7-0-0-85-220.png/230x0w.webp 1x, https://is4-ssl.mzstatic.com/image/thumb/Purple125/v4/dd/69/c0/dd69c0cd-7354-d533-7f6e-70a7484b323d/AppIcon-1x_U007emarketing-0-7-0-0-85-220.png/460x0w.webp 2x" media="(min-width: 1069px)" type="image/webp"> 
+          <source class="we-artwork__source" srcset="https://is4-ssl.mzstatic.com/image/thumb/Purple125/v4/dd/69/c0/dd69c0cd-7354-d533-7f6e-70a7484b323d/AppIcon-1x_U007emarketing-0-7-0-0-85-220.png/230x0w.png 1x, https://is4-ssl.mzstatic.com/image/thumb/Purple125/v4/dd/69/c0/dd69c0cd-7354-d533-7f6e-70a7484b323d/AppIcon-1x_U007emarketing-0-7-0-0-85-220.png/460x0w.png 2x" media="(min-width: 1069px)" type="image/png"> 
+          <source class="we-artwork__source" srcset="https://is4-ssl.mzstatic.com/image/thumb/Purple125/v4/dd/69/c0/dd69c0cd-7354-d533-7f6e-70a7484b323d/AppIcon-1x_U007emarketing-0-7-0-0-85-220.png/217x0w.webp 1x, https://is4-ssl.mzstatic.com/image/thumb/Purple125/v4/dd/69/c0/dd69c0cd-7354-d533-7f6e-70a7484b323d/AppIcon-1x_U007emarketing-0-7-0-0-85-220.png/434x0w.webp 2x" media="(min-width: 735px)" type="image/webp"> 
+          <source class="we-artwork__source" srcset="https://is4-ssl.mzstatic.com/image/thumb/Purple125/v4/dd/69/c0/dd69c0cd-7354-d533-7f6e-70a7484b323d/AppIcon-1x_U007emarketing-0-7-0-0-85-220.png/217x0w.png 1x, https://is4-ssl.mzstatic.com/image/thumb/Purple125/v4/dd/69/c0/dd69c0cd-7354-d533-7f6e-70a7484b323d/AppIcon-1x_U007emarketing-0-7-0-0-85-220.png/434x0w.png 2x" media="(min-width: 735px)" type="image/png"> 
+          <source class="we-artwork__source" srcset="https://is4-ssl.mzstatic.com/image/thumb/Purple125/v4/dd/69/c0/dd69c0cd-7354-d533-7f6e-70a7484b323d/AppIcon-1x_U007emarketing-0-7-0-0-85-220.png/246x0w.webp 1x, https://is4-ssl.mzstatic.com/image/thumb/Purple125/v4/dd/69/c0/dd69c0cd-7354-d533-7f6e-70a7484b323d/AppIcon-1x_U007emarketing-0-7-0-0-85-220.png/492x0w.webp 2x" type="image/webp"> 
+          <source class="we-artwork__source" srcset="https://is4-ssl.mzstatic.com/image/thumb/Purple125/v4/dd/69/c0/dd69c0cd-7354-d533-7f6e-70a7484b323d/AppIcon-1x_U007emarketing-0-7-0-0-85-220.png/246x0w.png 1x, https://is4-ssl.mzstatic.com/image/thumb/Purple125/v4/dd/69/c0/dd69c0cd-7354-d533-7f6e-70a7484b323d/AppIcon-1x_U007emarketing-0-7-0-0-85-220.png/492x0w.png 2x" type="image/png">   
+         </picture> 
+        </div> 
+        <div class="l-column small-7 medium-8 large-9 small-valign-top"> 
+         <header class="product-header app-header product-header--padded-start" role="banner"> <!----> 
+          <h1 class="product-header__title app-header__title"> 24 Horas <span class="badge badge--product-title">4+</span> </h1> 
+          <h2 class="product-header__subtitle app-header__subtitle"> El Diario sin Límites‪.‬ </h2> 
+          <h2 class="product-header__identity app-header__identity">  </h2> 
+          <h3 class="app-header__designed-for"> Diseñada para iPad </h3> 
+          <ul class="product-header__list app-header__list"> <!----> 
+           <li class="product-header__list__item app-header__list__item--user-rating"> 
+            <ul class="inline-list inline-list--mobile-compact"> 
+             <li class="inline-list__item">  </li> 
+            </ul> </li> 
+          </ul> 
+          <ul class="product-header__list app-header__list"> <!----> 
+           <li class="product-header__list__item"> 
+            <ul class="inline-list inline-list--mobile-compact"> 
+             <li class="inline-list__item inline-list__item--bulleted app-header__list__item--price">Gratis</li> <!----> 
+            </ul> </li> <!----> <!----> 
+          </ul> <!----> <!----> <!----> <!----> 
+         </header> 
+        </div> 
+       </div> 
+      </section> <!----> 
+      <section class="l-content-width section section--bordered"> 
+       <div class="section__nav section__nav--align-start"> 
+        <h2 class="section__headline">Capturas de pantalla</h2>  
+       </div> 
+       <div class="we-screenshot-viewer"> 
+        <div class="we-screenshot-viewer__screenshots"> 
+         <ul class="l-row l-row--peek we-screenshot-viewer__screenshots-list"> 
+          <li class="l-column small-4 medium-4 large-4"> <picture class="we-artwork we-artwork--downloaded we-artwork--fullwidth we-artwork--screenshot-platform-ipad we-artwork--screenshot-version-ipad-pro we-artwork--screenshot-orientation-portrait" style="--background-color: #000000;" id="ember52254349"> 
+            <source class="we-artwork__source" srcset="https://is1-ssl.mzstatic.com/image/thumb/Purple115/v4/97/cb/e9/97cbe9fc-5ec1-2d4c-d201-5781b1cc0bb1/d36d5837-215e-414d-b026-fc62ea655018_IMG_0139.png/313x0w.webp 1x, https://is1-ssl.mzstatic.com/image/thumb/Purple115/v4/97/cb/e9/97cbe9fc-5ec1-2d4c-d201-5781b1cc0bb1/d36d5837-215e-414d-b026-fc62ea655018_IMG_0139.png/626x0w.webp 2x" media="(min-width: 1069px)" type="image/webp"> 
+            <source class="we-artwork__source" srcset="https://is1-ssl.mzstatic.com/image/thumb/Purple115/v4/97/cb/e9/97cbe9fc-5ec1-2d4c-d201-5781b1cc0bb1/d36d5837-215e-414d-b026-fc62ea655018_IMG_0139.png/313x0w.png 1x, https://is1-ssl.mzstatic.com/image/thumb/Purple115/v4/97/cb/e9/97cbe9fc-5ec1-2d4c-d201-5781b1cc0bb1/d36d5837-215e-414d-b026-fc62ea655018_IMG_0139.png/626x0w.png 2x" media="(min-width: 1069px)" type="image/png"> 
+            <source class="we-artwork__source" srcset="https://is1-ssl.mzstatic.com/image/thumb/Purple115/v4/97/cb/e9/97cbe9fc-5ec1-2d4c-d201-5781b1cc0bb1/d36d5837-215e-414d-b026-fc62ea655018_IMG_0139.png/217x0w.webp 1x, https://is1-ssl.mzstatic.com/image/thumb/Purple115/v4/97/cb/e9/97cbe9fc-5ec1-2d4c-d201-5781b1cc0bb1/d36d5837-215e-414d-b026-fc62ea655018_IMG_0139.png/434x0w.webp 2x" media="(min-width: 735px)" type="image/webp"> 
+            <source class="we-artwork__source" srcset="https://is1-ssl.mzstatic.com/image/thumb/Purple115/v4/97/cb/e9/97cbe9fc-5ec1-2d4c-d201-5781b1cc0bb1/d36d5837-215e-414d-b026-fc62ea655018_IMG_0139.png/217x0w.png 1x, https://is1-ssl.mzstatic.com/image/thumb/Purple115/v4/97/cb/e9/97cbe9fc-5ec1-2d4c-d201-5781b1cc0bb1/d36d5837-215e-414d-b026-fc62ea655018_IMG_0139.png/434x0w.png 2x" media="(min-width: 735px)" type="image/png"> 
+            <source class="we-artwork__source" srcset="https://is1-ssl.mzstatic.com/image/thumb/Purple115/v4/97/cb/e9/97cbe9fc-5ec1-2d4c-d201-5781b1cc0bb1/d36d5837-215e-414d-b026-fc62ea655018_IMG_0139.png/643x0w.webp 1x, https://is1-ssl.mzstatic.com/image/thumb/Purple115/v4/97/cb/e9/97cbe9fc-5ec1-2d4c-d201-5781b1cc0bb1/d36d5837-215e-414d-b026-fc62ea655018_IMG_0139.png/1286x0w.webp 2x" type="image/webp"> 
+            <source class="we-artwork__source" srcset="https://is1-ssl.mzstatic.com/image/thumb/Purple115/v4/97/cb/e9/97cbe9fc-5ec1-2d4c-d201-5781b1cc0bb1/d36d5837-215e-414d-b026-fc62ea655018_IMG_0139.png/643x0w.png 1x, https://is1-ssl.mzstatic.com/image/thumb/Purple115/v4/97/cb/e9/97cbe9fc-5ec1-2d4c-d201-5781b1cc0bb1/d36d5837-215e-414d-b026-fc62ea655018_IMG_0139.png/1286x0w.png 2x" type="image/png">   
+           </picture> </li> 
+          <li class="l-column small-4 medium-4 large-4"> <picture class="we-artwork we-artwork--downloaded we-artwork--fullwidth we-artwork--screenshot-platform-ipad we-artwork--screenshot-version-ipad-pro we-artwork--screenshot-orientation-portrait" style="--background-color: #000000;" id="ember52254350"> 
+            <source class="we-artwork__source" srcset="https://is4-ssl.mzstatic.com/image/thumb/Purple125/v4/d2/25/44/d22544b1-8ab1-86cf-a3b1-7f122dd06577/5477701a-3baf-43ea-8d74-c7806a67d7d9_IMG_0138.png/313x0w.webp 1x, https://is4-ssl.mzstatic.com/image/thumb/Purple125/v4/d2/25/44/d22544b1-8ab1-86cf-a3b1-7f122dd06577/5477701a-3baf-43ea-8d74-c7806a67d7d9_IMG_0138.png/626x0w.webp 2x" media="(min-width: 1069px)" type="image/webp"> 
+            <source class="we-artwork__source" srcset="https://is4-ssl.mzstatic.com/image/thumb/Purple125/v4/d2/25/44/d22544b1-8ab1-86cf-a3b1-7f122dd06577/5477701a-3baf-43ea-8d74-c7806a67d7d9_IMG_0138.png/313x0w.png 1x, https://is4-ssl.mzstatic.com/image/thumb/Purple125/v4/d2/25/44/d22544b1-8ab1-86cf-a3b1-7f122dd06577/5477701a-3baf-43ea-8d74-c7806a67d7d9_IMG_0138.png/626x0w.png 2x" media="(min-width: 1069px)" type="image/png"> 
+            <source class="we-artwork__source" srcset="https://is4-ssl.mzstatic.com/image/thumb/Purple125/v4/d2/25/44/d22544b1-8ab1-86cf-a3b1-7f122dd06577/5477701a-3baf-43ea-8d74-c7806a67d7d9_IMG_0138.png/217x0w.webp 1x, https://is4-ssl.mzstatic.com/image/thumb/Purple125/v4/d2/25/44/d22544b1-8ab1-86cf-a3b1-7f122dd06577/5477701a-3baf-43ea-8d74-c7806a67d7d9_IMG_0138.png/434x0w.webp 2x" media="(min-width: 735px)" type="image/webp"> 
+            <source class="we-artwork__source" srcset="https://is4-ssl.mzstatic.com/image/thumb/Purple125/v4/d2/25/44/d22544b1-8ab1-86cf-a3b1-7f122dd06577/5477701a-3baf-43ea-8d74-c7806a67d7d9_IMG_0138.png/217x0w.png 1x, https://is4-ssl.mzstatic.com/image/thumb/Purple125/v4/d2/25/44/d22544b1-8ab1-86cf-a3b1-7f122dd06577/5477701a-3baf-43ea-8d74-c7806a67d7d9_IMG_0138.png/434x0w.png 2x" media="(min-width: 735px)" type="image/png"> 
+            <source class="we-artwork__source" srcset="https://is4-ssl.mzstatic.com/image/thumb/Purple125/v4/d2/25/44/d22544b1-8ab1-86cf-a3b1-7f122dd06577/5477701a-3baf-43ea-8d74-c7806a67d7d9_IMG_0138.png/643x0w.webp 1x, https://is4-ssl.mzstatic.com/image/thumb/Purple125/v4/d2/25/44/d22544b1-8ab1-86cf-a3b1-7f122dd06577/5477701a-3baf-43ea-8d74-c7806a67d7d9_IMG_0138.png/1286x0w.webp 2x" type="image/webp"> 
+            <source class="we-artwork__source" srcset="https://is4-ssl.mzstatic.com/image/thumb/Purple125/v4/d2/25/44/d22544b1-8ab1-86cf-a3b1-7f122dd06577/5477701a-3baf-43ea-8d74-c7806a67d7d9_IMG_0138.png/643x0w.png 1x, https://is4-ssl.mzstatic.com/image/thumb/Purple125/v4/d2/25/44/d22544b1-8ab1-86cf-a3b1-7f122dd06577/5477701a-3baf-43ea-8d74-c7806a67d7d9_IMG_0138.png/1286x0w.png 2x" type="image/png">   
+           </picture> </li> 
+         </ul> <!----> 
+        </div> 
+       </div> 
+      </section> 
+      <section class="l-content-width section section--bordered"> 
+       <div class="section__description"> 
+        <h2 class="section__headline visuallyhidden">Descripción</h2> 
+        <div class="l-row"> 
+         <div class="we-truncate we-truncate--multi-line we-truncate--interactive  l-column small-12 medium-9 large-8" dir aria-label> 
+          <p dir="false" data-test-bidi>24 Horas, El Diario Sin Límites, es un periódico mexicano fundado el 13 de octubre de 2011. Su impreso se distribuye gratuitamente en la República Mexicana de lunes a viernes, y vía Whatsapp a 28 países. Es un periódico de información general, con contenidos propios, y cuya línea editorial está caracterizada por el profesionalismo de su equipo editorial y la libre opinión de sus colaboradores.<br><br>24 Horas maneja un Código de Prácticas y manuales de Redes Sociales y de Estilo, que constituyen herramientas para fijar los criterios de redacción y las políticas editoriales que permiten ofrecer a los lectores, día a día, un producto homogéneo e impecable en su hechura y donde la ética periodística se ubica en un contexto objetivo. El diario parte del compromiso profesional y ético que obliga a difundir información corroborada y de impacto informativo, en donde no debe fallar la práctica de consultar a todas las personas involucradas en la información. <br><br>Con esta app para tus dispositivos 24 Horas pone al alcance de tu mano la información al minuto de México y el mundo. Mediante el servicio de alertas, te permite recibir notificaciones de los eventos más relevantes del día, así como de las noticias de último momento.<br><br>Además de tener acceso a todo nuestro acervo en línea e impreso, puedes personalizar la interfaz en tu espacio propio en la app, para darle seguimiento a los temas que sean de tu interés. ¿No tienes tiempo de leer una nota en particular? Guárdala en tus marcadores y consúltala en el momento que lo requieras. Comparte el contenido con tus familiares y amigos, de manera directa o por redes sociales. Comenta y contribuye a la discusión de los temas importantes.</p> <!---->
+         </div> 
+        </div> 
+       </div> 
+      </section> <!----> 
+      <section class="l-content-width section section--bordered whats-new"> 
+       <div class="section__nav section__nav--small"> 
+        <h2 class="whats-new__headline">Novedades</h2> 
+        <div class="version-history">  <!---->
+        </div> 
+       </div> 
+       <div class="l-row whats-new__content"> 
+        <div class="l-column small-12 medium-3 large-4 small-valign-top whats-new__latest"> 
+         <div class="l-row"> <time data-test-we-datetime datetime="2021-06-08T00:00:00.000Z" aria-label="8 de junio de 2021" class="">8 de jun. de 2021</time> 
+          <p class="l-column small-6 medium-12 whats-new__latest__version">Versión 5.0</p> 
+         </div> 
+        </div> 
+        <div class="l-column small-12 medium-9 large-8 small-valign-top"> 
+         <div class="we-truncate we-truncate--multi-line we-truncate--interactive " dir aria-label> 
+          <p dir="false" data-test-bidi>- Actualización de interfaz.<br>- Recepción de notificaciones en segundo plano actualizada.<br>- Integración con videos de YouTube.<br>- Mejora en la velocidad de ejecución.</p> <!---->
+         </div> 
+        </div> 
+       </div> 
+      </section> 
+      <section class="l-content-width section section--bordered"> 
+       <div class="section__nav"> 
+        <h2 class="section__headline"> Valoraciones y reseñas </h2> <!----> 
+       </div> 
+       <div class="we-customer-ratings lockup"> 
+        <div class="l-row"> 
+         <div class="we-customer-ratings__stats l-column small-4 medium-6 large-4"> 
+          <div class="we-customer-ratings__averages">
+           <span class="we-customer-ratings__averages__display">2.4</span> de 5
+          </div> 
+          <div class="we-customer-ratings__count small-hide medium-show">
+           7 calificaciones
+          </div> 
+         </div> 
+         <div class=" l-column small-8 medium-6 large-4">  
+          <p class="we-customer-ratings__count medium-hide">7 calificaciones</p> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="l-row l-row--peek"> 
+        <div id="ember52254352" class="small-valign-top l-column--equal-height l-column small-4 medium-6 large-4"> 
+         <div> <!----> <!---->
+         </div> 
+         <div aria-labelledby="we-customer-review-504652" class="we-customer-review lockup">  
+          <div class="we-customer-review__header we-customer-review__header--user"> <span class="we-truncate we-truncate--single-line  we-customer-review__user" dir="ltr" aria-label> Rulotec </span> <span class="we-customer-review__separator">, </span> <time data-test-customer-review-date datetime="2015-07-07T18:25:09.000Z" aria-label="7 de julio de 2015" class="we-customer-review__date">07/07/2015</time> 
+          </div> 
+          <h3 class="we-truncate we-truncate--single-line  we-customer-review__title" dir="ltr" aria-label id="we-customer-review-504652"> No recibo alertas </h3> 
+          <blockquote class="we-truncate we-truncate--multi-line we-truncate--interactive  we-customer-review__body" dir aria-label> 
+           <p dir="false" data-test-bidi>Ya active las notificaciones y ninguna alerta recibo. Pasa algo con la Aplicación o alguna recomendación??</p> <!---->
+          </blockquote> <!---->
+         </div> 
+        </div> 
+        <div id="ember52254354" class="small-valign-top l-column--equal-height l-column small-4 medium-6 large-4"> 
+         <div> <!----> <!---->
+         </div> 
+         <div aria-labelledby="we-customer-review-504653" class="we-customer-review lockup">  
+          <div class="we-customer-review__header we-customer-review__header--user"> <span class="we-truncate we-truncate--single-line  we-customer-review__user" dir="ltr" aria-label> djspank4eva </span> <span class="we-customer-review__separator">, </span> <time data-test-customer-review-date datetime="2019-10-25T14:59:08.000Z" aria-label="25 de octubre de 2019" class="we-customer-review__date">25/10/2019</time> 
+          </div> 
+          <h3 class="we-truncate we-truncate--single-line  we-customer-review__title" dir="ltr" aria-label id="we-customer-review-504653"> Notas muy muy cortas </h3> 
+          <blockquote class="we-truncate we-truncate--multi-line we-truncate--interactive  we-customer-review__body" dir aria-label> 
+           <p dir="false" data-test-bidi>Una decepción con esta aplicación las notas son de dos o tres renglones esperaba más</p> <!---->
+          </blockquote> <!---->
+         </div> 
+        </div> 
+        <div id="ember52254356" class="small-valign-top l-column--equal-height l-column small-4 medium-6 large-4"> 
+         <div> <!----> <!---->
+         </div> 
+         <div aria-labelledby="we-customer-review-504654" class="we-customer-review lockup">  
+          <div class="we-customer-review__header we-customer-review__header--user"> <span class="we-truncate we-truncate--single-line  we-customer-review__user" dir="ltr" aria-label> Rob_serrano </span> <span class="we-customer-review__separator">, </span> <time data-test-customer-review-date datetime="2018-01-03T04:29:13.000Z" aria-label="2 de enero de 2018" class="we-customer-review__date">02/01/2018</time> 
+          </div> 
+          <h3 class="we-truncate we-truncate--single-line  we-customer-review__title" dir="ltr" aria-label id="we-customer-review-504654"> Muy mala app </h3> 
+          <blockquote class="we-truncate we-truncate--multi-line we-truncate--interactive  we-customer-review__body" dir aria-label> 
+           <p dir="false" data-test-bidi>Malísima app, malísimo diario. Claramente es priista ... se traba continuamente, no carga algunas notas .. descárgala sólo si quieres perder tu tiempo</p> <!---->
+          </blockquote> <!---->
+         </div> 
+        </div> 
+       </div> 
+       <div class="l-row l-row--margin-top medium-hide"> <!----> <!----> <!----> <!----> <!----> <!----> 
+       </div> 
+      </section> <!----> <!----> <!----> 
+      <section class="l-content-width section section--bordered app-privacy"> 
+       <div class="section__nav"> 
+        <h2 class="section__headline section__headline--app-privacy"> Privacidad de la app </h2> 
+        <div> 
+         <div class="app-privacy--modal privacy-type--modal">  <!---->
+         </div> 
+        </div> 
+       </div> 
+       <p> El desarrollador (<span class="app-privacy__developer-name">INFORMACION INTEGRAL 24/7, S.A.P.I. DE C.V.</span>) indicó que, entre las prácticas de privacidad de la app, pueden incluirse el manejo de datos que se describe a continuación. Para obtener más información, consulta la . </p> 
+       <div class="app-privacy__cards"> 
+        <div class="app-privacy__card"> 
+         <div class="privacy-type__icon"> 
+          <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewbox="0 0 64 64" aria-hidden="true">
+           <path d="M7.36 17l3.208 3.208A24.23 24.23 0 007.39 32.235c0 13.44 10.93 24.374 24.366 24.374 4.374 0 8.483-1.159 12.035-3.186L47 56.631A28.616 28.616 0 0131.756 61C15.874 61 3 48.122 3 32.235A28.637 28.637 0 017.36 17zM9.77 6.642l47.588 47.606a2.204 2.204 0 010 3.11 2.206 2.206 0 01-3.111 0L6.632 9.753c-.829-.8-.856-2.283 0-3.11.826-.828 2.253-.886 3.138 0zM32.238 3C48.123 3 61 15.878 61 31.761c0 5.597-1.599 10.82-4.364 15.239l-3.208-3.209a24.221 24.221 0 003.182-12.03c0-13.437-10.934-24.37-24.372-24.37a24.223 24.223 0 00-12.03 3.18L17 7.363A28.628 28.628 0 0132.238 3zm-7.492 31L36 45H18.373C17.44 45 17 44.418 17 43.572c0-2.224 2.5-7.11 7.746-9.572zm6.915-20C35.733 14 39 17.634 39 22.002c0 2.419-.874 4.529-2.281 5.998L26 16.923C27.343 15.145 29.376 14 31.661 14z" />
+          </svg> 
+         </div> 
+         <h3 class="privacy-type__heading">Datos no asociados con tu identidad</h3> 
+         <p class="privacy-type__description">Los siguientes datos pueden recopilarse, pero no están asociados con tu identidad:</p> 
+         <ul class="privacy-type__items privacy-type__items--single-item"> 
+          <li classs="privacy-type__item"> <span class="privacy-type__grid"> <span class="privacy-type__grid-icon"> 
+             <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewbox="0 0 64 64" class="privacy-type__glyph privacy-type__glyph--contact-info" aria-hidden="true">
+              <path d="M32.09 61.568c16.185 0 29.586-13.43 29.586-29.587 0-16.186-13.43-29.587-29.616-29.587-16.157 0-29.558 13.4-29.558 29.587 0 16.156 13.43 29.587 29.587 29.587zm-.29-40.175c-2.176 0-3.917-1.74-3.917-3.945 0-2.204 1.74-3.945 3.916-3.945s3.887 1.74 3.887 3.945-1.711 3.945-3.887 3.945zm-4.961 27.093c-1.247 0-2.205-.9-2.205-2.147 0-1.16.958-2.117 2.205-2.117h3.684V30.588h-3.19c-1.22 0-2.176-.899-2.176-2.146 0-1.16.957-2.118 2.175-2.118h5.627c1.538 0 2.35 1.103 2.35 2.727v15.17h3.684c1.247 0 2.204.958 2.204 2.118 0 1.247-.957 2.147-2.204 2.147H26.839z" />
+             </svg> </span> <span class="privacy-type__grid-content privacy-type__data-category-heading">Información de contacto</span> </span> </li> 
+         </ul> 
+        </div> 
+       </div> 
+       <p class="app-privacy__learn-more">Las prácticas de privacidad pueden variar; por ejemplo, según tu edad o las funciones que uses. </p> 
+      </section> 
+      <section class="l-content-width section section--bordered section--information"> 
+       <div> 
+        <h2 class="section__headline">Información</h2> 
+        <dl class="information-list information-list--app medium-columns l-row"> 
+         <div class="information-list__item l-column small-12 medium-6 large-4 small-valign-top"> 
+          <dt class="information-list__item__term medium-valign-top">
+           Vendedor
+          </dt> 
+          <dd class="information-list__item__definition">
+            INFORMACION INTEGRAL 24/7 SAPI DE CV 
+          </dd> 
+         </div> 
+         <div class="information-list__item l-column small-12 medium-6 large-4 small-valign-top"> 
+          <dt class="information-list__item__term medium-valign-top">
+           Tamaño
+          </dt> 
+          <dd class="information-list__item__definition" aria-label="75.4 megabytes">
+           75.4 MB
+          </dd> 
+         </div> 
+         <div class="information-list__item l-column small-12 medium-6 large-4 small-valign-top"> 
+          <dt class="information-list__item__term medium-valign-top">
+           Categoría
+          </dt> 
+          <dd class="information-list__item__definition">  
+          </dd> 
+         </div> 
+         <div class="information-list__item l-column small-12 medium-6 large-4 small-valign-top"> 
+          <dt class="information-list__item__term medium-valign-top">
+           Compatibilidad
+          </dt> 
+          <dd class="information-list__item__definition"> 
+           <dl class="information-list__item__definition__item"> 
+            <dt class="information-list__item__definition__item__term">
+              iPhone 
+            </dt> 
+            <dd class="information-list__item__definition__item__definition">
+             Requiere iOS 9.0 o posterior. 
+            </dd> 
+           </dl> 
+           <dl class="information-list__item__definition__item"> 
+            <dt class="information-list__item__definition__item__term">
+              iPad 
+            </dt> 
+            <dd class="information-list__item__definition__item__definition">
+             Requiere iPadOS 9.0 o posterior. 
+            </dd> 
+           </dl> 
+           <dl class="information-list__item__definition__item"> 
+            <dt class="information-list__item__definition__item__term">
+              iPod&nbsp;touch 
+            </dt> 
+            <dd class="information-list__item__definition__item__definition">
+             Requiere iOS 9.0 o posterior. 
+            </dd> 
+           </dl> 
+           <dl class="information-list__item__definition__item"> 
+            <dt class="information-list__item__definition__item__term">
+              Mac 
+            </dt> 
+            <dd class="information-list__item__definition__item__definition">
+             Se necesita macOS 11.0 o posterior y una Mac con el chip M1 de Apple. 
+            </dd> 
+           </dl> 
+          </dd> 
+         </div> <!----> 
+         <div class="information-list__item l-column small-12 medium-6 large-4 small-valign-top"> 
+          <dt class="information-list__item__term medium-valign-top">
+           Idiomas
+          </dt> 
+          <dd class="we-truncate we-truncate--multi-line we-truncate--interactive  information-list__item__definition" dir aria-label> 
+           <p data-test-bidi>Inglés</p> <!---->
+          </dd> 
+         </div> 
+         <div class="information-list__item l-column small-12 medium-6 large-4 small-valign-top"> 
+          <dt class="information-list__item__term medium-valign-top">
+           Edad
+          </dt> 
+          <dd class="information-list__item__definition">
+            4+ <!----> 
+          </dd> 
+         </div> <!----> 
+         <div class="information-list__item l-column small-12 medium-6 large-4 small-valign-top"> 
+          <dt class="information-list__item__term medium-valign-top">
+           Copyright
+          </dt> 
+          <dd class="information-list__item__definition information-list__item__definition--copyright">
+           © Ejercito Nacional 216, Anzures, CDMX.
+          </dd> 
+         </div> 
+         <div class="information-list__item l-column small-12 medium-6 large-4 small-valign-top"> 
+          <dt class="information-list__item__term medium-valign-top">
+           Precio
+          </dt> 
+          <dd class="information-list__item__definition">
+           Gratis
+          </dd> 
+         </div> <!----> 
+        </dl> 
+       </div> 
+       <div class="small-hide medium-show"> 
+        <ul class="inline-list inline-list--app-extensions"> 
+         <li class="inline-list__item inline-list__item--margin-inline-end-large">  </li> 
+         <li class="inline-list__item inline-list__item--margin-inline-end-large">  </li> <!----> 
+         <li class="inline-list__item inline-list__item--margin-inline-end-large">  </li> 
+        </ul> 
+       </div> 
+      </section> 
+      <section class="section section--link-list l-content-width medium-hide"> 
+       <ul class="link-list link-list--a"> 
+        <li class="link-list__item link-list__item--a">  </li> 
+        <li class="link-list__item link-list__item--a">  </li> <!----> 
+        <li class="link-list__item link-list__item--a">  </li> 
+       </ul> 
+      </section> 
+      <section class="l-content-width section section--bordered"> 
+       <div class="section__nav"> 
+        <h2 class="section__headline">Compatibilidad</h2> 
+       </div> 
+       <ul class="supports-list l-row"> 
+        <li class="supports-list__item l-column l-column--grid small-12 medium-6 large-4">  
+         <div class="supports-list__item__copy"> 
+          <h3 class="we-truncate we-truncate--single-line  supports-list__item__copy__heading" dir="ltr" aria-label> Compartir en familia </h3> 
+          <h4 class="we-truncate we-truncate--multi-line we-truncate--interactive  supports-list__item__copy__description" dir aria-label> <p dir="false" data-test-bidi>Hasta seis miembros de una familia podrán usar esta app mientras la función Compartir en familia esté activada.</p> <!----></h4> 
+         </div> </li> 
+       </ul> 
+      </section> <!----> <!----> 
+      <section class="l-content-width section section--bordered"> 
+       <div class="section__nav"> 
+        <h2 class="section__headline"> Quizás te interese </h2> <!----> 
+       </div> 
+       <div class="l-row l-row--peek">       
+       </div> 
+      </section> <!----> <!---->
+     </div> 
+    </main> 
+   </div>  
+  </div> 
+  <div id="modal-container"></div>     
+ </body>
+</html>
